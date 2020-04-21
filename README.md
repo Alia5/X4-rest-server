@@ -21,6 +21,8 @@ Inject the X4RestServer.dll with a Dll-Injector of your choice.
 - Improve installation
 - Create github.io page
 - CI
+- CONTRIBUTORS WANTED: Linux support?
+
 
 ## License
 
