@@ -1,4 +1,8 @@
+#define WIN32_LEAN_AND_MEAN
 #include <windows.h>
+#include <httplib.h>
+#include <string>
+#include <thread>
 
 typedef const char* (__cdecl* _GetPlayerName)(void);
 _GetPlayerName GetPlayerName;
@@ -9,17 +13,23 @@ DWORD WINAPI MainThread(LPVOID param)
 
 
 	HMODULE x4mod = GetModuleHandle(L"X4.exe");
-	
-	GetPlayerName = (_GetPlayerName)GetProcAddress(x4mod, "GetPlayerName");
+	if (x4mod) {
+		_GetPlayerName GetPlayerName = (_GetPlayerName)GetProcAddress(x4mod, "GetPlayerName");
 
-	while (!GetAsyncKeyState(VK_END))
-	{
-		if (GetAsyncKeyState(VK_NUMPAD2) & 1)
-		{
-			const char* playername = GetPlayerName();
-			MessageBoxA(NULL, playername, playername, MB_OK);
-		}
+		httplib::Server server;
+
+		server.Get("/player-name", [GetPlayerName](const httplib::Request& req, httplib::Response& res) {
+			res.set_content(
+				"{\n    \"player_name\": \"" + std::string(GetPlayerName()) + "\"\n}", "text/json");
+			});
+		server.Get("/stop", [&](const httplib::Request& req, httplib::Response& res) {
+			std::thread([&]() {
+				server.stop();
+			}).detach();
+		});
+		server.listen("0.0.0.0", 3000);
 	}
+
 	FreeLibraryAndExitThread((HMODULE)param, 0);
 	return 0;
 }
