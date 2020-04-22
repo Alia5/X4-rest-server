@@ -71,11 +71,19 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\cpp-httplib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\cpp-httplib;$(SolutionDir)..\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\httpserver\HttpServer.cpp" />
+    <ClCompile Include="src\ffi\FFIInvoke.cpp" />
     <ClCompile Include="src/dllmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\httpserver\HttpServer.h" />
+    <ClInclude Include="src\ffi\FFIInvoke.h" />
+    <ClInclude Include="src\ffi\ffirip.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

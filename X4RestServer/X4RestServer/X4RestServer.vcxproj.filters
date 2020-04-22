@@ -13,10 +13,39 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\ffi">
+      <UniqueIdentifier>{7ea65467-761c-49fd-a150-bdc91f32ec8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ffi">
+      <UniqueIdentifier>{e8503874-46e2-4f6b-b6ba-5d83cf676d99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\httpserver">
+      <UniqueIdentifier>{98ce1deb-0a34-4435-ad96-d6627b1bd48d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\httpserver">
+      <UniqueIdentifier>{e9fd39f7-a51e-42d3-ad8e-1b27dd090138}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src/dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\ffi\FFIInvoke.cpp">
+      <Filter>Source Files\ffi</Filter>
+    </ClCompile>
+    <ClCompile Include="src\httpserver\HttpServer.cpp">
+      <Filter>Source Files\httpserver</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ffi\FFIInvoke.h">
+      <Filter>Header Files\ffi</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ffi\ffirip.h">
+      <Filter>Header Files\ffi</Filter>
+    </ClInclude>
+    <ClInclude Include="src\httpserver\HttpServer.h">
+      <Filter>Header Files\httpserver</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
