@@ -12,8 +12,6 @@ Inject the X4RestServer.dll with a Dll-Injector of your choice.
 
 ## Todos
 
-- Add HTTP / Websocket Lib
-  - Check if X4 uses asio, boost.asio, or another http/websocket-lib one could use
 - Rip FFI functions / datastructures from gamefiles / exported function in X4.exe
 - Check if we can remain in our separete DLL-thread for all funcs
   - If not: Add a generic hook in RenderThread that works with Steam / GoG versions
