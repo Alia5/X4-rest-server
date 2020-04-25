@@ -10,6 +10,7 @@ class FFIInvoke
 public:
 	explicit FFIInvoke(const HMODULE x4_module);
 	json GetPlayerName();
+	json GetSofttarget();
 private:
 	HMODULE x4_module_;
 	std::unordered_map<LPCSTR, FARPROC> funcs_;

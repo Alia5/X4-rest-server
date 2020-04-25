@@ -19,6 +19,21 @@ json FFIInvoke::GetPlayerName()
 		};
 }
 
+json FFIInvoke::GetSofttarget()
+{
+	const auto funcname = std::string(__FUNCTION__).substr(11);
+	if (funcs_.count(funcname.c_str()) == 0)
+	{
+		loadFunction(funcname.c_str());
+	}
+	X4FFI::SofttargetDetails softTarget = reinterpret_cast<X4FFI::GetSofttarget>(funcs_[funcname.c_str()])();
+	return json
+	{
+		{"universeId", softTarget.softtargetID},
+		{"softtargetConnectionName", softTarget.softtargetConnectionName},
+	};
+}
+
 void FFIInvoke::loadFunction(LPCSTR name)
 {
 	const auto addr = GetProcAddress(x4_module_, name);

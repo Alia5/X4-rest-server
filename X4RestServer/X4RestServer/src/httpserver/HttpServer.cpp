@@ -11,6 +11,14 @@ void HttpServer::run(int port)
 		res.set_content(
 			ffi_invoke_.GetPlayerName().dump(), "text/json");
 		});
+	server.Get("/soft-target", [&](const httplib::Request& req, httplib::Response& res) {
+		res.set_content(
+			ffi_invoke_.GetSofttarget().dump(), "text/json");
+		});
+
+
+
+	
 	server.Get("/stop", [&](const httplib::Request& req, httplib::Response& res) {
 		std::thread([&]() {
 			server.stop();
