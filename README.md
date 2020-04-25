@@ -1,9 +1,14 @@
 # X4 Rest Server
 
-X4 Rest Server aims to provide an API for the game [X4: Foundations](https://www.egosoft.com/games/x4/info_en.php)
+X4 Rest Server aims to provide an http/rest API for the game [X4: Foundations](https://www.egosoft.com/games/x4/info_en.php)
 
-The project should be primarly focused on data-out, **not** for interacting with the game from the far, or even cheating.  
+The project should be primarily focused on data-out, **not** for interacting with the game from the far, or even cheating.  
+All without getting "modified"  
 We'll see how things shake out, however...
+
+It works by injecting a shared-library (.dll) into the game.  
+The .dll loads functions from the game, which are exposed via FFI, normally used for lua-scripts managing the game UI, and calling them directly.
+The results are then sent out as json via an inbuilt http-server
 
 ## POC Stage
 
@@ -18,7 +23,7 @@ Even if not explicitly stated, feel free to take on anything on, or event outsid
 
 If you have any questions, you can:
 
-- Participate in the X4RestServer thread on Egosoft forums (preferred) (TODO: insert link)
+- Participate in the X4RestServer [thread on Egosoft forums](https://forum.egosoft.com/viewtopic.php?f=181&t=426061&p=4942843#p4942842) (preferred)
 - Find me on Discord: Alia5#9959
 - Find me on Steam: [oRLY]Alia5
 - Open an issue
@@ -66,6 +71,8 @@ Inject the X4RestServer.dll with a Dll-Injector of your choice. (i.E. Cheat Engi
 - Streamline development
   - **Contributors wanted**
 - Improve Docs
+- OpenApi/Swagger Rest docs
+  - **Contributors wanted**
 - Check if we can remain in our separete DLL-thread for all funcs
   - If not: Add a generic hook in RenderThread that works with Steam / GoG versions
 - Get out of POC stage
