@@ -81,6 +81,8 @@
     <ClCompile Include="src/dllmain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\ffi\ffi_typedef.h" />
+    <ClInclude Include="src\ffi\fii_typedef_struct.h" />
     <ClInclude Include="src\httpserver\HttpServer.h" />
     <ClInclude Include="src\ffi\FFIInvoke.h" />
     <ClInclude Include="src\ffi\ffirip.h" />

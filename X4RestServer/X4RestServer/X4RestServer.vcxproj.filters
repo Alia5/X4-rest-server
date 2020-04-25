@@ -47,5 +47,11 @@
     <ClInclude Include="src\httpserver\HttpServer.h">
       <Filter>Header Files\httpserver</Filter>
     </ClInclude>
+    <ClInclude Include="src\ffi\ffi_typedef.h">
+      <Filter>Header Files\ffi</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ffi\fii_typedef_struct.h">
+      <Filter>Header Files\ffi</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
