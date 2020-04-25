@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "3aa3d7ef-c9a3-43cf-96ce-cd48c86e0b73",
+		"name": "X4RestServer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/stop",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/stop",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"stop"
+					]
+				},
+				"description": "Stops the server and ejects dll"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/soft-target",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/soft-target",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"soft-target"
+					]
+				},
+				"description": "Get universeId of current target"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/component-details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/component-details?componentId=9427879&connectionName=gibberish",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"component-details"
+					],
+					"query": [
+						{
+							"key": "componentId",
+							"value": "9427879"
+						},
+						{
+							"key": "connectionName",
+							"value": "gibberish"
+						}
+					]
+				},
+				"description": "Get Info about universe object"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
