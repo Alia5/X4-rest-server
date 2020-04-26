@@ -1,32 +1,26 @@
 #include <string>
 #include "FFIInvoke.h"
-#include "ffirip.h"
 
-// Note: __FUNCTION__ Macro should work with all major compilers.
+#define Q(x) #x
+#define QUOTE(x) Q(x)
+
+#define invoke(FuncName, ...) \
+   invokeFn<X4FFI::FuncName>(QUOTE(FuncName), __VA_ARGS__);
 
 FFIInvoke::FFIInvoke(const HMODULE x4_module) : x4_module_(x4_module) {}
 
 json FFIInvoke::GetPlayerName()
 {
-	const auto funcname = std::string(__FUNCTION__).substr(11);
-	if (funcs_.count(funcname.c_str()) == 0)
-	{
-		loadFunction(funcname.c_str());
-	}
-	return json
-		{
-			{"player_name", reinterpret_cast<X4FFI::GetPlayerName>(funcs_[funcname.c_str()])()}
+	const auto res = invoke(GetPlayerName);
+		return json
+        {
+			{"player_name", res}
 		};
 }
 
 json FFIInvoke::GetSofttarget()
 {
-	const auto funcname = std::string(__FUNCTION__).substr(11);
-	if (funcs_.count(funcname.c_str()) == 0)
-	{
-		loadFunction(funcname.c_str());
-	}
-	X4FFI::SofttargetDetails softTarget = reinterpret_cast<X4FFI::GetSofttarget>(funcs_[funcname.c_str()])();
+	const X4FFI::SofttargetDetails softTarget = invoke(GetSofttarget);
 	return json
 	{
 		{"universeId", softTarget.softtargetID},
@@ -36,13 +30,7 @@ json FFIInvoke::GetSofttarget()
 
 json FFIInvoke::GetComponentDetails(const X4FFI::UniverseID componentid, const char* const connectionname)
 {
-	const auto funcname = std::string(__FUNCTION__).substr(11);
-	if (funcs_.count(funcname.c_str()) == 0)
-	{
-		loadFunction(funcname.c_str());
-	}
-	X4FFI::ComponentDetails compDetails =
-		reinterpret_cast<X4FFI::GetComponentDetails>(funcs_[funcname.c_str()])(componentid, connectionname);
+	const X4FFI::ComponentDetails compDetails = invoke(GetComponentDetails, componentid, connectionname);
 	return json
 	{
 		{"name", compDetails.name},
