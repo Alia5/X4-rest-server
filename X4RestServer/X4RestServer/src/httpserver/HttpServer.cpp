@@ -1,5 +1,13 @@
 #include "HttpServer.h"
 #include "../ffi/FFIInvoke.h"
+#include "../__generated__/ffi_json.h"
+
+#define SET_CONTENT(Call) \
+	res.set_content( \
+			Call.dump(), "text/json")
+
+#define PARAMS(...) \
+	ffi_invoke_, __VA_ARGS__
 
 HttpServer::HttpServer(FFIInvoke& ffi_invoke) : ffi_invoke_(ffi_invoke)
 {
@@ -8,13 +16,11 @@ HttpServer::HttpServer(FFIInvoke& ffi_invoke) : ffi_invoke_(ffi_invoke)
 void HttpServer::run(int port)
 {
 	server.Get("/player-name", [&](const httplib::Request& req, httplib::Response& res) {
-		res.set_content(
-			ffi_invoke_.GetPlayerName().dump(), "text/json");
-		});
+		SET_CONTENT(GEN::GetPlayerName(PARAMS()));
+	});
 	server.Get("/soft-target", [&](const httplib::Request& req, httplib::Response& res) {
-		res.set_content(
-			ffi_invoke_.GetSofttarget().dump(), "text/json");
-		});
+		SET_CONTENT(GEN::GetSofttarget(PARAMS()));
+	});
 
 	server.Get("/component-details", [&](const httplib::Request& req, httplib::Response& res) {
 		std::string compId = req.get_param_value("componentId");
@@ -30,21 +36,19 @@ void HttpServer::run(int port)
 		}
 		try {
 			X4FFI::UniverseID uniId = std::stoll(compId);
-			res.set_content(
-				ffi_invoke_.GetComponentDetails(uniId, connectionName.c_str()).dump(), "text/json");
+			SET_CONTENT(GEN::GetComponentDetails(PARAMS(uniId, connectionName.c_str())));
 		} catch (std::exception&) {
 			return BadRequest(res, "componentId malformed");
 		}
 	});
 
-
-
+	// --
 	
 	server.Get("/stop", [&](const httplib::Request& req, httplib::Response& res) {
 		std::thread([&]() {
 			server.stop();
 			}).detach();
-		// produces empty response
+			res.set_content(json{{"ejected", true}}.dump(), "text/json");
 		});
 	// somehow got bad request every other request without this o.O
 	std::thread([&]()

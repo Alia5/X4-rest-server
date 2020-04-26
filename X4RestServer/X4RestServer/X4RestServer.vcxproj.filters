@@ -25,6 +25,9 @@
     <Filter Include="Source Files\httpserver">
       <UniqueIdentifier>{e9fd39f7-a51e-42d3-ad8e-1b27dd090138}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\ffi\ffirip">
+      <UniqueIdentifier>{5388ac34-3a0d-4c4d-be9e-c24ba91c3059}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src/dllmain.cpp">
@@ -41,17 +44,20 @@
     <ClInclude Include="src\ffi\FFIInvoke.h">
       <Filter>Header Files\ffi</Filter>
     </ClInclude>
-    <ClInclude Include="src\ffi\ffirip.h">
-      <Filter>Header Files\ffi</Filter>
-    </ClInclude>
     <ClInclude Include="src\httpserver\HttpServer.h">
       <Filter>Header Files\httpserver</Filter>
     </ClInclude>
-    <ClInclude Include="src\ffi\ffi_typedef.h">
-      <Filter>Header Files\ffi</Filter>
+    <ClInclude Include="src\ffi\ffirip\fii_typedef_struct.h">
+      <Filter>Header Files\ffi\ffirip</Filter>
     </ClInclude>
-    <ClInclude Include="src\ffi\fii_typedef_struct.h">
-      <Filter>Header Files\ffi</Filter>
+    <ClInclude Include="src\ffi\ffirip\ffirip.h">
+      <Filter>Header Files\ffi\ffirip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ffi\ffirip\ffi_typedef.h">
+      <Filter>Header Files\ffi\ffirip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\__generated__\ffi_json.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

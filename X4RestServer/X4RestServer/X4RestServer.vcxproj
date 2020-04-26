@@ -81,11 +81,12 @@
     <ClCompile Include="src/dllmain.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\ffi\ffi_typedef.h" />
-    <ClInclude Include="src\ffi\fii_typedef_struct.h" />
+    <ClInclude Include="src\ffi\ffirip\ffi_typedef.h" />
+    <ClInclude Include="src\ffi\ffirip\fii_typedef_struct.h" />
     <ClInclude Include="src\httpserver\HttpServer.h" />
     <ClInclude Include="src\ffi\FFIInvoke.h" />
-    <ClInclude Include="src\ffi\ffirip.h" />
+    <ClInclude Include="src\ffi\ffirip\ffirip.h" />
+    <ClInclude Include="src\__generated__\ffi_json.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

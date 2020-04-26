@@ -1,46 +1,10 @@
 #include <string>
 #include "FFIInvoke.h"
 
-#define Q(x) #x
-#define QUOTE(x) Q(x)
-
-#define invoke(FuncName, ...) \
-   invokeFn<X4FFI::FuncName>(QUOTE(FuncName), __VA_ARGS__);
-
-FFIInvoke::FFIInvoke(const HMODULE x4_module) : x4_module_(x4_module) {}
-
-json FFIInvoke::GetPlayerName()
+FFIInvoke::FFIInvoke(const HMODULE x4_module)
 {
-	const auto res = invoke(GetPlayerName);
-		return json
-        {
-			{"player_name", res}
-		};
+	x4_module_ = x4_module;
 }
-
-json FFIInvoke::GetSofttarget()
-{
-	const X4FFI::SofttargetDetails softTarget = invoke(GetSofttarget);
-	return json
-	{
-		{"universeId", softTarget.softtargetID},
-		{"softtargetConnectionName", softTarget.softtargetConnectionName},
-	};
-}
-
-json FFIInvoke::GetComponentDetails(const X4FFI::UniverseID componentid, const char* const connectionname)
-{
-	const X4FFI::ComponentDetails compDetails = invoke(GetComponentDetails, componentid, connectionname);
-	return json
-	{
-		{"name", compDetails.name},
-		{"hull", compDetails.hull},
-		{"shield", compDetails.shield},
-		{"speed", compDetails.speed},
-		{"hasShield", compDetails.hasShield},
-	};
-}
-
 
 void FFIInvoke::loadFunction(LPCSTR name)
 {
