@@ -1,7 +1,5 @@
 #pragma once
-
 #include "ffi_typedef.h"
-
 
 namespace X4FFI
 {

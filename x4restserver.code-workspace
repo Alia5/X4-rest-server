@@ -28,5 +28,11 @@
         "typescript.preferences.quoteStyle": "single",
         "cSpell.words": [
         ],
+        "files.exclude": {
+            "**/.classpath": true,
+            "**/.project": true,
+            "**/.settings": true,
+            "**/.factorypath": true
+        },
     }
 }
