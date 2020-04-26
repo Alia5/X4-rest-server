@@ -5,16 +5,30 @@ VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "X4RestServer", "X4RestServer\X4RestServer.vcxproj", "{ECF1C4B2-1788-406A-A81C-04AD488815B6}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "FFIRipper", "script\FFIRipper\FFIRipper.njsproj", "{C1F4EB5F-0A77-4E57-8E24-D0C54F368052}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECF1C4B2-1788-406A-A81C-04AD488815B6}.Debug|Any CPU.ActiveCfg = Debug|x64
 		{ECF1C4B2-1788-406A-A81C-04AD488815B6}.Debug|x64.ActiveCfg = Debug|x64
 		{ECF1C4B2-1788-406A-A81C-04AD488815B6}.Debug|x64.Build.0 = Debug|x64
+		{ECF1C4B2-1788-406A-A81C-04AD488815B6}.Release|Any CPU.ActiveCfg = Release|x64
 		{ECF1C4B2-1788-406A-A81C-04AD488815B6}.Release|x64.ActiveCfg = Release|x64
 		{ECF1C4B2-1788-406A-A81C-04AD488815B6}.Release|x64.Build.0 = Release|x64
+		{C1F4EB5F-0A77-4E57-8E24-D0C54F368052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1F4EB5F-0A77-4E57-8E24-D0C54F368052}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1F4EB5F-0A77-4E57-8E24-D0C54F368052}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C1F4EB5F-0A77-4E57-8E24-D0C54F368052}.Debug|x64.Build.0 = Debug|Any CPU
+		{C1F4EB5F-0A77-4E57-8E24-D0C54F368052}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1F4EB5F-0A77-4E57-8E24-D0C54F368052}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1F4EB5F-0A77-4E57-8E24-D0C54F368052}.Release|x64.ActiveCfg = Release|Any CPU
+		{C1F4EB5F-0A77-4E57-8E24-D0C54F368052}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,32 @@
+{
+    "folders": [
+        {
+            "name": "X4RestServer",
+            "path": "./X4RestServer"
+        },
+        {
+            "name": "script/FFIRipper",
+            "path": "./X4RestServer/script/FFIRipper"
+        },
+        {
+            "name": "root",
+            "path": "."
+        }
+    ],
+    "extensions": {
+        "recommendations": [
+        ]
+    },
+    "settings": {
+        "typescript.tsc.autoDetect": "on",
+        "task.autoDetect": "on",
+        "task.slowProviderWarning": false,
+        "typescript.check.npmIsInstalled": true,
+        "typescript.validate.enable": true,
+        "npm.enableScriptExplorer": true,
+        "jira-plugin.workingProject": "",
+        "typescript.preferences.quoteStyle": "single",
+        "cSpell.words": [
+        ],
+    }
+}
