@@ -63,7 +63,7 @@ Inject the X4RestServer.dll with a Dll-Injector of your choice. (i.E. Cheat Engi
 ### Todos
 
 - Rip more FFI functions / datastructures from gamefiles / exported function in X4.exe
-  - Write a script that can rip them automatically (in Node.js / Typescript)
+  - Write a script that can rip them automatically (in Node.js / Typescript) (Found in X4RestServer/script/FFIRipper)
     - **Bonus points/Consideration**: Generate C++ Invocation and rest-endpoint code
       - **Contributors wanted**
 - Implement more endpoints
