@@ -24,7 +24,7 @@ namespace X4FFI
 
 const FFI_FUNCS_H =
 `#pragma once
-#include "fii_typedef_struct.h"
+#include "ffi_typedef_struct.h"
 
 namespace X4FFI
 ` as const;
@@ -125,7 +125,6 @@ namespace FFIRipper {
             }
         });
         requiredTypes = requiredTypes.sort().filter((v,i,arr) => arr.indexOf(v) === i);
-        console.log(requiredTypes);
         const res = structs.sort((structA, structB) =>
             requiredTypes.includes(structA.match(/\S+?(?=;(?!\s))/g)?.[0])
                 ? -1 : requiredTypes.includes(structB.match(/\S+?(?=;(?!\s))/g)?.[0])
@@ -134,6 +133,10 @@ namespace FFIRipper {
         return res;
     };
 
+    const funcsToUsing = (funcs: string[]): string[] => funcs.map(
+        (func) =>
+            `using ${(/\S+?(?=\()/g).exec(func)} = ${(/(\S|const \S)+?(?=\s\S+?\()/g).exec(func)?.[0]} (*)${(/\(.*\)/g).exec(func)};`
+    );
 
     export const main = async (): Promise<void> => {
 
@@ -142,7 +145,7 @@ namespace FFIRipper {
 
         const typedefs = filterTypedefs(ffiStrings);
         const structs = sortStructArray(filterStructs(ffiStrings));
-        const funcs = filterFuns(ffiStrings);
+        const funcs = funcsToUsing(filterFuns(ffiStrings));
 
         // TODO: transform function decls to types
 
@@ -154,14 +157,12 @@ namespace FFIRipper {
             resolve(join(__dirname, '../../../X4RestServer/src/__generated__/ffi_typedef_struct.h')),
             `${FFI_TYPEDEF_STRUCT_H}{\n    ${structs.join('\n').replace(/\n/g, '\n    ')}\n}`
         );
-        // writeFileSync('../../../X4RestServer/src/__generated__/ffi_typedef.h', `${ffi_typedef_h}{    ${typedefs.join('\n    ')}}`);
-
-
-        // // mkdirSync('DEBUG');
-        // writeFileSync('DEBUG/typedefs.h', typedefs.join('\n'));
-        // writeFileSync('DEBUG/structs.h', structs.join('\n'));
-        // writeFileSync('DEBUG/funcs.h', funcs.join('\n'));
+        writeFileSync(
+            join(__dirname, '../../../X4RestServer/src/__generated__/ffi_funcs.h'),
+            `${FFI_FUNCS_H}{\n    ${funcs.join('\n    ')}\n}`
+        );
     };
 }
 
 FFIRipper.main();
+
