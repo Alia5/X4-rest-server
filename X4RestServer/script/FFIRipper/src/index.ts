@@ -1,4 +1,4 @@
-import { PathLike, lstatSync, mkdirSync, writeFileSync } from 'fs';
+import { PathLike, lstatSync, writeFileSync } from 'fs';
 /* eslint-disable no-console */
 import config from 'config';
 import { join, resolve } from 'path';
