@@ -28,15 +28,36 @@ If you have any questions, you can:
 - Find me on Steam: [oRLY]Alia5
 - Open an issue
 
+### Contents
+
+#### FFIRipper
+
+Extracts `typedefs`, `structs`, and `function definitions` from the `.lua`-scripts from an unpacked instance of X4
+
+Written in NodeJS / TypeScript
+
+#### X4RestServer
+
+The actual _"mod"_.dll
+
+Loads exposed functions, providing a basic http/Rest-Api to call them
+
 ### Building
 
 Requirements:
 
 - Visual Studio 2019 setup for C++, development
-
-1. `git clone --recursive git@github.com:Alia5/X4-rest-server.git`
-2. Open .sln file
-3. Click Build
+- NodeJS (14.X) (recommended: use via [nvm](https://github.com/nvm-sh/nvm) or [nvm-windows](https://github.com/coreybutler/nvm-windows))
+- An unpacked version of X4:Foundations  
+  - [official X4 unpacking tool](https://www.egosoft.com/download/x4/bonus_en.php?download=598)
+  
+1. Unpack X4
+2. `git clone --recursive git@github.com:Alia5/X4-rest-server.git`
+3. Copy `X4RestServer/script/FFIRipper/config/default.js` to `X4RestServer/script/FFIRipper/config/local.js`
+4. Update `uiPath`-value in `local.js` to point to your Unpacked X4s `ui`-subfolder;
+5. Open .sln file with Visual Studio
+6. Build and start FFIRipper project (Otherwise X4 rest Server cannot build)
+7. Build X4RestServer Project
 
 ### Debugging
 

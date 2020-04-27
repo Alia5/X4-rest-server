@@ -34,5 +34,10 @@
             "**/.settings": true,
             "**/.factorypath": true
         },
+        "files.associations": {
+            "atomic": "cpp",
+            "cstdint": "cpp",
+            "resumable": "cpp"
+        },
     }
 }

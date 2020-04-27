@@ -47,16 +47,16 @@
     <ClInclude Include="src\httpserver\HttpServer.h">
       <Filter>Header Files\httpserver</Filter>
     </ClInclude>
-    <ClInclude Include="src\ffi\ffirip\fii_typedef_struct.h">
-      <Filter>Header Files\ffi\ffirip</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ffi\ffirip\ffirip.h">
-      <Filter>Header Files\ffi\ffirip</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ffi\ffirip\ffi_typedef.h">
-      <Filter>Header Files\ffi\ffirip</Filter>
-    </ClInclude>
     <ClInclude Include="src\__generated__\ffi_json.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\__generated__\ffi_typedef_struct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\__generated__\ffi_typedef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\__generated__\ffi_funcs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

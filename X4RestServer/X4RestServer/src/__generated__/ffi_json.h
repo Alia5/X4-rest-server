@@ -1,7 +1,7 @@
 #pragma once
 
 #include <nlohmann/json.hpp>
-#include "../ffi/ffirip/ffirip.h"
+#include "ffi_funcs.h"
 #include "../ffi/FFIInvoke.h"
 
 using json = nlohmann::json;
