@@ -15,6 +15,12 @@
     ],
     "extensions": {
         "recommendations": [
+            "ms-vscode.node-debug2",
+            "ms-vscode.node-debug",
+            "eg2.vscode-npm-script",
+            "dbaeumer.vscode-eslint",
+            "aaron-bond.better-comments",
+            "ms-vscode.cpptools"
         ]
     },
     "settings": {
@@ -27,6 +33,9 @@
         "jira-plugin.workingProject": "",
         "typescript.preferences.quoteStyle": "single",
         "cSpell.words": [
+            "Funs",
+            "promisify",
+            "typef"
         ],
         "files.exclude": {
             "**/.classpath": true,
