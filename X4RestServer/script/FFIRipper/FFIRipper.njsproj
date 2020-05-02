@@ -38,11 +38,17 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\" />
+    <Folder Include="src\CodeGen\" />
+    <Folder Include="src\FFIRip\" />
+    <Folder Include="src\util\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="src\CodeGen\codeGen.ts" />
+    <TypeScriptCompile Include="src\FFIRip\FFIRip.ts" />
     <TypeScriptCompile Include="src\index.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="src\util\util.ts" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>

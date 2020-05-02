@@ -86,7 +86,7 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
     const lines = [
         `json ${funcName}(PARAMS(${args}))`,
         '    {',
-        `        const auto ${resName} = invoke(${funcName}${ args ? `, ${(/\S+?(?=,)/g).exec(`${args},`).join(', ')}` : '' });`,
+        `        const auto ${resName} = invoke(${funcName}${ args ? `, ${(`${args},`).match(/\S+?(?=,)/g).join(', ')}` : '' });`,
         '        return json',
         '        {',
         innerJson.map((line) => `            ${line}`).join(',\n'),

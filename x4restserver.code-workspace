@@ -46,7 +46,9 @@
         "files.associations": {
             "atomic": "cpp",
             "cstdint": "cpp",
-            "resumable": "cpp"
+            "resumable": "cpp",
+            "iosfwd": "cpp",
+            "xlocbuf": "cpp"
         },
     }
 }
