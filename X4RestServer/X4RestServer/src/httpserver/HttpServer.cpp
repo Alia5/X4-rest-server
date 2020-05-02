@@ -1,5 +1,6 @@
 #include "HttpServer.h"
 #include "../ffi/FFIInvoke.h"
+#include "../ffi/ffi_json.h"
 #include "../__generated__/gen_ffi_json.h"
 
 #define SET_CONTENT(Call) \
@@ -39,6 +40,23 @@ void HttpServer::run(int port)
 			SET_CONTENT(ffijson::GetComponentDetails(PARAMS(uniId, connectionName.c_str())));
 		} catch (std::exception&) {
 			return BadRequest(res, "componentId malformed");
+		}
+	});
+
+	// --
+	
+	server.Get("/default-order", [&](const httplib::Request& req, httplib::Response& res) {
+		std::string controllableId = req.get_param_value("controllableId");
+		if (controllableId.empty())
+		{
+			return BadRequest(res, "controllableId must be set");
+		}
+		try {
+			X4FFI::UniverseID uniId = std::stoll(controllableId);
+			SET_CONTENT(JSONIMPL::GetDefaultOrder(PARAMS(uniId)));
+		}
+		catch (std::exception&) {
+			return BadRequest(res, "controllableId malformed");
 		}
 	});
 
