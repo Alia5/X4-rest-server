@@ -26,31 +26,31 @@ namespace JSONIMPL
 	
     json GetDefaultOrder(PARAMS(UniverseID controllableid))
     {
-        auto order = std::make_unique<Order>();
-        const auto res = invoke(GetDefaultOrder, order.get(), controllableid);
-    	if (order)
+        Order order;
+        const auto res = invoke(GetDefaultOrder, &order, controllableid);
+    	if (res)
     	{
             return json
             {
                 {"success", res},
                 {"order", {
-                    {"queueidx", order->queueidx},
-                    {"state", order->state},
-                    {"statename", order->statename},
-                    {"orderdef", order->orderdef},
-                    {"actualparams", order->actualparams},
-                    {"enabled", order->enabled},
-                    {"isinfinite", order->isinfinite},
-                    {"issyncpointreached", order->issyncpointreached},
-                    {"istemporder", order->istemporder}
+                    {"queueidx", order.queueidx},
+                    {"state", order.state},
+                    {"statename", order.statename},
+                    {"orderdef", order.orderdef},
+                    {"actualparams", order.actualparams},
+                    {"enabled", order.enabled},
+                    {"isinfinite", order.isinfinite},
+                    {"issyncpointreached", order.issyncpointreached},
+                    {"istemporder", order.istemporder}
                 }}
             };
-    	} else {
-            return json
-            {
-                {"success", res}
-            };
     	}
+ 
+        return json
+        {
+            {"success", res}
+        };
     }
 	
 }
