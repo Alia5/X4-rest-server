@@ -1,6 +1,6 @@
 #include "HttpServer.h"
 #include "../ffi/FFIInvoke.h"
-#include "../__generated__/ffi_json.h"
+#include "../__generated__/gen_ffi_json.h"
 
 #define SET_CONTENT(Call) \
 	res.set_content( \
@@ -16,10 +16,10 @@ HttpServer::HttpServer(FFIInvoke& ffi_invoke) : ffi_invoke_(ffi_invoke)
 void HttpServer::run(int port)
 {
 	server.Get("/player-name", [&](const httplib::Request& req, httplib::Response& res) {
-		SET_CONTENT(GEN::GetPlayerName(PARAMS()));
+		SET_CONTENT(ffijson::GetPlayerName(PARAMS()));
 	});
 	server.Get("/soft-target", [&](const httplib::Request& req, httplib::Response& res) {
-		SET_CONTENT(GEN::GetSofttarget(PARAMS()));
+		SET_CONTENT(ffijson::GetSofttarget(PARAMS()));
 	});
 
 	server.Get("/component-details", [&](const httplib::Request& req, httplib::Response& res) {
@@ -36,7 +36,7 @@ void HttpServer::run(int port)
 		}
 		try {
 			X4FFI::UniverseID uniId = std::stoll(compId);
-			SET_CONTENT(GEN::GetComponentDetails(PARAMS(uniId, connectionName.c_str())));
+			SET_CONTENT(ffijson::GetComponentDetails(PARAMS(uniId, connectionName.c_str())));
 		} catch (std::exception&) {
 			return BadRequest(res, "componentId malformed");
 		}

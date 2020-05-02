@@ -84,9 +84,10 @@
     <ClInclude Include="src\httpserver\HttpServer.h" />
     <ClInclude Include="src\ffi\FFIInvoke.h" />
     <ClInclude Include="src\__generated__\ffi_funcs.h" />
-    <ClInclude Include="src\__generated__\ffi_json.h" />
+    <ClInclude Include="src\ffi\ffi_json.h" />
     <ClInclude Include="src\__generated__\ffi_typedef.h" />
     <ClInclude Include="src\__generated__\ffi_typedef_struct.h" />
+    <ClInclude Include="src\__generated__\gen_ffi_json.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
