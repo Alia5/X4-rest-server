@@ -52,5 +52,75 @@ namespace JSONIMPL
             {"success", res}
         };
     }
+
+
+	//     using GetAllFactions = uint32_t (*)(const char** result, uint32_t resultlen, bool includehidden);
+
+	json GetAllFactions(PARAMS(bool includehidden))
+    {
+        std::vector<const char*> result;
+        result.resize(10000);
+        const auto func_res = invoke(GetAllFactions, result.data(), result.size(), includehidden);
+    	if (func_res)
+    	{
+            result.resize(func_res);
+            return json
+    		{
+                {"value", func_res},
+            	{"result", result}
+            };
+    	}
+
+        return json
+        {
+            {"value", func_res}
+        };
+    }
+
+	//     using GetFormationShapes = uint32_t (*)(UIFormationInfo* result, uint32_t resultlen);
+
+    //typedef struct {
+    //    const char* shape;
+    //    const char* name;
+    //    uint32_t requiredSkill;
+    //    float radius;
+    //    bool rollMembers;
+    //    bool rollFormation;
+    //    size_t maxShipsPerLine;
+    //} UIFormationInfo;
+	
+    json GetFormationShapes(PARAMS())
+    {
+        std::vector<UIFormationInfo> result;
+        result.resize(10000);
+        const auto func_res = invoke(GetFormationShapes, result.data(), result.size());
+        if (func_res)
+        {
+            result.resize(func_res);
+            std::vector<json> json_result;
+        	for (auto& v : result)
+        	{
+                json_result.push_back({
+                    {"shape", v.shape},
+                    {"name", v.name},
+                    {"requiredSkill", v.requiredSkill},
+                    {"radius", v.radius},
+                    {"rollMembers", v.rollMembers},
+                    {"rollFormation", v.rollFormation},
+                    {"maxShipsPerLine", v.maxShipsPerLine}
+                });
+        	}
+            return json
+        	{
+                {"value", func_res},
+                {"result", json_result}
+            };
+        }
+
+        return json
+        {
+            {"value", func_res}
+        };
+    }
 	
 }

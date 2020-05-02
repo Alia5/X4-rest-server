@@ -45,7 +45,7 @@ namespace FFIRipper {
 
         const funcsToGenImpl = funcsToUsing(funcs)
             .filter((func) =>
-                (/GetComponentDetails|GetPlayerName|GetSofttarget/g)
+                (/GetComponentDetails|GetPlayerName|GetSofttarget|GetDefaultOrder/g)
                     .exec(func));
 
         const testCppJsonImpl = getCppJsonFile(funcsToGenImpl, structs);

@@ -60,6 +60,10 @@ void HttpServer::run(int port)
 		}
 	});
 
+	server.Get("/formation-shapes", [&](const httplib::Request& req, httplib::Response& res) {
+		SET_CONTENT(JSONIMPL::GetFormationShapes(PARAMS()));
+	});
+
 	// --
 	
 	server.Get("/stop", [&](const httplib::Request& req, httplib::Response& res) {

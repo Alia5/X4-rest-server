@@ -62,39 +62,91 @@ const structToCppJsonVals = (struct: string|undefined, valueName: string, struct
         const valInfo = (/(.+?)(?=\S.+$)((\S|\S+,\s|(\S|\S+,\s|(\S|\S+,\s|(\S|\S+,\s|(\S|\S+,\s|(\S|\S+,\s))))))+$)/g).exec(val);
         const type = valInfo?.[1].replace(/\s|\*/g, '');
         const name = valInfo?.[2];
+        // const keyName = type.toLowerCase() === 'universeid'
+        //     ? 'universeId'
+        //     : name;
+        const keyName = name;
         if (type.startsWith(type[0].toUpperCase())) {
             const subStruct = structFromName(type, structs);
             if (subStruct) {
-                return `{"${name}", ${structToCppJsonVals(subStruct, `${valueName}.${name}`, structs)}}`;
+                return `{"${keyName}", ${structToCppJsonVals(subStruct, `${valueName}.${name}`, structs)}}`;
             }
         }
 
-        return `{"${name}", ${valueName}.${name}}`;
+        return `{"${keyName}", ${valueName}.${name}}`;
     });
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
+    const resName = 'func_res_1';
     const funcName = getFuncName(usingFunc);
-    const args = getArgs(usingFunc);
-    const resName = 'res';
+    const args = getArgs(usingFunc)?.split(',');
+
+    const jsonFuncArgs = args.filter((arg) => !arg.includes('*') || arg.match(/const char\*[^*]/g)).join(',');
+    const ptrArgs = args.filter((arg) => arg.includes('*') && !arg.match(/const char\*[^*]/g));
 
     const resultStruct = structFromName(getReturnType(usingFunc), structs);
 
-    const innerJson = structToCppJsonVals(resultStruct, resName, structs);
-
     const lines = [
-        `json ${funcName}(PARAMS(${args}))`,
-        '    {',
-        `        const auto ${resName} = invoke(${funcName}${ args ? `, ${(`${args},`).match(/\S+?(?=,)/g).join(', ')}` : '' });`,
+        `json ${funcName}(PARAMS(${jsonFuncArgs}))`,
+        '    {'
+    ];
+    if (ptrArgs.length) {
+        lines.push(ptrArgs?.map((arg) => {
+            const regexRes = (/(^[A-z]+).*?(\S+)$/g).exec(arg);
+            return `        ${regexRes[1]} ${regexRes[2]};`;
+        })?.join('\n'));
+
+    }
+    lines.push(...[
+        `        const auto ${resName} = invoke(${funcName}${
+            args && args[0] !== ''
+                ? `, ${args.map((arg) => {
+                    const res = arg.includes('*') && !arg.match(/const char\*[^*]/g) ? '&' : '';
+                    return res + (/\S+$/).exec(arg)[0];
+                }).join(', ')}`
+                : ''
+        });`
+    ]);
+    if(ptrArgs.length) {
+        lines.push(...[
+            `        if (${resName}) {`,
+            '            return json',
+            '            {',
+            structToCppJsonVals(resultStruct, resName, structs)
+                .map((line) => `                ${line}`)
+                .join(',\n') + ','
+        ]);
+        lines.push(...[
+            ptrArgs.map((arg) => {
+                const variableName = (/\S+$/).exec(arg)[0];
+                const argStruct = structFromName((/(^[A-z]+)/g).exec(arg)[1], structs);
+                return [
+                    `                {"${variableName}", {`,
+                    structToCppJsonVals(argStruct, variableName, structs)
+                        .map((line) => `                    ${line}`)
+                        .join(',\n'),
+                    '                }}'
+                ].join('\n');
+            }).join(',\n')
+        ]);
+        lines.push(...[
+            '            };',
+            '        }',
+            ' '
+        ]);
+    }
+    lines.push(...[
         '        return json',
         '        {',
-        innerJson.map((line) => `            ${line}`).join(',\n'),
+        structToCppJsonVals(resultStruct, resName, structs)
+            .map((line) => `            ${line}`)
+            .join(',\n'),
         '        };',
         '    }',
-        ''
-    ];
-    return lines.join('\n');
+        ' '
+    ]);
+    return lines.filter((line) => !!line).join('\n');
 };
 
 export const getTypedefsFile = (typefStrings: string[]): string => (
