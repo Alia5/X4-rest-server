@@ -18,6 +18,10 @@ const OSX_WORKAROUND = [
     'typedef struct {\n    int unknown;\n} mach_fat_arch;'
 ];
 
+const NEEDSFIXING_FUNCS = {
+    GetNumMessages: 'uint32_t GetNumMessages(const char* categoryname, bool unknownBool);',
+    GetPurchasableCargo: 'uint32_t GetPurchasableCargo(UniverseID containerid, const char* unknownString);'
+};
 
 export const getLuaFiles = (dir: string): string[] => listFiles(dir).filter((f) => f.endsWith(LUA_FILE_EXT));
 
@@ -65,7 +69,14 @@ export const filterStructs = (ffiFiles: string[]): string[] => ffiFiles.join('\n
 
 export const filterFuns = (ffiFiles: string[]): string[] => ffiFiles.flatMap((ffiStrings) => ffiStrings.split(/(?<=\);)/g))
 // remove blank lines
-    .map((ffiString) => ffiString.replace(/^\s*/g, ''))
+    .map((ffiString) => {
+        const needsFixingKey = Object.keys(NEEDSFIXING_FUNCS)
+            .find((k) => ffiString.includes(k)) as keyof typeof NEEDSFIXING_FUNCS;
+        if (needsFixingKey) {
+            return NEEDSFIXING_FUNCS[needsFixingKey];
+        }
+        return ffiString.replace(/^\s*/g, '');
+    })
     .filter((ffiString) =>  ffiString !== '')
     .filter((ffiString) => !ffiString.startsWith('typedef'))
     .sort()
