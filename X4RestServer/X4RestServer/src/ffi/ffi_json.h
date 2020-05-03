@@ -98,7 +98,7 @@ namespace JSONIMPL
         {
             result.resize(func_res);
             std::vector<json> json_result;
-        	for (auto& v : result)
+        	for (const auto& v : result)
         	{
                 json_result.push_back({
                     {"shape", v.shape},

@@ -1,5 +1,9 @@
 import { getFuncName, getArgs, getReturnType, structFromName, funcsToUsing } from './../util/util';
 
+// TODO: Cleanup Codegen
+// ! Note to self: OOP would probably be simpler.
+// ! Note to self: You have extensively used templating-engines in the past, haven't you?
+
 const FFI_TYPEDEF_H =
 `#pragma once
 #include <cstdint>
@@ -54,7 +58,7 @@ const structToCppJsonVals = (struct: string|undefined, valueName: string, struct
     // available via ffi funcs
     // so we ignore that, here
     if (!struct) {
-        return [`{"value", ${valueName}}`];
+        return [`{"func_res", ${valueName}}`];
     }
     const valuesArr = struct.split('\n').slice(1, -1).join('').split(';').filter((str) => !(/^\s*$/g).exec(str));
 
@@ -79,11 +83,20 @@ const structToCppJsonVals = (struct: string|undefined, valueName: string, struct
 
 export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
     const resName = 'func_res_1';
+    const arraySize = 32767; // ^= SHRT_MAX should be enough, right? technically possible: 4294967295 (UINT32_MAX)
+    // TODO: make arraySize user controllable
     const funcName = getFuncName(usingFunc);
     const args = getArgs(usingFunc)?.split(',');
 
-    const jsonFuncArgs = args.filter((arg) => !arg.includes('*') || arg.match(/const char\*[^*]/g)).join(',');
-    const ptrArgs = args.filter((arg) => arg.includes('*') && !arg.match(/const char\*[^*]/g));
+    const jsonFuncArgs = args.filter((arg) =>
+        (!arg.includes('*') || arg.match(/const char\*[^*]/g)) && (/\S+$/).exec(arg)?.[0] !== 'resultlen'
+    ).join(',');
+    const ptrArgs = args.filter((arg, i, arr) =>
+        arg.includes('*') && !arg.match(/const char\*[^*]/g) && (/\S+$/).exec(arr[i+1])?.[0] !== 'resultlen'
+    );
+    const arrayArgs = args.filter((arg, i, arr) =>
+        arg.includes('*') && !arg.match(/const char\*[^*]/g) && (/\S+$/).exec(arr[i+1])?.[0] === 'resultlen'
+    );
 
     const resultStruct = structFromName(getReturnType(usingFunc), structs);
 
@@ -96,14 +109,27 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
             const regexRes = (/(^[A-z]+).*?(\S+)$/g).exec(arg);
             return `        ${regexRes[1]} ${regexRes[2]};`;
         })?.join('\n'));
-
+    }
+    if (arrayArgs.length) {
+        lines.push(
+            `        uint32_t resultLen ${arraySize};`,
+            arrayArgs?.map((arg) => {
+                const regexRes = (/(^[A-z]+).*?(\S+)$/g).exec(arg);
+                return `        ${
+                    // TODO: fix horrible check for str arrays...
+                    regexRes[1] === 'const' ? 'std::vector<const char*>' : `std::vector<${regexRes[1]}>`
+                } ${regexRes[2]};\n`
+                + `        ${regexRes[2]}.resize(resultlen);`;
+            })?.join('\n'));
     }
     lines.push(...[
         `        const auto ${resName} = invoke(${funcName}${
             args && args[0] !== ''
                 ? `, ${args.map((arg) => {
-                    const res = arg.includes('*') && !arg.match(/const char\*[^*]/g) ? '&' : '';
-                    return res + (/\S+$/).exec(arg)[0];
+                    const pname = (/\S+$/).exec(arg)[0];
+                    return ptrArgs.includes(arg)
+                        ? `&${pname}`
+                        : pname;
                 }).join(', ')}`
                 : ''
         });`
@@ -132,6 +158,55 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
         ]);
         lines.push(...[
             '            };',
+            '        }',
+            ' '
+        ]);
+    }
+    if(arrayArgs.length) {
+        lines.push(...[
+            `        if (${resName}) {`,
+            arrayArgs?.map((arg) => {
+                const regexRes = (/(^[A-z]+).*?(\S+)$/g).exec(arg.trim());
+                return `            ${regexRes[2]}.resize(${resName});`;
+            })?.join('\n')
+        ]);
+        lines.push( ...arrayArgs.map((arg) => {
+            // TODO: move "return" statement out of map...
+            const regexRes = (/(^[A-z]+).*?(\S+)$/g).exec(arg.trim());
+            const argType = regexRes[1] === 'const' ? 'const char*' : regexRes[1];
+            const argStruct = structFromName(argType, structs);
+            if (!argStruct) {
+                return [
+                    '            return json',
+                    '            {',
+                    structToCppJsonVals(resultStruct, resName, structs)
+                        .map((line) => `                ${line}`)
+                        .join(',\n') + ',',
+                    `                {"${regexRes[2]}", ${regexRes[2]}}`,
+                    '            };'
+                ].join('\n');
+            }
+            return [
+                `            std::vector<json> json_${regexRes[2]};`,
+                `            json_${regexRes[2]}.reserve(${resName});`,
+                `        	for (const auto& v : ${regexRes[2]})`,
+                '            {',
+                `                json_${regexRes[2]}.push_back({`,
+                structToCppJsonVals(argStruct, regexRes[2], structs)
+                    .map((line) => `                    ${line}`)
+                    .join(',\n'),
+                '                });',
+                '            }',
+                '            return json',
+                '            {',
+                structToCppJsonVals(resultStruct, resName, structs)
+                    .map((line) => `                ${line}`)
+                    .join(',\n') + ',',
+                `                {"${regexRes[2]}", json_${regexRes[2]}}`,
+                '            };'
+            ].join('\n');
+        }));
+        lines.push(...[
             '        }',
             ' '
         ]);
