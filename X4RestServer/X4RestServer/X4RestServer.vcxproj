@@ -88,7 +88,7 @@
     <ClInclude Include="src\__generated__\ffi_typedef.h" />
     <ClInclude Include="src\__generated__\ffi_typedef_struct.h" />
     <ClInclude Include="src\__generated__\gen_ffi_json.h" />
-    <ClInclude Include="src\__generated__\init_server_funs.h" />
+    <ClInclude Include="src\__generated__\gen_http_funs.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

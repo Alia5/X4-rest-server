@@ -17,8 +17,5 @@ public:
 private:
 	httplib::Server server;
 	FFIInvoke& ffi_invoke_;
-
-	static void BadRequest(httplib::Response& res, std::string const& message);
-	
 };
 
