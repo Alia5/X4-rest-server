@@ -23,7 +23,7 @@ export const getArgs = (funcType: string): string => (
 );
 
 export const structFromName = (structName: string, structs: string[]): string => (
-    structs.find((struct) => struct.endsWith(`${structName};`))
+    structs.find((struct) => struct.endsWith(` ${structName};`))
 );
 
 export const funcsToUsing = (funcs: string[]): string[] => funcs.map(

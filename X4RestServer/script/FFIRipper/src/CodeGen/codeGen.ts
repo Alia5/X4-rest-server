@@ -97,7 +97,7 @@ const structToCppJsonVals = (struct: string|undefined, valueName: string, struct
         if (returnType.includes('void')) {
             return ['{"func_res", true}'];
         }
-        return [`{"func_res", ${valueName}}`];
+        return [`{"${valueName.includes('func') || valueName.endsWith('res') ? 'func_res' : valueName}", ${valueName}}`];
     }
     const valuesArr = struct.split('\n').slice(1, -1).join('').split(';').filter((str) => !(/^\s*$/g).exec(str));
 
@@ -176,9 +176,9 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
             args && args[0] !== ''
                 ? `, ${args.map((arg) => {
                     const pname = (/\S+$/).exec(arg.trim())[0];
-                    return ptrArgs.includes(arg.trim())
+                    return ptrArgs.includes(arg)
                         ? `&${pname}`
-                        : arrayArgs.includes(arg.trim())
+                        : arrayArgs.includes(arg)
                             ? `${pname}.data()`
                             : pname;
                 }).join(', ')}`
