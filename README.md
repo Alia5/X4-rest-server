@@ -83,17 +83,17 @@ Inject the X4RestServer.dll with a Dll-Injector of your choice. (i.E. Cheat Engi
 
 ### Todos
 
-- Rip more FFI functions / datastructures from gamefiles / exported function in X4.exe
-  - Write a script that can rip them automatically (in Node.js / Typescript) (Found in X4RestServer/script/FFIRipper)
-    - **Bonus points/Consideration**: Generate C++ Invocation and rest-endpoint code
-      - **Contributors wanted**
-- Implement more endpoints
-  - **Contributors wanted**
+- Cleanup / Refactor FFIRipper  
+  - **Contributors wanted** (Typescript)
+- Implement endpoints for which generator can't handle ('FilterComponentByText','SetMapFilterString', 'GetBlacklistInfo')
+  - **Contributors wanted** (C++)
+- Implement translation from input data-structs
+  - **Contributors wanted** (C++)
 - Streamline development
-  - **Contributors wanted**
+  - **Contributors wanted** (C++/Typescript)
 - Improve Docs
 - OpenApi/Swagger Rest docs
-  - **Contributors wanted**
+  - **Contributors wanted** (Typescript)
 - Check if we can remain in our separete DLL-thread for all funcs
   - If not: Add a generic hook in RenderThread that works with Steam / GoG versions
 - Get out of POC stage
