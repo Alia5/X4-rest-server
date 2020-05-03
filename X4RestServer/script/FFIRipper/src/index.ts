@@ -14,6 +14,7 @@ import {
 import { funcsToUsing } from './util/util';
 
 const EXCLUDE_LIST: readonly string[] = [
+    // TODO: Support input translation of structs:
     'CreateBlacklist',
     'GetCompSlotScreenPos',
     'GetLoadoutStatistics2',
@@ -65,7 +66,11 @@ const EXCLUDE_LIST: readonly string[] = [
     'UpdateBlacklist',
     'UpdateConstructionMapItemLoadout',
     'UpdateObjectConfigurationMap',
-    'UpdatePlayerAlert'
+    'UpdatePlayerAlert',
+    // TODO: impl. manually. :
+    'FilterComponentByText',
+    'SetMapFilterString',
+    'GetBlacklistInfo'
 ] as const;
 
 namespace FFIRipper {

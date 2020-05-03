@@ -137,13 +137,20 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
     const args = getArgs(usingFunc)?.split(',');
 
     const jsonFuncArgs = args.filter((arg) =>
-        (!arg.includes('*') || arg.match(/const char\*[^*]/g)) && (/\S+$/).exec(arg)?.[0] !== 'resultlen'
-    ).join(',');
+        (!arg.includes('*') || arg.match(/const char\*[^*]/g)) && (/\S+$/).exec(arg)?.[0] !== 'resultlen').join(',');
     const ptrArgs = args.filter((arg, i, arr) =>
-        arg.includes('*') && !arg.match(/const char\*[^*]/g) && (/\S+$/).exec(arr[i+1])?.[0] !== 'resultlen'
+        arg.includes('*') && !arg.match(/const char\*[^*]/g) && (
+            (/\S+$/).exec(arr[i+1])?.[0] !== 'resultlen'
+            && !(((/\S+$/).exec(arr[i+1])?.[0].startsWith('num') || (/\S+$/).exec(arr[i+1])?.[0].endsWith('count'))
+            && (arg.includes('const char**')))
+        )
     );
     const arrayArgs = args.filter((arg, i, arr) =>
-        arg.includes('*') && !arg.match(/const char\*[^*]/g) && (/\S+$/).exec(arr[i+1])?.[0] === 'resultlen'
+        arg.includes('*') && !arg.match(/const char\*[^*]/g) && (
+            (/\S+$/).exec(arr[i+1])?.[0] === 'resultlen'
+            || (((/\S+$/).exec(arr[i+1])?.[0].startsWith('num') || (/\S+$/).exec(arr[i+1])?.[0].endsWith('count'))
+            && arg.includes('const char**'))
+        )
     );
 
     const returnType = getReturnType(usingFunc);
@@ -155,24 +162,28 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
     ];
     if (ptrArgs.length) {
         lines.push(ptrArgs?.map((arg) => {
-            const regexRes = (/(^[A-z]+).*?(\S+)$/g).exec(arg.trim());
-            return `        ${regexRes[1]} ${regexRes[2]};`;
+            const regexRes = (/(^([A-z]|[0-9])+).*?(\S+)$/g).exec(arg.trim());
+            return `        ${regexRes[1]} ${regexRes[3]};`;
         })?.join('\n'));
     }
     if (arrayArgs.length) {
         lines.push(
             `        uint32_t resultlen = ${arraySize};`,
             arrayArgs?.map((arg) => {
-                const regexRes = (/(^[A-z]+).*?(\S+)$/g).exec(arg.trim());
+                const regexRes = (/(^([A-z]|[0-9])+).*?(\S+)$/g).exec(arg.trim());
                 return `        ${
                     // TODO: fix horrible check for str arrays...
                     regexRes[1] === 'const' ? 'std::vector<const char*>' : `std::vector<${regexRes[1]}>`
-                } ${regexRes[2]};\n`
-                + `        ${regexRes[2]}.resize(resultlen);`;
+                } ${regexRes[3]};\n`
+                + `        ${regexRes[3]}.resize(resultlen);`;
             })?.join('\n'));
     }
     lines.push(...[
-        `        ${ returnType.includes('void') ? '' : `const auto ${resName} = `}invoke(${funcName}${
+        `        ${ returnType.includes('void')
+            ? ''
+            : `${returnType.match(/uint[0-9]+?_t/g)
+                ? returnType
+                : 'const auto'} ${resName} = `}invoke(${funcName}${
             args && args[0] !== ''
                 ? `, ${args.map((arg) => {
                     const pname = (/\S+$/).exec(arg.trim())[0];
@@ -218,10 +229,12 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
     }
     if(arrayArgs.length) {
         lines.push(...[
-            `        if (${resName}) {`,
+            `         ${returnType.includes('void') || resultStruct ? '' : `if (${resName})`} {`,
             arrayArgs?.map((arg) => {
                 const regexRes = (/(^[A-z]+).*?(\S+)$/g).exec(arg.trim());
-                return `            ${regexRes[2]}.resize(${resName});`;
+                return `            ${regexRes[2]}.resize(${ returnType.includes('void') || resultStruct
+                    ? args.find((a) => a.includes(' num') || a.endsWith('count')).match(/\S+$/g)
+                    : resName});`;
             })?.join('\n')
         ]);
         lines.push( ...arrayArgs.map((arg) => {
@@ -265,7 +278,8 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
             ' '
         ]);
     }
-    if (!returnType.includes('void') && !resultStruct && (ptrArgs || arrayArgs)) {
+    if (!returnType.includes('void') && !resultStruct && (ptrArgs?.length || arrayArgs?.length)
+        || (!ptrArgs?.length && !arrayArgs?.length)) {
         lines.push(...[
             '        return json',
             '        {',
