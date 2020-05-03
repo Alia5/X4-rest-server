@@ -164,7 +164,9 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
                     const pname = (/\S+$/).exec(arg)[0];
                     return ptrArgs.includes(arg)
                         ? `&${pname}`
-                        : pname;
+                        : arrayArgs.includes(arg)
+                            ? `${pname}.data()`
+                            : pname;
                 }).join(', ')}`
                 : ''
         });`
