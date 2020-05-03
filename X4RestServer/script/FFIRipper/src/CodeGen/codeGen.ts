@@ -63,6 +63,8 @@ const HTTP_SERVER_FUNS =
 #include "../ffi/ffi_json.h"
 #include "gen_ffi_json.h"
 
+using uint = unsigned int;
+
 #define SET_CONTENT(Call) \
 	res.set_content( \
 			Call.dump(), "text/json")
@@ -87,12 +89,15 @@ void initGenFuns(httplib::Server& server, FFIInvoke& ffi_invoke)
 {
 ` as const;
 
-const structToCppJsonVals = (struct: string|undefined, valueName: string, structs: string[]): string[] => {
+const structToCppJsonVals = (struct: string|undefined, valueName: string, structs: string[], returnType?: string): string[] => {
     // currently no structs with arrays
     // or inner structs that are not separately defined
     // available via ffi funcs
     // so we ignore that, here
     if (!struct) {
+        if (returnType.includes('void')) {
+            return ['{"func_res", true}'];
+        }
         return [`{"func_res", ${valueName}}`];
     }
     const valuesArr = struct.split('\n').slice(1, -1).join('').split(';').filter((str) => !(/^\s*$/g).exec(str));
@@ -135,7 +140,8 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
         arg.includes('*') && !arg.match(/const char\*[^*]/g) && (/\S+$/).exec(arr[i+1])?.[0] === 'resultlen'
     );
 
-    const resultStruct = structFromName(getReturnType(usingFunc), structs);
+    const returnType = getReturnType(usingFunc);
+    const resultStruct = structFromName(returnType, structs);
 
     const lines = [
         `json ${funcName}(PARAMS(${jsonFuncArgs}))`,
@@ -160,7 +166,7 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
             })?.join('\n'));
     }
     lines.push(...[
-        `        const auto ${resName} = invoke(${funcName}${
+        `        ${ returnType.includes('void') ? '' : `const auto ${resName} = `}invoke(${funcName}${
             args && args[0] !== ''
                 ? `, ${args.map((arg) => {
                     const pname = (/\S+$/).exec(arg.trim())[0];
@@ -178,7 +184,7 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
             `        if (${resName}) {`,
             '            return json',
             '            {',
-            structToCppJsonVals(resultStruct, resName, structs)
+            structToCppJsonVals(resultStruct, resName, structs, returnType)
                 .map((line) => `                ${line}`)
                 .join(',\n') + ','
         ]);
@@ -188,7 +194,7 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
                 const argStruct = structFromName((/(^[A-z]+)/g).exec(arg.trim())[1], structs);
                 return [
                     `                {"${variableName}", {`,
-                    structToCppJsonVals(argStruct, variableName, structs)
+                    structToCppJsonVals(argStruct, variableName, structs, returnType)
                         .map((line) => `                    ${line}`)
                         .join(',\n'),
                     '                }}'
@@ -218,7 +224,7 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
                 return [
                     '            return json',
                     '            {',
-                    structToCppJsonVals(resultStruct, resName, structs)
+                    structToCppJsonVals(resultStruct, resName, structs, returnType)
                         .map((line) => `                ${line}`)
                         .join(',\n') + ',',
                     `                {"${regexRes[2]}", ${regexRes[2]}}`,
@@ -231,14 +237,14 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
                 `        	for (const auto& v : ${regexRes[2]})`,
                 '            {',
                 `                json_${regexRes[2]}.push_back({`,
-                structToCppJsonVals(argStruct, 'v', structs)
+                structToCppJsonVals(argStruct, 'v', structs, returnType)
                     .map((line) => `                    ${line}`)
                     .join(',\n'),
                 '                });',
                 '            }',
                 '            return json',
                 '            {',
-                structToCppJsonVals(resultStruct, resName, structs)
+                structToCppJsonVals(resultStruct, resName, structs, returnType)
                     .map((line) => `                ${line}`)
                     .join(',\n') + ',',
                 `                {"${regexRes[2]}", json_${regexRes[2]}}`,
@@ -253,7 +259,7 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
     lines.push(...[
         '        return json',
         '        {',
-        structToCppJsonVals(resultStruct, resName, structs)
+        structToCppJsonVals(resultStruct, resName, structs, returnType)
             .map((line) => `            ${line}`)
             .join(',\n'),
         '        };',
