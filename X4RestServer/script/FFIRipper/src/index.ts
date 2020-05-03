@@ -1,4 +1,4 @@
-import { getTypedefsFile, getStructsFile, getFuncsFile, genJsonFunc, getCppJsonFile } from './CodeGen/codeGen';
+import { getTypedefsFile, getStructsFile, getFuncsFile, genJsonFunc, getCppJsonFile, getHttpFuncsCppFile } from './CodeGen/codeGen';
 import { writeFileSync } from 'fs';
 import { join, resolve } from 'path';
 import {
@@ -47,15 +47,23 @@ namespace FFIRipper {
             .filter((func) =>
                 (/GetComponentDetails|GetPlayerName|GetSofttarget|GetDefaultOrder|GetAllFactions|GetFormationShapes/g)
                     .exec(func));
-
-        const testCppJsonImpl = getCppJsonFile(funcsToGenImpl, structs);
-
+        const cppJsonImpl = getCppJsonFile(funcsToGenImpl, structs);
         writeFileSync(
             resolve(join(
                 __dirname,
                 '../../../X4RestServer/src/__generated__/gen_ffi_json.h'
             )),
-            testCppJsonImpl
+            cppJsonImpl
+        );
+
+        const jsonImplFuncs = (/json.*?\)\)/gm).exec(cppJsonImpl);
+        const httpCppImpl = getHttpFuncsCppFile(jsonImplFuncs);
+        writeFileSync(
+            resolve(join(
+                __dirname,
+                '../../../X4RestServer/src/__generated__/gen_http_funs.h'
+            )),
+            httpCppImpl
         );
 
     };

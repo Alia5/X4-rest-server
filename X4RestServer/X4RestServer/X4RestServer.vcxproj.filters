@@ -62,5 +62,8 @@
     <ClInclude Include="src\__generated__\gen_ffi_json.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\__generated__\init_server_funs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

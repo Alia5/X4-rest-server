@@ -1,4 +1,5 @@
 import { getFuncName, getArgs, getReturnType, structFromName, funcsToUsing } from './../util/util';
+import { getHttpFuncsCpp } from './httpFuncGen';
 
 // TODO: Cleanup Codegen
 // ! Note to self: OOP would probably be simpler.
@@ -50,6 +51,39 @@ namespace ffijson
 {
     using namespace X4FFI;
 
+` as const;
+
+const HTTP_SERVER_FUNS =
+`
+#pragma once
+#include <httplib.h>
+
+#include "../ffi/FFIInvoke.h"
+#include "../ffi/ffi_json.h"
+#include "gen_ffi_json.h"
+
+#define SET_CONTENT(Call) \
+	res.set_content( \
+			Call.dump(), "text/json")
+
+#define PARAMS(...) \
+	ffi_invoke, __VA_ARGS__
+
+#define HAN_FN \
+	[&](const httplib::Request& req, httplib::Response& res)
+
+void BadRequest(httplib::Response& res, std::string const& message)
+{
+	res.status = 401;
+	res.set_content(json{
+		{"code", 401},
+		{"name", "Bad Request"},
+		{"message", message},
+		}.dump(), "text/json");
+}
+
+void initGenFuns(httplib::Server& server, FFIInvoke& ffi_invoke)
+{
 ` as const;
 
 const structToCppJsonVals = (struct: string|undefined, valueName: string, structs: string[]): string[] => {
@@ -112,7 +146,7 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
     }
     if (arrayArgs.length) {
         lines.push(
-            `        uint32_t resultLen ${arraySize};`,
+            `        uint32_t resultlen = ${arraySize};`,
             arrayArgs?.map((arg) => {
                 const regexRes = (/(^[A-z]+).*?(\S+)$/g).exec(arg);
                 return `        ${
@@ -192,7 +226,7 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
                 `        	for (const auto& v : ${regexRes[2]})`,
                 '            {',
                 `                json_${regexRes[2]}.push_back({`,
-                structToCppJsonVals(argStruct, regexRes[2], structs)
+                structToCppJsonVals(argStruct, 'v', structs)
                     .map((line) => `                    ${line}`)
                     .join(',\n'),
                 '                });',
@@ -225,17 +259,21 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
 };
 
 export const getTypedefsFile = (typefStrings: string[]): string => (
-    `${FFI_TYPEDEF_H}{\n    ${typefStrings.join('\n    ')}\n}`
+    `${FFI_TYPEDEF_H}{\n    ${typefStrings.join('\n    ')}\n}\n`
 );
 export const getStructsFile = (structStrings: string[]): string => (
-    `${FFI_TYPEDEF_STRUCT_H}{\n    ${structStrings.join('\n').replace(/\n/g, '\n    ')}\n}`
+    `${FFI_TYPEDEF_STRUCT_H}{\n    ${structStrings.join('\n').replace(/\n/g, '\n    ')}\n}\n`
 );
 export const getFuncsFile = (funcStrings: string[]): string => (
-    `${FFI_FUNCS_H}{\n    ${(funcsToUsing(funcStrings)).join('\n    ')}\n}`
+    `${FFI_FUNCS_H}{\n    ${(funcsToUsing(funcStrings)).join('\n    ')}\n}\n`
 );
 
 export const getCppJsonFile = (usingFuncStrings: string[], structStrings: string[]): string => (
     `${FFI_JSON_H}\n    ${
         usingFuncStrings.map((func) => genJsonFunc(func, structStrings)).join('\n    ')
-    }\n}`
+    }\n}\n`
+);
+
+export const getHttpFuncsCppFile = (jsonFuncStrings: string[]): string => (
+    `${HTTP_SERVER_FUNS}\n    ${getHttpFuncsCpp(jsonFuncStrings)}\n}\n`
 );
