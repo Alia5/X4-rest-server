@@ -86,6 +86,7 @@ Inject the X4RestServer.dll with a Dll-Injector of your choice. (i.E. Cheat Engi
 ### Todos
 
 - Cleanup / Refactor FFIRipper  
+  - I aimed to get things done, not make them pretty... It's a mess!
   - **Contributors wanted** (Typescript)
 - Implement endpoints for which generator can't handle ('FilterComponentByText','SetMapFilterString', 'GetBlacklistInfo')
   - **Contributors wanted** (C++)
