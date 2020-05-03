@@ -187,7 +187,7 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
     ]);
     if(ptrArgs.length) {
         lines.push(...[
-            `        if (${resName}) {`,
+            `         ${returnType.includes('void') || resultStruct ? '' : `if (${resName})`} {`,
             '            return json',
             '            {',
             structToCppJsonVals(resultStruct, resName, structs, returnType)
@@ -198,13 +198,16 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
             ptrArgs.map((arg) => {
                 const variableName = (/\S+$/).exec(arg)[0];
                 const argStruct = structFromName((/(^[A-z]+)/g).exec(arg.trim())[1], structs);
-                return [
-                    `                {"${variableName}", {`,
-                    structToCppJsonVals(argStruct, variableName, structs, returnType)
-                        .map((line) => `                    ${line}`)
-                        .join(',\n'),
-                    '                }}'
-                ].join('\n');
+                if (argStruct) {
+                    return [
+                        `                {"${variableName}", {`,
+                        structToCppJsonVals(argStruct, variableName, structs, returnType)
+                            .map((line) => `                    ${line}`)
+                            .join(',\n'),
+                        '                }}'
+                    ].join('\n');
+                }
+                return `                {"${variableName}", ${variableName}}`;
             }).join(',\n')
         ]);
         lines.push(...[
@@ -262,13 +265,17 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
             ' '
         ]);
     }
+    if (!returnType.includes('void') && !resultStruct && (ptrArgs || arrayArgs)) {
+        lines.push(...[
+            '        return json',
+            '        {',
+            structToCppJsonVals(resultStruct, resName, structs, returnType)
+                .map((line) => `            ${line}`)
+                .join(',\n'),
+            '        };'
+        ]);
+    }
     lines.push(...[
-        '        return json',
-        '        {',
-        structToCppJsonVals(resultStruct, resName, structs, returnType)
-            .map((line) => `            ${line}`)
-            .join(',\n'),
-        '        };',
         '    }',
         ' '
     ]);
