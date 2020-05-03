@@ -96,7 +96,7 @@ Inject the X4RestServer.dll with a Dll-Injector of your choice. (i.E. Cheat Engi
   - **Contributors wanted** (C++/Typescript)
 - Improve Docs
 - OpenApi/Swagger Rest docs
-  - **Contributors wanted** (Typescript)
+  - **Contributors wanted**
 - Check if we can remain in our separete DLL-thread for all funcs
   - If not: Add a generic hook in RenderThread that works with Steam / GoG versions
 - Get out of POC stage
