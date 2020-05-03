@@ -14,6 +14,8 @@ const TYPE_CONVERSIONS = {
     'NPCSeed': (p: string): string => `std::stoll(${p})`,
     'TradeID': (p: string): string => `std::stoll(${p})`,
     'uint32_t': (p: string): string => `std::stoll(${p})`,
+    'size_t': (p: string): string => `std::stoll(${p})`,
+    'uint64_t': (p: string): string => `std::stoll(${p})`,
     'int': (p: string): string => `std::stoi(${p})`,
     'bool': (p: string): string => `std::stoi(${p})`
 } as const;
@@ -28,7 +30,11 @@ const convertParams = (paramTypes: string[], paramNames: string[]): string => {
     return paramTypes.map((pt, i) => {
         const converterKey = Object.keys(TYPE_CONVERSIONS)
             .find((ct) => pt.trim().includes(ct)) as (keyof typeof TYPE_CONVERSIONS);
-        return ((TYPE_CONVERSIONS?.[converterKey])(paramNames[i])) || '';
+        if (!(TYPE_CONVERSIONS?.[converterKey])) {
+            throw new Error('cannot create endpoint for function');
+        }
+        // TODO: convert structs to input
+        return ((TYPE_CONVERSIONS?.[converterKey]) ? (TYPE_CONVERSIONS?.[converterKey])(paramNames[i]) : '');
     }).join(', ');
 };
 
@@ -41,6 +47,10 @@ export const getHttpFuncsCpp = (jsonFuncStrings: string[]): string => {
         );
 
     return funcs.map((func) => {
+
+        // eslint-disable-next-line no-console
+        console.log(`generating Function: ${func[0]}...`);
+
         const paramNames = `${func[1]}, `.match(/\S+?(?=,)/g);
         const paramTypes = `${func[1]}, `.match(/\S*\s*\S+?(?=\s\S+,)/g);
         const result = [

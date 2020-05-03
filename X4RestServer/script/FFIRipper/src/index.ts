@@ -1,4 +1,6 @@
-import { getTypedefsFile, getStructsFile, getFuncsFile, genJsonFunc, getCppJsonFile, getHttpFuncsCppFile } from './CodeGen/codeGen';
+import { getFuncName } from './util/util';
+/* eslint-disable no-console */
+import { getTypedefsFile, getStructsFile, getFuncsFile, getCppJsonFile, getHttpFuncsCppFile } from './CodeGen/codeGen';
 import { writeFileSync } from 'fs';
 import { join, resolve } from 'path';
 import {
@@ -11,16 +13,76 @@ import {
 } from './FFIRip/FFIRip';
 import { funcsToUsing } from './util/util';
 
+const EXCLUDE_LIST: readonly string[] = [
+    'CreateBlacklist',
+    'GetCompSlotScreenPos',
+    'GetLoadoutStatistics2',
+    'GetMapPositionOnEcliptic2',
+    'GetRoomForTransporter',
+    'GetSlotComponent',
+    'GetTransporterLocationComponent',
+    'ReserveBuildPlot',
+    'ExtendBuildPlot',
+    'IsControlPanelHacked',
+    'PerformCompSlotPlayerAction',
+    'GetControlPanelName',
+    'GetTransporterLocationName',
+    'GetBuildDuration',
+    'GetControlPanelHackExpireTime',
+    'GetBuildPlotPrice',
+    'GetCompSlotPlayerActions',
+    'GetControlPanelNumRequiredWares',
+    'GetControlPanelRequiredWares',
+    'GetMineablesAtSectorPos',
+    'GetNumCompSlotPlayerActions',
+    'GetNumMineablesAtSectorPos',
+    'MovePlayerToSectorPos',
+    'PayBuildPlotSize',
+    'SaveLoadout',
+    'SetBoxTextBoxColor',
+    'SetBoxTextColor',
+    'SetButtonHighlightColor',
+    'SetButtonText2Color',
+    'SetButtonTextColor',
+    'SetCheckBoxColor',
+    'SetCustomGameStartPosRotProperty',
+    'SetCustomGameStartShipAndLoadoutProperty',
+    'SetFlowChartEdgeColor',
+    'SetFlowChartNodeCaptionTextColor',
+    'SetFlowChartNodeOutlineColor',
+    'SetFlowChartNodeStatusColor',
+    'SetGuidance',
+    'SetIconColor',
+    'SetMacroMapPlayerSectorOffset',
+    'SetMapState',
+    'SetPlayerLogo',
+    'ShowObjectConfigurationMap',
+    'SpawnObjectAtPos',
+    'ShowUniverseMacroMap',
+    'ShowUniverseMap2',
+    'StartControlPanelHack',
+    'TransportPlayerToTarget',
+    'UpdateBlacklist',
+    'UpdateConstructionMapItemLoadout',
+    'UpdateObjectConfigurationMap',
+    'UpdatePlayerAlert'
+] as const;
+
 namespace FFIRipper {
 
     export const main = async (): Promise<void> => {
 
+        console.log('reading ui files...');
         const ffiStrings = await readFFiStrings(await getFfiLuaFiles());
 
+        console.log('extracting typedefs...');
         const typedefs = filterTypedefs(ffiStrings);
+        console.log('extracting structs...');
         const structs = sortStructArray(filterStructs(ffiStrings));
+        console.log('extracting funcs...');
         const funcs = filterFuns(ffiStrings);
 
+        console.log('generating typedef file...');
         writeFileSync(
             resolve(join(
                 __dirname,
@@ -28,6 +90,7 @@ namespace FFIRipper {
             )),
             getTypedefsFile(typedefs)
         );
+        console.log('generating structs file...');
         writeFileSync(
             resolve(join(
                 __dirname,
@@ -35,6 +98,7 @@ namespace FFIRipper {
             )),
             getStructsFile(structs)
         );
+        console.log('generating funcs file...');
         writeFileSync(
             resolve(join(
                 __dirname,
@@ -43,10 +107,8 @@ namespace FFIRipper {
             getFuncsFile(funcs)
         );
 
-        const funcsToGenImpl = funcsToUsing(funcs)
-            .filter((func) =>
-                (/GetComponentDetails|GetPlayerName|GetSofttarget|GetDefaultOrder|GetAllFactions|GetFormationShapes/g)
-                    .exec(func));
+        const funcsToGenImpl = funcsToUsing(funcs).filter((f) => !EXCLUDE_LIST.includes(getFuncName(f)));
+        console.log('generating funcsToJson file...');
         const cppJsonImpl = getCppJsonFile(funcsToGenImpl, structs);
         writeFileSync(
             resolve(join(
@@ -56,7 +118,8 @@ namespace FFIRipper {
             cppJsonImpl
         );
 
-        const jsonImplFuncs = cppJsonImpl.match(/json.*?\)\)/g); 
+        console.log('generating endpointsImpl. file...');
+        const jsonImplFuncs = cppJsonImpl.match(/json.*?\)\)/g);
         const httpCppImpl = getHttpFuncsCppFile(jsonImplFuncs);
         writeFileSync(
             resolve(join(
@@ -65,6 +128,7 @@ namespace FFIRipper {
             )),
             httpCppImpl
         );
+        console.log('done');
 
     };
 }

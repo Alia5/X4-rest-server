@@ -98,14 +98,14 @@ const structToCppJsonVals = (struct: string|undefined, valueName: string, struct
     const valuesArr = struct.split('\n').slice(1, -1).join('').split(';').filter((str) => !(/^\s*$/g).exec(str));
 
     return valuesArr.flatMap((val) => {
-        const valInfo = (/(.+?)(?=\S.+$)((\S|\S+,\s|(\S|\S+,\s|(\S|\S+,\s|(\S|\S+,\s|(\S|\S+,\s|(\S|\S+,\s))))))+$)/g).exec(val);
+        const valInfo = (/(.+?)(?=(\S.|\S)+$)((\S|\S+,\s|(\S|\S+,\s))+$)/g).exec(val.trim());
         const type = valInfo?.[1].replace(/\s|\*/g, '');
         const name = valInfo?.[2];
         // const keyName = type.toLowerCase() === 'universeid'
         //     ? 'universeId'
         //     : name;
         const keyName = name;
-        if (type.startsWith(type[0].toUpperCase())) {
+        if (type.trim().startsWith(type.trim()[0].toUpperCase())) {
             const subStruct = structFromName(type, structs);
             if (subStruct) {
                 return `{"${keyName}", ${structToCppJsonVals(subStruct, `${valueName}.${name}`, structs)}}`;
@@ -121,6 +121,8 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
     const arraySize = 32767; // ^= SHRT_MAX should be enough, right? technically possible: 4294967295 (UINT32_MAX)
     // TODO: make arraySize user controllable
     const funcName = getFuncName(usingFunc);
+    // eslint-disable-next-line no-console
+    console.log(`generating Function: ${funcName}...`);
     const args = getArgs(usingFunc)?.split(',');
 
     const jsonFuncArgs = args.filter((arg) =>
@@ -141,7 +143,7 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
     ];
     if (ptrArgs.length) {
         lines.push(ptrArgs?.map((arg) => {
-            const regexRes = (/(^[A-z]+).*?(\S+)$/g).exec(arg);
+            const regexRes = (/(^[A-z]+).*?(\S+)$/g).exec(arg.trim());
             return `        ${regexRes[1]} ${regexRes[2]};`;
         })?.join('\n'));
     }
@@ -149,7 +151,7 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
         lines.push(
             `        uint32_t resultlen = ${arraySize};`,
             arrayArgs?.map((arg) => {
-                const regexRes = (/(^[A-z]+).*?(\S+)$/g).exec(arg);
+                const regexRes = (/(^[A-z]+).*?(\S+)$/g).exec(arg.trim());
                 return `        ${
                     // TODO: fix horrible check for str arrays...
                     regexRes[1] === 'const' ? 'std::vector<const char*>' : `std::vector<${regexRes[1]}>`
@@ -161,10 +163,10 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
         `        const auto ${resName} = invoke(${funcName}${
             args && args[0] !== ''
                 ? `, ${args.map((arg) => {
-                    const pname = (/\S+$/).exec(arg)[0];
-                    return ptrArgs.includes(arg)
+                    const pname = (/\S+$/).exec(arg.trim())[0];
+                    return ptrArgs.includes(arg.trim())
                         ? `&${pname}`
-                        : arrayArgs.includes(arg)
+                        : arrayArgs.includes(arg.trim())
                             ? `${pname}.data()`
                             : pname;
                 }).join(', ')}`
@@ -183,7 +185,7 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
         lines.push(...[
             ptrArgs.map((arg) => {
                 const variableName = (/\S+$/).exec(arg)[0];
-                const argStruct = structFromName((/(^[A-z]+)/g).exec(arg)[1], structs);
+                const argStruct = structFromName((/(^[A-z]+)/g).exec(arg.trim())[1], structs);
                 return [
                     `                {"${variableName}", {`,
                     structToCppJsonVals(argStruct, variableName, structs)
