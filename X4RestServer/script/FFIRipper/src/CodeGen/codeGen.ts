@@ -115,7 +115,7 @@ const structToCppJsonVals = (struct: string|undefined, valueName: string, struct
             if (subStruct) {
                 return `{"${keyName}", ${structToCppJsonVals(
                     subStruct,
-                    `${valueName}${isPtrType && valueName.includes('.') ? '->' : '.'}${name}`,
+                    `${valueName}${lastWasPtr && valueName.includes('.') ? '->' : '.'}${name}`,
                     structs,
                     undefined,
                     isPtrType
