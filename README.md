@@ -10,6 +10,8 @@ It works by injecting a shared-library (.dll) into the game.
 The .dll loads functions from the game, which are exposed via FFI, normally used for lua-scripts managing the game UI, and calling them directly.
 The results are then sent out as json via an inbuilt http-server
 
+Due to the fact, that most code is generated, most endpoints use http-GET requests, even if changing values in the game. (We'll see how long that stays...)
+
 ## POC Stage
 
 This project is currently in POC stage.  
