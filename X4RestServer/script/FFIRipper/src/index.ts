@@ -56,7 +56,7 @@ namespace FFIRipper {
             cppJsonImpl
         );
 
-        const jsonImplFuncs = (/json.*?\)\)/gm).exec(cppJsonImpl);
+        const jsonImplFuncs = cppJsonImpl.match(/json.*?\)\)/g); 
         const httpCppImpl = getHttpFuncsCppFile(jsonImplFuncs);
         writeFileSync(
             resolve(join(

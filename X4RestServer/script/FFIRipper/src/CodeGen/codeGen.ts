@@ -57,6 +57,7 @@ const HTTP_SERVER_FUNS =
 `
 #pragma once
 #include <httplib.h>
+#include <string>
 
 #include "../ffi/FFIInvoke.h"
 #include "../ffi/ffi_json.h"
@@ -275,5 +276,5 @@ export const getCppJsonFile = (usingFuncStrings: string[], structStrings: string
 );
 
 export const getHttpFuncsCppFile = (jsonFuncStrings: string[]): string => (
-    `${HTTP_SERVER_FUNS}\n    ${getHttpFuncsCpp(jsonFuncStrings)}\n}\n`
+    `${HTTP_SERVER_FUNS}\n${getHttpFuncsCpp(jsonFuncStrings)}\n}\n`
 );
