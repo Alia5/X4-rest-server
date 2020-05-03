@@ -100,7 +100,7 @@ const structToCppJsonVals = (struct: string|undefined, valueName: string, struct
     return valuesArr.flatMap((val) => {
         const valInfo = (/(.+?)(?=(\S.|\S)+$)((\S|\S+,\s|(\S|\S+,\s))+$)/g).exec(val.trim());
         const type = valInfo?.[1].replace(/\s|\*/g, '');
-        const name = valInfo?.[2];
+        const name = valInfo?.[3];
         // const keyName = type.toLowerCase() === 'universeid'
         //     ? 'universeId'
         //     : name;
