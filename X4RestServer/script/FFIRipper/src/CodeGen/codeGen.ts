@@ -35,6 +35,7 @@ const FFI_JSON_H =
 #include "../ffi/FFIInvoke.h"
 
 using json = nlohmann::json;
+using uint = unsigned int;
 
 #define Q(x) #x
 #define QUOTE(x) Q(x)
@@ -63,8 +64,6 @@ const HTTP_SERVER_FUNS =
 #include "../ffi/ffi_json.h"
 #include "gen_ffi_json.h"
 
-using uint = unsigned int;
-
 #define SET_CONTENT(Call) \
 	res.set_content( \
 			Call.dump(), "text/json")
@@ -89,7 +88,7 @@ void initGenFuns(httplib::Server& server, FFIInvoke& ffi_invoke)
 {
 ` as const;
 
-const structToCppJsonVals = (struct: string|undefined, valueName: string, structs: string[], returnType?: string): string[] => {
+const structToCppJsonVals = (struct: string|undefined, valueName: string, structs: string[], returnType?: string, lastWasPtr?: boolean): string[] => {
     // currently no structs with arrays
     // or inner structs that are not separately defined
     // available via ffi funcs
@@ -106,6 +105,7 @@ const structToCppJsonVals = (struct: string|undefined, valueName: string, struct
         const valInfo = (/(.+?)(?=(\S.|\S)+$)((\S|\S+,\s|(\S|\S+,\s))+$)/g).exec(val.trim());
         const type = valInfo?.[1].replace(/\s|\*/g, '');
         const name = valInfo?.[3];
+        const isPtrType = valInfo?.[1]?.includes('*') && !valInfo?.[1]?.includes('const char');
         // const keyName = type.toLowerCase() === 'universeid'
         //     ? 'universeId'
         //     : name;
@@ -113,11 +113,17 @@ const structToCppJsonVals = (struct: string|undefined, valueName: string, struct
         if (type.trim().startsWith(type.trim()[0].toUpperCase())) {
             const subStruct = structFromName(type, structs);
             if (subStruct) {
-                return `{"${keyName}", ${structToCppJsonVals(subStruct, `${valueName}.${name}`, structs)}}`;
+                return `{"${keyName}", ${structToCppJsonVals(
+                    subStruct,
+                    `${valueName}${isPtrType && valueName.includes('.') ? '->' : '.'}${name}`,
+                    structs,
+                    undefined,
+                    isPtrType
+                )}}`;
             }
         }
 
-        return `{"${keyName}", ${valueName}.${name}}`;
+        return `{"${keyName}", ${valueName}${lastWasPtr && valueName.includes('.') ? '->' : '.'}${name}}`;
     });
 };
 
