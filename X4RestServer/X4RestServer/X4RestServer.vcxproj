@@ -88,6 +88,7 @@
     <ClCompile Include="src/dllmain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="resource.h" />
     <ClInclude Include="src\httpserver\HttpServer.h" />
     <ClInclude Include="src\ffi\FFIInvoke.h" />
     <ClInclude Include="src\__generated__\ffi_funcs.h" />
@@ -98,9 +99,14 @@
     <ClInclude Include="src\__generated__\gen_http_funs.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\dbghelp.asm">
+    <MASM Include="src\dbghelp.asm">
       <FileType>Document</FileType>
-    </None>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="X4RestServer.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
