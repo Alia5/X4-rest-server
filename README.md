@@ -69,9 +69,17 @@ Use Visual Studio to [attach to](https://github.com/MicrosoftDocs/visualstudio-d
 
 ### Installation
 
-Inject the X4RestServer.dll with a Dll-Injector of your choice. (i.E. Cheat Engine)
+#### Release Builds:
 
-### Injecting with Cheat Engine
+Extract and copy the `dbghelp.dll` to the game directory (the same as the X4.exe)
+The http-server is available as soon as the game starts
+
+#### Debug Builds:
+
+1. Make sure you don't have any release build currently installed!
+2. Inject the X4RestServer.dll with a Dll-Injector of your choice. (i.E. Cheat Engine)
+
+##### Injecting with Cheat Engine
 
 1. Attach Cheat Engine to X4
 2. Add any address
@@ -79,7 +87,7 @@ Inject the X4RestServer.dll with a Dll-Injector of your choice. (i.E. Cheat Engi
 4. Tools -> Inject DLL (CTRL+I)
 5. Select X4RestServer.dll
 
-### Ejecting dll
+##### Ejecting dll
 
 `curl -X GET http://localhost:3000/stop`
 
@@ -100,7 +108,6 @@ Inject the X4RestServer.dll with a Dll-Injector of your choice. (i.E. Cheat Engi
 - Check if we can remain in our separete DLL-thread for all funcs
   - If not: Add a generic hook in RenderThread that works with Steam / GoG versions
 - Get out of POC stage
-- Improve installation
 - Add own DLL injector for debugging.
 - Create github.io page
 - CI
