@@ -12,6 +12,15 @@ The results are then sent out as json via an inbuilt http-server
 
 Due to the fact, that most code is generated, most endpoints use http-GET requests, even if changing values in the game. (We'll see how long that stays...)
 
+## Installation
+
+### Release Builds:
+
+Extract and copy the `dbghelp.dll` to the game directory (the same as the X4.exe)  
+The http-server is available as soon as the game starts
+
+Information on [Debug builds](#using-debug-builds)
+
 ## POC Stage
 
 This project is currently in POC stage.  
@@ -67,14 +76,7 @@ Use Visual Studio to [attach to](https://github.com/MicrosoftDocs/visualstudio-d
 
 **Note**: Clicking the stop button terminates the game Process. Use the `Debug` menu to detach before rebuilding.
 
-### Installation
-
-#### Release Builds:
-
-Extract and copy the `dbghelp.dll` to the game directory (the same as the X4.exe)
-The http-server is available as soon as the game starts
-
-#### Debug Builds:
+### Using **debug** Builds:
 
 1. Make sure you don't have any release build currently installed!
 2. Inject the X4RestServer.dll with a Dll-Injector of your choice. (i.E. Cheat Engine)
