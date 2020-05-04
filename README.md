@@ -6,27 +6,22 @@ The project should be primarily focused on data-out, **not** for interacting wit
 All without getting "modified"  
 We'll see how things shake out, however...
 
-It works by injecting a shared-library (.dll) into the game.  
-The .dll loads functions from the game, which are exposed via FFI, normally used for lua-scripts managing the game UI, and calling them directly.
+It works by loading a shared-library (.dll) into the game.  
+The .dll loads functions from the game, which are exposed via FFI, normally used for lua-scripts managing the game UI, and calls them directly.
 The results are then sent out as json via an inbuilt http-server
 
-Due to the fact, that most code is generated, most endpoints use http-GET requests, even if changing values in the game. (We'll see how long that stays...)
+Due to the fact, that most code is generated, almost all endpoints use http-GET requests, even if changing values in the game. (We'll see how long that stays...)
+
+## Available Functions / Data- Types and Structures
+
+DataTypes, DataStructures, and Functions are listed
+
+- in code: [\_\_generated__](X4RestServer/X4RestServer/src/__generated__)
+- in [Markdown](docs) with a bit of additional info.
 
 ## Installation
 
-### Release Builds:
-
-Extract and copy the `dbghelp.dll` to the game directory (the same as the X4.exe)  
-The http-server is available as soon as the game starts
-
-Information on [Debug builds](#using-debug-builds)
-
-## POC Stage
-
-This project is currently in POC stage.  
-If you don't want to contribute, come back in a few months!
-
-Stay tuned.
+See [Docs](docs)
 
 ## Contributors
 
@@ -58,17 +53,23 @@ Loads exposed functions, providing a basic http/Rest-Api to call them
 Requirements:
 
 - Visual Studio 2019 setup for C++, development
+  
+1. Open .sln file with Visual Studio
+2. Build and start FFIRipper project (Otherwise X4 rest Server cannot build)
+3. Build X4RestServer Project
+
+#### Generated code
+
+Requirements:
+
 - NodeJS (14.X) (recommended: use via [nvm](https://github.com/nvm-sh/nvm) or [nvm-windows](https://github.com/coreybutler/nvm-windows))
 - An unpacked version of X4:Foundations  
   - [official X4 unpacking tool](https://www.egosoft.com/download/x4/bonus_en.php?download=598)
-  
+
 1. Unpack X4
 2. `git clone --recursive git@github.com:Alia5/X4-rest-server.git`
 3. Copy `X4RestServer/script/FFIRipper/config/default.js` to `X4RestServer/script/FFIRipper/config/local.js`
 4. Update `uiPath`-value in `local.js` to point to your Unpacked X4s `ui`-subfolder;
-5. Open .sln file with Visual Studio
-6. Build and start FFIRipper project (Otherwise X4 rest Server cannot build)
-7. Build X4RestServer Project
 
 ### Debugging
 
@@ -76,12 +77,12 @@ Use Visual Studio to [attach to](https://github.com/MicrosoftDocs/visualstudio-d
 
 **Note**: Clicking the stop button terminates the game Process. Use the `Debug` menu to detach before rebuilding.
 
-### Using **debug** Builds:
+### Using **debug** Builds
 
 1. Make sure you don't have any release build currently installed!
 2. Inject the X4RestServer.dll with a Dll-Injector of your choice. (i.E. Cheat Engine)
 
-##### Injecting with Cheat Engine
+#### Injecting with Cheat Engine
 
 1. Attach Cheat Engine to X4
 2. Add any address
@@ -89,7 +90,7 @@ Use Visual Studio to [attach to](https://github.com/MicrosoftDocs/visualstudio-d
 4. Tools -> Inject DLL (CTRL+I)
 5. Select X4RestServer.dll
 
-##### Ejecting dll
+#### Ejecting dll
 
 `curl -X GET http://localhost:3000/stop`
 
@@ -115,6 +116,7 @@ Use Visual Studio to [attach to](https://github.com/MicrosoftDocs/visualstudio-d
 - CI
 - Linux support?
   - **Contributors wanted**
+    - I have limited to no idea on how to pull this off. Feel completely free!
 
 ## License
 
