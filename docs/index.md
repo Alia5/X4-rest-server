@@ -1,5 +1,3 @@
-# X4 Rest Server
-
 X4 Rest Server aims to provide an http/rest API for the game [X4: Foundations](https://www.egosoft.com/games/x4/info_en.php)
 
 The project should be primarily focused on data-out, **not** for interacting with the game from the far, or even cheating.  
