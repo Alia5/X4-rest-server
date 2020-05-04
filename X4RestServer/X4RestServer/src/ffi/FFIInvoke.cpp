@@ -1,6 +1,6 @@
 #include <string>
 #include "FFIInvoke.h"
-
+#ifdef _WIN32
 FFIInvoke::FFIInvoke(const HMODULE x4_module)
 {
 	x4_module_ = x4_module;
@@ -14,3 +14,4 @@ void FFIInvoke::loadFunction(LPCSTR name)
 	}
 	funcs_[name] = addr;
 }
+#endif

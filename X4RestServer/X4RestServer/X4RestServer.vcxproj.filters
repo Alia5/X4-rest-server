@@ -66,4 +66,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="src\dbghelp.asm">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>

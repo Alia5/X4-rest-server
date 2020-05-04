@@ -21,13 +21,14 @@ void HttpServer::run(int port)
 	initGenFuns(server, ffi_invoke_);
 	
 	// --
-	
+#ifdef _DEBUG
 	server.Get("/stop", [&](const httplib::Request& req, httplib::Response& res) {
 		std::thread([&]() {
 			server.stop();
 			}).detach();
 			res.set_content(json{{"ejected", true}}.dump(), "text/json");
 		});
+#endif
 	// somehow got bad request every other request without this o.O
 	std::thread([&]()
 	{
