@@ -34,6 +34,8 @@ DataTypes, DataStructures, and Functions are listed
   - [TypeAliases](type_aliases.md)
   - [DataStructures](available_structs.md)
   - [Functions](available_funcs.md)
+  
+[Missing Functions](missing_funcs.md)
 
 ### Requesting / Sending Data
 
