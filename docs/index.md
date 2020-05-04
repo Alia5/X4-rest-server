@@ -19,7 +19,7 @@ This project is currently in POC/Alpha stage.
 ### Release Builds
 
 [Download](https://github.com/Alia5/X4-rest-server/releases) and copy the `dbghelp.dll` to the game directory (the same as the X4.exe)  
-The http-server is available as soon as the game starts
+The http-server is available as soon as the game starts on port `3000`
 
 Information on [Debug builds](https://github.com/Alia5/X4-rest-server#using-debug-builds)
 
