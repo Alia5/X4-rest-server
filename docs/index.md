@@ -10,6 +10,8 @@ The results are then sent out as json via an inbuilt http-server
 
 Due to the fact, that most code is generated, almost all endpoints use http-GET requests, even if changing values in the game. (We'll see how long that stays...)
 
+It compiles on Windows **and Linux**
+
 ## POC/Alpha Stage
 
 This project is currently in POC/Alpha stage.
@@ -18,8 +20,20 @@ This project is currently in POC/Alpha stage.
 
 ### Release Builds
 
-[Download](https://github.com/Alia5/X4-rest-server/releases) and copy the `dbghelp.dll` to the game directory (the same as the X4.exe)  
+#### Windows
+
+[Download](https://github.com/Alia5/X4-rest-server/releases) and copy the `dbghelp.dll` to the game directory (the same as the X4.exe)   
 The http-server is available as soon as the game starts on port `3000`
+
+#### Linux
+
+(POC)
+
+[Build](https://github.com/Alia5/X4-rest-server#linux) the shared object.  
+Exit Steam(!)  
+`export LD_PRELOAD="${LD_PRELOAD}:/usr/lib/libpthread.so.0:PATH_TO_X4RestServer.so"`  
+`cd ~/.local/share/Steam/steamapps/common/X4\ Foundations/`  
+Run X4 Foundations `./X4`  
 
 Information on [Debug builds](https://github.com/Alia5/X4-rest-server#using-debug-builds)
 
