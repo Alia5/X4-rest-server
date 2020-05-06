@@ -11,9 +11,9 @@ using uint = unsigned int;
 #define Q(x) #x
 #define QUOTE(x) Q(x)
 
-#define invoke(FuncName, ...)   ffi_invoke.invokeFn<X4FFI::FuncName>(QUOTE(FuncName), __VA_ARGS__);
+#define invoke(FuncName, ...)   ffi_invoke.invokeFn<X4FFI::FuncName>(QUOTE(FuncName), ##__VA_ARGS__);
 
-#define PARAMS(...)     FFIInvoke& ffi_invoke, __VA_ARGS__
+#define PARAMS(...)     FFIInvoke& ffi_invoke, ##__VA_ARGS__
 
 // ---
 

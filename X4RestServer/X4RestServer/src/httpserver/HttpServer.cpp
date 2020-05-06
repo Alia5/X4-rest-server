@@ -9,7 +9,7 @@
 			Call.dump(), "text/json")
 
 #define PARAMS(...) \
-	ffi_invoke_, __VA_ARGS__
+	ffi_invoke_, ##__VA_ARGS__
 
 HttpServer::HttpServer(FFIInvoke& ffi_invoke) : ffi_invoke_(ffi_invoke)
 {

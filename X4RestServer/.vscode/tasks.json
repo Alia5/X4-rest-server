@@ -1,0 +1,54 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "type": "shell",
+        "label": "clang++ build active file",
+        "command": "clang++",
+        "args": [
+            "-shared", 
+            "-I../cpp-httplib/", "-I../json/include",
+            "-stdlib=libstdc++",
+            "-std=c++14",
+            "-fPIC",
+            "-Wall",
+            "${workspaceFolder}/X4RestServer/src/somain.cpp", "${workspaceFolder}/X4RestServer/src/ffi/FFIInvoke.cpp", "${workspaceFolder}/X4RestServer/src/httpserver/HttpServer.cpp",
+            "-o", "${workspaceFolder}/X4RestServer.so"
+        ],
+        "options": {
+        
+        },
+        "problemMatcher": ["$gcc"],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+      {
+        "type": "shell",
+        "label": "Kill Steam",
+        "command": "pkill steam",
+        "options": {
+
+        },
+        "problemMatcher": [
+
+        ]
+      },
+      {
+        "type": "shell",
+        "label": "Run X4 with Mod",
+        "command": "./X4",
+        "options": {
+            "cwd": "${env:HOME}/.local/share/Steam/steamapps/common/X4 Foundations",
+            "env": {
+                "LD_PRELOAD": "${LD_PRELOAD}:/usr/lib/libpthread.so.0:${workspaceFolder}/X4RestServer.so",
+                "DISPLAY": ":0.0"
+            }
+        },
+        "problemMatcher": [
+
+        ]
+      }
+    ]
+  }

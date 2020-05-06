@@ -9,7 +9,7 @@
 
 #define SET_CONTENT(Call) 	res.set_content( 			Call.dump(), "text/json")
 
-#define PARAMS(...) 	ffi_invoke, __VA_ARGS__
+#define PARAMS(...) 	ffi_invoke, ##__VA_ARGS__
 
 #define HAN_FN 	[&](const httplib::Request& req, httplib::Response& res)
 

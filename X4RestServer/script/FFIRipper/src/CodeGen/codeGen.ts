@@ -41,10 +41,10 @@ using uint = unsigned int;
 #define QUOTE(x) Q(x)
 
 #define invoke(FuncName, ...) \
-  ffi_invoke.invokeFn<X4FFI::FuncName>(QUOTE(FuncName), __VA_ARGS__);
+  ffi_invoke.invokeFn<X4FFI::FuncName>(QUOTE(FuncName), ##__VA_ARGS__);
 
 #define PARAMS(...) \
-    FFIInvoke& ffi_invoke, __VA_ARGS__
+    FFIInvoke& ffi_invoke, ##__VA_ARGS__
 
 // ---
 
@@ -69,7 +69,7 @@ const HTTP_SERVER_FUNS =
 			Call.dump(), "text/json")
 
 #define PARAMS(...) \
-	ffi_invoke, __VA_ARGS__
+	ffi_invoke, ##__VA_ARGS__
 
 #define HAN_FN \
 	[&](const httplib::Request& req, httplib::Response& res)
