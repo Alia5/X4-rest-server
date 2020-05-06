@@ -6,11 +6,13 @@ The project should be primarily focused on data-out, **not** for interacting wit
 All without getting "modified"  
 We'll see how things shake out, however...
 
-It works by loading a shared-library (.dll) into the game.  
-The .dll loads functions from the game, which are exposed via FFI, normally used for lua-scripts managing the game UI, and calls them directly.
+It works by loading a shared-library (.dll/.so) into the game.  
+The .dll/.so loads functions from the game, which are exposed via FFI, normally used for lua-scripts managing the game UI, and calls them directly.
 The results are then sent out as json via an inbuilt http-server
 
 Due to the fact, that most code is generated, almost all endpoints use http-GET requests, even if changing values in the game. (We'll see how long that stays...)
+
+It compiles on Windows **and Linux**
 
 ## Available Functions / Data- Types and Structures
 
@@ -50,13 +52,24 @@ Loads exposed functions, providing a basic http/Rest-Api to call them
 
 ### Building
 
+#### Windows
+
 Requirements:
 
 - Visual Studio 2019 setup for C++, development
   
 1. Open .sln file with Visual Studio
-2. Build and start FFIRipper project (Otherwise X4 rest Server cannot build)
-3. Build X4RestServer Project
+2. Build X4RestServer Project
+
+#### Linux
+
+Requirements:
+
+- Visual Studio Code
+- clang++
+  
+1. Open x4restserver.code-workspace file with Visual Studio Code
+2. Run Build Task
 
 #### Generated code
 
@@ -71,7 +84,7 @@ Requirements:
 3. Copy `X4RestServer/script/FFIRipper/config/default.js` to `X4RestServer/script/FFIRipper/config/local.js`
 4. Update `uiPath`-value in `local.js` to point to your Unpacked X4s `ui`-subfolder;
 
-### Debugging
+### Debugging (Windows)
 
 Use Visual Studio to [attach to](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/debugger/attach-to-running-processes-with-the-visual-studio-debugger.md#-attach-to-a-running-process-on-your-local-machine) X4.exe
 
@@ -90,7 +103,7 @@ Use Visual Studio to [attach to](https://github.com/MicrosoftDocs/visualstudio-d
 4. Tools -> Inject DLL (CTRL+I)
 5. Select X4RestServer.dll
 
-#### Ejecting dll
+#### Ejecting dll (Windows only)
 
 `curl -X GET http://localhost:3000/stop`
 
@@ -112,11 +125,10 @@ Use Visual Studio to [attach to](https://github.com/MicrosoftDocs/visualstudio-d
   - If not: Add a generic hook in RenderThread that works with Steam / GoG versions
 - Get out of POC stage
 - Add own DLL injector for debugging.
-- Create github.io page
 - CI
-- Linux support?
+- Linux support! POC is available
   - **Contributors wanted**
-    - I have limited to no idea on how to pull this off. Feel completely free!
+    
 
 ## License
 
