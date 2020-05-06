@@ -71,6 +71,8 @@ Requirements:
 1. Open x4restserver.code-workspace file with Visual Studio Code
 2. Run Build Task
 
+Alt: `clang++ -shared X4RestServer/src/somain.cpp X4RestServer/src/ffi/FFIInvoke.cpp X4RestServer/src/httpserver/HttpServer.cpp -o X4RestServer.so -I../cpp-httplib/ -I../json/include -stdlib=libstdc++ -std=c++14 -fPIC` 
+
 #### Generated code
 
 Requirements:
