@@ -35,6 +35,8 @@ Exit Steam(!)
 `cd ~/.local/share/Steam/steamapps/common/X4\ Foundations/`  
 Run X4 Foundations `./X4`  
 
+#### Windows/Linux
+
 Information on [Debug builds](https://github.com/Alia5/X4-rest-server#using-debug-builds)
 
 ## Available Functions / Data- Types and Structures
