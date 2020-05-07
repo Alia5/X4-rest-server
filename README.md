@@ -1,5 +1,9 @@
 # X4 Rest Server
 
+[![Build status](https://ci.appveyor.com/api/projects/status/qxc7386fl3c5fn8w/branch/master?svg=true)](https://ci.appveyor.com/project/Alia5/x4-rest-server/branch/master) 
+![GitHub All Releases](https://github.com/Alia5/X4-rest-server/releases)  
+
+
 X4 Rest Server aims to provide an http/rest API for the game [X4: Foundations](https://www.egosoft.com/games/x4/info_en.php)
 
 The project should be primarily focused on data-out, **not** for interacting with the game from the far, or even cheating.  
