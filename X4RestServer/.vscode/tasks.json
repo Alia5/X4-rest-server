@@ -12,7 +12,9 @@
             "-std=c++14",
             "-fPIC",
             "-Wall",
-            "${workspaceFolder}/X4RestServer/src/somain.cpp", "${workspaceFolder}/X4RestServer/src/ffi/FFIInvoke.cpp", "${workspaceFolder}/X4RestServer/src/httpserver/HttpServer.cpp",
+            "${workspaceFolder}/X4RestServer/src/somain.cpp",
+            "${workspaceFolder}/X4RestServer/src/ffi/FFIInvoke.cpp",
+             "${workspaceFolder}/X4RestServer/src/httpserver/HttpServer.cpp",
             "-o", "${workspaceFolder}/X4RestServer.so"
         ],
         "options": {
