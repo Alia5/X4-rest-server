@@ -29,5 +29,5 @@ for:
     - sh: >-
         cd X4RestServer/script/FFIRipper;
         npm run build;
-        cd ../../X4RestServer;
+        cd ../..;
         make default;
