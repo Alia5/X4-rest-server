@@ -129,7 +129,8 @@ Use Visual Studio to [attach to](https://github.com/MicrosoftDocs/visualstudio-d
   - If not: Add a generic hook in RenderThread that works with Steam / GoG versions
 - Get out of POC stage
 - Add own DLL injector for debugging.
-- CI
+- Improve CI  
+  - **Contributors wanted** (I really don't have time to learn this shit)
 - Linux support! POC is available
   - **Contributors wanted**
     
