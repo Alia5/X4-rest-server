@@ -7,8 +7,8 @@
     "name": "Peter Repukat"
   },
   "scripts": {
-    "eslint": "eslint src/**",
-    "eslint-fix": "eslint src/** --fix",
+    "eslint": "eslint ./src --ext=ts --ext=js",
+    "eslint-fix": "eslint ./src --ext=ts --ext=js --fix",
     "build": "npm run eslint && tsc --build",
     "clean": "tsc --build --clean",
     "start": "npm run build && node dist/index.js"

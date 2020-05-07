@@ -1,0 +1,33 @@
+version: 0.1.1.{build}
+pull_requests:
+  do_not_increment_build_number: true
+image:
+- Visual Studio 2019
+- Ubuntu1804
+configuration:
+- Release
+platform: x64
+skip_commits:
+  files:
+    - docs/*
+  message: /(.+?)\.(png|jpg|jpeg|bmp|gif|md)/      # Regex for matching commit message
+install:
+  - git submodule -q update --init --recursive
+  - cd X4RestServer/script/FFIRipper
+  - npm install
+  - cd ../../..
+build:
+  project: X4RestServer/X4RestServer.sln
+  verbosity: minimal
+
+for:
+-
+  matrix:
+    only:
+      - image: Ubuntu1804
+  build_script:
+    - sh: >-
+        cd X4RestServer/script/FFIRipper;
+        npm run build;
+        cd ../../X4RestServer;
+        make default;

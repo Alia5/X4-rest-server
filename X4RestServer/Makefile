@@ -7,7 +7,7 @@ FILES=X4RestServer/src/somain.cpp X4RestServer/src/ffi/FFIInvoke.cpp X4RestServe
 
 OUTFILE=X4RestServer.so
 
-make:
+default:
 	$(CC) $(CFLAGS) $(FILES) -o $(OUTFILE)
 
 clean:
