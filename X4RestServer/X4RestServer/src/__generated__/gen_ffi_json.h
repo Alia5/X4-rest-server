@@ -24,856 +24,856 @@ namespace ffijson
 
     json GetCrosshairArrowDetails(PARAMS(int posid,float radius))
     {
-        const auto func_res_1 = invoke(GetCrosshairArrowDetails, posid, radius);
+        const auto callResult = invoke(GetCrosshairArrowDetails, posid, radius);
         return json
         {
-            {"angle", func_res_1.angle},
-            {"inside", func_res_1.inside},
-            {"valid", func_res_1.valid}
+            {"angle", callResult.angle},
+            {"inside", callResult.inside},
+            {"valid", callResult.valid}
         };
     }
  
     json GetAutosaveIntervalOption(PARAMS())
     {
-        const auto func_res_1 = invoke(GetAutosaveIntervalOption);
+        const auto callResult = invoke(GetAutosaveIntervalOption);
         return json
         {
-            {"mintime", func_res_1.mintime},
-            {"maxtime", func_res_1.maxtime},
-            {"factor", func_res_1.factor}
+            {"mintime", callResult.mintime},
+            {"maxtime", callResult.maxtime},
+            {"factor", callResult.factor}
         };
     }
  
     json GetBlacklistInfoCounts(PARAMS(BlacklistID id))
     {
-        const auto func_res_1 = invoke(GetBlacklistInfoCounts, id);
+        const auto callResult = invoke(GetBlacklistInfoCounts, id);
         return json
         {
-            {"nummacros", func_res_1.nummacros},
-            {"numfactions", func_res_1.numfactions}
+            {"nummacros", callResult.nummacros},
+            {"numfactions", callResult.numfactions}
         };
     }
  
     json GetControllableBlacklistID(PARAMS(UniverseID controllableid,const char* listtype,const char* defaultgroup))
     {
-        const auto func_res_1 = invoke(GetControllableBlacklistID, controllableid, listtype, defaultgroup);
+        const auto callResult = invoke(GetControllableBlacklistID, controllableid, listtype, defaultgroup);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetBoardingRiskThresholds(PARAMS(UniverseID defensibletargetid,const char* boarderfactionid))
     {
-        const auto func_res_1 = invoke(GetBoardingRiskThresholds, defensibletargetid, boarderfactionid);
+        const auto callResult = invoke(GetBoardingRiskThresholds, defensibletargetid, boarderfactionid);
         return json
         {
-            {"approach", func_res_1.approach},
-            {"insertion", func_res_1.insertion}
+            {"approach", callResult.approach},
+            {"insertion", callResult.insertion}
         };
     }
  
     json GetBuildTaskInfo(PARAMS(BuildTaskID id))
     {
-        const auto func_res_1 = invoke(GetBuildTaskInfo, id);
+        const auto callResult = invoke(GetBuildTaskInfo, id);
         return json
         {
-            {"id", func_res_1.id},
-            {"buildingcontainer", func_res_1.buildingcontainer},
-            {"component", func_res_1.component},
-            {"macro", func_res_1.macro},
-            {"factionid", func_res_1.factionid},
-            {"buildercomponent", func_res_1.buildercomponent},
-            {"price", func_res_1.price},
-            {"ismissingresources", func_res_1.ismissingresources},
-            {"queueposition", func_res_1.queueposition}
+            {"id", callResult.id},
+            {"buildingcontainer", callResult.buildingcontainer},
+            {"component", callResult.component},
+            {"macro", callResult.macro},
+            {"factionid", callResult.factionid},
+            {"buildercomponent", callResult.buildercomponent},
+            {"price", callResult.price},
+            {"ismissingresources", callResult.ismissingresources},
+            {"queueposition", callResult.queueposition}
         };
     }
  
     json GetComponentDetails(PARAMS(const UniverseID componentid,const char*const connectionname))
     {
-        const auto func_res_1 = invoke(GetComponentDetails, componentid, connectionname);
+        const auto callResult = invoke(GetComponentDetails, componentid, connectionname);
         return json
         {
-            {"name", func_res_1.name},
-            {"hull", func_res_1.hull},
-            {"shield", func_res_1.shield},
-            {"speed", func_res_1.speed},
-            {"hasShield", func_res_1.hasShield}
+            {"name", callResult.name},
+            {"hull", callResult.hull},
+            {"shield", callResult.shield},
+            {"speed", callResult.speed},
+            {"hasShield", callResult.hasShield}
         };
     }
  
     json GetCenteredMousePos(PARAMS())
     {
-        const auto func_res_1 = invoke(GetCenteredMousePos);
+        const auto callResult = invoke(GetCenteredMousePos);
         return json
         {
-            {"x", func_res_1.x},
-            {"y", func_res_1.y}
+            {"x", callResult.x},
+            {"y", callResult.y}
         };
     }
  
     json GetWidgetSystemSizeOverride(PARAMS())
     {
-        const auto func_res_1 = invoke(GetWidgetSystemSizeOverride);
+        const auto callResult = invoke(GetWidgetSystemSizeOverride);
         return json
         {
-            {"x", func_res_1.x},
-            {"y", func_res_1.y}
+            {"x", callResult.x},
+            {"y", callResult.y}
         };
     }
  
     json GetBuildPlotCenterOffset(PARAMS(UniverseID stationid))
     {
-        const auto func_res_1 = invoke(GetBuildPlotCenterOffset, stationid);
+        const auto callResult = invoke(GetBuildPlotCenterOffset, stationid);
         return json
         {
-            {"x", func_res_1.x},
-            {"y", func_res_1.y},
-            {"z", func_res_1.z}
+            {"x", callResult.x},
+            {"y", callResult.y},
+            {"z", callResult.z}
         };
     }
  
     json GetBuildPlotSize(PARAMS(UniverseID stationid))
     {
-        const auto func_res_1 = invoke(GetBuildPlotSize, stationid);
+        const auto callResult = invoke(GetBuildPlotSize, stationid);
         return json
         {
-            {"x", func_res_1.x},
-            {"y", func_res_1.y},
-            {"z", func_res_1.z}
+            {"x", callResult.x},
+            {"y", callResult.y},
+            {"z", callResult.z}
         };
     }
  
     json GetMinimumBuildPlotCenterOffset(PARAMS(UniverseID stationid))
     {
-        const auto func_res_1 = invoke(GetMinimumBuildPlotCenterOffset, stationid);
+        const auto callResult = invoke(GetMinimumBuildPlotCenterOffset, stationid);
         return json
         {
-            {"x", func_res_1.x},
-            {"y", func_res_1.y},
-            {"z", func_res_1.z}
+            {"x", callResult.x},
+            {"y", callResult.y},
+            {"z", callResult.z}
         };
     }
  
     json GetMinimumBuildPlotSize(PARAMS(UniverseID stationid))
     {
-        const auto func_res_1 = invoke(GetMinimumBuildPlotSize, stationid);
+        const auto callResult = invoke(GetMinimumBuildPlotSize, stationid);
         return json
         {
-            {"x", func_res_1.x},
-            {"y", func_res_1.y},
-            {"z", func_res_1.z}
+            {"x", callResult.x},
+            {"y", callResult.y},
+            {"z", callResult.z}
         };
     }
  
     json GetPaidBuildPlotCenterOffset(PARAMS(UniverseID stationid))
     {
-        const auto func_res_1 = invoke(GetPaidBuildPlotCenterOffset, stationid);
+        const auto callResult = invoke(GetPaidBuildPlotCenterOffset, stationid);
         return json
         {
-            {"x", func_res_1.x},
-            {"y", func_res_1.y},
-            {"z", func_res_1.z}
+            {"x", callResult.x},
+            {"y", callResult.y},
+            {"z", callResult.z}
         };
     }
  
     json GetPaidBuildPlotSize(PARAMS(UniverseID stationid))
     {
-        const auto func_res_1 = invoke(GetPaidBuildPlotSize, stationid);
+        const auto callResult = invoke(GetPaidBuildPlotSize, stationid);
         return json
         {
-            {"x", func_res_1.x},
-            {"y", func_res_1.y},
-            {"z", func_res_1.z}
+            {"x", callResult.x},
+            {"y", callResult.y},
+            {"z", callResult.z}
         };
     }
  
     json GetNumBuildTaskCrewTransferInfo(PARAMS(UniverseID containerid,BuildTaskID id))
     {
-        const auto func_res_1 = invoke(GetNumBuildTaskCrewTransferInfo, containerid, id);
+        const auto callResult = invoke(GetNumBuildTaskCrewTransferInfo, containerid, id);
         return json
         {
-            {"numremoved", func_res_1.numremoved},
-            {"numadded", func_res_1.numadded},
-            {"numtransferred", func_res_1.numtransferred}
+            {"numremoved", callResult.numremoved},
+            {"numadded", callResult.numadded},
+            {"numtransferred", callResult.numtransferred}
         };
     }
  
     json GetCurrentCrosshairMessage(PARAMS())
     {
-        const auto func_res_1 = invoke(GetCurrentCrosshairMessage);
+        const auto callResult = invoke(GetCurrentCrosshairMessage);
         return json
         {
-            {"messageID", func_res_1.messageID},
-            {"obstructed", func_res_1.obstructed}
+            {"messageID", callResult.messageID},
+            {"obstructed", callResult.obstructed}
         };
     }
  
     json GetCurrentCursorInfo(PARAMS())
     {
-        const auto func_res_1 = invoke(GetCurrentCursorInfo);
+        const auto callResult = invoke(GetCurrentCursorInfo);
         return json
         {
-            {"width", func_res_1.width},
-            {"height", func_res_1.height},
-            {"xHotspot", func_res_1.xHotspot},
-            {"yHotspot", func_res_1.yHotspot}
+            {"width", callResult.width},
+            {"height", callResult.height},
+            {"xHotspot", callResult.xHotspot},
+            {"yHotspot", callResult.yHotspot}
         };
     }
  
     json GetCustomGameStartBlueprintPropertyState(PARAMS(const char* id,const char* propertyid))
     {
-        const auto func_res_1 = invoke(GetCustomGameStartBlueprintPropertyState, id, propertyid);
+        const auto callResult = invoke(GetCustomGameStartBlueprintPropertyState, id, propertyid);
         return json
         {
-            {"state", func_res_1.state},
-            {"numvalues", func_res_1.numvalues},
-            {"numdefaultvalues", func_res_1.numdefaultvalues}
+            {"state", callResult.state},
+            {"numvalues", callResult.numvalues},
+            {"numdefaultvalues", callResult.numdefaultvalues}
         };
     }
  
     json GetCustomGameStartEncyclopediaPropertyState(PARAMS(const char* id,const char* propertyid))
     {
-        const auto func_res_1 = invoke(GetCustomGameStartEncyclopediaPropertyState, id, propertyid);
+        const auto callResult = invoke(GetCustomGameStartEncyclopediaPropertyState, id, propertyid);
         return json
         {
-            {"state", func_res_1.state}
+            {"state", callResult.state}
         };
     }
  
     json GetCustomGameStartInventoryPropertyState(PARAMS(const char* id,const char* propertyid))
     {
-        const auto func_res_1 = invoke(GetCustomGameStartInventoryPropertyState, id, propertyid);
+        const auto callResult = invoke(GetCustomGameStartInventoryPropertyState, id, propertyid);
         return json
         {
-            {"state", func_res_1.state},
-            {"numvalues", func_res_1.numvalues},
-            {"numdefaultvalues", func_res_1.numdefaultvalues}
+            {"state", callResult.state},
+            {"numvalues", callResult.numvalues},
+            {"numdefaultvalues", callResult.numdefaultvalues}
         };
     }
  
     json GetCustomGameStartLoadoutPropertyState(PARAMS(const char* id,const char* propertyid))
     {
-        const auto func_res_1 = invoke(GetCustomGameStartLoadoutPropertyState, id, propertyid);
+        const auto callResult = invoke(GetCustomGameStartLoadoutPropertyState, id, propertyid);
         return json
         {
-            {"state", func_res_1.state}
+            {"state", callResult.state}
         };
     }
  
     json GetCustomGameStartRelationsPropertyState(PARAMS(const char* id,const char* propertyid))
     {
-        const auto func_res_1 = invoke(GetCustomGameStartRelationsPropertyState, id, propertyid);
+        const auto callResult = invoke(GetCustomGameStartRelationsPropertyState, id, propertyid);
         return json
         {
-            {"state", func_res_1.state}
+            {"state", callResult.state}
         };
     }
  
     json GetCustomGameStartResearchPropertyState(PARAMS(const char* id,const char* propertyid))
     {
-        const auto func_res_1 = invoke(GetCustomGameStartResearchPropertyState, id, propertyid);
+        const auto callResult = invoke(GetCustomGameStartResearchPropertyState, id, propertyid);
         return json
         {
-            {"state", func_res_1.state}
+            {"state", callResult.state}
         };
     }
  
     json GetDroneDetails(PARAMS(const uint32_t dronetype))
     {
-        const auto func_res_1 = invoke(GetDroneDetails, dronetype);
+        const auto callResult = invoke(GetDroneDetails, dronetype);
         return json
         {
-            {"armed", func_res_1.armed},
-            {"blocked", func_res_1.blocked},
-            {"modeIcon", func_res_1.modeIcon},
-            {"pending", func_res_1.pending},
-            {"possible", func_res_1.possible},
-            {"total", func_res_1.total},
-            {"undocked", func_res_1.undocked}
+            {"armed", callResult.armed},
+            {"blocked", callResult.blocked},
+            {"modeIcon", callResult.modeIcon},
+            {"pending", callResult.pending},
+            {"possible", callResult.possible},
+            {"total", callResult.total},
+            {"undocked", callResult.undocked}
         };
     }
  
     json GetEquipmentModInfo(PARAMS(const char* wareid))
     {
-        const auto func_res_1 = invoke(GetEquipmentModInfo, wareid);
+        const auto callResult = invoke(GetEquipmentModInfo, wareid);
         return json
         {
-            {"PropertyType", func_res_1.PropertyType},
-            {"MinValueFloat", func_res_1.MinValueFloat},
-            {"MaxValueFloat", func_res_1.MaxValueFloat},
-            {"MinValueUINT", func_res_1.MinValueUINT},
-            {"MaxValueUINT", func_res_1.MaxValueUINT},
-            {"BonusMax", func_res_1.BonusMax},
-            {"BonusChance", func_res_1.BonusChance}
+            {"PropertyType", callResult.PropertyType},
+            {"MinValueFloat", callResult.MinValueFloat},
+            {"MaxValueFloat", callResult.MaxValueFloat},
+            {"MinValueUINT", callResult.MinValueUINT},
+            {"MaxValueUINT", callResult.MaxValueUINT},
+            {"BonusMax", callResult.BonusMax},
+            {"BonusChance", callResult.BonusChance}
         };
     }
  
     json GetFPS(PARAMS())
     {
-        const auto func_res_1 = invoke(GetFPS);
+        const auto callResult = invoke(GetFPS);
         return json
         {
-            {"fps", func_res_1.fps},
-            {"moveTime", func_res_1.moveTime},
-            {"renderTime", func_res_1.renderTime},
-            {"gpuTime", func_res_1.gpuTime}
+            {"fps", callResult.fps},
+            {"moveTime", callResult.moveTime},
+            {"renderTime", callResult.renderTime},
+            {"gpuTime", callResult.gpuTime}
         };
     }
  
     json GetFactionDetails(PARAMS(const char* factionid))
     {
-        const auto func_res_1 = invoke(GetFactionDetails, factionid);
+        const auto callResult = invoke(GetFactionDetails, factionid);
         return json
         {
-            {"factionID", func_res_1.factionID},
-            {"factionName", func_res_1.factionName},
-            {"factionIcon", func_res_1.factionIcon}
+            {"factionID", callResult.factionID},
+            {"factionName", callResult.factionName},
+            {"factionIcon", callResult.factionIcon}
         };
     }
  
     json GetOwnerDetails(PARAMS(UniverseID componentid))
     {
-        const auto func_res_1 = invoke(GetOwnerDetails, componentid);
+        const auto callResult = invoke(GetOwnerDetails, componentid);
         return json
         {
-            {"factionID", func_res_1.factionID},
-            {"factionName", func_res_1.factionName},
-            {"factionIcon", func_res_1.factionIcon}
+            {"factionID", callResult.factionID},
+            {"factionName", callResult.factionName},
+            {"factionIcon", callResult.factionIcon}
         };
     }
  
     json GetGameVersion(PARAMS())
     {
-        const auto func_res_1 = invoke(GetGameVersion);
+        const auto callResult = invoke(GetGameVersion);
         return json
         {
-            {"major", func_res_1.major},
-            {"minor", func_res_1.minor}
+            {"major", callResult.major},
+            {"minor", callResult.minor}
         };
     }
  
     json GetMissionOfferIcons(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(GetMissionOfferIcons, componentid);
+        const auto callResult = invoke(GetMissionOfferIcons, componentid);
         return json
         {
-            {"active", func_res_1.active},
-            {"inactive", func_res_1.inactive},
-            {"select", func_res_1.select}
+            {"active", callResult.active},
+            {"inactive", callResult.inactive},
+            {"select", callResult.select}
         };
     }
  
     json GetLastAttackInfo(PARAMS(UniverseID destructibleid))
     {
-        const auto func_res_1 = invoke(GetLastAttackInfo, destructibleid);
+        const auto callResult = invoke(GetLastAttackInfo, destructibleid);
         return json
         {
-            {"attacker", func_res_1.attacker},
-            {"time", func_res_1.time},
-            {"method", func_res_1.method}
+            {"attacker", callResult.attacker},
+            {"time", callResult.time},
+            {"method", callResult.method}
         };
     }
  
     json GetMessageDetails2(PARAMS(uint32_t messageid))
     {
-        const auto func_res_1 = invoke(GetMessageDetails2, messageid);
+        const auto callResult = invoke(GetMessageDetails2, messageid);
         return json
         {
-            {"poiID", func_res_1.poiID},
-            {"componentID", func_res_1.componentID},
-            {"messageType", func_res_1.messageType},
-            {"connectionName", func_res_1.connectionName},
-            {"isAssociative", func_res_1.isAssociative},
-            {"isMissionTarget", func_res_1.isMissionTarget},
-            {"isPriorityMissionTarget", func_res_1.isPriorityMissionTarget},
-            {"showIndicator", func_res_1.showIndicator}
+            {"poiID", callResult.poiID},
+            {"componentID", callResult.componentID},
+            {"messageType", callResult.messageType},
+            {"connectionName", callResult.connectionName},
+            {"isAssociative", callResult.isAssociative},
+            {"isMissionTarget", callResult.isMissionTarget},
+            {"isPriorityMissionTarget", callResult.isPriorityMissionTarget},
+            {"showIndicator", callResult.showIndicator}
         };
     }
  
     json GetMissionBriefingIcon(PARAMS(MissionID missionid))
     {
-        const auto func_res_1 = invoke(GetMissionBriefingIcon, missionid);
+        const auto callResult = invoke(GetMissionBriefingIcon, missionid);
         return json
         {
-            {"icon", func_res_1.icon},
-            {"caption", func_res_1.caption}
+            {"icon", callResult.icon},
+            {"caption", callResult.caption}
         };
     }
  
     json GetMissionIDDetails(PARAMS(uint64_t missionid))
     {
-        const auto func_res_1 = invoke(GetMissionIDDetails, missionid);
+        const auto callResult = invoke(GetMissionIDDetails, missionid);
         return json
         {
-            {"missionName", func_res_1.missionName},
-            {"missionDescription", func_res_1.missionDescription},
-            {"difficulty", func_res_1.difficulty},
-            {"upkeepalertlevel", func_res_1.upkeepalertlevel},
-            {"threadType", func_res_1.threadType},
-            {"mainType", func_res_1.mainType},
-            {"subType", func_res_1.subType},
-            {"subTypeName", func_res_1.subTypeName},
-            {"faction", func_res_1.faction},
-            {"reward", func_res_1.reward},
-            {"rewardText", func_res_1.rewardText},
-            {"numBriefingObjectives", func_res_1.numBriefingObjectives},
-            {"activeBriefingStep", func_res_1.activeBriefingStep},
-            {"opposingFaction", func_res_1.opposingFaction},
-            {"license", func_res_1.license},
-            {"timeLeft", func_res_1.timeLeft},
-            {"duration", func_res_1.duration},
-            {"abortable", func_res_1.abortable},
-            {"hasObjective", func_res_1.hasObjective},
-            {"associatedComponent", func_res_1.associatedComponent},
-            {"threadMissionID", func_res_1.threadMissionID}
+            {"missionName", callResult.missionName},
+            {"missionDescription", callResult.missionDescription},
+            {"difficulty", callResult.difficulty},
+            {"upkeepalertlevel", callResult.upkeepalertlevel},
+            {"threadType", callResult.threadType},
+            {"mainType", callResult.mainType},
+            {"subType", callResult.subType},
+            {"subTypeName", callResult.subTypeName},
+            {"faction", callResult.faction},
+            {"reward", callResult.reward},
+            {"rewardText", callResult.rewardText},
+            {"numBriefingObjectives", callResult.numBriefingObjectives},
+            {"activeBriefingStep", callResult.activeBriefingStep},
+            {"opposingFaction", callResult.opposingFaction},
+            {"license", callResult.license},
+            {"timeLeft", callResult.timeLeft},
+            {"duration", callResult.duration},
+            {"abortable", callResult.abortable},
+            {"hasObjective", callResult.hasObjective},
+            {"associatedComponent", callResult.associatedComponent},
+            {"threadMissionID", callResult.threadMissionID}
         };
     }
  
     json GetMissionGroupDetails(PARAMS(MissionID missionid))
     {
-        const auto func_res_1 = invoke(GetMissionGroupDetails, missionid);
+        const auto callResult = invoke(GetMissionGroupDetails, missionid);
         return json
         {
-            {"id", func_res_1.id},
-            {"name", func_res_1.name}
+            {"id", callResult.id},
+            {"name", callResult.name}
         };
     }
  
     json GetPickedMapMission(PARAMS(UniverseID holomapid))
     {
-        const auto func_res_1 = invoke(GetPickedMapMission, holomapid);
+        const auto callResult = invoke(GetPickedMapMission, holomapid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetMissionInfo2(PARAMS())
     {
-        const auto func_res_1 = invoke(GetMissionInfo2);
+        const auto callResult = invoke(GetMissionInfo2);
         return json
         {
-            {"active", func_res_1.active},
-            {"callbackMode", func_res_1.callbackMode},
-            {"barLine", func_res_1.barLine},
-            {"barPercent", func_res_1.barPercent},
-            {"line1Left", func_res_1.line1Left},
-            {"line1Right", func_res_1.line1Right},
-            {"line2Left", func_res_1.line2Left},
-            {"line2Right", func_res_1.line2Right},
-            {"line3Left", func_res_1.line3Left},
-            {"line3Right", func_res_1.line3Right},
-            {"line4Left", func_res_1.line4Left},
-            {"line4Right", func_res_1.line4Right},
-            {"missionBarText", func_res_1.missionBarText}
+            {"active", callResult.active},
+            {"callbackMode", callResult.callbackMode},
+            {"barLine", callResult.barLine},
+            {"barPercent", callResult.barPercent},
+            {"line1Left", callResult.line1Left},
+            {"line1Right", callResult.line1Right},
+            {"line2Left", callResult.line2Left},
+            {"line2Right", callResult.line2Right},
+            {"line3Left", callResult.line3Left},
+            {"line3Right", callResult.line3Right},
+            {"line4Left", callResult.line4Left},
+            {"line4Right", callResult.line4Right},
+            {"missionBarText", callResult.missionBarText}
         };
     }
  
     json GetMissionIDObjective(PARAMS(uint64_t missionid))
     {
-        const auto func_res_1 = invoke(GetMissionIDObjective, missionid);
+        const auto callResult = invoke(GetMissionIDObjective, missionid);
         return json
         {
-            {"objectiveText", func_res_1.objectiveText},
-            {"timeout", func_res_1.timeout},
-            {"numTargets", func_res_1.numTargets}
+            {"objectiveText", callResult.objectiveText},
+            {"timeout", callResult.timeout},
+            {"numTargets", callResult.numTargets}
         };
     }
  
     json GetMissionObjectiveStep2(PARAMS(uint64_t missionid,size_t objectiveIndex))
     {
-        const auto func_res_1 = invoke(GetMissionObjectiveStep2, missionid, objectiveIndex);
+        const auto callResult = invoke(GetMissionObjectiveStep2, missionid, objectiveIndex);
         return json
         {
-            {"text", func_res_1.text},
-            {"step", func_res_1.step},
-            {"failed", func_res_1.failed}
+            {"text", callResult.text},
+            {"step", callResult.step},
+            {"failed", callResult.failed}
         };
     }
  
     json GetPOIDetails(PARAMS(const uint64_t poiid))
     {
-        const auto func_res_1 = invoke(GetPOIDetails, poiid);
+        const auto callResult = invoke(GetPOIDetails, poiid);
         return json
         {
-            {"POIName", func_res_1.POIName},
-            {"POIType", func_res_1.POIType}
+            {"POIName", callResult.POIName},
+            {"POIType", callResult.POIType}
         };
     }
  
     json GetRelativeAimOffset(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(GetRelativeAimOffset, componentid);
+        const auto callResult = invoke(GetRelativeAimOffset, componentid);
         return json
         {
-            {"x", func_res_1.x},
-            {"y", func_res_1.y},
-            {"z", func_res_1.z},
-            {"yaw", func_res_1.yaw},
-            {"pitch", func_res_1.pitch},
-            {"roll", func_res_1.roll}
+            {"x", callResult.x},
+            {"y", callResult.y},
+            {"z", callResult.z},
+            {"yaw", callResult.yaw},
+            {"pitch", callResult.pitch},
+            {"roll", callResult.roll}
         };
     }
  
     json GetTargetElementOffset(PARAMS(const int posid))
     {
-        const auto func_res_1 = invoke(GetTargetElementOffset, posid);
+        const auto callResult = invoke(GetTargetElementOffset, posid);
         return json
         {
-            {"x", func_res_1.x},
-            {"y", func_res_1.y},
-            {"z", func_res_1.z},
-            {"yaw", func_res_1.yaw},
-            {"pitch", func_res_1.pitch},
-            {"roll", func_res_1.roll}
+            {"x", callResult.x},
+            {"y", callResult.y},
+            {"z", callResult.z},
+            {"yaw", callResult.yaw},
+            {"pitch", callResult.pitch},
+            {"roll", callResult.roll}
         };
     }
  
     json GetRelativeAimScreenPosition(PARAMS(const UniverseID componentid,const uint32_t iconsizeonscreen,const uint32_t iconsizeoffscreen))
     {
-        const auto func_res_1 = invoke(GetRelativeAimScreenPosition, componentid, iconsizeonscreen, iconsizeoffscreen);
+        const auto callResult = invoke(GetRelativeAimScreenPosition, componentid, iconsizeonscreen, iconsizeoffscreen);
         return json
         {
-            {"x", func_res_1.x},
-            {"y", func_res_1.y}
+            {"x", callResult.x},
+            {"y", callResult.y}
         };
     }
  
     json GetFactionRelationStatus(PARAMS(const char* factionid))
     {
-        const auto func_res_1 = invoke(GetFactionRelationStatus, factionid);
+        const auto callResult = invoke(GetFactionRelationStatus, factionid);
         return json
         {
-            {"relationStatus", func_res_1.relationStatus},
-            {"relationValue", func_res_1.relationValue},
-            {"relationLEDValue", func_res_1.relationLEDValue},
-            {"isBoostedValue", func_res_1.isBoostedValue}
+            {"relationStatus", callResult.relationStatus},
+            {"relationValue", callResult.relationValue},
+            {"relationLEDValue", callResult.relationLEDValue},
+            {"isBoostedValue", callResult.isBoostedValue}
         };
     }
  
     json GetRelationStatus2(PARAMS(const UniverseID componentid,const char*const connectionname))
     {
-        const auto func_res_1 = invoke(GetRelationStatus2, componentid, connectionname);
+        const auto callResult = invoke(GetRelationStatus2, componentid, connectionname);
         return json
         {
-            {"relationStatus", func_res_1.relationStatus},
-            {"relationValue", func_res_1.relationValue},
-            {"relationLEDValue", func_res_1.relationLEDValue},
-            {"isBoostedValue", func_res_1.isBoostedValue}
+            {"relationStatus", callResult.relationStatus},
+            {"relationValue", callResult.relationValue},
+            {"relationLEDValue", callResult.relationLEDValue},
+            {"isBoostedValue", callResult.isBoostedValue}
         };
     }
  
     json GetGameResolution(PARAMS())
     {
-        const auto func_res_1 = invoke(GetGameResolution);
+        const auto callResult = invoke(GetGameResolution);
         return json
         {
-            {"x", func_res_1.x},
-            {"y", func_res_1.y}
+            {"x", callResult.x},
+            {"y", callResult.y}
         };
     }
  
     json GetRenderResolutionOption(PARAMS())
     {
-        const auto func_res_1 = invoke(GetRenderResolutionOption);
+        const auto callResult = invoke(GetRenderResolutionOption);
         return json
         {
-            {"x", func_res_1.x},
-            {"y", func_res_1.y}
+            {"x", callResult.x},
+            {"y", callResult.y}
         };
     }
  
     json GetCameraRotation(PARAMS())
     {
-        const auto func_res_1 = invoke(GetCameraRotation);
+        const auto callResult = invoke(GetCameraRotation);
         return json
         {
-            {"yaw", func_res_1.yaw},
-            {"pitch", func_res_1.pitch},
-            {"roll", func_res_1.roll}
+            {"yaw", callResult.yaw},
+            {"pitch", callResult.pitch},
+            {"roll", callResult.roll}
         };
     }
  
     json GetComponentScreenPosition(PARAMS(const UniverseID componentid,const uint32_t iconsizeonscreen,const uint32_t iconsizeoffscreen))
     {
-        const auto func_res_1 = invoke(GetComponentScreenPosition, componentid, iconsizeonscreen, iconsizeoffscreen);
+        const auto callResult = invoke(GetComponentScreenPosition, componentid, iconsizeonscreen, iconsizeoffscreen);
         return json
         {
-            {"x", func_res_1.x},
-            {"y", func_res_1.y},
-            {"onScreen", func_res_1.onScreen}
+            {"x", callResult.x},
+            {"y", callResult.y},
+            {"onScreen", callResult.onScreen}
         };
     }
  
     json GetSofttarget(PARAMS())
     {
-        const auto func_res_1 = invoke(GetSofttarget);
+        const auto callResult = invoke(GetSofttarget);
         return json
         {
-            {"softtargetID", func_res_1.softtargetID},
-            {"softtargetConnectionName", func_res_1.softtargetConnectionName}
+            {"softtargetID", callResult.softtargetID},
+            {"softtargetConnectionName", callResult.softtargetConnectionName}
         };
     }
  
     json GetSpecialNPCs(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(GetSpecialNPCs, componentid);
+        const auto callResult = invoke(GetSpecialNPCs, componentid);
         return json
         {
-            {"factionNPC", func_res_1.factionNPC},
-            {"missionActor", func_res_1.missionActor},
-            {"shadyGuy", func_res_1.shadyGuy}
+            {"factionNPC", callResult.factionNPC},
+            {"missionActor", callResult.missionActor},
+            {"shadyGuy", callResult.shadyGuy}
         };
     }
  
     json GetTableInitialSelectionInfo(PARAMS(const int tableid))
     {
-        const auto func_res_1 = invoke(GetTableInitialSelectionInfo, tableid);
+        const auto callResult = invoke(GetTableInitialSelectionInfo, tableid);
         return json
         {
-            {"toprow", func_res_1.toprow},
-            {"selectedrow", func_res_1.selectedrow},
-            {"selectedcol", func_res_1.selectedcol},
-            {"shiftstart", func_res_1.shiftstart},
-            {"shiftend", func_res_1.shiftend}
+            {"toprow", callResult.toprow},
+            {"selectedrow", callResult.selectedrow},
+            {"selectedcol", callResult.selectedcol},
+            {"shiftstart", callResult.shiftstart},
+            {"shiftend", callResult.shiftend}
         };
     }
  
     json GetPickedMapTradeOffer(PARAMS(UniverseID holomapid))
     {
-        const auto func_res_1 = invoke(GetPickedMapTradeOffer, holomapid);
+        const auto callResult = invoke(GetPickedMapTradeOffer, holomapid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetTurret(PARAMS(size_t turretnum))
     {
-        const auto func_res_1 = invoke(GetTurret, turretnum);
+        const auto callResult = invoke(GetTurret, turretnum);
         return json
         {
-            {"icon", func_res_1.icon},
-            {"mode", func_res_1.mode},
-            {"damageState", func_res_1.damageState},
-            {"active", func_res_1.active},
-            {"usesAmmo", func_res_1.usesAmmo},
-            {"ammo", func_res_1.ammo}
+            {"icon", callResult.icon},
+            {"mode", callResult.mode},
+            {"damageState", callResult.damageState},
+            {"active", callResult.active},
+            {"usesAmmo", callResult.usesAmmo},
+            {"ammo", callResult.ammo}
         };
     }
  
     json SetFormationShape(PARAMS(UniverseID objectid,const char* formationshape))
     {
-        const auto func_res_1 = invoke(SetFormationShape, objectid, formationshape);
+        const auto callResult = invoke(SetFormationShape, objectid, formationshape);
         return json
         {
-            {"shape", func_res_1.shape},
-            {"name", func_res_1.name},
-            {"requiredSkill", func_res_1.requiredSkill},
-            {"radius", func_res_1.radius},
-            {"rollMembers", func_res_1.rollMembers},
-            {"rollFormation", func_res_1.rollFormation},
-            {"maxShipsPerLine", func_res_1.maxShipsPerLine}
+            {"shape", callResult.shape},
+            {"name", callResult.name},
+            {"requiredSkill", callResult.requiredSkill},
+            {"radius", callResult.radius},
+            {"rollMembers", callResult.rollMembers},
+            {"rollFormation", callResult.rollFormation},
+            {"maxShipsPerLine", callResult.maxShipsPerLine}
         };
     }
  
     json GetFrameBackground2Info(PARAMS(const int frameid))
     {
-        const auto func_res_1 = invoke(GetFrameBackground2Info, frameid);
+        const auto callResult = invoke(GetFrameBackground2Info, frameid);
         return json
         {
-            {"iconid", func_res_1.iconid},
-            {"color", {"red", func_res_1.color.red},{"green", func_res_1.color.green},{"blue", func_res_1.color.blue},{"alpha", func_res_1.color.alpha}},
-            {"width", func_res_1.width},
-            {"height", func_res_1.height},
-            {"rotationrate", func_res_1.rotationrate},
-            {"rotstart", func_res_1.rotstart},
-            {"rotduration", func_res_1.rotduration},
-            {"rotinterval", func_res_1.rotinterval},
-            {"initscale", func_res_1.initscale},
-            {"scaleduration", func_res_1.scaleduration}
+            {"iconid", callResult.iconid},
+            {"color", {"red", callResult.color.red},{"green", callResult.color.green},{"blue", callResult.color.blue},{"alpha", callResult.color.alpha}},
+            {"width", callResult.width},
+            {"height", callResult.height},
+            {"rotationrate", callResult.rotationrate},
+            {"rotstart", callResult.rotstart},
+            {"rotduration", callResult.rotduration},
+            {"rotinterval", callResult.rotinterval},
+            {"initscale", callResult.initscale},
+            {"scaleduration", callResult.scaleduration}
         };
     }
  
     json GetFrameBackgroundInfo(PARAMS(const int frameid))
     {
-        const auto func_res_1 = invoke(GetFrameBackgroundInfo, frameid);
+        const auto callResult = invoke(GetFrameBackgroundInfo, frameid);
         return json
         {
-            {"iconid", func_res_1.iconid},
-            {"color", {"red", func_res_1.color.red},{"green", func_res_1.color.green},{"blue", func_res_1.color.blue},{"alpha", func_res_1.color.alpha}},
-            {"width", func_res_1.width},
-            {"height", func_res_1.height},
-            {"rotationrate", func_res_1.rotationrate},
-            {"rotstart", func_res_1.rotstart},
-            {"rotduration", func_res_1.rotduration},
-            {"rotinterval", func_res_1.rotinterval},
-            {"initscale", func_res_1.initscale},
-            {"scaleduration", func_res_1.scaleduration}
+            {"iconid", callResult.iconid},
+            {"color", {"red", callResult.color.red},{"green", callResult.color.green},{"blue", callResult.color.blue},{"alpha", callResult.color.alpha}},
+            {"width", callResult.width},
+            {"height", callResult.height},
+            {"rotationrate", callResult.rotationrate},
+            {"rotstart", callResult.rotstart},
+            {"rotduration", callResult.rotduration},
+            {"rotinterval", callResult.rotinterval},
+            {"initscale", callResult.initscale},
+            {"scaleduration", callResult.scaleduration}
         };
     }
  
     json GetFrameOverlayInfo(PARAMS(const int frameid))
     {
-        const auto func_res_1 = invoke(GetFrameOverlayInfo, frameid);
+        const auto callResult = invoke(GetFrameOverlayInfo, frameid);
         return json
         {
-            {"iconid", func_res_1.iconid},
-            {"color", {"red", func_res_1.color.red},{"green", func_res_1.color.green},{"blue", func_res_1.color.blue},{"alpha", func_res_1.color.alpha}},
-            {"width", func_res_1.width},
-            {"height", func_res_1.height},
-            {"rotationrate", func_res_1.rotationrate},
-            {"rotstart", func_res_1.rotstart},
-            {"rotduration", func_res_1.rotduration},
-            {"rotinterval", func_res_1.rotinterval},
-            {"initscale", func_res_1.initscale},
-            {"scaleduration", func_res_1.scaleduration}
+            {"iconid", callResult.iconid},
+            {"color", {"red", callResult.color.red},{"green", callResult.color.green},{"blue", callResult.color.blue},{"alpha", callResult.color.alpha}},
+            {"width", callResult.width},
+            {"height", callResult.height},
+            {"rotationrate", callResult.rotationrate},
+            {"rotstart", callResult.rotstart},
+            {"rotduration", callResult.rotduration},
+            {"rotinterval", callResult.rotinterval},
+            {"initscale", callResult.initscale},
+            {"scaleduration", callResult.scaleduration}
         };
     }
  
     json GetCurrentLoadoutStatistics2(PARAMS(UniverseID shipid))
     {
-        const auto func_res_1 = invoke(GetCurrentLoadoutStatistics2, shipid);
+        const auto callResult = invoke(GetCurrentLoadoutStatistics2, shipid);
         return json
         {
-            {"HullValue", func_res_1.HullValue},
-            {"ShieldValue", func_res_1.ShieldValue},
-            {"GroupedShieldValue", func_res_1.GroupedShieldValue},
-            {"BurstDPS", func_res_1.BurstDPS},
-            {"SustainedDPS", func_res_1.SustainedDPS},
-            {"TurretBurstDPS", func_res_1.TurretBurstDPS},
-            {"TurretSustainedDPS", func_res_1.TurretSustainedDPS},
-            {"GroupedTurretBurstDPS", func_res_1.GroupedTurretBurstDPS},
-            {"GroupedTurretSustainedDPS", func_res_1.GroupedTurretSustainedDPS},
-            {"ForwardSpeed", func_res_1.ForwardSpeed},
-            {"BoostSpeed", func_res_1.BoostSpeed},
-            {"TravelSpeed", func_res_1.TravelSpeed},
-            {"YawSpeed", func_res_1.YawSpeed},
-            {"PitchSpeed", func_res_1.PitchSpeed},
-            {"RollSpeed", func_res_1.RollSpeed},
-            {"ForwardAcceleration", func_res_1.ForwardAcceleration},
-            {"NumDocksShipMedium", func_res_1.NumDocksShipMedium},
-            {"NumDocksShipSmall", func_res_1.NumDocksShipSmall},
-            {"ShipCapacityMedium", func_res_1.ShipCapacityMedium},
-            {"ShipCapacitySmall", func_res_1.ShipCapacitySmall},
-            {"CrewCapacity", func_res_1.CrewCapacity},
-            {"ContainerCapacity", func_res_1.ContainerCapacity},
-            {"SolidCapacity", func_res_1.SolidCapacity},
-            {"LiquidCapacity", func_res_1.LiquidCapacity},
-            {"UnitCapacity", func_res_1.UnitCapacity},
-            {"MissileCapacity", func_res_1.MissileCapacity},
-            {"CountermeasureCapacity", func_res_1.CountermeasureCapacity},
-            {"DeployableCapacity", func_res_1.DeployableCapacity},
-            {"RadarRange", func_res_1.RadarRange}
+            {"HullValue", callResult.HullValue},
+            {"ShieldValue", callResult.ShieldValue},
+            {"GroupedShieldValue", callResult.GroupedShieldValue},
+            {"BurstDPS", callResult.BurstDPS},
+            {"SustainedDPS", callResult.SustainedDPS},
+            {"TurretBurstDPS", callResult.TurretBurstDPS},
+            {"TurretSustainedDPS", callResult.TurretSustainedDPS},
+            {"GroupedTurretBurstDPS", callResult.GroupedTurretBurstDPS},
+            {"GroupedTurretSustainedDPS", callResult.GroupedTurretSustainedDPS},
+            {"ForwardSpeed", callResult.ForwardSpeed},
+            {"BoostSpeed", callResult.BoostSpeed},
+            {"TravelSpeed", callResult.TravelSpeed},
+            {"YawSpeed", callResult.YawSpeed},
+            {"PitchSpeed", callResult.PitchSpeed},
+            {"RollSpeed", callResult.RollSpeed},
+            {"ForwardAcceleration", callResult.ForwardAcceleration},
+            {"NumDocksShipMedium", callResult.NumDocksShipMedium},
+            {"NumDocksShipSmall", callResult.NumDocksShipSmall},
+            {"ShipCapacityMedium", callResult.ShipCapacityMedium},
+            {"ShipCapacitySmall", callResult.ShipCapacitySmall},
+            {"CrewCapacity", callResult.CrewCapacity},
+            {"ContainerCapacity", callResult.ContainerCapacity},
+            {"SolidCapacity", callResult.SolidCapacity},
+            {"LiquidCapacity", callResult.LiquidCapacity},
+            {"UnitCapacity", callResult.UnitCapacity},
+            {"MissileCapacity", callResult.MissileCapacity},
+            {"CountermeasureCapacity", callResult.CountermeasureCapacity},
+            {"DeployableCapacity", callResult.DeployableCapacity},
+            {"RadarRange", callResult.RadarRange}
         };
     }
  
     json GetMaxLoadoutStatistics2(PARAMS(UniverseID shipid,const char* macroname))
     {
-        const auto func_res_1 = invoke(GetMaxLoadoutStatistics2, shipid, macroname);
+        const auto callResult = invoke(GetMaxLoadoutStatistics2, shipid, macroname);
         return json
         {
-            {"HullValue", func_res_1.HullValue},
-            {"ShieldValue", func_res_1.ShieldValue},
-            {"GroupedShieldValue", func_res_1.GroupedShieldValue},
-            {"BurstDPS", func_res_1.BurstDPS},
-            {"SustainedDPS", func_res_1.SustainedDPS},
-            {"TurretBurstDPS", func_res_1.TurretBurstDPS},
-            {"TurretSustainedDPS", func_res_1.TurretSustainedDPS},
-            {"GroupedTurretBurstDPS", func_res_1.GroupedTurretBurstDPS},
-            {"GroupedTurretSustainedDPS", func_res_1.GroupedTurretSustainedDPS},
-            {"ForwardSpeed", func_res_1.ForwardSpeed},
-            {"BoostSpeed", func_res_1.BoostSpeed},
-            {"TravelSpeed", func_res_1.TravelSpeed},
-            {"YawSpeed", func_res_1.YawSpeed},
-            {"PitchSpeed", func_res_1.PitchSpeed},
-            {"RollSpeed", func_res_1.RollSpeed},
-            {"ForwardAcceleration", func_res_1.ForwardAcceleration},
-            {"NumDocksShipMedium", func_res_1.NumDocksShipMedium},
-            {"NumDocksShipSmall", func_res_1.NumDocksShipSmall},
-            {"ShipCapacityMedium", func_res_1.ShipCapacityMedium},
-            {"ShipCapacitySmall", func_res_1.ShipCapacitySmall},
-            {"CrewCapacity", func_res_1.CrewCapacity},
-            {"ContainerCapacity", func_res_1.ContainerCapacity},
-            {"SolidCapacity", func_res_1.SolidCapacity},
-            {"LiquidCapacity", func_res_1.LiquidCapacity},
-            {"UnitCapacity", func_res_1.UnitCapacity},
-            {"MissileCapacity", func_res_1.MissileCapacity},
-            {"CountermeasureCapacity", func_res_1.CountermeasureCapacity},
-            {"DeployableCapacity", func_res_1.DeployableCapacity},
-            {"RadarRange", func_res_1.RadarRange}
+            {"HullValue", callResult.HullValue},
+            {"ShieldValue", callResult.ShieldValue},
+            {"GroupedShieldValue", callResult.GroupedShieldValue},
+            {"BurstDPS", callResult.BurstDPS},
+            {"SustainedDPS", callResult.SustainedDPS},
+            {"TurretBurstDPS", callResult.TurretBurstDPS},
+            {"TurretSustainedDPS", callResult.TurretSustainedDPS},
+            {"GroupedTurretBurstDPS", callResult.GroupedTurretBurstDPS},
+            {"GroupedTurretSustainedDPS", callResult.GroupedTurretSustainedDPS},
+            {"ForwardSpeed", callResult.ForwardSpeed},
+            {"BoostSpeed", callResult.BoostSpeed},
+            {"TravelSpeed", callResult.TravelSpeed},
+            {"YawSpeed", callResult.YawSpeed},
+            {"PitchSpeed", callResult.PitchSpeed},
+            {"RollSpeed", callResult.RollSpeed},
+            {"ForwardAcceleration", callResult.ForwardAcceleration},
+            {"NumDocksShipMedium", callResult.NumDocksShipMedium},
+            {"NumDocksShipSmall", callResult.NumDocksShipSmall},
+            {"ShipCapacityMedium", callResult.ShipCapacityMedium},
+            {"ShipCapacitySmall", callResult.ShipCapacitySmall},
+            {"CrewCapacity", callResult.CrewCapacity},
+            {"ContainerCapacity", callResult.ContainerCapacity},
+            {"SolidCapacity", callResult.SolidCapacity},
+            {"LiquidCapacity", callResult.LiquidCapacity},
+            {"UnitCapacity", callResult.UnitCapacity},
+            {"MissileCapacity", callResult.MissileCapacity},
+            {"CountermeasureCapacity", callResult.CountermeasureCapacity},
+            {"DeployableCapacity", callResult.DeployableCapacity},
+            {"RadarRange", callResult.RadarRange}
         };
     }
  
     json GetCurrentPlayerLogo(PARAMS())
     {
-        const auto func_res_1 = invoke(GetCurrentPlayerLogo);
+        const auto callResult = invoke(GetCurrentPlayerLogo);
         return json
         {
-            {"file", func_res_1.file},
-            {"icon", func_res_1.icon},
-            {"ispersonal", func_res_1.ispersonal}
+            {"file", callResult.file},
+            {"icon", callResult.icon},
+            {"ispersonal", callResult.ispersonal}
         };
     }
  
     json GetMapTradeVolumeParameter(PARAMS())
     {
-        const auto func_res_1 = invoke(GetMapTradeVolumeParameter);
+        const auto callResult = invoke(GetMapTradeVolumeParameter);
         return json
         {
-            {"icon", func_res_1.icon},
-            {"color", {"red", func_res_1.color.red},{"green", func_res_1.color.green},{"blue", func_res_1.color.blue},{"alpha", func_res_1.color.alpha}},
-            {"volume_s", func_res_1.volume_s},
-            {"volume_m", func_res_1.volume_m},
-            {"volume_l", func_res_1.volume_l}
+            {"icon", callResult.icon},
+            {"color", {"red", callResult.color.red},{"green", callResult.color.green},{"blue", callResult.color.blue},{"alpha", callResult.color.alpha}},
+            {"volume_s", callResult.volume_s},
+            {"volume_m", callResult.volume_m},
+            {"volume_l", callResult.volume_l}
         };
     }
  
     json GetHelpOverlayInfo(PARAMS(const int widgetid))
     {
-        const auto func_res_1 = invoke(GetHelpOverlayInfo, widgetid);
+        const auto callResult = invoke(GetHelpOverlayInfo, widgetid);
         return json
         {
-            {"id", func_res_1.id},
-            {"text", func_res_1.text},
-            {"x", func_res_1.x},
-            {"y", func_res_1.y},
-            {"width", func_res_1.width},
-            {"height", func_res_1.height},
-            {"highlightonly", func_res_1.highlightonly}
+            {"id", callResult.id},
+            {"text", callResult.text},
+            {"x", callResult.x},
+            {"y", callResult.y},
+            {"width", callResult.width},
+            {"height", callResult.height},
+            {"highlightonly", callResult.highlightonly}
         };
     }
  
     json GetStandardButtonHelpOverlayInfo(PARAMS(const int frameid,const char* button))
     {
-        const auto func_res_1 = invoke(GetStandardButtonHelpOverlayInfo, frameid, button);
+        const auto callResult = invoke(GetStandardButtonHelpOverlayInfo, frameid, button);
         return json
         {
-            {"id", func_res_1.id},
-            {"text", func_res_1.text},
-            {"x", func_res_1.x},
-            {"y", func_res_1.y},
-            {"width", func_res_1.width},
-            {"height", func_res_1.height},
-            {"highlightonly", func_res_1.highlightonly}
+            {"id", callResult.id},
+            {"text", callResult.text},
+            {"x", callResult.x},
+            {"y", callResult.y},
+            {"width", callResult.width},
+            {"height", callResult.height},
+            {"highlightonly", callResult.highlightonly}
         };
     }
  
     json GetCustomGameStartPosRotProperty(PARAMS(const char* id,const char* propertyid))
     {
         CustomGameStartPosRotPropertyState state;
-        const auto func_res_1 = invoke(GetCustomGameStartPosRotProperty, id, propertyid, &state);
+        const auto callResult = invoke(GetCustomGameStartPosRotProperty, id, propertyid, &state);
           {
             return json
             {
-                {"x", func_res_1.x},
-                {"y", func_res_1.y},
-                {"z", func_res_1.z},
-                {"yaw", func_res_1.yaw},
-                {"pitch", func_res_1.pitch},
-                {"roll", func_res_1.roll},
+                {"x", callResult.x},
+                {"y", callResult.y},
+                {"z", callResult.z},
+                {"yaw", callResult.yaw},
+                {"pitch", callResult.pitch},
+                {"roll", callResult.roll},
                 {"state", {
                     {"state", state.state},
                     {"defaultvalue", {"x", state.defaultvalue.x},{"y", state.defaultvalue.y},{"z", state.defaultvalue.z},{"yaw", state.defaultvalue.yaw},{"pitch", state.defaultvalue.pitch},{"roll", state.defaultvalue.roll}}
@@ -885,201 +885,201 @@ namespace ffijson
  
     json GetObjectPositionInSector(PARAMS(UniverseID objectid))
     {
-        const auto func_res_1 = invoke(GetObjectPositionInSector, objectid);
+        const auto callResult = invoke(GetObjectPositionInSector, objectid);
         return json
         {
-            {"x", func_res_1.x},
-            {"y", func_res_1.y},
-            {"z", func_res_1.z},
-            {"yaw", func_res_1.yaw},
-            {"pitch", func_res_1.pitch},
-            {"roll", func_res_1.roll}
+            {"x", callResult.x},
+            {"y", callResult.y},
+            {"z", callResult.z},
+            {"yaw", callResult.yaw},
+            {"pitch", callResult.pitch},
+            {"roll", callResult.roll}
         };
     }
  
     json GetPlayerTargetOffset(PARAMS())
     {
-        const auto func_res_1 = invoke(GetPlayerTargetOffset);
+        const auto callResult = invoke(GetPlayerTargetOffset);
         return json
         {
-            {"x", func_res_1.x},
-            {"y", func_res_1.y},
-            {"z", func_res_1.z},
-            {"yaw", func_res_1.yaw},
-            {"pitch", func_res_1.pitch},
-            {"roll", func_res_1.roll}
+            {"x", callResult.x},
+            {"y", callResult.y},
+            {"z", callResult.z},
+            {"yaw", callResult.yaw},
+            {"pitch", callResult.pitch},
+            {"roll", callResult.roll}
         };
     }
  
     json GetLastSaveInfo(PARAMS())
     {
-        const auto func_res_1 = invoke(GetLastSaveInfo);
+        const auto callResult = invoke(GetLastSaveInfo);
         return json
         {
-            {"filename", func_res_1.filename},
-            {"name", func_res_1.name},
-            {"description", func_res_1.description},
-            {"version", func_res_1.version},
-            {"rawversion", func_res_1.rawversion},
-            {"time", func_res_1.time},
-            {"rawtime", func_res_1.rawtime},
-            {"playtime", func_res_1.playtime},
-            {"playername", func_res_1.playername},
-            {"location", func_res_1.location},
-            {"money", func_res_1.money},
-            {"error", func_res_1.error},
-            {"invalidgameid", func_res_1.invalidgameid},
-            {"invalidversion", func_res_1.invalidversion},
-            {"numinvalidpatches", func_res_1.numinvalidpatches}
+            {"filename", callResult.filename},
+            {"name", callResult.name},
+            {"description", callResult.description},
+            {"version", callResult.version},
+            {"rawversion", callResult.rawversion},
+            {"time", callResult.time},
+            {"rawtime", callResult.rawtime},
+            {"playtime", callResult.playtime},
+            {"playername", callResult.playername},
+            {"location", callResult.location},
+            {"money", callResult.money},
+            {"error", callResult.error},
+            {"invalidgameid", callResult.invalidgameid},
+            {"invalidversion", callResult.invalidversion},
+            {"numinvalidpatches", callResult.numinvalidpatches}
         };
     }
  
     json GetNumUISystemInfo(PARAMS(UniverseID clusterid))
     {
-        const auto func_res_1 = invoke(GetNumUISystemInfo, clusterid);
+        const auto callResult = invoke(GetNumUISystemInfo, clusterid);
         return json
         {
-            {"numsuns", func_res_1.numsuns},
-            {"numplanets", func_res_1.numplanets}
+            {"numsuns", callResult.numsuns},
+            {"numplanets", callResult.numplanets}
         };
     }
  
     json GetCurrentVentureMissionInfo(PARAMS(UniverseID ventureplatformid))
     {
-        const auto func_res_1 = invoke(GetCurrentVentureMissionInfo, ventureplatformid);
+        const auto callResult = invoke(GetCurrentVentureMissionInfo, ventureplatformid);
         return json
         {
-            {"name", func_res_1.name},
-            {"icon", func_res_1.icon},
-            {"rewardicon", func_res_1.rewardicon},
-            {"remainingtime", func_res_1.remainingtime},
-            {"numships", func_res_1.numships}
+            {"name", callResult.name},
+            {"icon", callResult.icon},
+            {"rewardicon", callResult.rewardicon},
+            {"remainingtime", callResult.remainingtime},
+            {"numships", callResult.numships}
         };
     }
  
     json AddHoloMap(PARAMS(const char* texturename,float x0,float x1,float y0,float y1,float aspectx,float aspecty))
     {
-        const auto func_res_1 = invoke(AddHoloMap, texturename, x0, x1, y0, y1, aspectx, aspecty);
+        const auto callResult = invoke(AddHoloMap, texturename, x0, x1, y0, y1, aspectx, aspecty);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CreateNPCFromPerson(PARAMS(NPCSeed person,UniverseID controllableid))
     {
-        const auto func_res_1 = invoke(CreateNPCFromPerson, person, controllableid);
+        const auto callResult = invoke(CreateNPCFromPerson, person, controllableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetCommonContext(PARAMS(UniverseID componentid,UniverseID othercomponentid,bool includeself,bool includeother,UniverseID limitid,bool includelimit))
     {
-        const auto func_res_1 = invoke(GetCommonContext, componentid, othercomponentid, includeself, includeother, limitid, includelimit);
+        const auto callResult = invoke(GetCommonContext, componentid, othercomponentid, includeself, includeother, limitid, includelimit);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetContextByClass(PARAMS(UniverseID componentid,const char* classname,bool includeself))
     {
-        const auto func_res_1 = invoke(GetContextByClass, componentid, classname, includeself);
+        const auto callResult = invoke(GetContextByClass, componentid, classname, includeself);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetContextForTransporterCheck(PARAMS(UniverseID positionalid))
     {
-        const auto func_res_1 = invoke(GetContextForTransporterCheck, positionalid);
+        const auto callResult = invoke(GetContextForTransporterCheck, positionalid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetEnvironmentObject(PARAMS())
     {
-        const auto func_res_1 = invoke(GetEnvironmentObject);
+        const auto callResult = invoke(GetEnvironmentObject);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetExternalTargetViewComponent(PARAMS())
     {
-        const auto func_res_1 = invoke(GetExternalTargetViewComponent);
+        const auto callResult = invoke(GetExternalTargetViewComponent);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetFactionRepresentative(PARAMS(const char* factionid))
     {
-        const auto func_res_1 = invoke(GetFactionRepresentative, factionid);
+        const auto callResult = invoke(GetFactionRepresentative, factionid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetInstantiatedPerson(PARAMS(NPCSeed person,UniverseID controllableid))
     {
-        const auto func_res_1 = invoke(GetInstantiatedPerson, person, controllableid);
+        const auto callResult = invoke(GetInstantiatedPerson, person, controllableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetLastPlayerControlledShipID(PARAMS())
     {
-        const auto func_res_1 = invoke(GetLastPlayerControlledShipID);
+        const auto callResult = invoke(GetLastPlayerControlledShipID);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetMissionIDObjectiveTarget(PARAMS(uint64_t missionid,size_t targetIndex))
     {
-        const auto func_res_1 = invoke(GetMissionIDObjectiveTarget, missionid, targetIndex);
+        const auto callResult = invoke(GetMissionIDObjectiveTarget, missionid, targetIndex);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetParentComponent(PARAMS(UniverseID componentid))
     {
-        const auto func_res_1 = invoke(GetParentComponent, componentid);
+        const auto callResult = invoke(GetParentComponent, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPickedMapComponent(PARAMS(UniverseID holomapid))
     {
-        const auto func_res_1 = invoke(GetPickedMapComponent, holomapid);
+        const auto callResult = invoke(GetPickedMapComponent, holomapid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPickedMapMissionOffer(PARAMS(UniverseID holomapid))
     {
-        const auto func_res_1 = invoke(GetPickedMapMissionOffer, holomapid);
+        const auto callResult = invoke(GetPickedMapMissionOffer, holomapid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -1087,11 +1087,11 @@ namespace ffijson
     {
         Order result;
         bool intermediate;
-        const auto func_res_1 = invoke(GetPickedMapOrder, holomapid, &result, &intermediate);
-         if (func_res_1) {
+        const auto callResult = invoke(GetPickedMapOrder, holomapid, &result, &intermediate);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", {
                     {"queueidx", result.queueidx},
                     {"state", result.state},
@@ -1109,117 +1109,117 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPlayerComputerID(PARAMS())
     {
-        const auto func_res_1 = invoke(GetPlayerComputerID);
+        const auto callResult = invoke(GetPlayerComputerID);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPlayerContainerID(PARAMS())
     {
-        const auto func_res_1 = invoke(GetPlayerContainerID);
+        const auto callResult = invoke(GetPlayerContainerID);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPlayerControlledShipID(PARAMS())
     {
-        const auto func_res_1 = invoke(GetPlayerControlledShipID);
+        const auto callResult = invoke(GetPlayerControlledShipID);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPlayerID(PARAMS())
     {
-        const auto func_res_1 = invoke(GetPlayerID);
+        const auto callResult = invoke(GetPlayerID);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPlayerObjectID(PARAMS())
     {
-        const auto func_res_1 = invoke(GetPlayerObjectID);
+        const auto callResult = invoke(GetPlayerObjectID);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPlayerOccupiedShipID(PARAMS())
     {
-        const auto func_res_1 = invoke(GetPlayerOccupiedShipID);
+        const auto callResult = invoke(GetPlayerOccupiedShipID);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPlayerShipID(PARAMS())
     {
-        const auto func_res_1 = invoke(GetPlayerShipID);
+        const auto callResult = invoke(GetPlayerShipID);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPlayerZoneID(PARAMS())
     {
-        const auto func_res_1 = invoke(GetPlayerZoneID);
+        const auto callResult = invoke(GetPlayerZoneID);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetSectorControlStation(PARAMS(UniverseID sectorid))
     {
-        const auto func_res_1 = invoke(GetSectorControlStation, sectorid);
+        const auto callResult = invoke(GetSectorControlStation, sectorid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetTopLevelContainer(PARAMS(UniverseID componentid))
     {
-        const auto func_res_1 = invoke(GetTopLevelContainer, componentid);
+        const auto callResult = invoke(GetTopLevelContainer, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetUpgradeSlotCurrentComponent(PARAMS(UniverseID destructibleid,const char* upgradetypename,size_t slot))
     {
-        const auto func_res_1 = invoke(GetUpgradeSlotCurrentComponent, destructibleid, upgradetypename, slot);
+        const auto callResult = invoke(GetUpgradeSlotCurrentComponent, destructibleid, upgradetypename, slot);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetZoneAt(PARAMS(UniverseID sectorid))
     {
         UIPosRot uioffset;
-        const auto func_res_1 = invoke(GetZoneAt, sectorid, &uioffset);
-         if (func_res_1) {
+        const auto callResult = invoke(GetZoneAt, sectorid, &uioffset);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"uioffset", {
                     {"x", uioffset.x},
                     {"y", uioffset.y},
@@ -1233,97 +1233,97 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetUpgradeSlotGroup(PARAMS(UniverseID destructibleid,const char* macroname,const char* upgradetypename,size_t slot))
     {
-        const auto func_res_1 = invoke(GetUpgradeSlotGroup, destructibleid, macroname, upgradetypename, slot);
+        const auto callResult = invoke(GetUpgradeSlotGroup, destructibleid, macroname, upgradetypename, slot);
         return json
         {
-            {"path", func_res_1.path},
-            {"group", func_res_1.group}
+            {"path", callResult.path},
+            {"group", callResult.group}
         };
     }
  
     json GetUpgradeGroupInfo(PARAMS(UniverseID destructibleid,const char* macroname,const char* path,const char* group,const char* upgradetypename))
     {
-        const auto func_res_1 = invoke(GetUpgradeGroupInfo, destructibleid, macroname, path, group, upgradetypename);
+        const auto callResult = invoke(GetUpgradeGroupInfo, destructibleid, macroname, path, group, upgradetypename);
         return json
         {
-            {"currentcomponent", func_res_1.currentcomponent},
-            {"currentmacro", func_res_1.currentmacro},
-            {"slotsize", func_res_1.slotsize},
-            {"count", func_res_1.count},
-            {"operational", func_res_1.operational},
-            {"total", func_res_1.total}
+            {"currentcomponent", callResult.currentcomponent},
+            {"currentmacro", callResult.currentmacro},
+            {"slotsize", callResult.slotsize},
+            {"count", callResult.count},
+            {"operational", callResult.operational},
+            {"total", callResult.total}
         };
     }
  
     json GetUpgradeGroupInfo2(PARAMS(UniverseID destructibleid,const char* macroname,UniverseID contextid,const char* path,const char* group,const char* upgradetypename))
     {
-        const auto func_res_1 = invoke(GetUpgradeGroupInfo2, destructibleid, macroname, contextid, path, group, upgradetypename);
+        const auto callResult = invoke(GetUpgradeGroupInfo2, destructibleid, macroname, contextid, path, group, upgradetypename);
         return json
         {
-            {"currentcomponent", func_res_1.currentcomponent},
-            {"currentmacro", func_res_1.currentmacro},
-            {"slotsize", func_res_1.slotsize},
-            {"count", func_res_1.count},
-            {"operational", func_res_1.operational},
-            {"total", func_res_1.total}
+            {"currentcomponent", callResult.currentcomponent},
+            {"currentmacro", callResult.currentmacro},
+            {"slotsize", callResult.slotsize},
+            {"count", callResult.count},
+            {"operational", callResult.operational},
+            {"total", callResult.total}
         };
     }
  
     json GetPrimaryWeapon(PARAMS(size_t weaponnum))
     {
-        const auto func_res_1 = invoke(GetPrimaryWeapon, weaponnum);
+        const auto callResult = invoke(GetPrimaryWeapon, weaponnum);
         return json
         {
-            {"icon", func_res_1.icon},
-            {"damageState", func_res_1.damageState},
-            {"active", func_res_1.active},
-            {"usesAmmo", func_res_1.usesAmmo},
-            {"ammo", func_res_1.ammo},
-            {"mode", func_res_1.mode},
-            {"reloadPercent", func_res_1.reloadPercent},
-            {"heatState", func_res_1.heatState},
-            {"heatPercent", func_res_1.heatPercent},
-            {"lockPercent", func_res_1.lockPercent},
-            {"counterMeasureTarget", func_res_1.counterMeasureTarget}
+            {"icon", callResult.icon},
+            {"damageState", callResult.damageState},
+            {"active", callResult.active},
+            {"usesAmmo", callResult.usesAmmo},
+            {"ammo", callResult.ammo},
+            {"mode", callResult.mode},
+            {"reloadPercent", callResult.reloadPercent},
+            {"heatState", callResult.heatState},
+            {"heatPercent", callResult.heatPercent},
+            {"lockPercent", callResult.lockPercent},
+            {"counterMeasureTarget", callResult.counterMeasureTarget}
         };
     }
  
     json GetSecondaryWeapon(PARAMS(size_t weaponnum))
     {
-        const auto func_res_1 = invoke(GetSecondaryWeapon, weaponnum);
+        const auto callResult = invoke(GetSecondaryWeapon, weaponnum);
         return json
         {
-            {"icon", func_res_1.icon},
-            {"damageState", func_res_1.damageState},
-            {"active", func_res_1.active},
-            {"usesAmmo", func_res_1.usesAmmo},
-            {"ammo", func_res_1.ammo},
-            {"mode", func_res_1.mode},
-            {"reloadPercent", func_res_1.reloadPercent},
-            {"heatState", func_res_1.heatState},
-            {"heatPercent", func_res_1.heatPercent},
-            {"lockPercent", func_res_1.lockPercent},
-            {"counterMeasureTarget", func_res_1.counterMeasureTarget}
+            {"icon", callResult.icon},
+            {"damageState", callResult.damageState},
+            {"active", callResult.active},
+            {"usesAmmo", callResult.usesAmmo},
+            {"ammo", callResult.ammo},
+            {"mode", callResult.mode},
+            {"reloadPercent", callResult.reloadPercent},
+            {"heatState", callResult.heatState},
+            {"heatPercent", callResult.heatPercent},
+            {"lockPercent", callResult.lockPercent},
+            {"counterMeasureTarget", callResult.counterMeasureTarget}
         };
     }
  
     json GetWorkForceInfo(PARAMS(UniverseID containerid,const char* raceid))
     {
-        const auto func_res_1 = invoke(GetWorkForceInfo, containerid, raceid);
+        const auto callResult = invoke(GetWorkForceInfo, containerid, raceid);
         return json
         {
-            {"current", func_res_1.current},
-            {"capacity", func_res_1.capacity},
-            {"optimal", func_res_1.optimal},
-            {"available", func_res_1.available},
-            {"maxavailable", func_res_1.maxavailable},
-            {"timeuntilnextupdate", func_res_1.timeuntilnextupdate}
+            {"current", callResult.current},
+            {"capacity", callResult.capacity},
+            {"optimal", callResult.optimal},
+            {"available", callResult.available},
+            {"maxavailable", callResult.maxavailable},
+            {"timeuntilnextupdate", callResult.timeuntilnextupdate}
         };
     }
  
@@ -1331,11 +1331,11 @@ namespace ffijson
     {
         uint32_t marinetieramounts;
         int32_t marinetierskilllevels;
-        const auto func_res_1 = invoke(AddAttackerToBoardingOperation, defensibletargetid, defensibleboarderid, boarderfactionid, actionid, &marinetieramounts, &marinetierskilllevels, nummarinetiers);
-         if (func_res_1) {
+        const auto callResult = invoke(AddAttackerToBoardingOperation, defensibletargetid, defensibleboarderid, boarderfactionid, actionid, &marinetieramounts, &marinetierskilllevels, nummarinetiers);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"marinetieramounts", marinetieramounts},
                 {"marinetierskilllevels", marinetierskilllevels}
             };
@@ -1343,288 +1343,288 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json AdjustOrder(PARAMS(UniverseID controllableid,size_t idx,size_t newidx,bool enabled,bool forcestates,bool checkonly))
     {
-        const auto func_res_1 = invoke(AdjustOrder, controllableid, idx, newidx, enabled, forcestates, checkonly);
+        const auto callResult = invoke(AdjustOrder, controllableid, idx, newidx, enabled, forcestates, checkonly);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json AreGfxSettingsTooHigh(PARAMS())
     {
-        const auto func_res_1 = invoke(AreGfxSettingsTooHigh);
+        const auto callResult = invoke(AreGfxSettingsTooHigh);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json AreMandatoryAssertsEnabled(PARAMS())
     {
-        const auto func_res_1 = invoke(AreMandatoryAssertsEnabled);
+        const auto callResult = invoke(AreMandatoryAssertsEnabled);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json AreOptionalAssertEnabled(PARAMS())
     {
-        const auto func_res_1 = invoke(AreOptionalAssertEnabled);
+        const auto callResult = invoke(AreOptionalAssertEnabled);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CanAcceptSubordinate(PARAMS(UniverseID commanderid,UniverseID potentialsubordinateid))
     {
-        const auto func_res_1 = invoke(CanAcceptSubordinate, commanderid, potentialsubordinateid);
+        const auto callResult = invoke(CanAcceptSubordinate, commanderid, potentialsubordinateid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CanApplyKnownLoadout(PARAMS(const char* macroname,const char* loadoutid))
     {
-        const auto func_res_1 = invoke(CanApplyKnownLoadout, macroname, loadoutid);
+        const auto callResult = invoke(CanApplyKnownLoadout, macroname, loadoutid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CanBuildLoadout(PARAMS(UniverseID containerid,UniverseID defensibleid,const char* macroname,const char* loadoutid))
     {
-        const auto func_res_1 = invoke(CanBuildLoadout, containerid, defensibleid, macroname, loadoutid);
+        const auto callResult = invoke(CanBuildLoadout, containerid, defensibleid, macroname, loadoutid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CanCancelConstruction(PARAMS(UniverseID containerid,BuildTaskID id))
     {
-        const auto func_res_1 = invoke(CanCancelConstruction, containerid, id);
+        const auto callResult = invoke(CanCancelConstruction, containerid, id);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CanContainerEquipShip(PARAMS(UniverseID containerid,UniverseID shipid))
     {
-        const auto func_res_1 = invoke(CanContainerEquipShip, containerid, shipid);
+        const auto callResult = invoke(CanContainerEquipShip, containerid, shipid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CanContainerMineTransport(PARAMS(UniverseID containerid,const char* transportname))
     {
-        const auto func_res_1 = invoke(CanContainerMineTransport, containerid, transportname);
+        const auto callResult = invoke(CanContainerMineTransport, containerid, transportname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CanContainerSupplyShip(PARAMS(UniverseID containerid,UniverseID shipid))
     {
-        const auto func_res_1 = invoke(CanContainerSupplyShip, containerid, shipid);
+        const auto callResult = invoke(CanContainerSupplyShip, containerid, shipid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CanContainerTransport(PARAMS(UniverseID containerid,const char* transportname))
     {
-        const auto func_res_1 = invoke(CanContainerTransport, containerid, transportname);
+        const auto callResult = invoke(CanContainerTransport, containerid, transportname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CanControllableHaveControlEntity(PARAMS(UniverseID controllableid,const char* postid))
     {
-        const auto func_res_1 = invoke(CanControllableHaveControlEntity, controllableid, postid);
+        const auto callResult = invoke(CanControllableHaveControlEntity, controllableid, postid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CanGenerateValidKnownLoadout(PARAMS(const char* macroname))
     {
-        const auto func_res_1 = invoke(CanGenerateValidKnownLoadout, macroname);
+        const auto callResult = invoke(CanGenerateValidKnownLoadout, macroname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CanGenerateValidLoadout(PARAMS(UniverseID containerid,const char* macroname))
     {
-        const auto func_res_1 = invoke(CanGenerateValidLoadout, containerid, macroname);
+        const auto callResult = invoke(CanGenerateValidLoadout, containerid, macroname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CanHaveCountermeasures(PARAMS())
     {
-        const auto func_res_1 = invoke(CanHaveCountermeasures);
+        const auto callResult = invoke(CanHaveCountermeasures);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CanOpenWebBrowser(PARAMS())
     {
-        const auto func_res_1 = invoke(CanOpenWebBrowser);
+        const auto callResult = invoke(CanOpenWebBrowser);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CanPlayerCommTarget(PARAMS(UniverseID componentid))
     {
-        const auto func_res_1 = invoke(CanPlayerCommTarget, componentid);
+        const auto callResult = invoke(CanPlayerCommTarget, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CanPlayerStandUp(PARAMS())
     {
-        const auto func_res_1 = invoke(CanPlayerStandUp);
+        const auto callResult = invoke(CanPlayerStandUp);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CanRedoConstructionMapChange(PARAMS(UniverseID holomapid))
     {
-        const auto func_res_1 = invoke(CanRedoConstructionMapChange, holomapid);
+        const auto callResult = invoke(CanRedoConstructionMapChange, holomapid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CanStartTravelMode(PARAMS(UniverseID objectid))
     {
-        const auto func_res_1 = invoke(CanStartTravelMode, objectid);
+        const auto callResult = invoke(CanStartTravelMode, objectid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CanUndoConstructionMapChange(PARAMS(UniverseID holomapid))
     {
-        const auto func_res_1 = invoke(CanUndoConstructionMapChange, holomapid);
+        const auto callResult = invoke(CanUndoConstructionMapChange, holomapid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CancelConstruction(PARAMS(UniverseID containerid,BuildTaskID id))
     {
-        const auto func_res_1 = invoke(CancelConstruction, containerid, id);
+        const auto callResult = invoke(CancelConstruction, containerid, id);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CheckWeaponModCompatibility(PARAMS(UniverseID weaponid,const char* wareid))
     {
-        const auto func_res_1 = invoke(CheckWeaponModCompatibility, weaponid, wareid);
+        const auto callResult = invoke(CheckWeaponModCompatibility, weaponid, wareid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CompareMapConstructionSequenceWithPlanned(PARAMS(UniverseID holomapid,UniverseID defensibleid,bool usestoredplan))
     {
-        const auto func_res_1 = invoke(CompareMapConstructionSequenceWithPlanned, holomapid, defensibleid, usestoredplan);
+        const auto callResult = invoke(CompareMapConstructionSequenceWithPlanned, holomapid, defensibleid, usestoredplan);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CopyToClipboard(PARAMS(const char*const text))
     {
-        const auto func_res_1 = invoke(CopyToClipboard, text);
+        const auto callResult = invoke(CopyToClipboard, text);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CreateBoardingOperation(PARAMS(UniverseID defensibletargetid,const char* boarderfactionid,uint32_t approachthreshold,uint32_t insertionthreshold))
     {
-        const auto func_res_1 = invoke(CreateBoardingOperation, defensibletargetid, boarderfactionid, approachthreshold, insertionthreshold);
+        const auto callResult = invoke(CreateBoardingOperation, defensibletargetid, boarderfactionid, approachthreshold, insertionthreshold);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json DeleteSavegame(PARAMS(const char* filename))
     {
-        const auto func_res_1 = invoke(DeleteSavegame, filename);
+        const auto callResult = invoke(DeleteSavegame, filename);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json DoesMapConstructionSequenceRequireBuilder(PARAMS(UniverseID holomapid,UniverseID defensibleid,bool usestoredplan))
     {
-        const auto func_res_1 = invoke(DoesMapConstructionSequenceRequireBuilder, holomapid, defensibleid, usestoredplan);
+        const auto callResult = invoke(DoesMapConstructionSequenceRequireBuilder, holomapid, defensibleid, usestoredplan);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json DropCargo(PARAMS(UniverseID containerid,const char* wareid,uint32_t amount))
     {
-        const auto func_res_1 = invoke(DropCargo, containerid, wareid, amount);
+        const auto callResult = invoke(DropCargo, containerid, wareid, amount);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json DropInventory(PARAMS(UniverseID entityid,const char* lockboxid,uint32_t numwares))
     {
         UIWareAmount wares;
-        const auto func_res_1 = invoke(DropInventory, entityid, lockboxid, &wares, numwares);
-         if (func_res_1) {
+        const auto callResult = invoke(DropInventory, entityid, lockboxid, &wares, numwares);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"wares", {
                     {"wareid", wares.wareid},
                     {"amount", wares.amount}
@@ -1634,43 +1634,43 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json EnableOrder(PARAMS(UniverseID controllableid,size_t idx))
     {
-        const auto func_res_1 = invoke(EnableOrder, controllableid, idx);
+        const auto callResult = invoke(EnableOrder, controllableid, idx);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json EnablePlannedDefaultOrder(PARAMS(UniverseID controllableid,bool checkonly))
     {
-        const auto func_res_1 = invoke(EnablePlannedDefaultOrder, controllableid, checkonly);
+        const auto callResult = invoke(EnablePlannedDefaultOrder, controllableid, checkonly);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetAskToSignalForControllable(PARAMS(const char* signalid,UniverseID controllableid))
     {
-        const auto func_res_1 = invoke(GetAskToSignalForControllable, signalid, controllableid);
+        const auto callResult = invoke(GetAskToSignalForControllable, signalid, controllableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetAskToSignalForFaction(PARAMS(const char* signalid,const char* factionid))
     {
-        const auto func_res_1 = invoke(GetAskToSignalForFaction, signalid, factionid);
+        const auto callResult = invoke(GetAskToSignalForFaction, signalid, factionid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -1678,11 +1678,11 @@ namespace ffijson
     {
         uint32_t resultmarinetieramounts;
         int32_t inputmarinetierskilllevels;
-        const auto func_res_1 = invoke(GetBoardingMarineTierAmountsFromAttacker, &resultmarinetieramounts, &inputmarinetierskilllevels, inputnummarinetiers, defensibletargetid, defensibleboarderid, boarderfactionid);
-         if (func_res_1) {
+        const auto callResult = invoke(GetBoardingMarineTierAmountsFromAttacker, &resultmarinetieramounts, &inputmarinetierskilllevels, inputnummarinetiers, defensibletargetid, defensibleboarderid, boarderfactionid);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"resultmarinetieramounts", resultmarinetieramounts},
                 {"inputmarinetierskilllevels", inputmarinetierskilllevels}
             };
@@ -1690,18 +1690,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetBoxTextBoxColor(PARAMS(const int boxtextid))
     {
         Color color;
-        const auto func_res_1 = invoke(GetBoxTextBoxColor, boxtextid, &color);
-         if (func_res_1) {
+        const auto callResult = invoke(GetBoxTextBoxColor, boxtextid, &color);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"color", {
                     {"red", color.red},
                     {"green", color.green},
@@ -1713,18 +1713,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetBoxTextInfo(PARAMS(const int boxtextid))
     {
         TextInfo textinfo;
-        const auto func_res_1 = invoke(GetBoxTextInfo, boxtextid, &textinfo);
-         if (func_res_1) {
+        const auto callResult = invoke(GetBoxTextInfo, boxtextid, &textinfo);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"textinfo", {
                     {"text", textinfo.text},
                     {"x", textinfo.x},
@@ -1738,18 +1738,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetBuildMapStationLocation(PARAMS(UniverseID holomapid))
     {
         UIPosRot location;
-        const auto func_res_1 = invoke(GetBuildMapStationLocation, holomapid, &location);
-         if (func_res_1) {
+        const auto callResult = invoke(GetBuildMapStationLocation, holomapid, &location);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"location", {
                     {"x", location.x},
                     {"y", location.y},
@@ -1763,18 +1763,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetButtonHighlightColor(PARAMS(const int buttonid))
     {
         Color color;
-        const auto func_res_1 = invoke(GetButtonHighlightColor, buttonid, &color);
-         if (func_res_1) {
+        const auto callResult = invoke(GetButtonHighlightColor, buttonid, &color);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"color", {
                     {"red", color.red},
                     {"green", color.green},
@@ -1786,18 +1786,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetButtonText2Details(PARAMS(const int buttonid))
     {
         TextInfo textinfo;
-        const auto func_res_1 = invoke(GetButtonText2Details, buttonid, &textinfo);
-         if (func_res_1) {
+        const auto callResult = invoke(GetButtonText2Details, buttonid, &textinfo);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"textinfo", {
                     {"text", textinfo.text},
                     {"x", textinfo.x},
@@ -1811,18 +1811,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetCheckBoxColor(PARAMS(const int checkboxid))
     {
         Color color;
-        const auto func_res_1 = invoke(GetCheckBoxColor, checkboxid, &color);
-         if (func_res_1) {
+        const auto callResult = invoke(GetCheckBoxColor, checkboxid, &color);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"color", {
                     {"red", color.red},
                     {"green", color.green},
@@ -1834,45 +1834,45 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetChromaticAberrationOption(PARAMS())
     {
-        const auto func_res_1 = invoke(GetChromaticAberrationOption);
+        const auto callResult = invoke(GetChromaticAberrationOption);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetContainerWareIsBuyable(PARAMS(UniverseID containerid,const char* wareid))
     {
-        const auto func_res_1 = invoke(GetContainerWareIsBuyable, containerid, wareid);
+        const auto callResult = invoke(GetContainerWareIsBuyable, containerid, wareid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetContainerWareIsSellable(PARAMS(UniverseID containerid,const char* wareid))
     {
-        const auto func_res_1 = invoke(GetContainerWareIsSellable, containerid, wareid);
+        const auto callResult = invoke(GetContainerWareIsSellable, containerid, wareid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetCustomGameStartBoolProperty(PARAMS(const char* id,const char* propertyid))
     {
         CustomGameStartBoolPropertyState state;
-        const auto func_res_1 = invoke(GetCustomGameStartBoolProperty, id, propertyid, &state);
-         if (func_res_1) {
+        const auto callResult = invoke(GetCustomGameStartBoolProperty, id, propertyid, &state);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"state", {
                     {"state", state.state},
                     {"defaultvalue", state.defaultvalue}
@@ -1882,18 +1882,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetDefaultOrder(PARAMS(UniverseID controllableid))
     {
         Order result;
-        const auto func_res_1 = invoke(GetDefaultOrder, &result, controllableid);
-         if (func_res_1) {
+        const auto callResult = invoke(GetDefaultOrder, &result, controllableid);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", {
                     {"queueidx", result.queueidx},
                     {"state", result.state},
@@ -1910,18 +1910,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetDropDownColor(PARAMS(const int dropdownid))
     {
         Color color;
-        const auto func_res_1 = invoke(GetDropDownColor, dropdownid, &color);
-         if (func_res_1) {
+        const auto callResult = invoke(GetDropDownColor, dropdownid, &color);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"color", {
                     {"red", color.red},
                     {"green", color.green},
@@ -1933,18 +1933,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetDropDownHighlightColor(PARAMS(const int dropdownid))
     {
         Color color;
-        const auto func_res_1 = invoke(GetDropDownHighlightColor, dropdownid, &color);
-         if (func_res_1) {
+        const auto callResult = invoke(GetDropDownHighlightColor, dropdownid, &color);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"color", {
                     {"red", color.red},
                     {"green", color.green},
@@ -1956,18 +1956,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetDropDownHotkeyDetails(PARAMS(const int dropdownid))
     {
         HotkeyInfo hotkeyinfo;
-        const auto func_res_1 = invoke(GetDropDownHotkeyDetails, dropdownid, &hotkeyinfo);
-         if (func_res_1) {
+        const auto callResult = invoke(GetDropDownHotkeyDetails, dropdownid, &hotkeyinfo);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"hotkeyinfo", {
                     {"iconid", hotkeyinfo.iconid},
                     {"x", hotkeyinfo.x},
@@ -1979,18 +1979,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetDropDownIconDetails(PARAMS(const int dropdownid))
     {
         DropDownIconInfo iconinfo;
-        const auto func_res_1 = invoke(GetDropDownIconDetails, dropdownid, &iconinfo);
-         if (func_res_1) {
+        const auto callResult = invoke(GetDropDownIconDetails, dropdownid, &iconinfo);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"iconinfo", {
                     {"color", {"red", iconinfo.color.red},{"green", iconinfo.color.green},{"blue", iconinfo.color.blue},{"alpha", iconinfo.color.alpha}},
                     {"width", iconinfo.width},
@@ -2003,18 +2003,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetDropDownOptionColor(PARAMS(const int dropdownid))
     {
         Color color;
-        const auto func_res_1 = invoke(GetDropDownOptionColor, dropdownid, &color);
-         if (func_res_1) {
+        const auto callResult = invoke(GetDropDownOptionColor, dropdownid, &color);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"color", {
                     {"red", color.red},
                     {"green", color.green},
@@ -2026,18 +2026,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetDropDownText2Details(PARAMS(const int dropdownid))
     {
         DropDownTextInfo textinfo;
-        const auto func_res_1 = invoke(GetDropDownText2Details, dropdownid, &textinfo);
-         if (func_res_1) {
+        const auto callResult = invoke(GetDropDownText2Details, dropdownid, &textinfo);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"textinfo", {
                     {"color", {"red", textinfo.color.red},{"green", textinfo.color.green},{"blue", textinfo.color.blue},{"alpha", textinfo.color.alpha}},
                     {"font", {"name", textinfo.font.name},{"size", textinfo.font.size}},
@@ -2051,18 +2051,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetDropDownTextDetails(PARAMS(const int dropdownid))
     {
         DropDownTextInfo textinfo;
-        const auto func_res_1 = invoke(GetDropDownTextDetails, dropdownid, &textinfo);
-         if (func_res_1) {
+        const auto callResult = invoke(GetDropDownTextDetails, dropdownid, &textinfo);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"textinfo", {
                     {"color", {"red", textinfo.color.red},{"green", textinfo.color.green},{"blue", textinfo.color.blue},{"alpha", textinfo.color.alpha}},
                     {"font", {"name", textinfo.font.name},{"size", textinfo.font.size}},
@@ -2076,18 +2076,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetFontStringTitleColor(PARAMS(const int fontstringid))
     {
         Color color;
-        const auto func_res_1 = invoke(GetFontStringTitleColor, fontstringid, &color);
-         if (func_res_1) {
+        const auto callResult = invoke(GetFontStringTitleColor, fontstringid, &color);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"color", {
                     {"red", color.red},
                     {"green", color.green},
@@ -2099,27 +2099,27 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetForceShootingAtCursorOption(PARAMS())
     {
-        const auto func_res_1 = invoke(GetForceShootingAtCursorOption);
+        const auto callResult = invoke(GetForceShootingAtCursorOption);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetGraphBackgroundColor(PARAMS(const int graphid))
     {
         Color color;
-        const auto func_res_1 = invoke(GetGraphBackgroundColor, graphid, &color);
-         if (func_res_1) {
+        const auto callResult = invoke(GetGraphBackgroundColor, graphid, &color);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"color", {
                     {"red", color.red},
                     {"green", color.green},
@@ -2131,18 +2131,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetGraphTitle(PARAMS(const int graphid))
     {
         GraphTextInfo title;
-        const auto func_res_1 = invoke(GetGraphTitle, graphid, &title);
-         if (func_res_1) {
+        const auto callResult = invoke(GetGraphTitle, graphid, &title);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"title", {
                     {"text", title.text},
                     {"font", {"name", title.font.name},{"size", title.font.size}},
@@ -2153,18 +2153,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetGraphXAxis(PARAMS(const int graphid))
     {
         GraphAxisInfo axis;
-        const auto func_res_1 = invoke(GetGraphXAxis, graphid, &axis);
-         if (func_res_1) {
+        const auto callResult = invoke(GetGraphXAxis, graphid, &axis);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"axis", {
                     {"label", {"text", axis.label.text},{"font", {"name", axis.label.font.name},{"size", axis.label.font.size}},{"color", {"red", axis.label.color.red},{"green", axis.label.color.green},{"blue", axis.label.color.blue},{"alpha", axis.label.color.alpha}}},
                     {"startvalue", axis.startvalue},
@@ -2180,18 +2180,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetGraphYAxis(PARAMS(const int graphid))
     {
         GraphAxisInfo axis;
-        const auto func_res_1 = invoke(GetGraphYAxis, graphid, &axis);
-         if (func_res_1) {
+        const auto callResult = invoke(GetGraphYAxis, graphid, &axis);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"axis", {
                     {"label", {"text", axis.label.text},{"font", {"name", axis.label.font.name},{"size", axis.label.font.size}},{"color", {"red", axis.label.color.red},{"green", axis.label.color.green},{"blue", axis.label.color.blue},{"alpha", axis.label.color.alpha}}},
                     {"startvalue", axis.startvalue},
@@ -2207,27 +2207,27 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetHUDSeparateRadar(PARAMS())
     {
-        const auto func_res_1 = invoke(GetHUDSeparateRadar);
+        const auto callResult = invoke(GetHUDSeparateRadar);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetIconText2Details(PARAMS(const int iconid))
     {
         TextInfo textinfo;
-        const auto func_res_1 = invoke(GetIconText2Details, iconid, &textinfo);
-         if (func_res_1) {
+        const auto callResult = invoke(GetIconText2Details, iconid, &textinfo);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"textinfo", {
                     {"text", textinfo.text},
                     {"x", textinfo.x},
@@ -2241,18 +2241,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetIconTextDetails(PARAMS(const int iconid))
     {
         TextInfo textinfo;
-        const auto func_res_1 = invoke(GetIconTextDetails, iconid, &textinfo);
-         if (func_res_1) {
+        const auto callResult = invoke(GetIconTextDetails, iconid, &textinfo);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"textinfo", {
                     {"text", textinfo.text},
                     {"x", textinfo.x},
@@ -2266,18 +2266,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetInstalledEngineMod(PARAMS(UniverseID objectid))
     {
         UIEngineMod enginemod;
-        const auto func_res_1 = invoke(GetInstalledEngineMod, objectid, &enginemod);
-         if (func_res_1) {
+        const auto callResult = invoke(GetInstalledEngineMod, objectid, &enginemod);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"enginemod", {
                     {"Name", enginemod.Name},
                     {"RawName", enginemod.RawName},
@@ -2304,18 +2304,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetInstalledGroupedWeaponMod(PARAMS(UniverseID defensibleid,UniverseID contextid,const char* group))
     {
         UIWeaponMod weaponmod;
-        const auto func_res_1 = invoke(GetInstalledGroupedWeaponMod, defensibleid, contextid, group, &weaponmod);
-         if (func_res_1) {
+        const auto callResult = invoke(GetInstalledGroupedWeaponMod, defensibleid, contextid, group, &weaponmod);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"weaponmod", {
                     {"Name", weaponmod.Name},
                     {"RawName", weaponmod.RawName},
@@ -2340,18 +2340,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetInstalledPaintMod(PARAMS(UniverseID objectid))
     {
         UIPaintMod paintmod;
-        const auto func_res_1 = invoke(GetInstalledPaintMod, objectid, &paintmod);
-         if (func_res_1) {
+        const auto callResult = invoke(GetInstalledPaintMod, objectid, &paintmod);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"paintmod", {
                     {"Name", paintmod.Name},
                     {"RawName", paintmod.RawName},
@@ -2364,18 +2364,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetInstalledShieldMod(PARAMS(UniverseID defensibleid,UniverseID contextid,const char* group))
     {
         UIShieldMod shieldmod;
-        const auto func_res_1 = invoke(GetInstalledShieldMod, defensibleid, contextid, group, &shieldmod);
-         if (func_res_1) {
+        const auto callResult = invoke(GetInstalledShieldMod, defensibleid, contextid, group, &shieldmod);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"shieldmod", {
                     {"Name", shieldmod.Name},
                     {"RawName", shieldmod.RawName},
@@ -2391,18 +2391,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetInstalledShipMod(PARAMS(UniverseID shipid))
     {
         UIShipMod shipmod;
-        const auto func_res_1 = invoke(GetInstalledShipMod, shipid, &shipmod);
-         if (func_res_1) {
+        const auto callResult = invoke(GetInstalledShipMod, shipid, &shipmod);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"shipmod", {
                     {"Name", shipmod.Name},
                     {"RawName", shipmod.RawName},
@@ -2423,18 +2423,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetInstalledWeaponMod(PARAMS(UniverseID weaponid))
     {
         UIWeaponMod weaponmod;
-        const auto func_res_1 = invoke(GetInstalledWeaponMod, weaponid, &weaponmod);
-         if (func_res_1) {
+        const auto callResult = invoke(GetInstalledWeaponMod, weaponid, &weaponmod);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"weaponmod", {
                     {"Name", weaponmod.Name},
                     {"RawName", weaponmod.RawName},
@@ -2459,18 +2459,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetLicenceInfo(PARAMS(const char* factionid,const char* licenceid))
     {
         LicenceInfo result;
-        const auto func_res_1 = invoke(GetLicenceInfo, &result, factionid, licenceid);
-         if (func_res_1) {
+        const auto callResult = invoke(GetLicenceInfo, &result, factionid, licenceid);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", {
                     {"name", result.name},
                     {"icon", result.icon}
@@ -2480,36 +2480,36 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetMouseOverTextOption(PARAMS())
     {
-        const auto func_res_1 = invoke(GetMouseOverTextOption);
+        const auto callResult = invoke(GetMouseOverTextOption);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetMouseSteeringInvertedOption(PARAMS(const char* paramname))
     {
-        const auto func_res_1 = invoke(GetMouseSteeringInvertedOption, paramname);
+        const auto callResult = invoke(GetMouseSteeringInvertedOption, paramname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetOrderDefinition(PARAMS(const char* orderdef))
     {
         OrderDefinition result;
-        const auto func_res_1 = invoke(GetOrderDefinition, &result, orderdef);
-         if (func_res_1) {
+        const auto callResult = invoke(GetOrderDefinition, &result, orderdef);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", {
                     {"id", result.id},
                     {"name", result.name},
@@ -2525,18 +2525,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPickedBuildMapEntry(PARAMS(UniverseID holomapid,UniverseID defensibleid))
     {
         UIConstructionPlanEntry result;
-        const auto func_res_1 = invoke(GetPickedBuildMapEntry, holomapid, defensibleid, &result);
-         if (func_res_1) {
+        const auto callResult = invoke(GetPickedBuildMapEntry, holomapid, defensibleid, &result);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", {
                     {"idx", result.idx},
                     {"macroid", result.macroid},
@@ -2552,18 +2552,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPickedMapMacroSlot(PARAMS(UniverseID holomapid,UniverseID defensibleid,UniverseID moduleid,const char* macroname,bool ismodule))
     {
         UILoadoutSlot result;
-        const auto func_res_1 = invoke(GetPickedMapMacroSlot, holomapid, defensibleid, moduleid, macroname, ismodule, &result);
-         if (func_res_1) {
+        const auto callResult = invoke(GetPickedMapMacroSlot, holomapid, defensibleid, moduleid, macroname, ismodule, &result);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", {
                     {"upgradetype", result.upgradetype},
                     {"slot", result.slot}
@@ -2573,18 +2573,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPlannedDefaultOrder(PARAMS(UniverseID controllableid))
     {
         Order result;
-        const auto func_res_1 = invoke(GetPlannedDefaultOrder, &result, controllableid);
-         if (func_res_1) {
+        const auto callResult = invoke(GetPlannedDefaultOrder, &result, controllableid);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", {
                     {"queueidx", result.queueidx},
                     {"state", result.state},
@@ -2601,18 +2601,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPlayerPaintThemeMod(PARAMS(UniverseID objectid,const char* macroname))
     {
         UIPaintMod paintmod;
-        const auto func_res_1 = invoke(GetPlayerPaintThemeMod, objectid, macroname, &paintmod);
-         if (func_res_1) {
+        const auto callResult = invoke(GetPlayerPaintThemeMod, objectid, macroname, &paintmod);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"paintmod", {
                     {"Name", paintmod.Name},
                     {"RawName", paintmod.RawName},
@@ -2625,36 +2625,36 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetSavesCompressedOption(PARAMS())
     {
-        const auto func_res_1 = invoke(GetSavesCompressedOption);
+        const auto callResult = invoke(GetSavesCompressedOption);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetScreenDisplayOption(PARAMS())
     {
-        const auto func_res_1 = invoke(GetScreenDisplayOption);
+        const auto callResult = invoke(GetScreenDisplayOption);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetShieldGroup(PARAMS(UniverseID defensibleid,UniverseID destructibleid))
     {
         ShieldGroup result;
-        const auto func_res_1 = invoke(GetShieldGroup, &result, defensibleid, destructibleid);
-         if (func_res_1) {
+        const auto callResult = invoke(GetShieldGroup, &result, defensibleid, destructibleid);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", {
                     {"context", result.context},
                     {"group", result.group},
@@ -2665,18 +2665,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetSliderCellBackgroundColor(PARAMS(const int slidercellid))
     {
         Color color;
-        const auto func_res_1 = invoke(GetSliderCellBackgroundColor, slidercellid, &color);
-         if (func_res_1) {
+        const auto callResult = invoke(GetSliderCellBackgroundColor, slidercellid, &color);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"color", {
                     {"red", color.red},
                     {"green", color.green},
@@ -2688,18 +2688,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetSliderCellFont(PARAMS(const int slidercellid))
     {
         Font font;
-        const auto func_res_1 = invoke(GetSliderCellFont, slidercellid, &font);
-         if (func_res_1) {
+        const auto callResult = invoke(GetSliderCellFont, slidercellid, &font);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"font", {
                     {"name", font.name},
                     {"size", font.size}
@@ -2709,18 +2709,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetSliderCellInactiveBackgroundColor(PARAMS(const int slidercellid))
     {
         Color color;
-        const auto func_res_1 = invoke(GetSliderCellInactiveBackgroundColor, slidercellid, &color);
-         if (func_res_1) {
+        const auto callResult = invoke(GetSliderCellInactiveBackgroundColor, slidercellid, &color);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"color", {
                     {"red", color.red},
                     {"green", color.green},
@@ -2732,18 +2732,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetSliderCellNegativeValueColor(PARAMS(const int slidercellid))
     {
         Color color;
-        const auto func_res_1 = invoke(GetSliderCellNegativeValueColor, slidercellid, &color);
-         if (func_res_1) {
+        const auto callResult = invoke(GetSliderCellNegativeValueColor, slidercellid, &color);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"color", {
                     {"red", color.red},
                     {"green", color.green},
@@ -2755,18 +2755,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetSliderCellTextColor(PARAMS(const int slidercellid))
     {
         Color color;
-        const auto func_res_1 = invoke(GetSliderCellTextColor, slidercellid, &color);
-         if (func_res_1) {
+        const auto callResult = invoke(GetSliderCellTextColor, slidercellid, &color);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"color", {
                     {"red", color.red},
                     {"green", color.green},
@@ -2778,18 +2778,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetSliderCellValueColor(PARAMS(const int slidercellid))
     {
         Color color;
-        const auto func_res_1 = invoke(GetSliderCellValueColor, slidercellid, &color);
-         if (func_res_1) {
+        const auto callResult = invoke(GetSliderCellValueColor, slidercellid, &color);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"color", {
                     {"red", color.red},
                     {"green", color.green},
@@ -2801,18 +2801,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetSliderCellValues(PARAMS(const int slidercellid))
     {
         SliderCellDetails values;
-        const auto func_res_1 = invoke(GetSliderCellValues, slidercellid, &values);
-         if (func_res_1) {
+        const auto callResult = invoke(GetSliderCellValues, slidercellid, &values);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"values", {
                     {"min", values.min},
                     {"minSelect", values.minSelect},
@@ -2835,27 +2835,27 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetSpeakTargetNameOption(PARAMS())
     {
-        const auto func_res_1 = invoke(GetSpeakTargetNameOption);
+        const auto callResult = invoke(GetSpeakTargetNameOption);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetStatusBarMarkerColor(PARAMS(const int statusbarid))
     {
         Color color;
-        const auto func_res_1 = invoke(GetStatusBarMarkerColor, statusbarid, &color);
-         if (func_res_1) {
+        const auto callResult = invoke(GetStatusBarMarkerColor, statusbarid, &color);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"color", {
                     {"red", color.red},
                     {"green", color.green},
@@ -2867,18 +2867,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetStatusBarNegChangeColor(PARAMS(const int statusbarid))
     {
         Color color;
-        const auto func_res_1 = invoke(GetStatusBarNegChangeColor, statusbarid, &color);
-         if (func_res_1) {
+        const auto callResult = invoke(GetStatusBarNegChangeColor, statusbarid, &color);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"color", {
                     {"red", color.red},
                     {"green", color.green},
@@ -2890,18 +2890,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetStatusBarPosChangeColor(PARAMS(const int statusbarid))
     {
         Color color;
-        const auto func_res_1 = invoke(GetStatusBarPosChangeColor, statusbarid, &color);
-         if (func_res_1) {
+        const auto callResult = invoke(GetStatusBarPosChangeColor, statusbarid, &color);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"color", {
                     {"red", color.red},
                     {"green", color.green},
@@ -2913,18 +2913,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetStatusBarValueColor(PARAMS(const int statusbarid))
     {
         Color color;
-        const auto func_res_1 = invoke(GetStatusBarValueColor, statusbarid, &color);
-         if (func_res_1) {
+        const auto callResult = invoke(GetStatusBarValueColor, statusbarid, &color);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"color", {
                     {"red", color.red},
                     {"green", color.green},
@@ -2936,18 +2936,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetSyncPointInfo(PARAMS(UniverseID controllableid,size_t orderidx))
     {
         SyncPointInfo result;
-        const auto func_res_1 = invoke(GetSyncPointInfo, controllableid, orderidx, &result);
-         if (func_res_1) {
+        const auto callResult = invoke(GetSyncPointInfo, controllableid, orderidx, &result);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", {
                     {"id", result.id},
                     {"reached", result.reached}
@@ -2957,18 +2957,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetTableBackgroundColor(PARAMS(const int tableid))
     {
         Color color;
-        const auto func_res_1 = invoke(GetTableBackgroundColor, tableid, &color);
-         if (func_res_1) {
+        const auto callResult = invoke(GetTableBackgroundColor, tableid, &color);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"color", {
                     {"red", color.red},
                     {"green", color.green},
@@ -2980,18 +2980,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetUISystemInfo(PARAMS(UniverseID clusterid))
     {
         UISystemInfo result;
-        const auto func_res_1 = invoke(GetUISystemInfo, &result, clusterid);
-         if (func_res_1) {
+        const auto callResult = invoke(GetUISystemInfo, &result, clusterid);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", {
                     {"space", {"environment", result.space.environment}},
                     {"numsuns", result.numsuns},
@@ -3004,1789 +3004,1789 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetUp(PARAMS())
     {
-        const auto func_res_1 = invoke(GetUp);
+        const auto callResult = invoke(GetUp);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetVentureOption(PARAMS())
     {
-        const auto func_res_1 = invoke(GetVentureOption);
+        const auto callResult = invoke(GetVentureOption);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetVisitorNamesShownOption(PARAMS())
     {
-        const auto func_res_1 = invoke(GetVisitorNamesShownOption);
+        const auto callResult = invoke(GetVisitorNamesShownOption);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json HasContainerBuyLimitOverride(PARAMS(UniverseID containerid,const char* wareid))
     {
-        const auto func_res_1 = invoke(HasContainerBuyLimitOverride, containerid, wareid);
+        const auto callResult = invoke(HasContainerBuyLimitOverride, containerid, wareid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json HasContainerSellLimitOverride(PARAMS(UniverseID containerid,const char* wareid))
     {
-        const auto func_res_1 = invoke(HasContainerSellLimitOverride, containerid, wareid);
+        const auto callResult = invoke(HasContainerSellLimitOverride, containerid, wareid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json HasControllableOwnBlacklist(PARAMS(UniverseID controllableid,const char* listtype))
     {
-        const auto func_res_1 = invoke(HasControllableOwnBlacklist, controllableid, listtype);
+        const auto callResult = invoke(HasControllableOwnBlacklist, controllableid, listtype);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json HasControllableOwnResponse(PARAMS(UniverseID controllableid,const char* signalid))
     {
-        const auto func_res_1 = invoke(HasControllableOwnResponse, controllableid, signalid);
+        const auto callResult = invoke(HasControllableOwnResponse, controllableid, signalid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json HasDefaultLoadout(PARAMS(const char* macroname))
     {
-        const auto func_res_1 = invoke(HasDefaultLoadout, macroname);
+        const auto callResult = invoke(HasDefaultLoadout, macroname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json HasEntityMoneyLogEntries(PARAMS(UniverseID entityid))
     {
-        const auto func_res_1 = invoke(HasEntityMoneyLogEntries, entityid);
+        const auto callResult = invoke(HasEntityMoneyLogEntries, entityid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json HasExtension(PARAMS(const char* extensionid,bool personal))
     {
-        const auto func_res_1 = invoke(HasExtension, extensionid, personal);
+        const auto callResult = invoke(HasExtension, extensionid, personal);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json HasFrameBrackets(PARAMS(const int frameid))
     {
-        const auto func_res_1 = invoke(HasFrameBrackets, frameid);
+        const auto callResult = invoke(HasFrameBrackets, frameid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json HasLimitedOxygenSupply(PARAMS())
     {
-        const auto func_res_1 = invoke(HasLimitedOxygenSupply);
+        const auto callResult = invoke(HasLimitedOxygenSupply);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json HasResearched(PARAMS(const char* wareid))
     {
-        const auto func_res_1 = invoke(HasResearched, wareid);
+        const auto callResult = invoke(HasResearched, wareid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json HasSavegame(PARAMS())
     {
-        const auto func_res_1 = invoke(HasSavegame);
+        const auto callResult = invoke(HasSavegame);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json HasSeta(PARAMS())
     {
-        const auto func_res_1 = invoke(HasSeta);
+        const auto callResult = invoke(HasSeta);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json HasShipFlightAssist(PARAMS(UniverseID shipid))
     {
-        const auto func_res_1 = invoke(HasShipFlightAssist, shipid);
+        const auto callResult = invoke(HasShipFlightAssist, shipid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json HasStartAnimation(PARAMS())
     {
-        const auto func_res_1 = invoke(HasStartAnimation);
+        const auto callResult = invoke(HasStartAnimation);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json HasVenturerDock(PARAMS(UniverseID containerid,UniverseID shipid,UniverseID ventureplatformid))
     {
-        const auto func_res_1 = invoke(HasVenturerDock, containerid, shipid, ventureplatformid);
+        const auto callResult = invoke(HasVenturerDock, containerid, shipid, ventureplatformid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json InstallEngineMod(PARAMS(UniverseID objectid,const char* wareid))
     {
-        const auto func_res_1 = invoke(InstallEngineMod, objectid, wareid);
+        const auto callResult = invoke(InstallEngineMod, objectid, wareid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json InstallGroupedWeaponMod(PARAMS(UniverseID defensibleid,UniverseID contextid,const char* group,const char* wareid))
     {
-        const auto func_res_1 = invoke(InstallGroupedWeaponMod, defensibleid, contextid, group, wareid);
+        const auto callResult = invoke(InstallGroupedWeaponMod, defensibleid, contextid, group, wareid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json InstallPaintMod(PARAMS(UniverseID objectid,const char* wareid,bool useinventory))
     {
-        const auto func_res_1 = invoke(InstallPaintMod, objectid, wareid, useinventory);
+        const auto callResult = invoke(InstallPaintMod, objectid, wareid, useinventory);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json InstallShieldMod(PARAMS(UniverseID defensibleid,UniverseID contextid,const char* group,const char* wareid))
     {
-        const auto func_res_1 = invoke(InstallShieldMod, defensibleid, contextid, group, wareid);
+        const auto callResult = invoke(InstallShieldMod, defensibleid, contextid, group, wareid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json InstallShipMod(PARAMS(UniverseID shipid,const char* wareid))
     {
-        const auto func_res_1 = invoke(InstallShipMod, shipid, wareid);
+        const auto callResult = invoke(InstallShipMod, shipid, wareid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json InstallWeaponMod(PARAMS(UniverseID weaponid,const char* wareid))
     {
-        const auto func_res_1 = invoke(InstallWeaponMod, weaponid, wareid);
+        const auto callResult = invoke(InstallWeaponMod, weaponid, wareid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsAAOptionSupported(PARAMS(const char* mode))
     {
-        const auto func_res_1 = invoke(IsAAOptionSupported, mode);
+        const auto callResult = invoke(IsAAOptionSupported, mode);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsAdvancedSatellite(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsAdvancedSatellite, componentid);
+        const auto callResult = invoke(IsAdvancedSatellite, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsAmmoMacroCompatible(PARAMS(const char* weaponmacroname,const char* ammomacroname))
     {
-        const auto func_res_1 = invoke(IsAmmoMacroCompatible, weaponmacroname, ammomacroname);
+        const auto callResult = invoke(IsAmmoMacroCompatible, weaponmacroname, ammomacroname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsAppStoreVersion(PARAMS())
     {
-        const auto func_res_1 = invoke(IsAppStoreVersion);
+        const auto callResult = invoke(IsAppStoreVersion);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsAsteroid(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsAsteroid, componentid);
+        const auto callResult = invoke(IsAsteroid, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsAutotargetingActive(PARAMS())
     {
-        const auto func_res_1 = invoke(IsAutotargetingActive);
+        const auto callResult = invoke(IsAutotargetingActive);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsBomb(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsBomb, componentid);
+        const auto callResult = invoke(IsBomb, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsBoxTextWordWrap(PARAMS(const int boxtextid))
     {
-        const auto func_res_1 = invoke(IsBoxTextWordWrap, boxtextid);
+        const auto callResult = invoke(IsBoxTextWordWrap, boxtextid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsBuilderBusy(PARAMS(UniverseID shipid))
     {
-        const auto func_res_1 = invoke(IsBuilderBusy, shipid);
+        const auto callResult = invoke(IsBuilderBusy, shipid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsCheckBoxActive(PARAMS(const int checkboxid))
     {
-        const auto func_res_1 = invoke(IsCheckBoxActive, checkboxid);
+        const auto callResult = invoke(IsCheckBoxActive, checkboxid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsCheckBoxChecked(PARAMS(const int checkboxid))
     {
-        const auto func_res_1 = invoke(IsCheckBoxChecked, checkboxid);
+        const auto callResult = invoke(IsCheckBoxChecked, checkboxid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsCollectable(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsCollectable, componentid);
+        const auto callResult = invoke(IsCollectable, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsCommander(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsCommander, componentid);
+        const auto callResult = invoke(IsCommander, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsComponentClass(PARAMS(UniverseID componentid,const char* classname))
     {
-        const auto func_res_1 = invoke(IsComponentClass, componentid, classname);
+        const auto callResult = invoke(IsComponentClass, componentid, classname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsComponentOperational(PARAMS(UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsComponentOperational, componentid);
+        const auto callResult = invoke(IsComponentOperational, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsComponentWrecked(PARAMS(UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsComponentWrecked, componentid);
+        const auto callResult = invoke(IsComponentWrecked, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsConstructionPlanValid(PARAMS(const char* constructionplanid))
     {
         uint32_t numinvalidpatches;
-        const auto func_res_1 = invoke(IsConstructionPlanValid, constructionplanid, &numinvalidpatches);
-         if (func_res_1) {
+        const auto callResult = invoke(IsConstructionPlanValid, constructionplanid, &numinvalidpatches);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"numinvalidpatches", numinvalidpatches}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsContainerAmmoMacroCompatible(PARAMS(UniverseID containerid,const char* ammomacroname))
     {
-        const auto func_res_1 = invoke(IsContainerAmmoMacroCompatible, containerid, ammomacroname);
+        const auto callResult = invoke(IsContainerAmmoMacroCompatible, containerid, ammomacroname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsContainerFactionBuildRescricted(PARAMS(UniverseID containerid))
     {
-        const auto func_res_1 = invoke(IsContainerFactionBuildRescricted, containerid);
+        const auto callResult = invoke(IsContainerFactionBuildRescricted, containerid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsContainerFactionTradeRescricted(PARAMS(UniverseID containerid,const char* wareid))
     {
-        const auto func_res_1 = invoke(IsContainerFactionTradeRescricted, containerid, wareid);
+        const auto callResult = invoke(IsContainerFactionTradeRescricted, containerid, wareid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsContestedSector(PARAMS(UniverseID sectorid))
     {
-        const auto func_res_1 = invoke(IsContestedSector, sectorid);
+        const auto callResult = invoke(IsContestedSector, sectorid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsControlPressed(PARAMS())
     {
-        const auto func_res_1 = invoke(IsControlPressed);
+        const auto callResult = invoke(IsControlPressed);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsConversationActive(PARAMS())
     {
-        const auto func_res_1 = invoke(IsConversationActive);
+        const auto callResult = invoke(IsConversationActive);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsCrate(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsCrate, componentid);
+        const auto callResult = invoke(IsCrate, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsCrystal(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsCrystal, componentid);
+        const auto callResult = invoke(IsCrystal, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsCurrentGPUDiscrete(PARAMS())
     {
-        const auto func_res_1 = invoke(IsCurrentGPUDiscrete);
+        const auto callResult = invoke(IsCurrentGPUDiscrete);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsCurrentOrderCritical(PARAMS(UniverseID controllableid))
     {
-        const auto func_res_1 = invoke(IsCurrentOrderCritical, controllableid);
+        const auto callResult = invoke(IsCurrentOrderCritical, controllableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsCurrentlyScanning(PARAMS())
     {
-        const auto func_res_1 = invoke(IsCurrentlyScanning);
+        const auto callResult = invoke(IsCurrentlyScanning);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsCustomGameStartPropertyChanged(PARAMS(const char* id,const char* propertyid))
     {
-        const auto func_res_1 = invoke(IsCustomGameStartPropertyChanged, id, propertyid);
+        const auto callResult = invoke(IsCustomGameStartPropertyChanged, id, propertyid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsDefensibleBeingBoardedBy(PARAMS(UniverseID defensibleid,const char* factionid))
     {
-        const auto func_res_1 = invoke(IsDefensibleBeingBoardedBy, defensibleid, factionid);
+        const auto callResult = invoke(IsDefensibleBeingBoardedBy, defensibleid, factionid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsDemoVersion(PARAMS())
     {
-        const auto func_res_1 = invoke(IsDemoVersion);
+        const auto callResult = invoke(IsDemoVersion);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsDeployableMacroCompatible(PARAMS(UniverseID containerid,const char* macroname,const char* deployablemacroname))
     {
-        const auto func_res_1 = invoke(IsDeployableMacroCompatible, containerid, macroname, deployablemacroname);
+        const auto callResult = invoke(IsDeployableMacroCompatible, containerid, macroname, deployablemacroname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsDestructible2(PARAMS(const UniverseID componentid,const char*const connectionname))
     {
-        const auto func_res_1 = invoke(IsDestructible2, componentid, connectionname);
+        const auto callResult = invoke(IsDestructible2, componentid, connectionname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsDetailUIElement(PARAMS(const UniverseID componentid,const char*const connectionname))
     {
-        const auto func_res_1 = invoke(IsDetailUIElement, componentid, connectionname);
+        const auto callResult = invoke(IsDetailUIElement, componentid, connectionname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsDroneTypeArmed(PARAMS(UniverseID defensibleid,const char* dronetype))
     {
-        const auto func_res_1 = invoke(IsDroneTypeArmed, defensibleid, dronetype);
+        const auto callResult = invoke(IsDroneTypeArmed, defensibleid, dronetype);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsDroneTypeBlocked(PARAMS(UniverseID defensibleid,const char* dronetype))
     {
-        const auto func_res_1 = invoke(IsDroneTypeBlocked, defensibleid, dronetype);
+        const auto callResult = invoke(IsDroneTypeBlocked, defensibleid, dronetype);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsDropDownActive(PARAMS(const int dropdownid))
     {
-        const auto func_res_1 = invoke(IsDropDownActive, dropdownid);
+        const auto callResult = invoke(IsDropDownActive, dropdownid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsDropDownMouseOverInteractionAllowed(PARAMS(const int dropdownid))
     {
-        const auto func_res_1 = invoke(IsDropDownMouseOverInteractionAllowed, dropdownid);
+        const auto callResult = invoke(IsDropDownMouseOverInteractionAllowed, dropdownid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsEditBoxActive(PARAMS(const int editboxid))
     {
-        const auto func_res_1 = invoke(IsEditBoxActive, editboxid);
+        const auto callResult = invoke(IsEditBoxActive, editboxid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsEditBoxInputEncrypted(PARAMS(const int editboxid))
     {
-        const auto func_res_1 = invoke(IsEditBoxInputEncrypted, editboxid);
+        const auto callResult = invoke(IsEditBoxInputEncrypted, editboxid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsEditBoxTextHidden(PARAMS(const int editboxid))
     {
-        const auto func_res_1 = invoke(IsEditBoxTextHidden, editboxid);
+        const auto callResult = invoke(IsEditBoxTextHidden, editboxid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsEditBoxTextSelectedOnActivation(PARAMS(const int editboxid))
     {
-        const auto func_res_1 = invoke(IsEditBoxTextSelectedOnActivation, editboxid);
+        const auto callResult = invoke(IsEditBoxTextSelectedOnActivation, editboxid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsEntity(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsEntity, componentid);
+        const auto callResult = invoke(IsEntity, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsErrorLogActive(PARAMS())
     {
-        const auto func_res_1 = invoke(IsErrorLogActive);
+        const auto callResult = invoke(IsErrorLogActive);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsExternalTargetMode(PARAMS())
     {
-        const auto func_res_1 = invoke(IsExternalTargetMode);
+        const auto callResult = invoke(IsExternalTargetMode);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsExternalViewActive(PARAMS())
     {
-        const auto func_res_1 = invoke(IsExternalViewActive);
+        const auto callResult = invoke(IsExternalViewActive);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsFPSEnabled(PARAMS())
     {
-        const auto func_res_1 = invoke(IsFPSEnabled);
+        const auto callResult = invoke(IsFPSEnabled);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsFactionAllyToFaction(PARAMS(const char* factionid,const char* otherfactionid))
     {
-        const auto func_res_1 = invoke(IsFactionAllyToFaction, factionid, otherfactionid);
+        const auto callResult = invoke(IsFactionAllyToFaction, factionid, otherfactionid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsFactionEnemyToFaction(PARAMS(const char* factionid,const char* otherfactionid))
     {
-        const auto func_res_1 = invoke(IsFactionEnemyToFaction, factionid, otherfactionid);
+        const auto callResult = invoke(IsFactionEnemyToFaction, factionid, otherfactionid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsFactionHQ(PARAMS(UniverseID stationid))
     {
-        const auto func_res_1 = invoke(IsFactionHQ, stationid);
+        const auto callResult = invoke(IsFactionHQ, stationid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsFullscreenMenuDisplayed(PARAMS(bool anymenu,const char* menuname))
     {
-        const auto func_res_1 = invoke(IsFullscreenMenuDisplayed, anymenu, menuname);
+        const auto callResult = invoke(IsFullscreenMenuDisplayed, anymenu, menuname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsGOGVersion(PARAMS())
     {
-        const auto func_res_1 = invoke(IsGOGVersion);
+        const auto callResult = invoke(IsGOGVersion);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsGameModified(PARAMS())
     {
-        const auto func_res_1 = invoke(IsGameModified);
+        const auto callResult = invoke(IsGameModified);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsGamePaused(PARAMS())
     {
-        const auto func_res_1 = invoke(IsGamePaused);
+        const auto callResult = invoke(IsGamePaused);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsHQ(PARAMS(UniverseID stationid))
     {
-        const auto func_res_1 = invoke(IsHQ, stationid);
+        const auto callResult = invoke(IsHQ, stationid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsHUDActive(PARAMS())
     {
-        const auto func_res_1 = invoke(IsHUDActive);
+        const auto callResult = invoke(IsHUDActive);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsHUDRadarActive(PARAMS())
     {
-        const auto func_res_1 = invoke(IsHUDRadarActive);
+        const auto callResult = invoke(IsHUDRadarActive);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsIconValid(PARAMS(const char* iconid))
     {
-        const auto func_res_1 = invoke(IsIconValid, iconid);
+        const auto callResult = invoke(IsIconValid, iconid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsInfoUnlockedForPlayer(PARAMS(UniverseID componentid,const char* infostring))
     {
-        const auto func_res_1 = invoke(IsInfoUnlockedForPlayer, componentid, infostring);
+        const auto callResult = invoke(IsInfoUnlockedForPlayer, componentid, infostring);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsJoystickSteeringAdapative(PARAMS())
     {
-        const auto func_res_1 = invoke(IsJoystickSteeringAdapative);
+        const auto callResult = invoke(IsJoystickSteeringAdapative);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsKnownItemRead(PARAMS(const char* libraryid,const char* itemid))
     {
-        const auto func_res_1 = invoke(IsKnownItemRead, libraryid, itemid);
+        const auto callResult = invoke(IsKnownItemRead, libraryid, itemid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsKnownRead(PARAMS(UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsKnownRead, componentid);
+        const auto callResult = invoke(IsKnownRead, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsKnownToPlayer(PARAMS(UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsKnownToPlayer, componentid);
+        const auto callResult = invoke(IsKnownToPlayer, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsLanguageSettingEnabled(PARAMS())
     {
-        const auto func_res_1 = invoke(IsLanguageSettingEnabled);
+        const auto callResult = invoke(IsLanguageSettingEnabled);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsLanguageValid(PARAMS())
     {
-        const auto func_res_1 = invoke(IsLanguageValid);
+        const auto callResult = invoke(IsLanguageValid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsLaserTower(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsLaserTower, componentid);
+        const auto callResult = invoke(IsLaserTower, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsLeftMouseButtonDown(PARAMS())
     {
-        const auto func_res_1 = invoke(IsLeftMouseButtonDown);
+        const auto callResult = invoke(IsLeftMouseButtonDown);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsLoadoutValid(PARAMS(UniverseID defensibleid,const char* macroname,const char* loadoutid))
     {
         uint32_t numinvalidpatches;
-        const auto func_res_1 = invoke(IsLoadoutValid, defensibleid, macroname, loadoutid, &numinvalidpatches);
-         if (func_res_1) {
+        const auto callResult = invoke(IsLoadoutValid, defensibleid, macroname, loadoutid, &numinvalidpatches);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"numinvalidpatches", numinvalidpatches}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsLockbox(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsLockbox, componentid);
+        const auto callResult = invoke(IsLockbox, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsLowOnOxygen(PARAMS())
     {
-        const auto func_res_1 = invoke(IsLowOnOxygen);
+        const auto callResult = invoke(IsLowOnOxygen);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsMasterVersion(PARAMS())
     {
-        const auto func_res_1 = invoke(IsMasterVersion);
+        const auto callResult = invoke(IsMasterVersion);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsMiniWidgetSystemUsed(PARAMS())
     {
-        const auto func_res_1 = invoke(IsMiniWidgetSystemUsed);
+        const auto callResult = invoke(IsMiniWidgetSystemUsed);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsMissileIncoming(PARAMS())
     {
-        const auto func_res_1 = invoke(IsMissileIncoming);
+        const auto callResult = invoke(IsMissileIncoming);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsMissileLockingOn(PARAMS())
     {
-        const auto func_res_1 = invoke(IsMissileLockingOn);
+        const auto callResult = invoke(IsMissileLockingOn);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsMouseDoubleClickMode(PARAMS())
     {
-        const auto func_res_1 = invoke(IsMouseDoubleClickMode);
+        const auto callResult = invoke(IsMouseDoubleClickMode);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsMouseEmulationActive(PARAMS())
     {
-        const auto func_res_1 = invoke(IsMouseEmulationActive);
+        const auto callResult = invoke(IsMouseEmulationActive);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsMouseSteeringAdapative(PARAMS())
     {
-        const auto func_res_1 = invoke(IsMouseSteeringAdapative);
+        const auto callResult = invoke(IsMouseSteeringAdapative);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsNavBeacon(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsNavBeacon, componentid);
+        const auto callResult = invoke(IsNavBeacon, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsNetworkEngineEnabled(PARAMS())
     {
-        const auto func_res_1 = invoke(IsNetworkEngineEnabled);
+        const auto callResult = invoke(IsNetworkEngineEnabled);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsNextStartAnimationSkipped(PARAMS(bool reset))
     {
-        const auto func_res_1 = invoke(IsNextStartAnimationSkipped, reset);
+        const auto callResult = invoke(IsNextStartAnimationSkipped, reset);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsObjectKnown(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsObjectKnown, componentid);
+        const auto callResult = invoke(IsObjectKnown, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsOnlineEnabled(PARAMS())
     {
-        const auto func_res_1 = invoke(IsOnlineEnabled);
+        const auto callResult = invoke(IsOnlineEnabled);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsOrderSelectableFor(PARAMS(const char* orderdefid,UniverseID controllableid))
     {
-        const auto func_res_1 = invoke(IsOrderSelectableFor, orderdefid, controllableid);
+        const auto callResult = invoke(IsOrderSelectableFor, orderdefid, controllableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsPerson(PARAMS(NPCSeed person,UniverseID controllableid))
     {
-        const auto func_res_1 = invoke(IsPerson, person, controllableid);
+        const auto callResult = invoke(IsPerson, person, controllableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsPersonTransferScheduled(PARAMS(UniverseID controllableid,NPCSeed person))
     {
-        const auto func_res_1 = invoke(IsPersonTransferScheduled, controllableid, person);
+        const auto callResult = invoke(IsPersonTransferScheduled, controllableid, person);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsPlayerBlacklistDefault(PARAMS(BlacklistID id,const char* listtype,const char* defaultgroup))
     {
-        const auto func_res_1 = invoke(IsPlayerBlacklistDefault, id, listtype, defaultgroup);
+        const auto callResult = invoke(IsPlayerBlacklistDefault, id, listtype, defaultgroup);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsPlayerCameraTargetViewPossible(PARAMS(UniverseID targetid,bool force))
     {
-        const auto func_res_1 = invoke(IsPlayerCameraTargetViewPossible, targetid, force);
+        const auto callResult = invoke(IsPlayerCameraTargetViewPossible, targetid, force);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsPlayerValid(PARAMS())
     {
-        const auto func_res_1 = invoke(IsPlayerValid);
+        const auto callResult = invoke(IsPlayerValid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsPointingWithinAimingRange(PARAMS())
     {
-        const auto func_res_1 = invoke(IsPointingWithinAimingRange);
+        const auto callResult = invoke(IsPointingWithinAimingRange);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsPresentModeOptionSupported(PARAMS(const char* mode))
     {
-        const auto func_res_1 = invoke(IsPresentModeOptionSupported, mode);
+        const auto callResult = invoke(IsPresentModeOptionSupported, mode);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsRealComponentClass(PARAMS(UniverseID componentid,const char* classname))
     {
-        const auto func_res_1 = invoke(IsRealComponentClass, componentid, classname);
+        const auto callResult = invoke(IsRealComponentClass, componentid, classname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsResourceProbe(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsResourceProbe, componentid);
+        const auto callResult = invoke(IsResourceProbe, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsSatellite(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsSatellite, componentid);
+        const auto callResult = invoke(IsSatellite, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsSaveListLoadingComplete(PARAMS())
     {
-        const auto func_res_1 = invoke(IsSaveListLoadingComplete);
+        const auto callResult = invoke(IsSaveListLoadingComplete);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsSaveValid(PARAMS(const char* filename))
     {
-        const auto func_res_1 = invoke(IsSaveValid, filename);
+        const auto callResult = invoke(IsSaveValid, filename);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsSetaActive(PARAMS())
     {
-        const auto func_res_1 = invoke(IsSetaActive);
+        const auto callResult = invoke(IsSetaActive);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsShiftPressed(PARAMS())
     {
-        const auto func_res_1 = invoke(IsShiftPressed);
+        const auto callResult = invoke(IsShiftPressed);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsShip(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsShip, componentid);
+        const auto callResult = invoke(IsShip, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsShipAtExternalDock(PARAMS(UniverseID shipid))
     {
-        const auto func_res_1 = invoke(IsShipAtExternalDock, shipid);
+        const auto callResult = invoke(IsShipAtExternalDock, shipid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsShipBeingRetrieved(PARAMS(UniverseID shipid))
     {
-        const auto func_res_1 = invoke(IsShipBeingRetrieved, shipid);
+        const auto callResult = invoke(IsShipBeingRetrieved, shipid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsSofttargetManagerActive(PARAMS())
     {
-        const auto func_res_1 = invoke(IsSofttargetManagerActive);
+        const auto callResult = invoke(IsSofttargetManagerActive);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsSoftwareDefault(PARAMS(UniverseID controllableid,const char* macroname,const char* softwarename))
     {
-        const auto func_res_1 = invoke(IsSoftwareDefault, controllableid, macroname, softwarename);
+        const auto callResult = invoke(IsSoftwareDefault, controllableid, macroname, softwarename);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsStartmenu(PARAMS())
     {
-        const auto func_res_1 = invoke(IsStartmenu);
+        const auto callResult = invoke(IsStartmenu);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsStation(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsStation, componentid);
+        const auto callResult = invoke(IsStation, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsStationary(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsStationary, componentid);
+        const auto callResult = invoke(IsStationary, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsSupplyManual(PARAMS(UniverseID containerid,const char* type))
     {
-        const auto func_res_1 = invoke(IsSupplyManual, containerid, type);
+        const auto callResult = invoke(IsSupplyManual, containerid, type);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsSurfaceElement(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsSurfaceElement, componentid);
+        const auto callResult = invoke(IsSurfaceElement, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsTableMultiSelect(PARAMS(const int tableid))
     {
-        const auto func_res_1 = invoke(IsTableMultiSelect, tableid);
+        const auto callResult = invoke(IsTableMultiSelect, tableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsTableRowBorderBelowEnabled(PARAMS(const int tableid,uint32_t row))
     {
-        const auto func_res_1 = invoke(IsTableRowBorderBelowEnabled, tableid, row);
+        const auto callResult = invoke(IsTableRowBorderBelowEnabled, tableid, row);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsTargetInPlayerWeaponRange(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsTargetInPlayerWeaponRange, componentid);
+        const auto callResult = invoke(IsTargetInPlayerWeaponRange, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsTargetMonitorNotification(PARAMS(const int notificationid))
     {
-        const auto func_res_1 = invoke(IsTargetMonitorNotification, notificationid);
+        const auto callResult = invoke(IsTargetMonitorNotification, notificationid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsTargetable(PARAMS(const uint32_t messageid))
     {
-        const auto func_res_1 = invoke(IsTargetable, messageid);
+        const auto callResult = invoke(IsTargetable, messageid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsThrottleBidirectional(PARAMS())
     {
-        const auto func_res_1 = invoke(IsThrottleBidirectional);
+        const auto callResult = invoke(IsThrottleBidirectional);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsTitleFontString(PARAMS(const int fontstringid))
     {
-        const auto func_res_1 = invoke(IsTitleFontString, fontstringid);
+        const auto callResult = invoke(IsTitleFontString, fontstringid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsTobiiAvailable(PARAMS())
     {
-        const auto func_res_1 = invoke(IsTobiiAvailable);
+        const auto callResult = invoke(IsTobiiAvailable);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsTradeShowVersion(PARAMS())
     {
-        const auto func_res_1 = invoke(IsTradeShowVersion);
+        const auto callResult = invoke(IsTradeShowVersion);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsTurretGroupArmed(PARAMS(UniverseID defensibleid,UniverseID contextid,const char* path,const char* group))
     {
-        const auto func_res_1 = invoke(IsTurretGroupArmed, defensibleid, contextid, path, group);
+        const auto callResult = invoke(IsTurretGroupArmed, defensibleid, contextid, path, group);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsUnit(PARAMS(UniverseID controllableid))
     {
-        const auto func_res_1 = invoke(IsUnit, controllableid);
+        const auto callResult = invoke(IsUnit, controllableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsUnitMacroCompatible(PARAMS(UniverseID containerid,const char* macroname,const char* unitmacroname))
     {
-        const auto func_res_1 = invoke(IsUnitMacroCompatible, containerid, macroname, unitmacroname);
+        const auto callResult = invoke(IsUnitMacroCompatible, containerid, macroname, unitmacroname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsUpgradeGroupMacroCompatible(PARAMS(UniverseID destructibleid,const char* macroname,const char* path,const char* group,const char* upgradetypename,const char* upgrademacroname))
     {
-        const auto func_res_1 = invoke(IsUpgradeGroupMacroCompatible, destructibleid, macroname, path, group, upgradetypename, upgrademacroname);
+        const auto callResult = invoke(IsUpgradeGroupMacroCompatible, destructibleid, macroname, path, group, upgradetypename, upgrademacroname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsUpgradeMacroCompatible(PARAMS(UniverseID objectid,UniverseID moduleid,const char* macroname,bool ismodule,const char* upgradetypename,size_t slot,const char* upgrademacroname))
     {
-        const auto func_res_1 = invoke(IsUpgradeMacroCompatible, objectid, moduleid, macroname, ismodule, upgradetypename, slot, upgrademacroname);
+        const auto callResult = invoke(IsUpgradeMacroCompatible, objectid, moduleid, macroname, ismodule, upgradetypename, slot, upgrademacroname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsVRMode(PARAMS())
     {
-        const auto func_res_1 = invoke(IsVRMode);
+        const auto callResult = invoke(IsVRMode);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsVROculusTouchActive(PARAMS())
     {
-        const auto func_res_1 = invoke(IsVROculusTouchActive);
+        const auto callResult = invoke(IsVROculusTouchActive);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsVRPointerActive(PARAMS())
     {
-        const auto func_res_1 = invoke(IsVRPointerActive);
+        const auto callResult = invoke(IsVRPointerActive);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsVRVersion(PARAMS())
     {
-        const auto func_res_1 = invoke(IsVRVersion);
+        const auto callResult = invoke(IsVRVersion);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsVRViveControllerActive(PARAMS())
     {
-        const auto func_res_1 = invoke(IsVRViveControllerActive);
+        const auto callResult = invoke(IsVRViveControllerActive);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsValidComponent(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsValidComponent, componentid);
+        const auto callResult = invoke(IsValidComponent, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsVentureShip(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsVentureShip, componentid);
+        const auto callResult = invoke(IsVentureShip, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsVirtualUpgradeMacroCompatible(PARAMS(UniverseID defensibleid,const char* macroname,const char* upgradetypename,size_t slot,const char* upgrademacroname))
     {
-        const auto func_res_1 = invoke(IsVirtualUpgradeMacroCompatible, defensibleid, macroname, upgradetypename, slot, upgrademacroname);
+        const auto callResult = invoke(IsVirtualUpgradeMacroCompatible, defensibleid, macroname, upgradetypename, slot, upgrademacroname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsWeaponArmed(PARAMS(UniverseID weaponid))
     {
-        const auto func_res_1 = invoke(IsWeaponArmed, weaponid);
+        const auto callResult = invoke(IsWeaponArmed, weaponid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsWillingToBuyFromPlayer(PARAMS(UniverseID componentid,const char* warename))
     {
-        const auto func_res_1 = invoke(IsWillingToBuyFromPlayer, componentid, warename);
+        const auto callResult = invoke(IsWillingToBuyFromPlayer, componentid, warename);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsWillingToSellToPlayer(PARAMS(UniverseID componentid,const char* warename))
     {
-        const auto func_res_1 = invoke(IsWillingToSellToPlayer, componentid, warename);
+        const auto callResult = invoke(IsWillingToSellToPlayer, componentid, warename);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json IsZone(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(IsZone, componentid);
+        const auto callResult = invoke(IsZone, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json MarkIndicatorShown(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(MarkIndicatorShown, componentid);
+        const auto callResult = invoke(MarkIndicatorShown, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json QueryGameServers(PARAMS())
     {
-        const auto func_res_1 = invoke(QueryGameServers);
+        const auto callResult = invoke(QueryGameServers);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json QuickDock(PARAMS())
     {
-        const auto func_res_1 = invoke(QuickDock);
+        const auto callResult = invoke(QuickDock);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json QuickMenuAccess(PARAMS(const char* menu))
     {
-        const auto func_res_1 = invoke(QuickMenuAccess, menu);
+        const auto callResult = invoke(QuickMenuAccess, menu);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json RemoveAllOrders(PARAMS(UniverseID controllableid))
     {
-        const auto func_res_1 = invoke(RemoveAllOrders, controllableid);
+        const auto callResult = invoke(RemoveAllOrders, controllableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json RemoveAttackerFromBoardingOperation(PARAMS(UniverseID defensibleboarderid))
     {
-        const auto func_res_1 = invoke(RemoveAttackerFromBoardingOperation, defensibleboarderid);
+        const auto callResult = invoke(RemoveAttackerFromBoardingOperation, defensibleboarderid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json RemoveBuildPlot(PARAMS(UniverseID stationid))
     {
-        const auto func_res_1 = invoke(RemoveBuildPlot, stationid);
+        const auto callResult = invoke(RemoveBuildPlot, stationid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json RemoveCommander2(PARAMS(UniverseID controllableid))
     {
-        const auto func_res_1 = invoke(RemoveCommander2, controllableid);
+        const auto callResult = invoke(RemoveCommander2, controllableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json RemoveConstructionPlan(PARAMS(const char* source,const char* id))
     {
-        const auto func_res_1 = invoke(RemoveConstructionPlan, source, id);
+        const auto callResult = invoke(RemoveConstructionPlan, source, id);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json RemoveLoadout(PARAMS(const char* source,const char* macroname,const char* localid))
     {
-        const auto func_res_1 = invoke(RemoveLoadout, source, macroname, localid);
+        const auto callResult = invoke(RemoveLoadout, source, macroname, localid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json RemoveOrder(PARAMS(UniverseID controllableid,size_t idx,bool playercancelled,bool checkonly))
     {
-        const auto func_res_1 = invoke(RemoveOrder, controllableid, idx, playercancelled, checkonly);
+        const auto callResult = invoke(RemoveOrder, controllableid, idx, playercancelled, checkonly);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json RemoveOrder2(PARAMS(UniverseID controllableid,size_t idx,bool playercancelled,bool checkonly,bool onlyimmediate))
     {
-        const auto func_res_1 = invoke(RemoveOrder2, controllableid, idx, playercancelled, checkonly, onlyimmediate);
+        const auto callResult = invoke(RemoveOrder2, controllableid, idx, playercancelled, checkonly, onlyimmediate);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json RequestDockAt(PARAMS(UniverseID containerid,bool checkonly))
     {
-        const auto func_res_1 = invoke(RequestDockAt, containerid, checkonly);
+        const auto callResult = invoke(RequestDockAt, containerid, checkonly);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json RequestShipFromInternalStorage2(PARAMS(UniverseID shipid,bool highpriority,UniverseID refcomponentid))
     {
-        const auto func_res_1 = invoke(RequestShipFromInternalStorage2, shipid, highpriority, refcomponentid);
+        const auto callResult = invoke(RequestShipFromInternalStorage2, shipid, highpriority, refcomponentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json ResetResponseToSignalForControllable(PARAMS(const char* signalid,UniverseID controllableid))
     {
-        const auto func_res_1 = invoke(ResetResponseToSignalForControllable, signalid, controllableid);
+        const auto callResult = invoke(ResetResponseToSignalForControllable, signalid, controllableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json SetActiveFrame(PARAMS(const int frameid))
     {
-        const auto func_res_1 = invoke(SetActiveFrame, frameid);
+        const auto callResult = invoke(SetActiveFrame, frameid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json SetActiveMission(PARAMS(MissionID missionid))
     {
-        const auto func_res_1 = invoke(SetActiveMission, missionid);
+        const auto callResult = invoke(SetActiveMission, missionid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json SetAmmoOfWeapon(PARAMS(UniverseID weaponid,const char* newammomacro))
     {
-        const auto func_res_1 = invoke(SetAmmoOfWeapon, weaponid, newammomacro);
+        const auto callResult = invoke(SetAmmoOfWeapon, weaponid, newammomacro);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json SetCommander(PARAMS(UniverseID controllableid,UniverseID commanderid,const char* assignment))
     {
-        const auto func_res_1 = invoke(SetCommander, controllableid, commanderid, assignment);
+        const auto callResult = invoke(SetCommander, controllableid, commanderid, assignment);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json SetDefaultResponseToSignalForControllable(PARAMS(const char* newresponse,bool ask,const char* signalid,UniverseID controllableid))
     {
-        const auto func_res_1 = invoke(SetDefaultResponseToSignalForControllable, newresponse, ask, signalid, controllableid);
+        const auto callResult = invoke(SetDefaultResponseToSignalForControllable, newresponse, ask, signalid, controllableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json SetDefaultResponseToSignalForFaction(PARAMS(const char* newresponse,bool ask,const char* signalid,const char* factionid))
     {
-        const auto func_res_1 = invoke(SetDefaultResponseToSignalForFaction, newresponse, ask, signalid, factionid);
+        const auto callResult = invoke(SetDefaultResponseToSignalForFaction, newresponse, ask, signalid, factionid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json SetEntityToPost(PARAMS(UniverseID controllableid,UniverseID entityid,const char* postid))
     {
-        const auto func_res_1 = invoke(SetEntityToPost, controllableid, entityid, postid);
+        const auto callResult = invoke(SetEntityToPost, controllableid, entityid, postid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json SetFrameInteractiveObject(PARAMS(const int frameid,const int objectid))
     {
-        const auto func_res_1 = invoke(SetFrameInteractiveObject, frameid, objectid);
+        const auto callResult = invoke(SetFrameInteractiveObject, frameid, objectid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json SetOrderSyncPointID(PARAMS(UniverseID controllableid,size_t orderidx,uint32_t syncid,bool checkonly))
     {
-        const auto func_res_1 = invoke(SetOrderSyncPointID, controllableid, orderidx, syncid, checkonly);
+        const auto callResult = invoke(SetOrderSyncPointID, controllableid, orderidx, syncid, checkonly);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json SetRadarRenderTarget(PARAMS(const char*const rendertargettexture,const UniverseID referencecomponent,const bool mapmode))
     {
-        const auto func_res_1 = invoke(SetRadarRenderTarget, rendertargettexture, referencecomponent, mapmode);
+        const auto callResult = invoke(SetRadarRenderTarget, rendertargettexture, referencecomponent, mapmode);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json SetRadarRenderTargetOnTarget(PARAMS(const char*const rendertargettexture,const UniverseID focuscomponentid,const UniverseID referencecomponent,const bool mapmode))
     {
-        const auto func_res_1 = invoke(SetRadarRenderTargetOnTarget, rendertargettexture, focuscomponentid, referencecomponent, mapmode);
+        const auto callResult = invoke(SetRadarRenderTargetOnTarget, rendertargettexture, focuscomponentid, referencecomponent, mapmode);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json SetSofttarget(PARAMS(UniverseID componentid,const char*const connectionname))
     {
-        const auto func_res_1 = invoke(SetSofttarget, componentid, connectionname);
+        const auto callResult = invoke(SetSofttarget, componentid, connectionname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json SetStationOverviewGraphWare(PARAMS(UniverseID stationid,const char* wareid,bool value))
     {
-        const auto func_res_1 = invoke(SetStationOverviewGraphWare, stationid, wareid, value);
+        const auto callResult = invoke(SetStationOverviewGraphWare, stationid, wareid, value);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json ShouldEditBoxRestoreInteractiveObject(PARAMS(const int editboxid))
     {
-        const auto func_res_1 = invoke(ShouldEditBoxRestoreInteractiveObject, editboxid);
+        const auto callResult = invoke(ShouldEditBoxRestoreInteractiveObject, editboxid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json ShouldSubordinateGroupDockAtCommander(PARAMS(UniverseID controllableid,int group))
     {
-        const auto func_res_1 = invoke(ShouldSubordinateGroupDockAtCommander, controllableid, group);
+        const auto callResult = invoke(ShouldSubordinateGroupDockAtCommander, controllableid, group);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json ShowGamepadTextInput(PARAMS(const char* description,uint32_t maxchars,const char* existingtext,bool multilines,bool password))
     {
-        const auto func_res_1 = invoke(ShowGamepadTextInput, description, maxchars, existingtext, multilines, password);
+        const auto callResult = invoke(ShowGamepadTextInput, description, maxchars, existingtext, multilines, password);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json ShuffleMapConstructionPlan(PARAMS(UniverseID holomapid,bool checkonly))
     {
-        const auto func_res_1 = invoke(ShuffleMapConstructionPlan, holomapid, checkonly);
+        const auto callResult = invoke(ShuffleMapConstructionPlan, holomapid, checkonly);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json StartBoardingOperation(PARAMS(UniverseID defensibletargetid,const char* boarderfactionid))
     {
-        const auto func_res_1 = invoke(StartBoardingOperation, defensibletargetid, boarderfactionid);
+        const auto callResult = invoke(StartBoardingOperation, defensibletargetid, boarderfactionid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json StopPanMap(PARAMS(UniverseID holomapid))
     {
-        const auto func_res_1 = invoke(StopPanMap, holomapid);
+        const auto callResult = invoke(StopPanMap, holomapid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json StopRotateMap(PARAMS(UniverseID holomapid))
     {
-        const auto func_res_1 = invoke(StopRotateMap, holomapid);
+        const auto callResult = invoke(StopRotateMap, holomapid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json TakeShipFromInternalStorage(PARAMS(UniverseID shipid,bool highpriority,bool checkonly))
     {
-        const auto func_res_1 = invoke(TakeShipFromInternalStorage, shipid, highpriority, checkonly);
+        const auto callResult = invoke(TakeShipFromInternalStorage, shipid, highpriority, checkonly);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json TeleportPlayerTo(PARAMS(UniverseID controllableid,bool allowcontrolling,bool instant,bool force))
     {
-        const auto func_res_1 = invoke(TeleportPlayerTo, controllableid, allowcontrolling, instant, force);
+        const auto callResult = invoke(TeleportPlayerTo, controllableid, allowcontrolling, instant, force);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json ToggleAutoPilot(PARAMS(bool checkonly))
     {
-        const auto func_res_1 = invoke(ToggleAutoPilot, checkonly);
+        const auto callResult = invoke(ToggleAutoPilot, checkonly);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json TriggerCompSlotAnimation(PARAMS(UniverseID componentid,const char* connectionname,const char* triggername))
     {
-        const auto func_res_1 = invoke(TriggerCompSlotAnimation, componentid, connectionname, triggername);
+        const auto callResult = invoke(TriggerCompSlotAnimation, componentid, connectionname, triggername);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -4794,11 +4794,11 @@ namespace ffijson
     {
         uint32_t marinetieramounts;
         int32_t marinetierskilllevels;
-        const auto func_res_1 = invoke(UpdateAttackerOfBoardingOperation, defensibletargetid, defensibleboarderid, boarderfactionid, actionid, &marinetieramounts, &marinetierskilllevels, nummarinetiers);
-         if (func_res_1) {
+        const auto callResult = invoke(UpdateAttackerOfBoardingOperation, defensibletargetid, defensibleboarderid, boarderfactionid, actionid, &marinetieramounts, &marinetierskilllevels, nummarinetiers);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"marinetieramounts", marinetieramounts},
                 {"marinetierskilllevels", marinetierskilllevels}
             };
@@ -4806,153 +4806,153 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json UpdateBoardingOperation(PARAMS(UniverseID defensibletargetid,const char* boarderfactionid,uint32_t approachthreshold,uint32_t insertionthreshold))
     {
-        const auto func_res_1 = invoke(UpdateBoardingOperation, defensibletargetid, boarderfactionid, approachthreshold, insertionthreshold);
+        const auto callResult = invoke(UpdateBoardingOperation, defensibletargetid, boarderfactionid, approachthreshold, insertionthreshold);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CanTeleportPlayerTo(PARAMS(UniverseID controllableid,bool allowcontrolling,bool force))
     {
-        const auto func_res_1 = invoke(CanTeleportPlayerTo, controllableid, allowcontrolling, force);
+        const auto callResult = invoke(CanTeleportPlayerTo, controllableid, allowcontrolling, force);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GenerateFactionRelationText(PARAMS(const char* factionid))
     {
-        const auto func_res_1 = invoke(GenerateFactionRelationText, factionid);
+        const auto callResult = invoke(GenerateFactionRelationText, factionid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetAAOption(PARAMS(bool useconfig))
     {
-        const auto func_res_1 = invoke(GetAAOption, useconfig);
+        const auto callResult = invoke(GetAAOption, useconfig);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetBoardingActionOfAttacker(PARAMS(UniverseID defensibletargetid,UniverseID defensibleboarderid,const char* boarderfactionid))
     {
-        const auto func_res_1 = invoke(GetBoardingActionOfAttacker, defensibletargetid, defensibleboarderid, boarderfactionid);
+        const auto callResult = invoke(GetBoardingActionOfAttacker, defensibletargetid, defensibleboarderid, boarderfactionid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetBuildVersionSuffix(PARAMS())
     {
-        const auto func_res_1 = invoke(GetBuildVersionSuffix);
+        const auto callResult = invoke(GetBuildVersionSuffix);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetCheckBoxSymbol(PARAMS(const int checkboxid))
     {
-        const auto func_res_1 = invoke(GetCheckBoxSymbol, checkboxid);
+        const auto callResult = invoke(GetCheckBoxSymbol, checkboxid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetCompSlotPlayerActionTriggeredConnection(PARAMS(UniverseID componentid,const char* connectionname))
     {
-        const auto func_res_1 = invoke(GetCompSlotPlayerActionTriggeredConnection, componentid, connectionname);
+        const auto callResult = invoke(GetCompSlotPlayerActionTriggeredConnection, componentid, connectionname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetComponentClass(PARAMS(UniverseID componentid))
     {
-        const auto func_res_1 = invoke(GetComponentClass, componentid);
+        const auto callResult = invoke(GetComponentClass, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetComponentName(PARAMS(UniverseID componentid))
     {
-        const auto func_res_1 = invoke(GetComponentName, componentid);
+        const auto callResult = invoke(GetComponentName, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetCurrentAmmoOfWeapon(PARAMS(UniverseID weaponid))
     {
-        const auto func_res_1 = invoke(GetCurrentAmmoOfWeapon, weaponid);
+        const auto callResult = invoke(GetCurrentAmmoOfWeapon, weaponid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetCurrentBoardingPhase(PARAMS(UniverseID defensibletargetid,const char* boarderfactionid))
     {
-        const auto func_res_1 = invoke(GetCurrentBoardingPhase, defensibletargetid, boarderfactionid);
+        const auto callResult = invoke(GetCurrentBoardingPhase, defensibletargetid, boarderfactionid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetCurrentDroneMode(PARAMS(UniverseID defensibleid,const char* dronetype))
     {
-        const auto func_res_1 = invoke(GetCurrentDroneMode, defensibleid, dronetype);
+        const auto callResult = invoke(GetCurrentDroneMode, defensibleid, dronetype);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetCurrentGPUNiceName(PARAMS())
     {
-        const auto func_res_1 = invoke(GetCurrentGPUNiceName);
+        const auto callResult = invoke(GetCurrentGPUNiceName);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetCurrentSoundDevice(PARAMS())
     {
-        const auto func_res_1 = invoke(GetCurrentSoundDevice);
+        const auto callResult = invoke(GetCurrentSoundDevice);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetCustomGameStartStringProperty(PARAMS(const char* id,const char* propertyid))
     {
         CustomGameStartStringPropertyState state;
-        const auto func_res_1 = invoke(GetCustomGameStartStringProperty, id, propertyid, &state);
-         if (func_res_1) {
+        const auto callResult = invoke(GetCustomGameStartStringProperty, id, propertyid, &state);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"state", {
                     {"state", state.state},
                     {"defaultvalue", state.defaultvalue},
@@ -4963,171 +4963,171 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetDefaultResponseToSignalForControllable(PARAMS(const char* signalid,UniverseID controllableid))
     {
-        const auto func_res_1 = invoke(GetDefaultResponseToSignalForControllable, signalid, controllableid);
+        const auto callResult = invoke(GetDefaultResponseToSignalForControllable, signalid, controllableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetDefaultResponseToSignalForFaction(PARAMS(const char* signalid,const char* factionid))
     {
-        const auto func_res_1 = invoke(GetDefaultResponseToSignalForFaction, signalid, factionid);
+        const auto callResult = invoke(GetDefaultResponseToSignalForFaction, signalid, factionid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetDetailmonitorCutsceneKey(PARAMS(uint32_t cutsceneid))
     {
-        const auto func_res_1 = invoke(GetDetailmonitorCutsceneKey, cutsceneid);
+        const auto callResult = invoke(GetDetailmonitorCutsceneKey, cutsceneid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetDropDownStartOption(PARAMS(const int dropdownid))
     {
-        const auto func_res_1 = invoke(GetDropDownStartOption, dropdownid);
+        const auto callResult = invoke(GetDropDownStartOption, dropdownid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetEditBoxDefaultText(PARAMS(const int editboxid))
     {
-        const auto func_res_1 = invoke(GetEditBoxDefaultText, editboxid);
+        const auto callResult = invoke(GetEditBoxDefaultText, editboxid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetEditBoxDescription(PARAMS(const int editboxid))
     {
-        const auto func_res_1 = invoke(GetEditBoxDescription, editboxid);
+        const auto callResult = invoke(GetEditBoxDescription, editboxid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetEntityActiveIcon(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(GetEntityActiveIcon, componentid);
+        const auto callResult = invoke(GetEntityActiveIcon, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetEntityInactiveIcon(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(GetEntityInactiveIcon, componentid);
+        const auto callResult = invoke(GetEntityInactiveIcon, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetEntitySelectedIcon(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(GetEntitySelectedIcon, componentid);
+        const auto callResult = invoke(GetEntitySelectedIcon, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetEquipmentModPropertyName(PARAMS(const char* wareid))
     {
-        const auto func_res_1 = invoke(GetEquipmentModPropertyName, wareid);
+        const auto callResult = invoke(GetEquipmentModPropertyName, wareid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetFactionNameForTargetMonitorHack(PARAMS(UniverseID componentid))
     {
-        const auto func_res_1 = invoke(GetFactionNameForTargetMonitorHack, componentid);
+        const auto callResult = invoke(GetFactionNameForTargetMonitorHack, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetFleetName(PARAMS(UniverseID controllableid))
     {
-        const auto func_res_1 = invoke(GetFleetName, controllableid);
+        const auto callResult = invoke(GetFleetName, controllableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetLocalizedInputName(PARAMS(uint32_t sourceid,uint32_t codeid))
     {
-        const auto func_res_1 = invoke(GetLocalizedInputName, sourceid, codeid);
+        const auto callResult = invoke(GetLocalizedInputName, sourceid, codeid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetLocalizedInteractiveNotificationKey(PARAMS())
     {
-        const auto func_res_1 = invoke(GetLocalizedInteractiveNotificationKey);
+        const auto callResult = invoke(GetLocalizedInteractiveNotificationKey);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetLocalizedRawMouseButtonName(PARAMS(uint32_t keycodeid))
     {
-        const auto func_res_1 = invoke(GetLocalizedRawMouseButtonName, keycodeid);
+        const auto callResult = invoke(GetLocalizedRawMouseButtonName, keycodeid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetLocalizedText(PARAMS(uint32_t pageid,uint32_t textid,const char* defaultvalue))
     {
-        const auto func_res_1 = invoke(GetLocalizedText, pageid, textid, defaultvalue);
+        const auto callResult = invoke(GetLocalizedText, pageid, textid, defaultvalue);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetMacroClass(PARAMS(const char* macroname))
     {
-        const auto func_res_1 = invoke(GetMacroClass, macroname);
+        const auto callResult = invoke(GetMacroClass, macroname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetMacroMapPositionOnEcliptic(PARAMS(UniverseID holomapid))
     {
         UIPosRot position;
-        const auto func_res_1 = invoke(GetMacroMapPositionOnEcliptic, holomapid, &position);
-         if (func_res_1) {
+        const auto callResult = invoke(GetMacroMapPositionOnEcliptic, holomapid, &position);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"position", {
                     {"x", position.x},
                     {"y", position.y},
@@ -5141,837 +5141,837 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetMappedInputName(PARAMS(const char* functionkey))
     {
-        const auto func_res_1 = invoke(GetMappedInputName, functionkey);
+        const auto callResult = invoke(GetMappedInputName, functionkey);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetMissingConstructionPlanBlueprints(PARAMS(UniverseID containerid,const char* constructionplanid))
     {
-        const auto func_res_1 = invoke(GetMissingConstructionPlanBlueprints, containerid, constructionplanid);
+        const auto callResult = invoke(GetMissingConstructionPlanBlueprints, containerid, constructionplanid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetMouseOverText(PARAMS(const int widgetid))
     {
-        const auto func_res_1 = invoke(GetMouseOverText, widgetid);
+        const auto callResult = invoke(GetMouseOverText, widgetid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetObjectIDCode(PARAMS(UniverseID objectid))
     {
-        const auto func_res_1 = invoke(GetObjectIDCode, objectid);
+        const auto callResult = invoke(GetObjectIDCode, objectid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPersonName(PARAMS(NPCSeed person,UniverseID controllableid))
     {
-        const auto func_res_1 = invoke(GetPersonName, person, controllableid);
+        const auto callResult = invoke(GetPersonName, person, controllableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPersonRole(PARAMS(NPCSeed person,UniverseID controllableid))
     {
-        const auto func_res_1 = invoke(GetPersonRole, person, controllableid);
+        const auto callResult = invoke(GetPersonRole, person, controllableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPersonRoleName(PARAMS(NPCSeed person,UniverseID controllableid))
     {
-        const auto func_res_1 = invoke(GetPersonRoleName, person, controllableid);
+        const auto callResult = invoke(GetPersonRoleName, person, controllableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPlayerClothingTheme(PARAMS())
     {
-        const auto func_res_1 = invoke(GetPlayerClothingTheme);
+        const auto callResult = invoke(GetPlayerClothingTheme);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPlayerFactionName(PARAMS(bool userawname))
     {
-        const auto func_res_1 = invoke(GetPlayerFactionName, userawname);
+        const auto callResult = invoke(GetPlayerFactionName, userawname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPlayerName(PARAMS())
     {
-        const auto func_res_1 = invoke(GetPlayerName);
+        const auto callResult = invoke(GetPlayerName);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPlayerPaintTheme(PARAMS())
     {
-        const auto func_res_1 = invoke(GetPlayerPaintTheme);
+        const auto callResult = invoke(GetPlayerPaintTheme);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPlayerShipSize(PARAMS())
     {
-        const auto func_res_1 = invoke(GetPlayerShipSize);
+        const auto callResult = invoke(GetPlayerShipSize);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPresentModeOption(PARAMS())
     {
-        const auto func_res_1 = invoke(GetPresentModeOption);
+        const auto callResult = invoke(GetPresentModeOption);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPurposeName(PARAMS(const char* purposeid))
     {
-        const auto func_res_1 = invoke(GetPurposeName, purposeid);
+        const auto callResult = invoke(GetPurposeName, purposeid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetRealComponentClass(PARAMS(UniverseID componentid))
     {
-        const auto func_res_1 = invoke(GetRealComponentClass, componentid);
+        const auto callResult = invoke(GetRealComponentClass, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetSSROption2(PARAMS())
     {
-        const auto func_res_1 = invoke(GetSSROption2);
+        const auto callResult = invoke(GetSSROption2);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetSaveLocationName(PARAMS())
     {
-        const auto func_res_1 = invoke(GetSaveLocationName);
+        const auto callResult = invoke(GetSaveLocationName);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetShipOrLaserTowerSize(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(GetShipOrLaserTowerSize, componentid);
+        const auto callResult = invoke(GetShipOrLaserTowerSize, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetShipPurpose(PARAMS(const UniverseID componentid))
     {
-        const auto func_res_1 = invoke(GetShipPurpose, componentid);
+        const auto callResult = invoke(GetShipPurpose, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetSliderCellSuffix(PARAMS(const int slidercellid))
     {
-        const auto func_res_1 = invoke(GetSliderCellSuffix, slidercellid);
+        const auto callResult = invoke(GetSliderCellSuffix, slidercellid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetSliderCellText(PARAMS(const int slidercellid))
     {
-        const auto func_res_1 = invoke(GetSliderCellText, slidercellid);
+        const auto callResult = invoke(GetSliderCellText, slidercellid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetSlotSize(PARAMS(UniverseID defensibleid,UniverseID moduleid,const char* macroname,bool ismodule,const char* upgradetypename,size_t slot))
     {
-        const auto func_res_1 = invoke(GetSlotSize, defensibleid, moduleid, macroname, ismodule, upgradetypename, slot);
+        const auto callResult = invoke(GetSlotSize, defensibleid, moduleid, macroname, ismodule, upgradetypename, slot);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetSoftwareMaxCompatibleVersion(PARAMS(UniverseID controllableid,const char* macroname,const char* softwarename))
     {
-        const auto func_res_1 = invoke(GetSoftwareMaxCompatibleVersion, controllableid, macroname, softwarename);
+        const auto callResult = invoke(GetSoftwareMaxCompatibleVersion, controllableid, macroname, softwarename);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetSteamID(PARAMS())
     {
-        const auto func_res_1 = invoke(GetSteamID);
+        const auto callResult = invoke(GetSteamID);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetSubordinateGroupAssignment(PARAMS(UniverseID controllableid,int group))
     {
-        const auto func_res_1 = invoke(GetSubordinateGroupAssignment, controllableid, group);
+        const auto callResult = invoke(GetSubordinateGroupAssignment, controllableid, group);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetTableBackgroundID(PARAMS(const int tableid))
     {
-        const auto func_res_1 = invoke(GetTableBackgroundID, tableid);
+        const auto callResult = invoke(GetTableBackgroundID, tableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetTextureQualityOption(PARAMS())
     {
-        const auto func_res_1 = invoke(GetTextureQualityOption);
+        const auto callResult = invoke(GetTextureQualityOption);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetTobiiMode(PARAMS())
     {
-        const auto func_res_1 = invoke(GetTobiiMode);
+        const auto callResult = invoke(GetTobiiMode);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetTrackerNameOption(PARAMS())
     {
-        const auto func_res_1 = invoke(GetTrackerNameOption);
+        const auto callResult = invoke(GetTrackerNameOption);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetTrackerSDKOption(PARAMS())
     {
-        const auto func_res_1 = invoke(GetTrackerSDKOption);
+        const auto callResult = invoke(GetTrackerSDKOption);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetTurretGroupMode2(PARAMS(UniverseID defensibleid,UniverseID contextid,const char* path,const char* group))
     {
-        const auto func_res_1 = invoke(GetTurretGroupMode2, defensibleid, contextid, path, group);
+        const auto callResult = invoke(GetTurretGroupMode2, defensibleid, contextid, path, group);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetUpgradeSlotCurrentMacro(PARAMS(UniverseID objectid,UniverseID moduleid,const char* upgradetypename,size_t slot))
     {
-        const auto func_res_1 = invoke(GetUpgradeSlotCurrentMacro, objectid, moduleid, upgradetypename, slot);
+        const auto callResult = invoke(GetUpgradeSlotCurrentMacro, objectid, moduleid, upgradetypename, slot);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetVirtualUpgradeSlotCurrentMacro(PARAMS(UniverseID defensibleid,const char* upgradetypename,size_t slot))
     {
-        const auto func_res_1 = invoke(GetVirtualUpgradeSlotCurrentMacro, defensibleid, upgradetypename, slot);
+        const auto callResult = invoke(GetVirtualUpgradeSlotCurrentMacro, defensibleid, upgradetypename, slot);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetWeaponMode(PARAMS(UniverseID weaponid))
     {
-        const auto func_res_1 = invoke(GetWeaponMode, weaponid);
+        const auto callResult = invoke(GetWeaponMode, weaponid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json RequestDockAtReason(PARAMS(UniverseID containerid,bool checkonly))
     {
-        const auto func_res_1 = invoke(RequestDockAtReason, containerid, checkonly);
+        const auto callResult = invoke(RequestDockAtReason, containerid, checkonly);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json UndockPlayerShip(PARAMS(bool checkonly))
     {
-        const auto func_res_1 = invoke(UndockPlayerShip, checkonly);
+        const auto callResult = invoke(UndockPlayerShip, checkonly);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetBuildProcessorEstimatedTimeLeft(PARAMS(UniverseID buildprocessorid))
     {
-        const auto func_res_1 = invoke(GetBuildProcessorEstimatedTimeLeft, buildprocessorid);
+        const auto callResult = invoke(GetBuildProcessorEstimatedTimeLeft, buildprocessorid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetBuildTaskDuration(PARAMS(UniverseID containerid,BuildTaskID id))
     {
-        const auto func_res_1 = invoke(GetBuildTaskDuration, containerid, id);
+        const auto callResult = invoke(GetBuildTaskDuration, containerid, id);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetContainerWareConsumption(PARAMS(UniverseID containerid,const char* wareid,bool ignorestate))
     {
-        const auto func_res_1 = invoke(GetContainerWareConsumption, containerid, wareid, ignorestate);
+        const auto callResult = invoke(GetContainerWareConsumption, containerid, wareid, ignorestate);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetContainerWareProduction(PARAMS(UniverseID containerid,const char* wareid,bool ignorestate))
     {
-        const auto func_res_1 = invoke(GetContainerWareProduction, containerid, wareid, ignorestate);
+        const auto callResult = invoke(GetContainerWareProduction, containerid, wareid, ignorestate);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetCurrentGameTime(PARAMS())
     {
-        const auto func_res_1 = invoke(GetCurrentGameTime);
+        const auto callResult = invoke(GetCurrentGameTime);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetAdaptiveSamplingOption(PARAMS())
     {
-        const auto func_res_1 = invoke(GetAdaptiveSamplingOption);
+        const auto callResult = invoke(GetAdaptiveSamplingOption);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetCockpitCameraScaleOption(PARAMS())
     {
-        const auto func_res_1 = invoke(GetCockpitCameraScaleOption);
+        const auto callResult = invoke(GetCockpitCameraScaleOption);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetContainerBuildPriceFactor(PARAMS(UniverseID containerid))
     {
-        const auto func_res_1 = invoke(GetContainerBuildPriceFactor, containerid);
+        const auto callResult = invoke(GetContainerBuildPriceFactor, containerid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetContainerGlobalPriceFactor(PARAMS(UniverseID containerid))
     {
-        const auto func_res_1 = invoke(GetContainerGlobalPriceFactor, containerid);
+        const auto callResult = invoke(GetContainerGlobalPriceFactor, containerid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetCurrentBuildProgress(PARAMS(UniverseID containerid))
     {
-        const auto func_res_1 = invoke(GetCurrentBuildProgress, containerid);
+        const auto callResult = invoke(GetCurrentBuildProgress, containerid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetDefensibleLoadoutLevel(PARAMS(UniverseID defensibleid))
     {
-        const auto func_res_1 = invoke(GetDefensibleLoadoutLevel, defensibleid);
+        const auto callResult = invoke(GetDefensibleLoadoutLevel, defensibleid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPlayerGlobalLoadoutLevel(PARAMS())
     {
-        const auto func_res_1 = invoke(GetPlayerGlobalLoadoutLevel);
+        const auto callResult = invoke(GetPlayerGlobalLoadoutLevel);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetRectangleTargetElementExtents(PARAMS(const int posid))
     {
-        const auto func_res_1 = invoke(GetRectangleTargetElementExtents, posid);
+        const auto callResult = invoke(GetRectangleTargetElementExtents, posid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetRemainingOxygen(PARAMS())
     {
-        const auto func_res_1 = invoke(GetRemainingOxygen);
+        const auto callResult = invoke(GetRemainingOxygen);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetResourceBoxSize(PARAMS())
     {
-        const auto func_res_1 = invoke(GetResourceBoxSize);
+        const auto callResult = invoke(GetResourceBoxSize);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetScanProgress(PARAMS())
     {
-        const auto func_res_1 = invoke(GetScanProgress);
+        const auto callResult = invoke(GetScanProgress);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetShieldHullBarHullPercent(PARAMS(const int shieldhullbarid))
     {
-        const auto func_res_1 = invoke(GetShieldHullBarHullPercent, shieldhullbarid);
+        const auto callResult = invoke(GetShieldHullBarHullPercent, shieldhullbarid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetShieldHullBarShieldPercent(PARAMS(const int shieldhullbarid))
     {
-        const auto func_res_1 = invoke(GetShieldHullBarShieldPercent, shieldhullbarid);
+        const auto callResult = invoke(GetShieldHullBarShieldPercent, shieldhullbarid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetStatusBarCurrentValue(PARAMS(const int statusbarid))
     {
-        const auto func_res_1 = invoke(GetStatusBarCurrentValue, statusbarid);
+        const auto callResult = invoke(GetStatusBarCurrentValue, statusbarid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetStatusBarMaxValue(PARAMS(const int statusbarid))
     {
-        const auto func_res_1 = invoke(GetStatusBarMaxValue, statusbarid);
+        const auto callResult = invoke(GetStatusBarMaxValue, statusbarid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetStatusBarStartValue(PARAMS(const int statusbarid))
     {
-        const auto func_res_1 = invoke(GetStatusBarStartValue, statusbarid);
+        const auto callResult = invoke(GetStatusBarStartValue, statusbarid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetTextHeight(PARAMS(const char*const text,const char*const fontname,const uint32_t fontsize,const float wordwrapwidth))
     {
-        const auto func_res_1 = invoke(GetTextHeight, text, fontname, fontsize, wordwrapwidth);
+        const auto callResult = invoke(GetTextHeight, text, fontname, fontsize, wordwrapwidth);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetTextWidth(PARAMS(const char*const text,const char*const fontname,const float fontsize))
     {
-        const auto func_res_1 = invoke(GetTextWidth, text, fontname, fontsize);
+        const auto callResult = invoke(GetTextWidth, text, fontname, fontsize);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetTobiiAngleFactor(PARAMS())
     {
-        const auto func_res_1 = invoke(GetTobiiAngleFactor);
+        const auto callResult = invoke(GetTobiiAngleFactor);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetTobiiDeadzoneAngle(PARAMS())
     {
-        const auto func_res_1 = invoke(GetTobiiDeadzoneAngle);
+        const auto callResult = invoke(GetTobiiDeadzoneAngle);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetTobiiDeadzonePosition(PARAMS())
     {
-        const auto func_res_1 = invoke(GetTobiiDeadzonePosition);
+        const auto callResult = invoke(GetTobiiDeadzonePosition);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetTobiiGazeAngleFactor(PARAMS())
     {
-        const auto func_res_1 = invoke(GetTobiiGazeAngleFactor);
+        const auto callResult = invoke(GetTobiiGazeAngleFactor);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetTobiiGazeDeadzone(PARAMS())
     {
-        const auto func_res_1 = invoke(GetTobiiGazeDeadzone);
+        const auto callResult = invoke(GetTobiiGazeDeadzone);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetTobiiHeadPositionFactor(PARAMS())
     {
-        const auto func_res_1 = invoke(GetTobiiHeadPositionFactor);
+        const auto callResult = invoke(GetTobiiHeadPositionFactor);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetUIScale(PARAMS(const bool scalewithresolution))
     {
-        const auto func_res_1 = invoke(GetUIScale, scalewithresolution);
+        const auto callResult = invoke(GetUIScale, scalewithresolution);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetUIScaleFactor(PARAMS())
     {
-        const auto func_res_1 = invoke(GetUIScaleFactor);
+        const auto callResult = invoke(GetUIScaleFactor);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetConfigSetting(PARAMS(const char*const setting))
     {
-        const auto func_res_1 = invoke(GetConfigSetting, setting);
+        const auto callResult = invoke(GetConfigSetting, setting);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNotificationID(PARAMS(const size_t num))
     {
-        const auto func_res_1 = invoke(GetNotificationID, num);
+        const auto callResult = invoke(GetNotificationID, num);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPriorityMissiontargetPOSID(PARAMS())
     {
-        const auto func_res_1 = invoke(GetPriorityMissiontargetPOSID);
+        const auto callResult = invoke(GetPriorityMissiontargetPOSID);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetTableNextConnectedTable(PARAMS(const int tableid))
     {
-        const auto func_res_1 = invoke(GetTableNextConnectedTable, tableid);
+        const auto callResult = invoke(GetTableNextConnectedTable, tableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetTableNextHorizontalConnectedTable(PARAMS(const int tableid))
     {
-        const auto func_res_1 = invoke(GetTableNextHorizontalConnectedTable, tableid);
+        const auto callResult = invoke(GetTableNextHorizontalConnectedTable, tableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetTablePreviousConnectedTable(PARAMS(const int tableid))
     {
-        const auto func_res_1 = invoke(GetTablePreviousConnectedTable, tableid);
+        const auto callResult = invoke(GetTablePreviousConnectedTable, tableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetTablePreviousHorizontalConnectedTable(PARAMS(const int tableid))
     {
-        const auto func_res_1 = invoke(GetTablePreviousHorizontalConnectedTable, tableid);
+        const auto callResult = invoke(GetTablePreviousHorizontalConnectedTable, tableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetVRVivePointerHand(PARAMS())
     {
-        const auto func_res_1 = invoke(GetVRVivePointerHand);
+        const auto callResult = invoke(GetVRVivePointerHand);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetContainerBuyLimit(PARAMS(UniverseID containerid,const char* wareid))
     {
-        const auto func_res_1 = invoke(GetContainerBuyLimit, containerid, wareid);
+        const auto callResult = invoke(GetContainerBuyLimit, containerid, wareid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetContainerSellLimit(PARAMS(UniverseID containerid,const char* wareid))
     {
-        const auto func_res_1 = invoke(GetContainerSellLimit, containerid, wareid);
+        const auto callResult = invoke(GetContainerSellLimit, containerid, wareid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetCurrentLanguage(PARAMS())
     {
-        const auto func_res_1 = invoke(GetCurrentLanguage);
+        const auto callResult = invoke(GetCurrentLanguage);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetEditBoxTextOffsetY(PARAMS(const int editboxid))
     {
-        const auto func_res_1 = invoke(GetEditBoxTextOffsetY, editboxid);
+        const auto callResult = invoke(GetEditBoxTextOffsetY, editboxid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetEntityCombinedSkill(PARAMS(UniverseID entityid,const char* role,const char* postid))
     {
-        const auto func_res_1 = invoke(GetEntityCombinedSkill, entityid, role, postid);
+        const auto callResult = invoke(GetEntityCombinedSkill, entityid, role, postid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPersonCombinedSkill(PARAMS(UniverseID controllableid,NPCSeed person,const char* role,const char* postid))
     {
-        const auto func_res_1 = invoke(GetPersonCombinedSkill, controllableid, person, role, postid);
+        const auto callResult = invoke(GetPersonCombinedSkill, controllableid, person, role, postid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPersonTier(PARAMS(NPCSeed npc,const char* role,UniverseID controllableid))
     {
-        const auto func_res_1 = invoke(GetPersonTier, npc, role, controllableid);
+        const auto callResult = invoke(GetPersonTier, npc, role, controllableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetRequestedLanguage(PARAMS())
     {
-        const auto func_res_1 = invoke(GetRequestedLanguage);
+        const auto callResult = invoke(GetRequestedLanguage);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetShipCombinedSkill(PARAMS(UniverseID shipid))
     {
-        const auto func_res_1 = invoke(GetShipCombinedSkill, shipid);
+        const auto callResult = invoke(GetShipCombinedSkill, shipid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetSliderCellAccuracyOverride(PARAMS(const int slidercellid))
     {
-        const auto func_res_1 = invoke(GetSliderCellAccuracyOverride, slidercellid);
+        const auto callResult = invoke(GetSliderCellAccuracyOverride, slidercellid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetUIRelation(PARAMS(const char* fromfactionid,const char* tofactionid))
     {
-        const auto func_res_1 = invoke(GetUIRelation, fromfactionid, tofactionid);
+        const auto callResult = invoke(GetUIRelation, fromfactionid, tofactionid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetBuildPlotPayment(PARAMS(UniverseID stationid))
     {
         bool positionchanged;
-        const auto func_res_1 = invoke(GetBuildPlotPayment, stationid, &positionchanged);
-         if (func_res_1) {
+        const auto callResult = invoke(GetBuildPlotPayment, stationid, &positionchanged);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"positionchanged", positionchanged}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetBuildWarePrice(PARAMS(UniverseID containerid,const char* warename))
     {
-        const auto func_res_1 = invoke(GetBuildWarePrice, containerid, warename);
+        const auto callResult = invoke(GetBuildWarePrice, containerid, warename);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetBuilderHiringFee(PARAMS())
     {
-        const auto func_res_1 = invoke(GetBuilderHiringFee);
+        const auto callResult = invoke(GetBuilderHiringFee);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetCreditsDueFromPlayerTrades(PARAMS())
     {
-        const auto func_res_1 = invoke(GetCreditsDueFromPlayerTrades);
+        const auto callResult = invoke(GetCreditsDueFromPlayerTrades);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetCustomGameStartMoneyProperty(PARAMS(const char* id,const char* propertyid))
     {
         CustomGameStartMoneyPropertyState state;
-        const auto func_res_1 = invoke(GetCustomGameStartMoneyProperty, id, propertyid, &state);
-         if (func_res_1) {
+        const auto callResult = invoke(GetCustomGameStartMoneyProperty, id, propertyid, &state);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"state", {
                     {"state", state.state},
                     {"defaultvalue", state.defaultvalue},
@@ -5983,25 +5983,25 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetRepairPrice(PARAMS(UniverseID componenttorepairid,UniverseID containerid))
     {
-        const auto func_res_1 = invoke(GetRepairPrice, componenttorepairid, containerid);
+        const auto callResult = invoke(GetRepairPrice, componenttorepairid, containerid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetSupplyBudget(PARAMS(UniverseID containerid))
     {
-        const auto func_res_1 = invoke(GetSupplyBudget, containerid);
+        const auto callResult = invoke(GetSupplyBudget, containerid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6010,11 +6010,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIConstructionPlanEntry> result;
         result.resize(resultlen);
-        const auto func_res_1 = invoke(GetBuildMapConstructionPlan, holomapid, defensibleid, usestoredplan, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        const auto callResult = invoke(GetBuildMapConstructionPlan, holomapid, defensibleid, usestoredplan, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -6030,131 +6030,131 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetConstructionMapVenturePlatform(PARAMS(UniverseID holomapid,size_t venturedockidx))
     {
-        const auto func_res_1 = invoke(GetConstructionMapVenturePlatform, holomapid, venturedockidx);
+        const auto callResult = invoke(GetConstructionMapVenturePlatform, holomapid, venturedockidx);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAcceptedMissions(PARAMS())
     {
-        const auto func_res_1 = invoke(GetNumAcceptedMissions);
+        const auto callResult = invoke(GetNumAcceptedMissions);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumBuildMapConstructionPlan(PARAMS(UniverseID holomapid,bool usestoredplan))
     {
-        const auto func_res_1 = invoke(GetNumBuildMapConstructionPlan, holomapid, usestoredplan);
+        const auto callResult = invoke(GetNumBuildMapConstructionPlan, holomapid, usestoredplan);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumNotifications(PARAMS())
     {
-        const auto func_res_1 = invoke(GetNumNotifications);
+        const auto callResult = invoke(GetNumNotifications);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumPlannedStationModules(PARAMS(UniverseID defensibleid,bool includeall))
     {
-        const auto func_res_1 = invoke(GetNumPlannedStationModules, defensibleid, includeall);
+        const auto callResult = invoke(GetNumPlannedStationModules, defensibleid, includeall);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumPrimaryWeapons(PARAMS())
     {
-        const auto func_res_1 = invoke(GetNumPrimaryWeapons);
+        const auto callResult = invoke(GetNumPrimaryWeapons);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumSecondaryWeapons(PARAMS())
     {
-        const auto func_res_1 = invoke(GetNumSecondaryWeapons);
+        const auto callResult = invoke(GetNumSecondaryWeapons);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumTradeComputerOrders(PARAMS(UniverseID controllableid))
     {
-        const auto func_res_1 = invoke(GetNumTradeComputerOrders, controllableid);
+        const auto callResult = invoke(GetNumTradeComputerOrders, controllableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumTurretSlots(PARAMS())
     {
-        const auto func_res_1 = invoke(GetNumTurretSlots);
+        const auto callResult = invoke(GetNumTurretSlots);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumTurrets(PARAMS())
     {
-        const auto func_res_1 = invoke(GetNumTurrets);
+        const auto callResult = invoke(GetNumTurrets);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumUpgradeSlots(PARAMS(UniverseID destructibleid,const char* macroname,const char* upgradetypename))
     {
-        const auto func_res_1 = invoke(GetNumUpgradeSlots, destructibleid, macroname, upgradetypename);
+        const auto callResult = invoke(GetNumUpgradeSlots, destructibleid, macroname, upgradetypename);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumVirtualUpgradeSlots(PARAMS(UniverseID objectid,const char* macroname,const char* upgradetypename))
     {
-        const auto func_res_1 = invoke(GetNumVirtualUpgradeSlots, objectid, macroname, upgradetypename);
+        const auto callResult = invoke(GetNumVirtualUpgradeSlots, objectid, macroname, upgradetypename);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumWeaponSlots(PARAMS())
     {
-        const auto func_res_1 = invoke(GetNumWeaponSlots);
+        const auto callResult = invoke(GetNumWeaponSlots);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6163,11 +6163,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIConstructionPlanEntry> result;
         result.resize(resultlen);
-        const auto func_res_1 = invoke(GetPlannedStationModules, result.data(), resultlen, defensibleid, includeall);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        const auto callResult = invoke(GetPlannedStationModules, result.data(), resultlen, defensibleid, includeall);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -6183,77 +6183,77 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetSelectedBuildMapEntry(PARAMS(UniverseID holomapid))
     {
-        const auto func_res_1 = invoke(GetSelectedBuildMapEntry, holomapid);
+        const auto callResult = invoke(GetSelectedBuildMapEntry, holomapid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetTobiiGazeFilterStrength(PARAMS())
     {
-        const auto func_res_1 = invoke(GetTobiiGazeFilterStrength);
+        const auto callResult = invoke(GetTobiiGazeFilterStrength);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetTobiiHeadFilterStrength(PARAMS())
     {
-        const auto func_res_1 = invoke(GetTobiiHeadFilterStrength);
+        const auto callResult = invoke(GetTobiiHeadFilterStrength);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CreateOrder(PARAMS(UniverseID controllableid,const char* orderid,bool defaultorder))
     {
-        uint32_t func_res_1 = invoke(CreateOrder, controllableid, orderid, defaultorder);
+        uint32_t callResult = invoke(CreateOrder, controllableid, orderid, defaultorder);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json CreateOrder2(PARAMS(UniverseID controllableid,const char* orderid,bool defaultorder,bool isoverride))
     {
-        uint32_t func_res_1 = invoke(CreateOrder2, controllableid, orderid, defaultorder, isoverride);
+        uint32_t callResult = invoke(CreateOrder2, controllableid, orderid, defaultorder, isoverride);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetActivePrimaryWeaponGroup(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetActivePrimaryWeaponGroup);
+        uint32_t callResult = invoke(GetActivePrimaryWeaponGroup);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetActiveSecondaryWeaponGroup(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetActiveSecondaryWeaponGroup);
+        uint32_t callResult = invoke(GetActiveSecondaryWeaponGroup);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6262,19 +6262,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<BlacklistID> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllBlacklists, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllBlacklists, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6283,11 +6283,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<BoardingBehaviour> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllBoardingBehaviours, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllBoardingBehaviours, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -6297,14 +6297,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6313,11 +6313,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<BoardingPhase> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllBoardingPhases, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllBoardingPhases, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -6327,14 +6327,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6343,11 +6343,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<ControlPostInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllControlPosts, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllControlPosts, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -6357,14 +6357,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6373,11 +6373,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<AmmoData> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllCountermeasures, result.data(), resultlen, defensibleid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllCountermeasures, result.data(), resultlen, defensibleid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -6389,14 +6389,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6405,11 +6405,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<EquipmentWareInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllEquipment, result.data(), resultlen, playerblueprint);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllEquipment, result.data(), resultlen, playerblueprint);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -6421,14 +6421,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6437,11 +6437,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<EquipmentModPropertyInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllEquipmentModProperties, result.data(), resultlen, equipmentmodclass);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllEquipmentModProperties, result.data(), resultlen, equipmentmodclass);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -6455,14 +6455,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6471,19 +6471,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllFactionShips, result.data(), resultlen, factionid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllFactionShips, result.data(), resultlen, factionid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6492,19 +6492,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllFactionStations, result.data(), resultlen, factionid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllFactionStations, result.data(), resultlen, factionid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6513,19 +6513,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllFactions, result.data(), resultlen, includehidden);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllFactions, result.data(), resultlen, includehidden);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6534,11 +6534,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<AmmoData> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllInventoryBombs, result.data(), resultlen, entityid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllInventoryBombs, result.data(), resultlen, entityid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -6550,14 +6550,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6566,11 +6566,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<AmmoData> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllLaserTowers, result.data(), resultlen, defensibleid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllLaserTowers, result.data(), resultlen, defensibleid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -6582,14 +6582,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6598,11 +6598,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<AmmoData> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllMines, result.data(), resultlen, defensibleid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllMines, result.data(), resultlen, defensibleid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -6614,14 +6614,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6630,11 +6630,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<AmmoData> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllMissiles, result.data(), resultlen, defensibleid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllMissiles, result.data(), resultlen, defensibleid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -6646,14 +6646,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6662,11 +6662,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIModuleSet> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllModuleSets, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllModuleSets, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -6676,14 +6676,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6692,11 +6692,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<AmmoData> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllNavBeacons, result.data(), resultlen, defensibleid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllNavBeacons, result.data(), resultlen, defensibleid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -6708,14 +6708,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6724,11 +6724,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<RaceInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllRaces, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllRaces, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -6741,14 +6741,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6757,11 +6757,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<AmmoData> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllResourceProbes, result.data(), resultlen, defensibleid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllResourceProbes, result.data(), resultlen, defensibleid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -6773,14 +6773,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6789,11 +6789,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<ResponseInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllResponsesToSignal, result.data(), resultlen, signalid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllResponsesToSignal, result.data(), resultlen, signalid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -6804,14 +6804,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6820,11 +6820,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<PeopleInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllRoles, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllRoles, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -6838,14 +6838,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6854,11 +6854,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<AmmoData> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllSatellites, result.data(), resultlen, defensibleid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllSatellites, result.data(), resultlen, defensibleid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -6870,14 +6870,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6886,19 +6886,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllShipMacros, result.data(), resultlen, playerblueprint);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllShipMacros, result.data(), resultlen, playerblueprint);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6907,11 +6907,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<SignalInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllSignals, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllSignals, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -6925,14 +6925,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6941,11 +6941,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UnitData> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllUnits, result.data(), resultlen, defensibleid, onlydrones);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllUnits, result.data(), resultlen, defensibleid, onlydrones);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -6956,14 +6956,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -6972,11 +6972,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<WeaponSystemInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAllowedWeaponSystems, result.data(), resultlen, defensibleid, orderidx, usedefault);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAllowedWeaponSystems, result.data(), resultlen, defensibleid, orderidx, usedefault);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -6987,14 +6987,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7003,11 +7003,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<AmmoData> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAmmoStorage, result.data(), resultlen, defensibleid, ammotype);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAmmoStorage, result.data(), resultlen, defensibleid, ammotype);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -7019,23 +7019,23 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetAmountOfWareAvailable(PARAMS(const char* wareid,UniverseID productionmoduleid))
     {
-        uint32_t func_res_1 = invoke(GetAmountOfWareAvailable, wareid, productionmoduleid);
+        uint32_t callResult = invoke(GetAmountOfWareAvailable, wareid, productionmoduleid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7044,19 +7044,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAssignedConstructionVessels, result.data(), resultlen, containerid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAssignedConstructionVessels, result.data(), resultlen, containerid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7065,19 +7065,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAttackersOfBoardingOperation, result.data(), resultlen, defensibletargetid, boarderfactionid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAttackersOfBoardingOperation, result.data(), resultlen, defensibletargetid, boarderfactionid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7086,11 +7086,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIClothingTheme> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAvailableClothingThemes, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAvailableClothingThemes, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -7101,14 +7101,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7117,11 +7117,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<EquipmentWareInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAvailableEquipment, result.data(), resultlen, containerid, classid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAvailableEquipment, result.data(), resultlen, containerid, classid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -7133,14 +7133,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7149,11 +7149,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIEquipmentMod> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAvailableEquipmentMods, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAvailableEquipmentMods, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -7165,14 +7165,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7181,19 +7181,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAvailableLockboxes, result.data(), resultlen, entityid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAvailableLockboxes, result.data(), resultlen, entityid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7202,11 +7202,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIPaintTheme> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetAvailablePaintThemes, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetAvailablePaintThemes, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -7218,14 +7218,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7234,11 +7234,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIBlueprint> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetBlueprints, result.data(), resultlen, set, category, macroname);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetBlueprints, result.data(), resultlen, set, category, macroname);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -7249,32 +7249,32 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetBoardingCasualtiesOfTier(PARAMS(int32_t marinetierskilllevel,UniverseID defensibletargetid,const char* boarderfactionid))
     {
-        uint32_t func_res_1 = invoke(GetBoardingCasualtiesOfTier, marinetierskilllevel, defensibletargetid, boarderfactionid);
+        uint32_t callResult = invoke(GetBoardingCasualtiesOfTier, marinetierskilllevel, defensibletargetid, boarderfactionid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetBoardingStrengthFromOperation(PARAMS(UniverseID defensibletargetid,const char* boarderfactionid))
     {
-        uint32_t func_res_1 = invoke(GetBoardingStrengthFromOperation, defensibletargetid, boarderfactionid);
+        uint32_t callResult = invoke(GetBoardingStrengthFromOperation, defensibletargetid, boarderfactionid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7282,11 +7282,11 @@ namespace ffijson
     {
         uint32_t marinetieramounts;
         int32_t marinetierskilllevels;
-        uint32_t func_res_1 = invoke(GetBoardingStrengthOfControllableTierAmounts, controllableid, &marinetieramounts, &marinetierskilllevels, nummarinetiers);
-         if (func_res_1) {
+        uint32_t callResult = invoke(GetBoardingStrengthOfControllableTierAmounts, controllableid, &marinetieramounts, &marinetierskilllevels, nummarinetiers);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"marinetieramounts", marinetieramounts},
                 {"marinetierskilllevels", marinetierskilllevels}
             };
@@ -7294,7 +7294,7 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7303,19 +7303,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetBuildModules, result.data(), resultlen, containerid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetBuildModules, result.data(), resultlen, containerid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7324,11 +7324,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIWareInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetBuildSequenceResources, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetBuildSequenceResources, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -7339,14 +7339,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7355,11 +7355,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<BuildTaskInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetBuildTasks, result.data(), resultlen, containerid, buildmoduleid, isinprogress, includeupgrade);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetBuildTasks, result.data(), resultlen, containerid, buildmoduleid, isinprogress, includeupgrade);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -7376,14 +7376,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7392,11 +7392,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIWareInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetCargo, result.data(), resultlen, containerid, tags);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetCargo, result.data(), resultlen, containerid, tags);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -7407,14 +7407,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7423,11 +7423,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UICargoStat> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetCargoStatistics, result.data(), resultlen, numdatapoints);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetCargoStatistics, result.data(), resultlen, numdatapoints);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -7438,14 +7438,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7454,11 +7454,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<StorageInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetCargoTransportTypes, result.data(), resultlen, containerid, merge, aftertradeorders);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetCargoTransportTypes, result.data(), resultlen, containerid, merge, aftertradeorders);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -7470,14 +7470,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7486,19 +7486,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<int> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetCloseOnUnhandledClickFrames, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetCloseOnUnhandledClickFrames, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7507,11 +7507,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<InvalidPatchInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetConstructionPlanInvalidPatches, result.data(), resultlen, constructionplanid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetConstructionPlanInvalidPatches, result.data(), resultlen, constructionplanid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -7524,14 +7524,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7540,11 +7540,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIConstructionPlan> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetConstructionPlans, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetConstructionPlans, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -7556,14 +7556,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7572,19 +7572,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetContainerAllowedBuildFactions, result.data(), resultlen, containerid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetContainerAllowedBuildFactions, result.data(), resultlen, containerid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7593,19 +7593,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetContainerBuildResources, result.data(), resultlen, containerid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetContainerBuildResources, result.data(), resultlen, containerid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7614,19 +7614,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetContainerBuilderMacros, result.data(), resultlen, containerid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetContainerBuilderMacros, result.data(), resultlen, containerid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7635,11 +7635,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIWareInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetContainerStockLimitOverrides, result.data(), resultlen, containerid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetContainerStockLimitOverrides, result.data(), resultlen, containerid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -7650,14 +7650,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7666,11 +7666,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<WareReservationInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetContainerWareReservations, result.data(), resultlen, containerid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetContainerWareReservations, result.data(), resultlen, containerid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -7683,14 +7683,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7699,19 +7699,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<uint64_t> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetCurrentMissionOffers, result.data(), resultlen, showninbbs);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetCurrentMissionOffers, result.data(), resultlen, showninbbs);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7720,19 +7720,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetCurrentVentureShips, result.data(), resultlen, ventureplatformid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetCurrentVentureShips, result.data(), resultlen, ventureplatformid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7741,11 +7741,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<CustomGameStartBlueprint> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetCustomGameStartBlueprintDefaultProperty, result.data(), resultlen, id, propertyid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetCustomGameStartBlueprintDefaultProperty, result.data(), resultlen, id, propertyid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -7754,14 +7754,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7770,11 +7770,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<CustomGameStartBlueprint> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetCustomGameStartBlueprintProperty, result.data(), resultlen, id, propertyid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetCustomGameStartBlueprintProperty, result.data(), resultlen, id, propertyid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -7783,14 +7783,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7799,11 +7799,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<CustomGameStartEncyclopediaEntry> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetCustomGameStartEncyclopediaProperty, result.data(), resultlen, id, propertyid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetCustomGameStartEncyclopediaProperty, result.data(), resultlen, id, propertyid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -7813,23 +7813,23 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetCustomGameStartEncyclopediaPropertyCounts(PARAMS(const char* id,const char* propertyid))
     {
-        uint32_t func_res_1 = invoke(GetCustomGameStartEncyclopediaPropertyCounts, id, propertyid);
+        uint32_t callResult = invoke(GetCustomGameStartEncyclopediaPropertyCounts, id, propertyid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7838,11 +7838,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<CustomGameStartInventory> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetCustomGameStartInventoryDefaultProperty, result.data(), resultlen, id, propertyid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetCustomGameStartInventoryDefaultProperty, result.data(), resultlen, id, propertyid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -7852,14 +7852,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7868,11 +7868,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<CustomGameStartInventory> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetCustomGameStartInventoryProperty, result.data(), resultlen, id, propertyid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetCustomGameStartInventoryProperty, result.data(), resultlen, id, propertyid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -7882,14 +7882,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7898,11 +7898,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<CustomGameStartRelationInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetCustomGameStartRelationsProperty, result.data(), resultlen, id, propertyid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetCustomGameStartRelationsProperty, result.data(), resultlen, id, propertyid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -7913,23 +7913,23 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetCustomGameStartRelationsPropertyCounts(PARAMS(const char* id,const char* propertyid))
     {
-        uint32_t func_res_1 = invoke(GetCustomGameStartRelationsPropertyCounts, id, propertyid);
+        uint32_t callResult = invoke(GetCustomGameStartRelationsPropertyCounts, id, propertyid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7938,28 +7938,28 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetCustomGameStartResearchProperty, result.data(), resultlen, id, propertyid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetCustomGameStartResearchProperty, result.data(), resultlen, id, propertyid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetCustomGameStartResearchPropertyCounts(PARAMS(const char* id,const char* propertyid))
     {
-        uint32_t func_res_1 = invoke(GetCustomGameStartResearchPropertyCounts, id, propertyid);
+        uint32_t callResult = invoke(GetCustomGameStartResearchPropertyCounts, id, propertyid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -7968,57 +7968,57 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetDamagedSubComponents, result.data(), resultlen, objectid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetDamagedSubComponents, result.data(), resultlen, objectid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetDefaultCountermeasureStorageCapacity(PARAMS(const char* macroname))
     {
-        uint32_t func_res_1 = invoke(GetDefaultCountermeasureStorageCapacity, macroname);
+        uint32_t callResult = invoke(GetDefaultCountermeasureStorageCapacity, macroname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetDefaultMissileStorageCapacity(PARAMS(const char* macroname))
     {
-        uint32_t func_res_1 = invoke(GetDefaultMissileStorageCapacity, macroname);
+        uint32_t callResult = invoke(GetDefaultMissileStorageCapacity, macroname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetDefensibleActiveWeaponGroup(PARAMS(UniverseID defensibleid,bool primary))
     {
-        uint32_t func_res_1 = invoke(GetDefensibleActiveWeaponGroup, defensibleid, primary);
+        uint32_t callResult = invoke(GetDefensibleActiveWeaponGroup, defensibleid, primary);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetDefensibleDPS(PARAMS(UniverseID defensibleid,bool primary,bool secondary,bool lasers,bool missiles,bool turrets,bool includeheat,bool includeinactive))
     {
         DPSData result;
-        uint32_t func_res_1 = invoke(GetDefensibleDPS, &result, defensibleid, primary, secondary, lasers, missiles, turrets, includeheat, includeinactive);
-         if (func_res_1) {
+        uint32_t callResult = invoke(GetDefensibleDPS, &result, defensibleid, primary, secondary, lasers, missiles, turrets, includeheat, includeinactive);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", {
                     {"dps", result.dps},
                     {"quadranttextid", result.quadranttextid}
@@ -8028,16 +8028,16 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetDefensibleDeployableCapacity(PARAMS(UniverseID defensibleid))
     {
-        uint32_t func_res_1 = invoke(GetDefensibleDeployableCapacity, defensibleid);
+        uint32_t callResult = invoke(GetDefensibleDeployableCapacity, defensibleid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8046,19 +8046,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetDockedShips, result.data(), resultlen, dockingbayorcontainerid, factionid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetDockedShips, result.data(), resultlen, dockingbayorcontainerid, factionid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8067,11 +8067,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<DroneModeInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetDroneModes, result.data(), resultlen, defensibleid, dronetype);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetDroneModes, result.data(), resultlen, defensibleid, dronetype);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -8082,32 +8082,32 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetDropDownOptionHeight(PARAMS(const int dropdownid))
     {
-        uint32_t func_res_1 = invoke(GetDropDownOptionHeight, dropdownid);
+        uint32_t callResult = invoke(GetDropDownOptionHeight, dropdownid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetDropDownOptionWidth(PARAMS(const int dropdownid))
     {
-        uint32_t func_res_1 = invoke(GetDropDownOptionWidth, dropdownid);
+        uint32_t callResult = invoke(GetDropDownOptionWidth, dropdownid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8116,11 +8116,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<DropDownOption> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetDropDownOptions, result.data(), resultlen, dropdownid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetDropDownOptions, result.data(), resultlen, dropdownid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -8137,23 +8137,23 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetEditBoxTextOffsetX(PARAMS(const int editboxid))
     {
-        uint32_t func_res_1 = invoke(GetEditBoxTextOffsetX, editboxid);
+        uint32_t callResult = invoke(GetEditBoxTextOffsetX, editboxid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8162,11 +8162,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIFormationInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetFormationShapes, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetFormationShapes, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -8181,50 +8181,50 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetFreeCountermeasureStorageAfterTradeOrders(PARAMS(UniverseID defensibleid))
     {
-        uint32_t func_res_1 = invoke(GetFreeCountermeasureStorageAfterTradeOrders, defensibleid);
+        uint32_t callResult = invoke(GetFreeCountermeasureStorageAfterTradeOrders, defensibleid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetFreeDeployableStorageAfterTradeOrders(PARAMS(UniverseID defensibleid))
     {
-        uint32_t func_res_1 = invoke(GetFreeDeployableStorageAfterTradeOrders, defensibleid);
+        uint32_t callResult = invoke(GetFreeDeployableStorageAfterTradeOrders, defensibleid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetFreeMissileStorageAfterTradeOrders(PARAMS(UniverseID defensibleid))
     {
-        uint32_t func_res_1 = invoke(GetFreeMissileStorageAfterTradeOrders, defensibleid);
+        uint32_t callResult = invoke(GetFreeMissileStorageAfterTradeOrders, defensibleid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetFreePeopleCapacity(PARAMS(UniverseID controllableid))
     {
-        uint32_t func_res_1 = invoke(GetFreePeopleCapacity, controllableid);
+        uint32_t callResult = invoke(GetFreePeopleCapacity, controllableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8233,11 +8233,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<GraphDataPoint> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetGraphData, result.data(), resultlen, graphid, datarecordidx);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetGraphData, result.data(), resultlen, graphid, datarecordidx);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -8247,14 +8247,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8263,11 +8263,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<GraphDataRecord> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetGraphDataRecords, result.data(), resultlen, graphid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetGraphDataRecords, result.data(), resultlen, graphid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -8284,14 +8284,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8300,11 +8300,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<GraphIcon> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetGraphIcons, result.data(), resultlen, graphid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetGraphIcons, result.data(), resultlen, graphid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -8316,23 +8316,23 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetGraphType(PARAMS(const int graphid))
     {
-        uint32_t func_res_1 = invoke(GetGraphType, graphid);
+        uint32_t callResult = invoke(GetGraphType, graphid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8341,19 +8341,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetHQs, result.data(), resultlen, factionid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetHQs, result.data(), resultlen, factionid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8362,19 +8362,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetIllegalToFactions, result.data(), resultlen, wareid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetIllegalToFactions, result.data(), resultlen, wareid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8383,11 +8383,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIPaintMod> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetInventoryPaintMods, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetInventoryPaintMods, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -8400,23 +8400,23 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetLUTMode(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetLUTMode);
+        uint32_t callResult = invoke(GetLUTMode);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8425,11 +8425,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<LanguageInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetLanguages, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetLanguages, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -8442,14 +8442,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8458,30 +8458,30 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetLibraryEntryAliases, result.data(), resultlen, librarytypeid, id);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetLibraryEntryAliases, result.data(), resultlen, librarytypeid, id);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetLoadoutCounts(PARAMS(UniverseID defensibleid,const char* macroname,const char* loadoutid))
     {
         UILoadoutCounts result;
-        uint32_t func_res_1 = invoke(GetLoadoutCounts, &result, defensibleid, macroname, loadoutid);
-         if (func_res_1) {
+        uint32_t callResult = invoke(GetLoadoutCounts, &result, defensibleid, macroname, loadoutid);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", {
                     {"numweapons", result.numweapons},
                     {"numturrets", result.numturrets},
@@ -8498,7 +8498,7 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8507,11 +8507,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<InvalidPatchInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetLoadoutInvalidPatches, result.data(), resultlen, defensibleid, macroname, loadoutid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetLoadoutInvalidPatches, result.data(), resultlen, defensibleid, macroname, loadoutid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -8524,14 +8524,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8540,11 +8540,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UILoadoutInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetLoadoutsInfo, result.data(), resultlen, componentid, macroname);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetLoadoutsInfo, result.data(), resultlen, componentid, macroname);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -8556,32 +8556,32 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetMacroDeployableCapacity(PARAMS(const char* macroname))
     {
-        uint32_t func_res_1 = invoke(GetMacroDeployableCapacity, macroname);
+        uint32_t callResult = invoke(GetMacroDeployableCapacity, macroname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetMacroMissileCapacity(PARAMS(const char* macroname))
     {
-        uint32_t func_res_1 = invoke(GetMacroMissileCapacity, macroname);
+        uint32_t callResult = invoke(GetMacroMissileCapacity, macroname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8590,19 +8590,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<MissionID> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetMapComponentMissions, result.data(), resultlen, holomapid, componentid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetMapComponentMissions, result.data(), resultlen, holomapid, componentid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8611,19 +8611,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetMapRenderedComponents, result.data(), resultlen, holomapid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetMapRenderedComponents, result.data(), resultlen, holomapid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8632,19 +8632,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetMapSelectedComponents, result.data(), resultlen, holomapid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetMapSelectedComponents, result.data(), resultlen, holomapid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8653,11 +8653,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIWareAmount> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetMaxProductionStorage, result.data(), resultlen, containerid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetMaxProductionStorage, result.data(), resultlen, containerid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -8667,14 +8667,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8683,11 +8683,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<MessageInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetMessages, result.data(), resultlen, start, count, categoryname);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetMessages, result.data(), resultlen, start, count, categoryname);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -8713,14 +8713,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8729,11 +8729,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIWareInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetMissileCargo, result.data(), resultlen, containerid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetMissileCargo, result.data(), resultlen, containerid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -8744,14 +8744,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8760,11 +8760,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIWareInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetMissingBuildResources, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetMissingBuildResources, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -8775,14 +8775,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8791,11 +8791,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIWareInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetMissingLoadoutResources, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetMissingLoadoutResources, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -8806,14 +8806,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8822,19 +8822,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<MissionID> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetMissionThreadSubMissions, result.data(), resultlen, missionid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetMissionThreadSubMissions, result.data(), resultlen, missionid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8843,11 +8843,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIWareInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetModuleNeededResources, result.data(), resultlen, holomapid, cp_idx);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetModuleNeededResources, result.data(), resultlen, holomapid, cp_idx);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -8858,14 +8858,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8874,11 +8874,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIWareInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetModuleRecycledResources, result.data(), resultlen, moduleid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetModuleRecycledResources, result.data(), resultlen, moduleid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -8889,14 +8889,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8905,11 +8905,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UICelestialBodyInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetMoonInfo, result.data(), resultlen, clusterid, planetidx);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetMoonInfo, result.data(), resultlen, clusterid, planetidx);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -8924,23 +8924,23 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetMouseHUDModeOption(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetMouseHUDModeOption);
+        uint32_t callResult = invoke(GetMouseHUDModeOption);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8949,11 +8949,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIAccountStatData> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetNPCAccountStatistics, result.data(), resultlen, entityid, starttime, endtime);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetNPCAccountStatistics, result.data(), resultlen, entityid, starttime, endtime);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -8963,14 +8963,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -8979,11 +8979,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UINotificationType> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetNotificationTypes, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetNotificationTypes, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -8996,655 +8996,655 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllBlacklists(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumAllBlacklists);
+        uint32_t callResult = invoke(GetNumAllBlacklists);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllBoardingBehaviours(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumAllBoardingBehaviours);
+        uint32_t callResult = invoke(GetNumAllBoardingBehaviours);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllBoardingPhases(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumAllBoardingPhases);
+        uint32_t callResult = invoke(GetNumAllBoardingPhases);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllControlPosts(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumAllControlPosts);
+        uint32_t callResult = invoke(GetNumAllControlPosts);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllCountermeasures(PARAMS(UniverseID defensibleid))
     {
-        uint32_t func_res_1 = invoke(GetNumAllCountermeasures, defensibleid);
+        uint32_t callResult = invoke(GetNumAllCountermeasures, defensibleid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllEquipment(PARAMS(bool playerblueprint))
     {
-        uint32_t func_res_1 = invoke(GetNumAllEquipment, playerblueprint);
+        uint32_t callResult = invoke(GetNumAllEquipment, playerblueprint);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllEquipmentModProperties(PARAMS(const char* equipmentmodclass))
     {
-        uint32_t func_res_1 = invoke(GetNumAllEquipmentModProperties, equipmentmodclass);
+        uint32_t callResult = invoke(GetNumAllEquipmentModProperties, equipmentmodclass);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllFactionShips(PARAMS(const char* factionid))
     {
-        uint32_t func_res_1 = invoke(GetNumAllFactionShips, factionid);
+        uint32_t callResult = invoke(GetNumAllFactionShips, factionid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllFactionStations(PARAMS(const char* factionid))
     {
-        uint32_t func_res_1 = invoke(GetNumAllFactionStations, factionid);
+        uint32_t callResult = invoke(GetNumAllFactionStations, factionid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllFactions(PARAMS(bool includehidden))
     {
-        uint32_t func_res_1 = invoke(GetNumAllFactions, includehidden);
+        uint32_t callResult = invoke(GetNumAllFactions, includehidden);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllInventoryBombs(PARAMS(UniverseID entityid))
     {
-        uint32_t func_res_1 = invoke(GetNumAllInventoryBombs, entityid);
+        uint32_t callResult = invoke(GetNumAllInventoryBombs, entityid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllLaserTowers(PARAMS(UniverseID defensibleid))
     {
-        uint32_t func_res_1 = invoke(GetNumAllLaserTowers, defensibleid);
+        uint32_t callResult = invoke(GetNumAllLaserTowers, defensibleid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllMines(PARAMS(UniverseID defensibleid))
     {
-        uint32_t func_res_1 = invoke(GetNumAllMines, defensibleid);
+        uint32_t callResult = invoke(GetNumAllMines, defensibleid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllMissiles(PARAMS(UniverseID defensibleid))
     {
-        uint32_t func_res_1 = invoke(GetNumAllMissiles, defensibleid);
+        uint32_t callResult = invoke(GetNumAllMissiles, defensibleid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllModuleSets(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumAllModuleSets);
+        uint32_t callResult = invoke(GetNumAllModuleSets);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllNavBeacons(PARAMS(UniverseID defensibleid))
     {
-        uint32_t func_res_1 = invoke(GetNumAllNavBeacons, defensibleid);
+        uint32_t callResult = invoke(GetNumAllNavBeacons, defensibleid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllRaces(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumAllRaces);
+        uint32_t callResult = invoke(GetNumAllRaces);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllResourceProbes(PARAMS(UniverseID defensibleid))
     {
-        uint32_t func_res_1 = invoke(GetNumAllResourceProbes, defensibleid);
+        uint32_t callResult = invoke(GetNumAllResourceProbes, defensibleid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllResponsesToSignal(PARAMS(const char* signalid))
     {
-        uint32_t func_res_1 = invoke(GetNumAllResponsesToSignal, signalid);
+        uint32_t callResult = invoke(GetNumAllResponsesToSignal, signalid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllRoles(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumAllRoles);
+        uint32_t callResult = invoke(GetNumAllRoles);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllSatellites(PARAMS(UniverseID defensibleid))
     {
-        uint32_t func_res_1 = invoke(GetNumAllSatellites, defensibleid);
+        uint32_t callResult = invoke(GetNumAllSatellites, defensibleid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllShipMacros(PARAMS(bool playerblueprint))
     {
-        uint32_t func_res_1 = invoke(GetNumAllShipMacros, playerblueprint);
+        uint32_t callResult = invoke(GetNumAllShipMacros, playerblueprint);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllSignals(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumAllSignals);
+        uint32_t callResult = invoke(GetNumAllSignals);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllUnits(PARAMS(UniverseID defensibleid,bool onlydrones))
     {
-        uint32_t func_res_1 = invoke(GetNumAllUnits, defensibleid, onlydrones);
+        uint32_t callResult = invoke(GetNumAllUnits, defensibleid, onlydrones);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAllowedWeaponSystems(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumAllowedWeaponSystems);
+        uint32_t callResult = invoke(GetNumAllowedWeaponSystems);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAmmoStorage(PARAMS(UniverseID defensibleid,const char* ammotype))
     {
-        uint32_t func_res_1 = invoke(GetNumAmmoStorage, defensibleid, ammotype);
+        uint32_t callResult = invoke(GetNumAmmoStorage, defensibleid, ammotype);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAssignedConstructionVessels(PARAMS(UniverseID containerid))
     {
-        uint32_t func_res_1 = invoke(GetNumAssignedConstructionVessels, containerid);
+        uint32_t callResult = invoke(GetNumAssignedConstructionVessels, containerid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAttackersOfBoardingOperation(PARAMS(UniverseID defensibletargetid,const char* boarderfactionid))
     {
-        uint32_t func_res_1 = invoke(GetNumAttackersOfBoardingOperation, defensibletargetid, boarderfactionid);
+        uint32_t callResult = invoke(GetNumAttackersOfBoardingOperation, defensibletargetid, boarderfactionid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAvailableClothingThemes(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumAvailableClothingThemes);
+        uint32_t callResult = invoke(GetNumAvailableClothingThemes);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAvailableEquipment(PARAMS(UniverseID containerid,const char* classid))
     {
-        uint32_t func_res_1 = invoke(GetNumAvailableEquipment, containerid, classid);
+        uint32_t callResult = invoke(GetNumAvailableEquipment, containerid, classid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAvailableEquipmentMods(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumAvailableEquipmentMods);
+        uint32_t callResult = invoke(GetNumAvailableEquipmentMods);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAvailableLockboxes(PARAMS(UniverseID entityid))
     {
-        uint32_t func_res_1 = invoke(GetNumAvailableLockboxes, entityid);
+        uint32_t callResult = invoke(GetNumAvailableLockboxes, entityid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumAvailablePaintThemes(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumAvailablePaintThemes);
+        uint32_t callResult = invoke(GetNumAvailablePaintThemes);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumBlueprints(PARAMS(const char* set,const char* category,const char* macroname))
     {
-        uint32_t func_res_1 = invoke(GetNumBlueprints, set, category, macroname);
+        uint32_t callResult = invoke(GetNumBlueprints, set, category, macroname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumBoardingMarinesFromOperation(PARAMS(UniverseID defensibletargetid,const char* boarderfactionid))
     {
-        uint32_t func_res_1 = invoke(GetNumBoardingMarinesFromOperation, defensibletargetid, boarderfactionid);
+        uint32_t callResult = invoke(GetNumBoardingMarinesFromOperation, defensibletargetid, boarderfactionid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumBuildModules(PARAMS(UniverseID containerid))
     {
-        uint32_t func_res_1 = invoke(GetNumBuildModules, containerid);
+        uint32_t callResult = invoke(GetNumBuildModules, containerid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumBuildTasks(PARAMS(UniverseID containerid,UniverseID buildmoduleid,bool isinprogress,bool includeupgrade))
     {
-        uint32_t func_res_1 = invoke(GetNumBuildTasks, containerid, buildmoduleid, isinprogress, includeupgrade);
+        uint32_t callResult = invoke(GetNumBuildTasks, containerid, buildmoduleid, isinprogress, includeupgrade);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumCargo(PARAMS(UniverseID containerid,const char* tags))
     {
-        uint32_t func_res_1 = invoke(GetNumCargo, containerid, tags);
+        uint32_t callResult = invoke(GetNumCargo, containerid, tags);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumCargoStatistics(PARAMS(UniverseID containerorspaceid,double starttime,double endtime,size_t numdatapoints))
     {
-        uint32_t func_res_1 = invoke(GetNumCargoStatistics, containerorspaceid, starttime, endtime, numdatapoints);
+        uint32_t callResult = invoke(GetNumCargoStatistics, containerorspaceid, starttime, endtime, numdatapoints);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumCargoTransportTypes(PARAMS(UniverseID containerid,bool merge))
     {
-        uint32_t func_res_1 = invoke(GetNumCargoTransportTypes, containerid, merge);
+        uint32_t callResult = invoke(GetNumCargoTransportTypes, containerid, merge);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumCloseOnUnhandledClickFrames(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumCloseOnUnhandledClickFrames);
+        uint32_t callResult = invoke(GetNumCloseOnUnhandledClickFrames);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumConstructionMapVenturePlatformDocks(PARAMS(UniverseID holomapid,size_t ventureplatformidx))
     {
-        uint32_t func_res_1 = invoke(GetNumConstructionMapVenturePlatformDocks, holomapid, ventureplatformidx);
+        uint32_t callResult = invoke(GetNumConstructionMapVenturePlatformDocks, holomapid, ventureplatformidx);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumConstructionPlans(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumConstructionPlans);
+        uint32_t callResult = invoke(GetNumConstructionPlans);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumContainedKnownSpaces(PARAMS(UniverseID spaceid))
     {
-        uint32_t func_res_1 = invoke(GetNumContainedKnownSpaces, spaceid);
+        uint32_t callResult = invoke(GetNumContainedKnownSpaces, spaceid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumContainedKnownUnreadSpaces(PARAMS(UniverseID spaceid))
     {
-        uint32_t func_res_1 = invoke(GetNumContainedKnownUnreadSpaces, spaceid);
+        uint32_t callResult = invoke(GetNumContainedKnownUnreadSpaces, spaceid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumContainerAllowedBuildFactions(PARAMS(UniverseID containerid))
     {
-        uint32_t func_res_1 = invoke(GetNumContainerAllowedBuildFactions, containerid);
+        uint32_t callResult = invoke(GetNumContainerAllowedBuildFactions, containerid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumContainerBuildResources(PARAMS(UniverseID containerid))
     {
-        uint32_t func_res_1 = invoke(GetNumContainerBuildResources, containerid);
+        uint32_t callResult = invoke(GetNumContainerBuildResources, containerid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumContainerBuilderMacros(PARAMS(UniverseID containerid))
     {
-        uint32_t func_res_1 = invoke(GetNumContainerBuilderMacros, containerid);
+        uint32_t callResult = invoke(GetNumContainerBuilderMacros, containerid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumContainerStockLimitOverrides(PARAMS(UniverseID containerid))
     {
-        uint32_t func_res_1 = invoke(GetNumContainerStockLimitOverrides, containerid);
+        uint32_t callResult = invoke(GetNumContainerStockLimitOverrides, containerid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumContainerWareReservations(PARAMS(UniverseID containerid))
     {
-        uint32_t func_res_1 = invoke(GetNumContainerWareReservations, containerid);
+        uint32_t callResult = invoke(GetNumContainerWareReservations, containerid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumCountermeasures(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumCountermeasures);
+        uint32_t callResult = invoke(GetNumCountermeasures);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumCurrentMissionOffers(PARAMS(bool showninbbs))
     {
-        uint32_t func_res_1 = invoke(GetNumCurrentMissionOffers, showninbbs);
+        uint32_t callResult = invoke(GetNumCurrentMissionOffers, showninbbs);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumDockedShips(PARAMS(UniverseID dockingbayorcontainerid,const char* factionid))
     {
-        uint32_t func_res_1 = invoke(GetNumDockedShips, dockingbayorcontainerid, factionid);
+        uint32_t callResult = invoke(GetNumDockedShips, dockingbayorcontainerid, factionid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumDroneModes(PARAMS(UniverseID defensibleid,const char* dronetype))
     {
-        uint32_t func_res_1 = invoke(GetNumDroneModes, defensibleid, dronetype);
+        uint32_t callResult = invoke(GetNumDroneModes, defensibleid, dronetype);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumDropDownOptions(PARAMS(const int dropdownid))
     {
-        uint32_t func_res_1 = invoke(GetNumDropDownOptions, dropdownid);
+        uint32_t callResult = invoke(GetNumDropDownOptions, dropdownid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumFormationShapes(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumFormationShapes);
+        uint32_t callResult = invoke(GetNumFormationShapes);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumGraphDataRecords(PARAMS(int graphid))
     {
-        uint32_t func_res_1 = invoke(GetNumGraphDataRecords, graphid);
+        uint32_t callResult = invoke(GetNumGraphDataRecords, graphid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumGraphIcons(PARAMS(int graphid))
     {
-        uint32_t func_res_1 = invoke(GetNumGraphIcons, graphid);
+        uint32_t callResult = invoke(GetNumGraphIcons, graphid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumHQs(PARAMS(const char* factionid))
     {
-        uint32_t func_res_1 = invoke(GetNumHQs, factionid);
+        uint32_t callResult = invoke(GetNumHQs, factionid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumIllegalToFactions(PARAMS(const char* wareid))
     {
-        uint32_t func_res_1 = invoke(GetNumIllegalToFactions, wareid);
+        uint32_t callResult = invoke(GetNumIllegalToFactions, wareid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumInventoryPaintMods(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumInventoryPaintMods);
+        uint32_t callResult = invoke(GetNumInventoryPaintMods);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumLanguages(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumLanguages);
+        uint32_t callResult = invoke(GetNumLanguages);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumLibraryEntryAliases(PARAMS(const char* librarytypeid,const char* id))
     {
-        uint32_t func_res_1 = invoke(GetNumLibraryEntryAliases, librarytypeid, id);
+        uint32_t callResult = invoke(GetNumLibraryEntryAliases, librarytypeid, id);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumLoadoutsInfo(PARAMS(UniverseID componentid,const char* macroname))
     {
-        uint32_t func_res_1 = invoke(GetNumLoadoutsInfo, componentid, macroname);
+        uint32_t callResult = invoke(GetNumLoadoutsInfo, componentid, macroname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumMapComponentMissions(PARAMS(UniverseID holomapid,UniverseID componentid))
     {
-        uint32_t func_res_1 = invoke(GetNumMapComponentMissions, holomapid, componentid);
+        uint32_t callResult = invoke(GetNumMapComponentMissions, holomapid, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumMapRenderedComponents(PARAMS(UniverseID holomapid))
     {
-        uint32_t func_res_1 = invoke(GetNumMapRenderedComponents, holomapid);
+        uint32_t callResult = invoke(GetNumMapRenderedComponents, holomapid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumMapSelectedComponents(PARAMS(UniverseID holomapid))
     {
-        uint32_t func_res_1 = invoke(GetNumMapSelectedComponents, holomapid);
+        uint32_t callResult = invoke(GetNumMapSelectedComponents, holomapid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumMaxProductionStorage(PARAMS(UniverseID containerid))
     {
-        uint32_t func_res_1 = invoke(GetNumMaxProductionStorage, containerid);
+        uint32_t callResult = invoke(GetNumMaxProductionStorage, containerid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumMessages(PARAMS(const char* categoryname,bool unknownBool))
     {
-        uint32_t func_res_1 = invoke(GetNumMessages, categoryname, unknownBool);
+        uint32_t callResult = invoke(GetNumMessages, categoryname, unknownBool);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumMissileCargo(PARAMS(UniverseID containerid))
     {
-        uint32_t func_res_1 = invoke(GetNumMissileCargo, containerid);
+        uint32_t callResult = invoke(GetNumMissileCargo, containerid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumMissingBuildResources2(PARAMS(UniverseID containerid,uint32_t numorders,bool playercase))
     {
         UIBuildOrderList orders;
-        uint32_t func_res_1 = invoke(GetNumMissingBuildResources2, containerid, &orders, numorders, playercase);
-         if (func_res_1) {
+        uint32_t callResult = invoke(GetNumMissingBuildResources2, containerid, &orders, numorders, playercase);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"orders", {
                     {"shipid", orders.shipid},
                     {"macroname", orders.macroname},
@@ -9656,18 +9656,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumMissingLoadoutResources2(PARAMS(UniverseID containerid,uint32_t numorders,bool playercase))
     {
         UIBuildOrderList orders;
-        uint32_t func_res_1 = invoke(GetNumMissingLoadoutResources2, containerid, &orders, numorders, playercase);
-         if (func_res_1) {
+        uint32_t callResult = invoke(GetNumMissingLoadoutResources2, containerid, &orders, numorders, playercase);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"orders", {
                     {"shipid", orders.shipid},
                     {"macroname", orders.macroname},
@@ -9679,133 +9679,133 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumMissionThreadSubMissions(PARAMS(MissionID missionid))
     {
-        uint32_t func_res_1 = invoke(GetNumMissionThreadSubMissions, missionid);
+        uint32_t callResult = invoke(GetNumMissionThreadSubMissions, missionid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumModuleNeededResources(PARAMS(UniverseID holomapid,size_t cp_idx))
     {
-        uint32_t func_res_1 = invoke(GetNumModuleNeededResources, holomapid, cp_idx);
+        uint32_t callResult = invoke(GetNumModuleNeededResources, holomapid, cp_idx);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumModuleRecycledResources(PARAMS(UniverseID moduleid))
     {
-        uint32_t func_res_1 = invoke(GetNumModuleRecycledResources, moduleid);
+        uint32_t callResult = invoke(GetNumModuleRecycledResources, moduleid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumNotificationTypes(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumNotificationTypes);
+        uint32_t callResult = invoke(GetNumNotificationTypes);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumObjectsWithSyncPoint(PARAMS(uint32_t syncid,bool onlyreached))
     {
-        uint32_t func_res_1 = invoke(GetNumObjectsWithSyncPoint, syncid, onlyreached);
+        uint32_t callResult = invoke(GetNumObjectsWithSyncPoint, syncid, onlyreached);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumOrderDefinitions(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumOrderDefinitions);
+        uint32_t callResult = invoke(GetNumOrderDefinitions);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumOrders(PARAMS(UniverseID controllableid))
     {
-        uint32_t func_res_1 = invoke(GetNumOrders, controllableid);
+        uint32_t callResult = invoke(GetNumOrders, controllableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumPeopleAfterOrders(PARAMS(UniverseID controllableid,int32_t numorders))
     {
-        uint32_t func_res_1 = invoke(GetNumPeopleAfterOrders, controllableid, numorders);
+        uint32_t callResult = invoke(GetNumPeopleAfterOrders, controllableid, numorders);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumPersonSuitableControlPosts(PARAMS(UniverseID controllableid,UniverseID personcontrollableid,NPCSeed person,bool free))
     {
-        uint32_t func_res_1 = invoke(GetNumPersonSuitableControlPosts, controllableid, personcontrollableid, person, free);
+        uint32_t callResult = invoke(GetNumPersonSuitableControlPosts, controllableid, personcontrollableid, person, free);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumPlannedLimitedModules(PARAMS(const char* constructionplanid))
     {
-        uint32_t func_res_1 = invoke(GetNumPlannedLimitedModules, constructionplanid);
+        uint32_t callResult = invoke(GetNumPlannedLimitedModules, constructionplanid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumPlayerAlertSounds(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumPlayerAlertSounds);
+        uint32_t callResult = invoke(GetNumPlayerAlertSounds);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumPlayerAlerts(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumPlayerAlerts);
+        uint32_t callResult = invoke(GetNumPlayerAlerts);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumPlayerLogos(PARAMS(bool includestandard,bool includecustom))
     {
-        uint32_t func_res_1 = invoke(GetNumPlayerLogos, includestandard, includecustom);
+        uint32_t callResult = invoke(GetNumPlayerLogos, includestandard, includecustom);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumPlayerShipBuildTasks(PARAMS(bool isinprogress,bool includeupgrade))
     {
-        uint32_t func_res_1 = invoke(GetNumPlayerShipBuildTasks, isinprogress, includeupgrade);
+        uint32_t callResult = invoke(GetNumPlayerShipBuildTasks, isinprogress, includeupgrade);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -9813,11 +9813,11 @@ namespace ffijson
     {
         uint32_t newIndex;
         uint32_t numChangedIndices;
-        uint32_t func_res_1 = invoke(GetNumRemovedConstructionPlanModules2, holomapid, defensibleid, &newIndex, usestoredplan, &numChangedIndices, checkupgrades);
-         if (func_res_1) {
+        uint32_t callResult = invoke(GetNumRemovedConstructionPlanModules2, holomapid, defensibleid, &newIndex, usestoredplan, &numChangedIndices, checkupgrades);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"newIndex", newIndex},
                 {"numChangedIndices", numChangedIndices}
             };
@@ -9825,322 +9825,322 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumRemovedStationModules(PARAMS(UniverseID defensibleid))
     {
         uint32_t newIndex;
-        uint32_t func_res_1 = invoke(GetNumRemovedStationModules, defensibleid, &newIndex);
-         if (func_res_1) {
+        uint32_t callResult = invoke(GetNumRemovedStationModules, defensibleid, &newIndex);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"newIndex", newIndex}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumRepairResources(PARAMS(UniverseID componenttorepairid))
     {
-        uint32_t func_res_1 = invoke(GetNumRepairResources, componenttorepairid);
+        uint32_t callResult = invoke(GetNumRepairResources, componenttorepairid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumResearchModules(PARAMS(UniverseID containerid))
     {
-        uint32_t func_res_1 = invoke(GetNumResearchModules, containerid);
+        uint32_t callResult = invoke(GetNumResearchModules, containerid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumSectorsByOwner(PARAMS(const char* factionid))
     {
-        uint32_t func_res_1 = invoke(GetNumSectorsByOwner, factionid);
+        uint32_t callResult = invoke(GetNumSectorsByOwner, factionid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumShieldGroups(PARAMS(UniverseID defensibleid))
     {
-        uint32_t func_res_1 = invoke(GetNumShieldGroups, defensibleid);
+        uint32_t callResult = invoke(GetNumShieldGroups, defensibleid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumSkills(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumSkills);
+        uint32_t callResult = invoke(GetNumSkills);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumSoftwarePredecessors(PARAMS(const char* softwarename))
     {
-        uint32_t func_res_1 = invoke(GetNumSoftwarePredecessors, softwarename);
+        uint32_t callResult = invoke(GetNumSoftwarePredecessors, softwarename);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumSoftwareSlots(PARAMS(UniverseID controllableid,const char* macroname))
     {
-        uint32_t func_res_1 = invoke(GetNumSoftwareSlots, controllableid, macroname);
+        uint32_t callResult = invoke(GetNumSoftwareSlots, controllableid, macroname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumSoundDevices(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumSoundDevices);
+        uint32_t callResult = invoke(GetNumSoundDevices);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumStationModules(PARAMS(UniverseID stationid,bool includeconstructions,bool includewrecks))
     {
-        uint32_t func_res_1 = invoke(GetNumStationModules, stationid, includeconstructions, includewrecks);
+        uint32_t callResult = invoke(GetNumStationModules, stationid, includeconstructions, includewrecks);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumStationOverviewGraphWares(PARAMS(UniverseID stationid))
     {
         bool initialized;
-        uint32_t func_res_1 = invoke(GetNumStationOverviewGraphWares, stationid, &initialized);
-         if (func_res_1) {
+        uint32_t callResult = invoke(GetNumStationOverviewGraphWares, stationid, &initialized);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"initialized", initialized}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumStoredUnits(PARAMS(UniverseID defensibleid,const char* cat,bool virtualammo))
     {
-        uint32_t func_res_1 = invoke(GetNumStoredUnits, defensibleid, cat, virtualammo);
+        uint32_t callResult = invoke(GetNumStoredUnits, defensibleid, cat, virtualammo);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumSubComponents(PARAMS(UniverseID containerid))
     {
-        uint32_t func_res_1 = invoke(GetNumSubComponents, containerid);
+        uint32_t callResult = invoke(GetNumSubComponents, containerid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumSuitableBuildProcessors(PARAMS(UniverseID containerid,UniverseID objectid,const char* macroname))
     {
-        uint32_t func_res_1 = invoke(GetNumSuitableBuildProcessors, containerid, objectid, macroname);
+        uint32_t callResult = invoke(GetNumSuitableBuildProcessors, containerid, objectid, macroname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumSuitableControlPosts(PARAMS(UniverseID controllableid,UniverseID entityid,bool free))
     {
-        uint32_t func_res_1 = invoke(GetNumSuitableControlPosts, controllableid, entityid, free);
+        uint32_t callResult = invoke(GetNumSuitableControlPosts, controllableid, entityid, free);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumSupplyOrders(PARAMS(UniverseID containerid,bool defaultorders))
     {
-        uint32_t func_res_1 = invoke(GetNumSupplyOrders, containerid, defaultorders);
+        uint32_t callResult = invoke(GetNumSupplyOrders, containerid, defaultorders);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumTableInitialMultiselectedRows(PARAMS(const int tableid))
     {
-        uint32_t func_res_1 = invoke(GetNumTableInitialMultiselectedRows, tableid);
+        uint32_t callResult = invoke(GetNumTableInitialMultiselectedRows, tableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumTiersOfRole(PARAMS(const char* role))
     {
-        uint32_t func_res_1 = invoke(GetNumTiersOfRole, role);
+        uint32_t callResult = invoke(GetNumTiersOfRole, role);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumTimeline(PARAMS())
     {
-        uint32_t func_res_1 = invoke(GetNumTimeline);
+        uint32_t callResult = invoke(GetNumTimeline);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumTradeOfferStatistics(PARAMS(UniverseID containerorspaceid,double starttime,double endtime,size_t numdatapoints))
     {
-        uint32_t func_res_1 = invoke(GetNumTradeOfferStatistics, containerorspaceid, starttime, endtime, numdatapoints);
+        uint32_t callResult = invoke(GetNumTradeOfferStatistics, containerorspaceid, starttime, endtime, numdatapoints);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumUnavailableUnits(PARAMS(UniverseID defensibleid,const char* cat))
     {
-        uint32_t func_res_1 = invoke(GetNumUnavailableUnits, defensibleid, cat);
+        uint32_t callResult = invoke(GetNumUnavailableUnits, defensibleid, cat);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumUnitCargo(PARAMS(UniverseID containerid,bool onlydrones))
     {
-        uint32_t func_res_1 = invoke(GetNumUnitCargo, containerid, onlydrones);
+        uint32_t callResult = invoke(GetNumUnitCargo, containerid, onlydrones);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumUnreadLibraryEntries(PARAMS(const char* libraryid))
     {
-        uint32_t func_res_1 = invoke(GetNumUnreadLibraryEntries, libraryid);
+        uint32_t callResult = invoke(GetNumUnreadLibraryEntries, libraryid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumUpgradeGroups(PARAMS(UniverseID destructibleid,const char* macroname))
     {
-        uint32_t func_res_1 = invoke(GetNumUpgradeGroups, destructibleid, macroname);
+        uint32_t callResult = invoke(GetNumUpgradeGroups, destructibleid, macroname);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumUsedLimitedModules(PARAMS(UniverseID excludedstationid))
     {
-        uint32_t func_res_1 = invoke(GetNumUsedLimitedModules, excludedstationid);
+        uint32_t callResult = invoke(GetNumUsedLimitedModules, excludedstationid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumUsedLimitedModulesFromSubsequence(PARAMS(UniverseID holomapid,size_t cp_idx))
     {
-        uint32_t func_res_1 = invoke(GetNumUsedLimitedModulesFromSubsequence, holomapid, cp_idx);
+        uint32_t callResult = invoke(GetNumUsedLimitedModulesFromSubsequence, holomapid, cp_idx);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumValidTransporterTargets(PARAMS(UniverseID componentid))
     {
-        uint32_t func_res_1 = invoke(GetNumValidTransporterTargets, componentid);
+        uint32_t callResult = invoke(GetNumValidTransporterTargets, componentid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumVenturePlatformDocks(PARAMS(UniverseID ventureplatformid))
     {
-        uint32_t func_res_1 = invoke(GetNumVenturePlatformDocks, ventureplatformid);
+        uint32_t callResult = invoke(GetNumVenturePlatformDocks, ventureplatformid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumVenturePlatforms(PARAMS(UniverseID defensibleid))
     {
-        uint32_t func_res_1 = invoke(GetNumVenturePlatforms, defensibleid);
+        uint32_t callResult = invoke(GetNumVenturePlatforms, defensibleid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumWareBlueprintOwners(PARAMS(const char* wareid))
     {
-        uint32_t func_res_1 = invoke(GetNumWareBlueprintOwners, wareid);
+        uint32_t callResult = invoke(GetNumWareBlueprintOwners, wareid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumWareSources(PARAMS(const char* wareid))
     {
-        uint32_t func_res_1 = invoke(GetNumWareSources, wareid);
+        uint32_t callResult = invoke(GetNumWareSources, wareid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumWares(PARAMS(const char* tags,bool research,const char* licenceownerid,const char* exclusiontags))
     {
-        uint32_t func_res_1 = invoke(GetNumWares, tags, research, licenceownerid, exclusiontags);
+        uint32_t callResult = invoke(GetNumWares, tags, research, licenceownerid, exclusiontags);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetNumWeaponGroupsByWeapon(PARAMS(UniverseID defensibleid,UniverseID weaponid))
     {
-        uint32_t func_res_1 = invoke(GetNumWeaponGroupsByWeapon, defensibleid, weaponid);
+        uint32_t callResult = invoke(GetNumWeaponGroupsByWeapon, defensibleid, weaponid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10149,11 +10149,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<OrderDefinition> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetOrderDefinitions, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetOrderDefinitions, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -10169,14 +10169,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10185,11 +10185,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<Order> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetOrders, result.data(), resultlen, controllableid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetOrders, result.data(), resultlen, controllableid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -10206,14 +10206,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10222,11 +10222,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<Order2> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetOrders2, result.data(), resultlen, controllableid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetOrders2, result.data(), resultlen, controllableid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -10243,14 +10243,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10259,11 +10259,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<PeopleInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetPeople, result.data(), resultlen, controllableid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetPeople, result.data(), resultlen, controllableid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -10277,14 +10277,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10293,11 +10293,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<NPCInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetPeopleAfterOrders, result.data(), resultlen, controllableid, numorders);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetPeopleAfterOrders, result.data(), resultlen, controllableid, numorders);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -10310,34 +10310,34 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPeopleCapacity(PARAMS(UniverseID controllableid,const char* macroname,bool includecrew))
     {
-        uint32_t func_res_1 = invoke(GetPeopleCapacity, controllableid, macroname, includecrew);
+        uint32_t callResult = invoke(GetPeopleCapacity, controllableid, macroname, includecrew);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPersonSkills(PARAMS(NPCSeed person,UniverseID controllableid))
     {
         Skill result;
-        uint32_t func_res_1 = invoke(GetPersonSkills, &result, person, controllableid);
-         if (func_res_1) {
+        uint32_t callResult = invoke(GetPersonSkills, &result, person, controllableid);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", {
                     {"textid", result.textid},
                     {"value", result.value},
@@ -10348,18 +10348,18 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPersonSkillsForAssignment(PARAMS(NPCSeed person,UniverseID controllableid,const char* role,const char* postid))
     {
         Skill2 result;
-        uint32_t func_res_1 = invoke(GetPersonSkillsForAssignment, &result, person, controllableid, role, postid);
-         if (func_res_1) {
+        uint32_t callResult = invoke(GetPersonSkillsForAssignment, &result, person, controllableid, role, postid);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", {
                     {"textid", result.textid},
                     {"value", result.value},
@@ -10370,7 +10370,7 @@ namespace ffijson
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10379,11 +10379,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<ControlPostInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetPersonSuitableControlPosts, result.data(), resultlen, controllableid, personcontrollableid, person, free);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetPersonSuitableControlPosts, result.data(), resultlen, controllableid, personcontrollableid, person, free);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -10393,14 +10393,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10409,11 +10409,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIMacroCount> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetPlannedLimitedModules, result.data(), resultlen, constructionplanid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetPlannedLimitedModules, result.data(), resultlen, constructionplanid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -10423,14 +10423,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10439,11 +10439,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<SoundInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetPlayerAlertSounds, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetPlayerAlertSounds, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -10453,14 +10453,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10469,11 +10469,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<PlayerAlertInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetPlayerAlerts, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetPlayerAlerts, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -10493,14 +10493,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10509,11 +10509,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UILogo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetPlayerLogos, result.data(), resultlen, includestandard, includecustom);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetPlayerLogos, result.data(), resultlen, includestandard, includecustom);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -10524,14 +10524,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10540,11 +10540,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<BuildTaskInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetPlayerShipBuildTasks, result.data(), resultlen, isinprogress, includeupgrade);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetPlayerShipBuildTasks, result.data(), resultlen, isinprogress, includeupgrade);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -10561,23 +10561,23 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetPurchasableCargo(PARAMS(UniverseID containerid,const char* unknownString))
     {
-        uint32_t func_res_1 = invoke(GetPurchasableCargo, containerid, unknownString);
+        uint32_t callResult = invoke(GetPurchasableCargo, containerid, unknownString);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10588,28 +10588,28 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetRemovedConstructionPlanModules2, result.data(), resultlen, &changedIndices, &numChangedIndices);
-         if (func_res_1) {
+        uint32_t callResult = invoke(GetRemovedConstructionPlanModules2, result.data(), resultlen, &changedIndices, &numChangedIndices);
+         if (callResult) {
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"changedIndices", changedIndices},
                 {"numChangedIndices", numChangedIndices}
             };
         }
  
-         if (func_res_1) {
-            result.resize(func_res_1);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10618,28 +10618,28 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetRemovedStationModules, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetRemovedStationModules, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetRenderTargetAlpha(PARAMS(const int rendertargetid))
     {
-        uint32_t func_res_1 = invoke(GetRenderTargetAlpha, rendertargetid);
+        uint32_t callResult = invoke(GetRenderTargetAlpha, rendertargetid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10648,11 +10648,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIWareInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetRepairResources, result.data(), resultlen, componenttorepairid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetRepairResources, result.data(), resultlen, componenttorepairid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -10663,14 +10663,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10679,19 +10679,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetResearchModules, result.data(), resultlen, containerid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetResearchModules, result.data(), resultlen, containerid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10700,19 +10700,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<NPCSeed> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetRoleTierNPCs, result.data(), resultlen, controllableid, role, skilllevel);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetRoleTierNPCs, result.data(), resultlen, controllableid, role, skilllevel);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10721,11 +10721,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<RoleTierData> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetRoleTiers, result.data(), resultlen, controllableid, role);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetRoleTiers, result.data(), resultlen, controllableid, role);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -10736,14 +10736,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10752,19 +10752,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetSectorsByOwner, result.data(), resultlen, factionid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetSectorsByOwner, result.data(), resultlen, factionid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10773,11 +10773,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<ShieldGroup> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetShieldGroups, result.data(), resultlen, defensibleid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetShieldGroups, result.data(), resultlen, defensibleid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -10788,14 +10788,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10804,19 +10804,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetSoftwarePredecessors, result.data(), resultlen, softwarename);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetSoftwarePredecessors, result.data(), resultlen, softwarename);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10825,11 +10825,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<SoftwareSlot> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetSoftwareSlots, result.data(), resultlen, controllableid, macroname);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetSoftwareSlots, result.data(), resultlen, controllableid, macroname);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -10839,14 +10839,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10855,37 +10855,37 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetSoundDevices, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetSoundDevices, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetStandardButtonOffsetX(PARAMS(const int frameid))
     {
-        uint32_t func_res_1 = invoke(GetStandardButtonOffsetX, frameid);
+        uint32_t callResult = invoke(GetStandardButtonOffsetX, frameid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetStandardButtonOffsetY(PARAMS(const int frameid))
     {
-        uint32_t func_res_1 = invoke(GetStandardButtonOffsetY, frameid);
+        uint32_t callResult = invoke(GetStandardButtonOffsetY, frameid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10894,19 +10894,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetStationModules, result.data(), resultlen, stationid, includeconstructions, includewrecks);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetStationModules, result.data(), resultlen, stationid, includeconstructions, includewrecks);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10915,19 +10915,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetStationOverviewGraphWares, result.data(), resultlen, stationid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetStationOverviewGraphWares, result.data(), resultlen, stationid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10936,11 +10936,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<ControlPostInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetSuitableControlPosts, result.data(), resultlen, controllableid, entityid, free);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetSuitableControlPosts, result.data(), resultlen, controllableid, entityid, free);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -10950,14 +10950,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -10966,11 +10966,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<SupplyOverride> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetSupplyOrders, result.data(), resultlen, containerid, defaultorders);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetSupplyOrders, result.data(), resultlen, containerid, defaultorders);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -10980,23 +10980,23 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetTableHighlightMode(PARAMS(const int tableid))
     {
-        uint32_t func_res_1 = invoke(GetTableHighlightMode, tableid);
+        uint32_t callResult = invoke(GetTableHighlightMode, tableid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -11005,19 +11005,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<uint32_t> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetTableInitialMultiselectedRows, result.data(), resultlen, tableid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetTableInitialMultiselectedRows, result.data(), resultlen, tableid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -11026,11 +11026,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<RoleTierData> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetTiersOfRole, result.data(), resultlen, role);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetTiersOfRole, result.data(), resultlen, role);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -11041,14 +11041,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -11057,11 +11057,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<TimelineInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetTimeline, result.data(), resultlen);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetTimeline, result.data(), resultlen);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -11077,14 +11077,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -11093,11 +11093,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UITradeOfferStat> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetTradeOfferStatistics, result.data(), resultlen, numdatapoints);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetTradeOfferStatistics, result.data(), resultlen, numdatapoints);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -11109,14 +11109,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -11125,11 +11125,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIWareInfo> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetUnitCargo, result.data(), resultlen, containerid, onlydrones);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetUnitCargo, result.data(), resultlen, containerid, onlydrones);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -11140,14 +11140,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -11156,11 +11156,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UpgradeGroup> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetUpgradeGroups, result.data(), resultlen, destructibleid, macroname);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetUpgradeGroups, result.data(), resultlen, destructibleid, macroname);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -11170,14 +11170,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -11186,11 +11186,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UpgradeGroup2> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetUpgradeGroups2, result.data(), resultlen, destructibleid, macroname);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetUpgradeGroups2, result.data(), resultlen, destructibleid, macroname);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -11200,14 +11200,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -11216,11 +11216,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIMacroCount> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetUsedLimitedModules, result.data(), resultlen, excludedstationid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetUsedLimitedModules, result.data(), resultlen, excludedstationid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -11230,14 +11230,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -11246,11 +11246,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIMacroCount> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetUsedLimitedModulesFromSubsequence, result.data(), resultlen, holomapid, cp_idx);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetUsedLimitedModulesFromSubsequence, result.data(), resultlen, holomapid, cp_idx);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -11260,14 +11260,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -11276,11 +11276,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIComponentSlot> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetValidTransporterTargets, result.data(), resultlen, componentid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetValidTransporterTargets, result.data(), resultlen, componentid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -11290,14 +11290,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -11306,19 +11306,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetVenturePlatformDocks, result.data(), resultlen, ventureplatformid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetVenturePlatformDocks, result.data(), resultlen, ventureplatformid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -11327,19 +11327,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetVenturePlatforms, result.data(), resultlen, defensibleid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetVenturePlatforms, result.data(), resultlen, defensibleid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -11348,19 +11348,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetWareBlueprintOwners, result.data(), resultlen, wareid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetWareBlueprintOwners, result.data(), resultlen, wareid);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -11369,11 +11369,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<WareSource> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetWareSources, result.data(), resultlen, wareid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetWareSources, result.data(), resultlen, wareid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -11383,14 +11383,14 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -11399,19 +11399,19 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetWares, result.data(), resultlen, tags, research, licenceownerid, exclusiontags);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetWares, result.data(), resultlen, tags, research, licenceownerid, exclusiontags);
+         if (callResult) {
+            result.resize(callResult);
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
@@ -11420,11 +11420,11 @@ namespace ffijson
         uint32_t resultlen = 32767;
         std::vector<UIWeaponGroup> result;
         result.resize(resultlen);
-        uint32_t func_res_1 = invoke(GetWeaponGroupsByWeapon, result.data(), resultlen, defensibleid, weaponid);
-         if (func_res_1) {
-            result.resize(func_res_1);
+        uint32_t callResult = invoke(GetWeaponGroupsByWeapon, result.data(), resultlen, defensibleid, weaponid);
+         if (callResult) {
+            result.resize(callResult);
             std::vector<json> json_result;
-            json_result.reserve(func_res_1);
+            json_result.reserve(callResult);
         	for (const auto& v : result)
             {
                 json_result.push_back({
@@ -11434,41 +11434,41 @@ namespace ffijson
             }
             return json
             {
-                {"func_res", func_res_1},
+                {"callResult", callResult},
                 {"result", json_result}
             };
         }
  
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json PlayDetailmonitorCutscene(PARAMS(uint32_t cutsceneid,const char* rendertarget))
     {
-        uint32_t func_res_1 = invoke(PlayDetailmonitorCutscene, cutsceneid, rendertarget);
+        uint32_t callResult = invoke(PlayDetailmonitorCutscene, cutsceneid, rendertarget);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json PrepareBuildSequenceResources(PARAMS(UniverseID holomapid,UniverseID stationid))
     {
-        uint32_t func_res_1 = invoke(PrepareBuildSequenceResources, holomapid, stationid);
+        uint32_t callResult = invoke(PrepareBuildSequenceResources, holomapid, stationid);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  
     json GetActiveMissionID(PARAMS())
     {
-        uint64_t func_res_1 = invoke(GetActiveMissionID);
+        uint64_t callResult = invoke(GetActiveMissionID);
         return json
         {
-            {"func_res", func_res_1}
+            {"callResult", callResult}
         };
     }
  

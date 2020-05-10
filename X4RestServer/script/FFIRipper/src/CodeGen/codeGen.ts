@@ -129,7 +129,7 @@ const structToCppJsonVals = (struct: string|undefined, valueName: string, struct
 };
 
 export const genJsonFunc = (cfunc: CFunction, structs: string[]): string => {
-    const resName = 'func_res_1';
+    const resName = 'callResult';
     const arraySize = 32767; // ^= SHRT_MAX should be enough, right? technically possible: 4294967295 (UINT32_MAX)
     // TODO: make arraySize user controllable
     const funcName = cfunc.name;
