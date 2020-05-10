@@ -1,4 +1,3 @@
-import { getFuncName } from './util/util';
 /* eslint-disable no-console */
 import { getTypedefsFile, getStructsFile, getFuncsFile, getCppJsonFile, getHttpFuncsCppFile } from './CodeGen/codeGen';
 import { writeFileSync } from 'fs';
@@ -11,7 +10,7 @@ import {
     sortStructArray,
     filterFuns
 } from './FFIRip/FFIRip';
-import { funcsToUsing } from './util/util';
+import { CFunction } from './CodeGen/function';
 
 const EXCLUDE_LIST: readonly string[] = [
     // TODO: Support input translation of structs:
@@ -85,7 +84,8 @@ namespace FFIRipper {
         console.log('extracting structs...');
         const structs = sortStructArray(filterStructs(ffiStrings));
         console.log('extracting funcs...');
-        const funcs = filterFuns(ffiStrings);
+        const funcs = filterFuns(ffiStrings).map((f) => new CFunction(f));
+
 
         console.log('generating typedef file...');
         writeFileSync(
@@ -112,7 +112,7 @@ namespace FFIRipper {
             getFuncsFile(funcs)
         );
 
-        const funcsToGenImpl = funcsToUsing(funcs).filter((f) => !EXCLUDE_LIST.includes(getFuncName(f)));
+        const funcsToGenImpl = funcs.filter((f) => !EXCLUDE_LIST.includes(f.name));
         console.log('generating funcsToJson file...');
         const cppJsonImpl = getCppJsonFile(funcsToGenImpl, structs);
         writeFileSync(

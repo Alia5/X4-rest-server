@@ -1,5 +1,6 @@
-import { getFuncName, getArgs, getReturnType, structFromName, funcsToUsing } from './../util/util';
+import { structFromName } from './../util/util';
 import { getHttpFuncsCpp } from './httpFuncGen';
+import { CFunction } from './function';
 
 // TODO: Cleanup Codegen
 // ! Note to self: OOP would probably be simpler.
@@ -127,14 +128,14 @@ const structToCppJsonVals = (struct: string|undefined, valueName: string, struct
     });
 };
 
-export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
+export const genJsonFunc = (cfunc: CFunction, structs: string[]): string => {
     const resName = 'func_res_1';
     const arraySize = 32767; // ^= SHRT_MAX should be enough, right? technically possible: 4294967295 (UINT32_MAX)
     // TODO: make arraySize user controllable
-    const funcName = getFuncName(usingFunc);
+    const funcName = cfunc.name;
     // eslint-disable-next-line no-console
     console.log(`generating Function: ${funcName}...`);
-    const args = getArgs(usingFunc)?.split(',');
+    const args = cfunc.args.map((a) => a.toString());
 
     const jsonFuncArgs = args.filter((arg) =>
         (!arg.includes('*') || arg.match(/const char\*[^*]/g)) && (/\S+$/).exec(arg)?.[0] !== 'resultlen').join(',');
@@ -153,7 +154,7 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
         )
     );
 
-    const returnType = getReturnType(usingFunc);
+    const returnType = cfunc.returnType;
     const resultStruct = structFromName(returnType, structs);
 
     const lines = [
@@ -184,7 +185,7 @@ export const genJsonFunc = (usingFunc: string, structs: string[]): string => {
             : `${returnType.match(/uint[0-9]+?_t/g)
                 ? returnType
                 : 'const auto'} ${resName} = `}invoke(${funcName}${
-            args && args[0] !== ''
+            args && args[0] && args[0].trim() !== ''
                 ? `, ${args.map((arg) => {
                     const pname = (/\S+$/).exec(arg.trim())[0];
                     return ptrArgs.includes(arg)
@@ -302,14 +303,13 @@ export const getTypedefsFile = (typefStrings: string[]): string => (
 export const getStructsFile = (structStrings: string[]): string => (
     `${FFI_TYPEDEF_STRUCT_H}{\n    ${structStrings.join('\n').replace(/\n/g, '\n    ')}\n}\n`
 );
-export const getFuncsFile = (funcStrings: string[]): string => (
-    `${FFI_FUNCS_H}{\n    ${(funcsToUsing(funcStrings)).join('\n    ')}\n}\n`
+export const getFuncsFile = (funcs: CFunction[]): string => (
+    `${FFI_FUNCS_H}{\n    ${(funcs.map((f) => f.toUsingString())).join('\n    ')}\n}\n`
 );
 
-export const getCppJsonFile = (usingFuncStrings: string[], structStrings: string[]): string => (
+export const getCppJsonFile = (funcs: CFunction[], structStrings: string[]): string => (
     `${FFI_JSON_H}\n    ${
-        usingFuncStrings.map((func) => genJsonFunc(func, structStrings)).join('\n    ')
-    }\n}\n`
+        funcs.map((func) => genJsonFunc(func, structStrings)).join('\n    ')}\n}\n`
 );
 
 export const getHttpFuncsCppFile = (jsonFuncStrings: string[]): string => (

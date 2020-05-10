@@ -52,7 +52,7 @@ export const getHttpFuncsCpp = (jsonFuncStrings: string[]): string => {
         console.log(`generating Function: ${func[0]}...`);
 
         const paramNames = `${func[1]}, `.match(/\S+?(?=,)/g);
-        const paramTypes = `${func[1]}, `.match(/\S*\s*\S+?(?=\s\S+,)/g);
+        const paramTypes = func[1].split(',').map((s) => s.split(' ').slice(0, -1).join(' ').trim());
         const result = [
             `server.Get("/${func[0]}", HAN_FN {`
         ];

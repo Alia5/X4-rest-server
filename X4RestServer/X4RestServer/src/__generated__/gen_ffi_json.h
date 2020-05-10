@@ -22,7 +22,7 @@ namespace ffijson
     using namespace X4FFI;
 
 
-    json GetCrosshairArrowDetails(PARAMS(int posid, float radius))
+    json GetCrosshairArrowDetails(PARAMS(int posid,float radius))
     {
         const auto func_res_1 = invoke(GetCrosshairArrowDetails, posid, radius);
         return json
@@ -54,7 +54,7 @@ namespace ffijson
         };
     }
  
-    json GetControllableBlacklistID(PARAMS(UniverseID controllableid, const char* listtype, const char* defaultgroup))
+    json GetControllableBlacklistID(PARAMS(UniverseID controllableid,const char* listtype,const char* defaultgroup))
     {
         const auto func_res_1 = invoke(GetControllableBlacklistID, controllableid, listtype, defaultgroup);
         return json
@@ -63,7 +63,7 @@ namespace ffijson
         };
     }
  
-    json GetBoardingRiskThresholds(PARAMS(UniverseID defensibletargetid, const char* boarderfactionid))
+    json GetBoardingRiskThresholds(PARAMS(UniverseID defensibletargetid,const char* boarderfactionid))
     {
         const auto func_res_1 = invoke(GetBoardingRiskThresholds, defensibletargetid, boarderfactionid);
         return json
@@ -90,7 +90,7 @@ namespace ffijson
         };
     }
  
-    json GetComponentDetails(PARAMS(const UniverseID componentid, const char*const connectionname))
+    json GetComponentDetails(PARAMS(const UniverseID componentid,const char*const connectionname))
     {
         const auto func_res_1 = invoke(GetComponentDetails, componentid, connectionname);
         return json
@@ -189,7 +189,7 @@ namespace ffijson
         };
     }
  
-    json GetNumBuildTaskCrewTransferInfo(PARAMS(UniverseID containerid, BuildTaskID id))
+    json GetNumBuildTaskCrewTransferInfo(PARAMS(UniverseID containerid,BuildTaskID id))
     {
         const auto func_res_1 = invoke(GetNumBuildTaskCrewTransferInfo, containerid, id);
         return json
@@ -222,7 +222,7 @@ namespace ffijson
         };
     }
  
-    json GetCustomGameStartBlueprintPropertyState(PARAMS(const char* id, const char* propertyid))
+    json GetCustomGameStartBlueprintPropertyState(PARAMS(const char* id,const char* propertyid))
     {
         const auto func_res_1 = invoke(GetCustomGameStartBlueprintPropertyState, id, propertyid);
         return json
@@ -233,7 +233,7 @@ namespace ffijson
         };
     }
  
-    json GetCustomGameStartEncyclopediaPropertyState(PARAMS(const char* id, const char* propertyid))
+    json GetCustomGameStartEncyclopediaPropertyState(PARAMS(const char* id,const char* propertyid))
     {
         const auto func_res_1 = invoke(GetCustomGameStartEncyclopediaPropertyState, id, propertyid);
         return json
@@ -242,7 +242,7 @@ namespace ffijson
         };
     }
  
-    json GetCustomGameStartInventoryPropertyState(PARAMS(const char* id, const char* propertyid))
+    json GetCustomGameStartInventoryPropertyState(PARAMS(const char* id,const char* propertyid))
     {
         const auto func_res_1 = invoke(GetCustomGameStartInventoryPropertyState, id, propertyid);
         return json
@@ -253,7 +253,7 @@ namespace ffijson
         };
     }
  
-    json GetCustomGameStartLoadoutPropertyState(PARAMS(const char* id, const char* propertyid))
+    json GetCustomGameStartLoadoutPropertyState(PARAMS(const char* id,const char* propertyid))
     {
         const auto func_res_1 = invoke(GetCustomGameStartLoadoutPropertyState, id, propertyid);
         return json
@@ -262,7 +262,7 @@ namespace ffijson
         };
     }
  
-    json GetCustomGameStartRelationsPropertyState(PARAMS(const char* id, const char* propertyid))
+    json GetCustomGameStartRelationsPropertyState(PARAMS(const char* id,const char* propertyid))
     {
         const auto func_res_1 = invoke(GetCustomGameStartRelationsPropertyState, id, propertyid);
         return json
@@ -271,7 +271,7 @@ namespace ffijson
         };
     }
  
-    json GetCustomGameStartResearchPropertyState(PARAMS(const char* id, const char* propertyid))
+    json GetCustomGameStartResearchPropertyState(PARAMS(const char* id,const char* propertyid))
     {
         const auto func_res_1 = invoke(GetCustomGameStartResearchPropertyState, id, propertyid);
         return json
@@ -482,7 +482,7 @@ namespace ffijson
         };
     }
  
-    json GetMissionObjectiveStep2(PARAMS(uint64_t missionid, size_t objectiveIndex))
+    json GetMissionObjectiveStep2(PARAMS(uint64_t missionid,size_t objectiveIndex))
     {
         const auto func_res_1 = invoke(GetMissionObjectiveStep2, missionid, objectiveIndex);
         return json
@@ -531,7 +531,7 @@ namespace ffijson
         };
     }
  
-    json GetRelativeAimScreenPosition(PARAMS(const UniverseID componentid, const uint32_t iconsizeonscreen, const uint32_t iconsizeoffscreen))
+    json GetRelativeAimScreenPosition(PARAMS(const UniverseID componentid,const uint32_t iconsizeonscreen,const uint32_t iconsizeoffscreen))
     {
         const auto func_res_1 = invoke(GetRelativeAimScreenPosition, componentid, iconsizeonscreen, iconsizeoffscreen);
         return json
@@ -553,7 +553,7 @@ namespace ffijson
         };
     }
  
-    json GetRelationStatus2(PARAMS(const UniverseID componentid, const char*const connectionname))
+    json GetRelationStatus2(PARAMS(const UniverseID componentid,const char*const connectionname))
     {
         const auto func_res_1 = invoke(GetRelationStatus2, componentid, connectionname);
         return json
@@ -596,7 +596,7 @@ namespace ffijson
         };
     }
  
-    json GetComponentScreenPosition(PARAMS(const UniverseID componentid, const uint32_t iconsizeonscreen, const uint32_t iconsizeoffscreen))
+    json GetComponentScreenPosition(PARAMS(const UniverseID componentid,const uint32_t iconsizeonscreen,const uint32_t iconsizeoffscreen))
     {
         const auto func_res_1 = invoke(GetComponentScreenPosition, componentid, iconsizeonscreen, iconsizeoffscreen);
         return json
@@ -664,7 +664,7 @@ namespace ffijson
         };
     }
  
-    json SetFormationShape(PARAMS(UniverseID objectid, const char* formationshape))
+    json SetFormationShape(PARAMS(UniverseID objectid,const char* formationshape))
     {
         const auto func_res_1 = invoke(SetFormationShape, objectid, formationshape);
         return json
@@ -770,7 +770,7 @@ namespace ffijson
         };
     }
  
-    json GetMaxLoadoutStatistics2(PARAMS(UniverseID shipid, const char* macroname))
+    json GetMaxLoadoutStatistics2(PARAMS(UniverseID shipid,const char* macroname))
     {
         const auto func_res_1 = invoke(GetMaxLoadoutStatistics2, shipid, macroname);
         return json
@@ -846,7 +846,7 @@ namespace ffijson
         };
     }
  
-    json GetStandardButtonHelpOverlayInfo(PARAMS(const int frameid, const char* button))
+    json GetStandardButtonHelpOverlayInfo(PARAMS(const int frameid,const char* button))
     {
         const auto func_res_1 = invoke(GetStandardButtonHelpOverlayInfo, frameid, button);
         return json
@@ -861,7 +861,7 @@ namespace ffijson
         };
     }
  
-    json GetCustomGameStartPosRotProperty(PARAMS(const char* id, const char* propertyid))
+    json GetCustomGameStartPosRotProperty(PARAMS(const char* id,const char* propertyid))
     {
         CustomGameStartPosRotPropertyState state;
         const auto func_res_1 = invoke(GetCustomGameStartPosRotProperty, id, propertyid, &state);
@@ -957,7 +957,7 @@ namespace ffijson
         };
     }
  
-    json AddHoloMap(PARAMS(const char* texturename, float x0, float x1, float y0, float y1, float aspectx, float aspecty))
+    json AddHoloMap(PARAMS(const char* texturename,float x0,float x1,float y0,float y1,float aspectx,float aspecty))
     {
         const auto func_res_1 = invoke(AddHoloMap, texturename, x0, x1, y0, y1, aspectx, aspecty);
         return json
@@ -966,7 +966,7 @@ namespace ffijson
         };
     }
  
-    json CreateNPCFromPerson(PARAMS(NPCSeed person, UniverseID controllableid))
+    json CreateNPCFromPerson(PARAMS(NPCSeed person,UniverseID controllableid))
     {
         const auto func_res_1 = invoke(CreateNPCFromPerson, person, controllableid);
         return json
@@ -975,7 +975,7 @@ namespace ffijson
         };
     }
  
-    json GetCommonContext(PARAMS(UniverseID componentid, UniverseID othercomponentid, bool includeself, bool includeother, UniverseID limitid, bool includelimit))
+    json GetCommonContext(PARAMS(UniverseID componentid,UniverseID othercomponentid,bool includeself,bool includeother,UniverseID limitid,bool includelimit))
     {
         const auto func_res_1 = invoke(GetCommonContext, componentid, othercomponentid, includeself, includeother, limitid, includelimit);
         return json
@@ -984,7 +984,7 @@ namespace ffijson
         };
     }
  
-    json GetContextByClass(PARAMS(UniverseID componentid, const char* classname, bool includeself))
+    json GetContextByClass(PARAMS(UniverseID componentid,const char* classname,bool includeself))
     {
         const auto func_res_1 = invoke(GetContextByClass, componentid, classname, includeself);
         return json
@@ -1029,7 +1029,7 @@ namespace ffijson
         };
     }
  
-    json GetInstantiatedPerson(PARAMS(NPCSeed person, UniverseID controllableid))
+    json GetInstantiatedPerson(PARAMS(NPCSeed person,UniverseID controllableid))
     {
         const auto func_res_1 = invoke(GetInstantiatedPerson, person, controllableid);
         return json
@@ -1047,7 +1047,7 @@ namespace ffijson
         };
     }
  
-    json GetMissionIDObjectiveTarget(PARAMS(uint64_t missionid, size_t targetIndex))
+    json GetMissionIDObjectiveTarget(PARAMS(uint64_t missionid,size_t targetIndex))
     {
         const auto func_res_1 = invoke(GetMissionIDObjectiveTarget, missionid, targetIndex);
         return json
@@ -1203,7 +1203,7 @@ namespace ffijson
         };
     }
  
-    json GetUpgradeSlotCurrentComponent(PARAMS(UniverseID destructibleid, const char* upgradetypename, size_t slot))
+    json GetUpgradeSlotCurrentComponent(PARAMS(UniverseID destructibleid,const char* upgradetypename,size_t slot))
     {
         const auto func_res_1 = invoke(GetUpgradeSlotCurrentComponent, destructibleid, upgradetypename, slot);
         return json
@@ -1237,7 +1237,7 @@ namespace ffijson
         };
     }
  
-    json GetUpgradeSlotGroup(PARAMS(UniverseID destructibleid, const char* macroname, const char* upgradetypename, size_t slot))
+    json GetUpgradeSlotGroup(PARAMS(UniverseID destructibleid,const char* macroname,const char* upgradetypename,size_t slot))
     {
         const auto func_res_1 = invoke(GetUpgradeSlotGroup, destructibleid, macroname, upgradetypename, slot);
         return json
@@ -1247,7 +1247,7 @@ namespace ffijson
         };
     }
  
-    json GetUpgradeGroupInfo(PARAMS(UniverseID destructibleid, const char* macroname, const char* path, const char* group, const char* upgradetypename))
+    json GetUpgradeGroupInfo(PARAMS(UniverseID destructibleid,const char* macroname,const char* path,const char* group,const char* upgradetypename))
     {
         const auto func_res_1 = invoke(GetUpgradeGroupInfo, destructibleid, macroname, path, group, upgradetypename);
         return json
@@ -1261,7 +1261,7 @@ namespace ffijson
         };
     }
  
-    json GetUpgradeGroupInfo2(PARAMS(UniverseID destructibleid, const char* macroname, UniverseID contextid, const char* path, const char* group, const char* upgradetypename))
+    json GetUpgradeGroupInfo2(PARAMS(UniverseID destructibleid,const char* macroname,UniverseID contextid,const char* path,const char* group,const char* upgradetypename))
     {
         const auto func_res_1 = invoke(GetUpgradeGroupInfo2, destructibleid, macroname, contextid, path, group, upgradetypename);
         return json
@@ -1313,7 +1313,7 @@ namespace ffijson
         };
     }
  
-    json GetWorkForceInfo(PARAMS(UniverseID containerid, const char* raceid))
+    json GetWorkForceInfo(PARAMS(UniverseID containerid,const char* raceid))
     {
         const auto func_res_1 = invoke(GetWorkForceInfo, containerid, raceid);
         return json
@@ -1327,7 +1327,7 @@ namespace ffijson
         };
     }
  
-    json AddAttackerToBoardingOperation(PARAMS(UniverseID defensibletargetid, UniverseID defensibleboarderid, const char* boarderfactionid, const char* actionid, uint32_t nummarinetiers))
+    json AddAttackerToBoardingOperation(PARAMS(UniverseID defensibletargetid,UniverseID defensibleboarderid,const char* boarderfactionid,const char* actionid,uint32_t nummarinetiers))
     {
         uint32_t marinetieramounts;
         int32_t marinetierskilllevels;
@@ -1347,7 +1347,7 @@ namespace ffijson
         };
     }
  
-    json AdjustOrder(PARAMS(UniverseID controllableid, size_t idx, size_t newidx, bool enabled, bool forcestates, bool checkonly))
+    json AdjustOrder(PARAMS(UniverseID controllableid,size_t idx,size_t newidx,bool enabled,bool forcestates,bool checkonly))
     {
         const auto func_res_1 = invoke(AdjustOrder, controllableid, idx, newidx, enabled, forcestates, checkonly);
         return json
@@ -1383,7 +1383,7 @@ namespace ffijson
         };
     }
  
-    json CanAcceptSubordinate(PARAMS(UniverseID commanderid, UniverseID potentialsubordinateid))
+    json CanAcceptSubordinate(PARAMS(UniverseID commanderid,UniverseID potentialsubordinateid))
     {
         const auto func_res_1 = invoke(CanAcceptSubordinate, commanderid, potentialsubordinateid);
         return json
@@ -1392,7 +1392,7 @@ namespace ffijson
         };
     }
  
-    json CanApplyKnownLoadout(PARAMS(const char* macroname, const char* loadoutid))
+    json CanApplyKnownLoadout(PARAMS(const char* macroname,const char* loadoutid))
     {
         const auto func_res_1 = invoke(CanApplyKnownLoadout, macroname, loadoutid);
         return json
@@ -1401,7 +1401,7 @@ namespace ffijson
         };
     }
  
-    json CanBuildLoadout(PARAMS(UniverseID containerid, UniverseID defensibleid, const char* macroname, const char* loadoutid))
+    json CanBuildLoadout(PARAMS(UniverseID containerid,UniverseID defensibleid,const char* macroname,const char* loadoutid))
     {
         const auto func_res_1 = invoke(CanBuildLoadout, containerid, defensibleid, macroname, loadoutid);
         return json
@@ -1410,7 +1410,7 @@ namespace ffijson
         };
     }
  
-    json CanCancelConstruction(PARAMS(UniverseID containerid, BuildTaskID id))
+    json CanCancelConstruction(PARAMS(UniverseID containerid,BuildTaskID id))
     {
         const auto func_res_1 = invoke(CanCancelConstruction, containerid, id);
         return json
@@ -1419,7 +1419,7 @@ namespace ffijson
         };
     }
  
-    json CanContainerEquipShip(PARAMS(UniverseID containerid, UniverseID shipid))
+    json CanContainerEquipShip(PARAMS(UniverseID containerid,UniverseID shipid))
     {
         const auto func_res_1 = invoke(CanContainerEquipShip, containerid, shipid);
         return json
@@ -1428,7 +1428,7 @@ namespace ffijson
         };
     }
  
-    json CanContainerMineTransport(PARAMS(UniverseID containerid, const char* transportname))
+    json CanContainerMineTransport(PARAMS(UniverseID containerid,const char* transportname))
     {
         const auto func_res_1 = invoke(CanContainerMineTransport, containerid, transportname);
         return json
@@ -1437,7 +1437,7 @@ namespace ffijson
         };
     }
  
-    json CanContainerSupplyShip(PARAMS(UniverseID containerid, UniverseID shipid))
+    json CanContainerSupplyShip(PARAMS(UniverseID containerid,UniverseID shipid))
     {
         const auto func_res_1 = invoke(CanContainerSupplyShip, containerid, shipid);
         return json
@@ -1446,7 +1446,7 @@ namespace ffijson
         };
     }
  
-    json CanContainerTransport(PARAMS(UniverseID containerid, const char* transportname))
+    json CanContainerTransport(PARAMS(UniverseID containerid,const char* transportname))
     {
         const auto func_res_1 = invoke(CanContainerTransport, containerid, transportname);
         return json
@@ -1455,7 +1455,7 @@ namespace ffijson
         };
     }
  
-    json CanControllableHaveControlEntity(PARAMS(UniverseID controllableid, const char* postid))
+    json CanControllableHaveControlEntity(PARAMS(UniverseID controllableid,const char* postid))
     {
         const auto func_res_1 = invoke(CanControllableHaveControlEntity, controllableid, postid);
         return json
@@ -1473,7 +1473,7 @@ namespace ffijson
         };
     }
  
-    json CanGenerateValidLoadout(PARAMS(UniverseID containerid, const char* macroname))
+    json CanGenerateValidLoadout(PARAMS(UniverseID containerid,const char* macroname))
     {
         const auto func_res_1 = invoke(CanGenerateValidLoadout, containerid, macroname);
         return json
@@ -1545,7 +1545,7 @@ namespace ffijson
         };
     }
  
-    json CancelConstruction(PARAMS(UniverseID containerid, BuildTaskID id))
+    json CancelConstruction(PARAMS(UniverseID containerid,BuildTaskID id))
     {
         const auto func_res_1 = invoke(CancelConstruction, containerid, id);
         return json
@@ -1554,7 +1554,7 @@ namespace ffijson
         };
     }
  
-    json CheckWeaponModCompatibility(PARAMS(UniverseID weaponid, const char* wareid))
+    json CheckWeaponModCompatibility(PARAMS(UniverseID weaponid,const char* wareid))
     {
         const auto func_res_1 = invoke(CheckWeaponModCompatibility, weaponid, wareid);
         return json
@@ -1563,7 +1563,7 @@ namespace ffijson
         };
     }
  
-    json CompareMapConstructionSequenceWithPlanned(PARAMS(UniverseID holomapid, UniverseID defensibleid, bool usestoredplan))
+    json CompareMapConstructionSequenceWithPlanned(PARAMS(UniverseID holomapid,UniverseID defensibleid,bool usestoredplan))
     {
         const auto func_res_1 = invoke(CompareMapConstructionSequenceWithPlanned, holomapid, defensibleid, usestoredplan);
         return json
@@ -1581,7 +1581,7 @@ namespace ffijson
         };
     }
  
-    json CreateBoardingOperation(PARAMS(UniverseID defensibletargetid, const char* boarderfactionid, uint32_t approachthreshold, uint32_t insertionthreshold))
+    json CreateBoardingOperation(PARAMS(UniverseID defensibletargetid,const char* boarderfactionid,uint32_t approachthreshold,uint32_t insertionthreshold))
     {
         const auto func_res_1 = invoke(CreateBoardingOperation, defensibletargetid, boarderfactionid, approachthreshold, insertionthreshold);
         return json
@@ -1599,7 +1599,7 @@ namespace ffijson
         };
     }
  
-    json DoesMapConstructionSequenceRequireBuilder(PARAMS(UniverseID holomapid, UniverseID defensibleid, bool usestoredplan))
+    json DoesMapConstructionSequenceRequireBuilder(PARAMS(UniverseID holomapid,UniverseID defensibleid,bool usestoredplan))
     {
         const auto func_res_1 = invoke(DoesMapConstructionSequenceRequireBuilder, holomapid, defensibleid, usestoredplan);
         return json
@@ -1608,7 +1608,7 @@ namespace ffijson
         };
     }
  
-    json DropCargo(PARAMS(UniverseID containerid, const char* wareid, uint32_t amount))
+    json DropCargo(PARAMS(UniverseID containerid,const char* wareid,uint32_t amount))
     {
         const auto func_res_1 = invoke(DropCargo, containerid, wareid, amount);
         return json
@@ -1617,7 +1617,7 @@ namespace ffijson
         };
     }
  
-    json DropInventory(PARAMS(UniverseID entityid, const char* lockboxid, uint32_t numwares))
+    json DropInventory(PARAMS(UniverseID entityid,const char* lockboxid,uint32_t numwares))
     {
         UIWareAmount wares;
         const auto func_res_1 = invoke(DropInventory, entityid, lockboxid, &wares, numwares);
@@ -1638,7 +1638,7 @@ namespace ffijson
         };
     }
  
-    json EnableOrder(PARAMS(UniverseID controllableid, size_t idx))
+    json EnableOrder(PARAMS(UniverseID controllableid,size_t idx))
     {
         const auto func_res_1 = invoke(EnableOrder, controllableid, idx);
         return json
@@ -1647,7 +1647,7 @@ namespace ffijson
         };
     }
  
-    json EnablePlannedDefaultOrder(PARAMS(UniverseID controllableid, bool checkonly))
+    json EnablePlannedDefaultOrder(PARAMS(UniverseID controllableid,bool checkonly))
     {
         const auto func_res_1 = invoke(EnablePlannedDefaultOrder, controllableid, checkonly);
         return json
@@ -1656,7 +1656,7 @@ namespace ffijson
         };
     }
  
-    json GetAskToSignalForControllable(PARAMS(const char* signalid, UniverseID controllableid))
+    json GetAskToSignalForControllable(PARAMS(const char* signalid,UniverseID controllableid))
     {
         const auto func_res_1 = invoke(GetAskToSignalForControllable, signalid, controllableid);
         return json
@@ -1665,7 +1665,7 @@ namespace ffijson
         };
     }
  
-    json GetAskToSignalForFaction(PARAMS(const char* signalid, const char* factionid))
+    json GetAskToSignalForFaction(PARAMS(const char* signalid,const char* factionid))
     {
         const auto func_res_1 = invoke(GetAskToSignalForFaction, signalid, factionid);
         return json
@@ -1674,7 +1674,7 @@ namespace ffijson
         };
     }
  
-    json GetBoardingMarineTierAmountsFromAttacker(PARAMS( uint32_t inputnummarinetiers, UniverseID defensibletargetid, UniverseID defensibleboarderid, const char* boarderfactionid))
+    json GetBoardingMarineTierAmountsFromAttacker(PARAMS(uint32_t inputnummarinetiers,UniverseID defensibletargetid,UniverseID defensibleboarderid,const char* boarderfactionid))
     {
         uint32_t resultmarinetieramounts;
         int32_t inputmarinetierskilllevels;
@@ -1847,7 +1847,7 @@ namespace ffijson
         };
     }
  
-    json GetContainerWareIsBuyable(PARAMS(UniverseID containerid, const char* wareid))
+    json GetContainerWareIsBuyable(PARAMS(UniverseID containerid,const char* wareid))
     {
         const auto func_res_1 = invoke(GetContainerWareIsBuyable, containerid, wareid);
         return json
@@ -1856,7 +1856,7 @@ namespace ffijson
         };
     }
  
-    json GetContainerWareIsSellable(PARAMS(UniverseID containerid, const char* wareid))
+    json GetContainerWareIsSellable(PARAMS(UniverseID containerid,const char* wareid))
     {
         const auto func_res_1 = invoke(GetContainerWareIsSellable, containerid, wareid);
         return json
@@ -1865,7 +1865,7 @@ namespace ffijson
         };
     }
  
-    json GetCustomGameStartBoolProperty(PARAMS(const char* id, const char* propertyid))
+    json GetCustomGameStartBoolProperty(PARAMS(const char* id,const char* propertyid))
     {
         CustomGameStartBoolPropertyState state;
         const auto func_res_1 = invoke(GetCustomGameStartBoolProperty, id, propertyid, &state);
@@ -1886,7 +1886,7 @@ namespace ffijson
         };
     }
  
-    json GetDefaultOrder(PARAMS( UniverseID controllableid))
+    json GetDefaultOrder(PARAMS(UniverseID controllableid))
     {
         Order result;
         const auto func_res_1 = invoke(GetDefaultOrder, &result, controllableid);
@@ -2308,7 +2308,7 @@ namespace ffijson
         };
     }
  
-    json GetInstalledGroupedWeaponMod(PARAMS(UniverseID defensibleid, UniverseID contextid, const char* group))
+    json GetInstalledGroupedWeaponMod(PARAMS(UniverseID defensibleid,UniverseID contextid,const char* group))
     {
         UIWeaponMod weaponmod;
         const auto func_res_1 = invoke(GetInstalledGroupedWeaponMod, defensibleid, contextid, group, &weaponmod);
@@ -2368,7 +2368,7 @@ namespace ffijson
         };
     }
  
-    json GetInstalledShieldMod(PARAMS(UniverseID defensibleid, UniverseID contextid, const char* group))
+    json GetInstalledShieldMod(PARAMS(UniverseID defensibleid,UniverseID contextid,const char* group))
     {
         UIShieldMod shieldmod;
         const auto func_res_1 = invoke(GetInstalledShieldMod, defensibleid, contextid, group, &shieldmod);
@@ -2463,7 +2463,7 @@ namespace ffijson
         };
     }
  
-    json GetLicenceInfo(PARAMS( const char* factionid, const char* licenceid))
+    json GetLicenceInfo(PARAMS(const char* factionid,const char* licenceid))
     {
         LicenceInfo result;
         const auto func_res_1 = invoke(GetLicenceInfo, &result, factionid, licenceid);
@@ -2502,7 +2502,7 @@ namespace ffijson
         };
     }
  
-    json GetOrderDefinition(PARAMS( const char* orderdef))
+    json GetOrderDefinition(PARAMS(const char* orderdef))
     {
         OrderDefinition result;
         const auto func_res_1 = invoke(GetOrderDefinition, &result, orderdef);
@@ -2529,7 +2529,7 @@ namespace ffijson
         };
     }
  
-    json GetPickedBuildMapEntry(PARAMS(UniverseID holomapid, UniverseID defensibleid))
+    json GetPickedBuildMapEntry(PARAMS(UniverseID holomapid,UniverseID defensibleid))
     {
         UIConstructionPlanEntry result;
         const auto func_res_1 = invoke(GetPickedBuildMapEntry, holomapid, defensibleid, &result);
@@ -2556,7 +2556,7 @@ namespace ffijson
         };
     }
  
-    json GetPickedMapMacroSlot(PARAMS(UniverseID holomapid, UniverseID defensibleid, UniverseID moduleid, const char* macroname, bool ismodule))
+    json GetPickedMapMacroSlot(PARAMS(UniverseID holomapid,UniverseID defensibleid,UniverseID moduleid,const char* macroname,bool ismodule))
     {
         UILoadoutSlot result;
         const auto func_res_1 = invoke(GetPickedMapMacroSlot, holomapid, defensibleid, moduleid, macroname, ismodule, &result);
@@ -2577,7 +2577,7 @@ namespace ffijson
         };
     }
  
-    json GetPlannedDefaultOrder(PARAMS( UniverseID controllableid))
+    json GetPlannedDefaultOrder(PARAMS(UniverseID controllableid))
     {
         Order result;
         const auto func_res_1 = invoke(GetPlannedDefaultOrder, &result, controllableid);
@@ -2605,7 +2605,7 @@ namespace ffijson
         };
     }
  
-    json GetPlayerPaintThemeMod(PARAMS(UniverseID objectid, const char* macroname))
+    json GetPlayerPaintThemeMod(PARAMS(UniverseID objectid,const char* macroname))
     {
         UIPaintMod paintmod;
         const auto func_res_1 = invoke(GetPlayerPaintThemeMod, objectid, macroname, &paintmod);
@@ -2647,7 +2647,7 @@ namespace ffijson
         };
     }
  
-    json GetShieldGroup(PARAMS( UniverseID defensibleid, UniverseID destructibleid))
+    json GetShieldGroup(PARAMS(UniverseID defensibleid,UniverseID destructibleid))
     {
         ShieldGroup result;
         const auto func_res_1 = invoke(GetShieldGroup, &result, defensibleid, destructibleid);
@@ -2940,7 +2940,7 @@ namespace ffijson
         };
     }
  
-    json GetSyncPointInfo(PARAMS(UniverseID controllableid, size_t orderidx))
+    json GetSyncPointInfo(PARAMS(UniverseID controllableid,size_t orderidx))
     {
         SyncPointInfo result;
         const auto func_res_1 = invoke(GetSyncPointInfo, controllableid, orderidx, &result);
@@ -2984,7 +2984,7 @@ namespace ffijson
         };
     }
  
-    json GetUISystemInfo(PARAMS( UniverseID clusterid))
+    json GetUISystemInfo(PARAMS(UniverseID clusterid))
     {
         UISystemInfo result;
         const auto func_res_1 = invoke(GetUISystemInfo, &result, clusterid);
@@ -3035,7 +3035,7 @@ namespace ffijson
         };
     }
  
-    json HasContainerBuyLimitOverride(PARAMS(UniverseID containerid, const char* wareid))
+    json HasContainerBuyLimitOverride(PARAMS(UniverseID containerid,const char* wareid))
     {
         const auto func_res_1 = invoke(HasContainerBuyLimitOverride, containerid, wareid);
         return json
@@ -3044,7 +3044,7 @@ namespace ffijson
         };
     }
  
-    json HasContainerSellLimitOverride(PARAMS(UniverseID containerid, const char* wareid))
+    json HasContainerSellLimitOverride(PARAMS(UniverseID containerid,const char* wareid))
     {
         const auto func_res_1 = invoke(HasContainerSellLimitOverride, containerid, wareid);
         return json
@@ -3053,7 +3053,7 @@ namespace ffijson
         };
     }
  
-    json HasControllableOwnBlacklist(PARAMS(UniverseID controllableid, const char* listtype))
+    json HasControllableOwnBlacklist(PARAMS(UniverseID controllableid,const char* listtype))
     {
         const auto func_res_1 = invoke(HasControllableOwnBlacklist, controllableid, listtype);
         return json
@@ -3062,7 +3062,7 @@ namespace ffijson
         };
     }
  
-    json HasControllableOwnResponse(PARAMS(UniverseID controllableid, const char* signalid))
+    json HasControllableOwnResponse(PARAMS(UniverseID controllableid,const char* signalid))
     {
         const auto func_res_1 = invoke(HasControllableOwnResponse, controllableid, signalid);
         return json
@@ -3089,7 +3089,7 @@ namespace ffijson
         };
     }
  
-    json HasExtension(PARAMS(const char* extensionid, bool personal))
+    json HasExtension(PARAMS(const char* extensionid,bool personal))
     {
         const auto func_res_1 = invoke(HasExtension, extensionid, personal);
         return json
@@ -3161,7 +3161,7 @@ namespace ffijson
         };
     }
  
-    json HasVenturerDock(PARAMS(UniverseID containerid, UniverseID shipid, UniverseID ventureplatformid))
+    json HasVenturerDock(PARAMS(UniverseID containerid,UniverseID shipid,UniverseID ventureplatformid))
     {
         const auto func_res_1 = invoke(HasVenturerDock, containerid, shipid, ventureplatformid);
         return json
@@ -3170,7 +3170,7 @@ namespace ffijson
         };
     }
  
-    json InstallEngineMod(PARAMS(UniverseID objectid, const char* wareid))
+    json InstallEngineMod(PARAMS(UniverseID objectid,const char* wareid))
     {
         const auto func_res_1 = invoke(InstallEngineMod, objectid, wareid);
         return json
@@ -3179,7 +3179,7 @@ namespace ffijson
         };
     }
  
-    json InstallGroupedWeaponMod(PARAMS(UniverseID defensibleid, UniverseID contextid, const char* group, const char* wareid))
+    json InstallGroupedWeaponMod(PARAMS(UniverseID defensibleid,UniverseID contextid,const char* group,const char* wareid))
     {
         const auto func_res_1 = invoke(InstallGroupedWeaponMod, defensibleid, contextid, group, wareid);
         return json
@@ -3188,7 +3188,7 @@ namespace ffijson
         };
     }
  
-    json InstallPaintMod(PARAMS(UniverseID objectid, const char* wareid, bool useinventory))
+    json InstallPaintMod(PARAMS(UniverseID objectid,const char* wareid,bool useinventory))
     {
         const auto func_res_1 = invoke(InstallPaintMod, objectid, wareid, useinventory);
         return json
@@ -3197,7 +3197,7 @@ namespace ffijson
         };
     }
  
-    json InstallShieldMod(PARAMS(UniverseID defensibleid, UniverseID contextid, const char* group, const char* wareid))
+    json InstallShieldMod(PARAMS(UniverseID defensibleid,UniverseID contextid,const char* group,const char* wareid))
     {
         const auto func_res_1 = invoke(InstallShieldMod, defensibleid, contextid, group, wareid);
         return json
@@ -3206,7 +3206,7 @@ namespace ffijson
         };
     }
  
-    json InstallShipMod(PARAMS(UniverseID shipid, const char* wareid))
+    json InstallShipMod(PARAMS(UniverseID shipid,const char* wareid))
     {
         const auto func_res_1 = invoke(InstallShipMod, shipid, wareid);
         return json
@@ -3215,7 +3215,7 @@ namespace ffijson
         };
     }
  
-    json InstallWeaponMod(PARAMS(UniverseID weaponid, const char* wareid))
+    json InstallWeaponMod(PARAMS(UniverseID weaponid,const char* wareid))
     {
         const auto func_res_1 = invoke(InstallWeaponMod, weaponid, wareid);
         return json
@@ -3242,7 +3242,7 @@ namespace ffijson
         };
     }
  
-    json IsAmmoMacroCompatible(PARAMS(const char* weaponmacroname, const char* ammomacroname))
+    json IsAmmoMacroCompatible(PARAMS(const char* weaponmacroname,const char* ammomacroname))
     {
         const auto func_res_1 = invoke(IsAmmoMacroCompatible, weaponmacroname, ammomacroname);
         return json
@@ -3341,7 +3341,7 @@ namespace ffijson
         };
     }
  
-    json IsComponentClass(PARAMS(UniverseID componentid, const char* classname))
+    json IsComponentClass(PARAMS(UniverseID componentid,const char* classname))
     {
         const auto func_res_1 = invoke(IsComponentClass, componentid, classname);
         return json
@@ -3386,7 +3386,7 @@ namespace ffijson
         };
     }
  
-    json IsContainerAmmoMacroCompatible(PARAMS(UniverseID containerid, const char* ammomacroname))
+    json IsContainerAmmoMacroCompatible(PARAMS(UniverseID containerid,const char* ammomacroname))
     {
         const auto func_res_1 = invoke(IsContainerAmmoMacroCompatible, containerid, ammomacroname);
         return json
@@ -3404,7 +3404,7 @@ namespace ffijson
         };
     }
  
-    json IsContainerFactionTradeRescricted(PARAMS(UniverseID containerid, const char* wareid))
+    json IsContainerFactionTradeRescricted(PARAMS(UniverseID containerid,const char* wareid))
     {
         const auto func_res_1 = invoke(IsContainerFactionTradeRescricted, containerid, wareid);
         return json
@@ -3485,7 +3485,7 @@ namespace ffijson
         };
     }
  
-    json IsCustomGameStartPropertyChanged(PARAMS(const char* id, const char* propertyid))
+    json IsCustomGameStartPropertyChanged(PARAMS(const char* id,const char* propertyid))
     {
         const auto func_res_1 = invoke(IsCustomGameStartPropertyChanged, id, propertyid);
         return json
@@ -3494,7 +3494,7 @@ namespace ffijson
         };
     }
  
-    json IsDefensibleBeingBoardedBy(PARAMS(UniverseID defensibleid, const char* factionid))
+    json IsDefensibleBeingBoardedBy(PARAMS(UniverseID defensibleid,const char* factionid))
     {
         const auto func_res_1 = invoke(IsDefensibleBeingBoardedBy, defensibleid, factionid);
         return json
@@ -3512,7 +3512,7 @@ namespace ffijson
         };
     }
  
-    json IsDeployableMacroCompatible(PARAMS(UniverseID containerid, const char* macroname, const char* deployablemacroname))
+    json IsDeployableMacroCompatible(PARAMS(UniverseID containerid,const char* macroname,const char* deployablemacroname))
     {
         const auto func_res_1 = invoke(IsDeployableMacroCompatible, containerid, macroname, deployablemacroname);
         return json
@@ -3521,7 +3521,7 @@ namespace ffijson
         };
     }
  
-    json IsDestructible2(PARAMS(const UniverseID componentid, const char*const connectionname))
+    json IsDestructible2(PARAMS(const UniverseID componentid,const char*const connectionname))
     {
         const auto func_res_1 = invoke(IsDestructible2, componentid, connectionname);
         return json
@@ -3530,7 +3530,7 @@ namespace ffijson
         };
     }
  
-    json IsDetailUIElement(PARAMS(const UniverseID componentid, const char*const connectionname))
+    json IsDetailUIElement(PARAMS(const UniverseID componentid,const char*const connectionname))
     {
         const auto func_res_1 = invoke(IsDetailUIElement, componentid, connectionname);
         return json
@@ -3539,7 +3539,7 @@ namespace ffijson
         };
     }
  
-    json IsDroneTypeArmed(PARAMS(UniverseID defensibleid, const char* dronetype))
+    json IsDroneTypeArmed(PARAMS(UniverseID defensibleid,const char* dronetype))
     {
         const auto func_res_1 = invoke(IsDroneTypeArmed, defensibleid, dronetype);
         return json
@@ -3548,7 +3548,7 @@ namespace ffijson
         };
     }
  
-    json IsDroneTypeBlocked(PARAMS(UniverseID defensibleid, const char* dronetype))
+    json IsDroneTypeBlocked(PARAMS(UniverseID defensibleid,const char* dronetype))
     {
         const auto func_res_1 = invoke(IsDroneTypeBlocked, defensibleid, dronetype);
         return json
@@ -3656,7 +3656,7 @@ namespace ffijson
         };
     }
  
-    json IsFactionAllyToFaction(PARAMS(const char* factionid, const char* otherfactionid))
+    json IsFactionAllyToFaction(PARAMS(const char* factionid,const char* otherfactionid))
     {
         const auto func_res_1 = invoke(IsFactionAllyToFaction, factionid, otherfactionid);
         return json
@@ -3665,7 +3665,7 @@ namespace ffijson
         };
     }
  
-    json IsFactionEnemyToFaction(PARAMS(const char* factionid, const char* otherfactionid))
+    json IsFactionEnemyToFaction(PARAMS(const char* factionid,const char* otherfactionid))
     {
         const auto func_res_1 = invoke(IsFactionEnemyToFaction, factionid, otherfactionid);
         return json
@@ -3683,7 +3683,7 @@ namespace ffijson
         };
     }
  
-    json IsFullscreenMenuDisplayed(PARAMS(bool anymenu, const char* menuname))
+    json IsFullscreenMenuDisplayed(PARAMS(bool anymenu,const char* menuname))
     {
         const auto func_res_1 = invoke(IsFullscreenMenuDisplayed, anymenu, menuname);
         return json
@@ -3755,7 +3755,7 @@ namespace ffijson
         };
     }
  
-    json IsInfoUnlockedForPlayer(PARAMS(UniverseID componentid, const char* infostring))
+    json IsInfoUnlockedForPlayer(PARAMS(UniverseID componentid,const char* infostring))
     {
         const auto func_res_1 = invoke(IsInfoUnlockedForPlayer, componentid, infostring);
         return json
@@ -3773,7 +3773,7 @@ namespace ffijson
         };
     }
  
-    json IsKnownItemRead(PARAMS(const char* libraryid, const char* itemid))
+    json IsKnownItemRead(PARAMS(const char* libraryid,const char* itemid))
     {
         const auto func_res_1 = invoke(IsKnownItemRead, libraryid, itemid);
         return json
@@ -3836,7 +3836,7 @@ namespace ffijson
         };
     }
  
-    json IsLoadoutValid(PARAMS(UniverseID defensibleid, const char* macroname, const char* loadoutid))
+    json IsLoadoutValid(PARAMS(UniverseID defensibleid,const char* macroname,const char* loadoutid))
     {
         uint32_t numinvalidpatches;
         const auto func_res_1 = invoke(IsLoadoutValid, defensibleid, macroname, loadoutid, &numinvalidpatches);
@@ -3980,7 +3980,7 @@ namespace ffijson
         };
     }
  
-    json IsOrderSelectableFor(PARAMS(const char* orderdefid, UniverseID controllableid))
+    json IsOrderSelectableFor(PARAMS(const char* orderdefid,UniverseID controllableid))
     {
         const auto func_res_1 = invoke(IsOrderSelectableFor, orderdefid, controllableid);
         return json
@@ -3989,7 +3989,7 @@ namespace ffijson
         };
     }
  
-    json IsPerson(PARAMS(NPCSeed person, UniverseID controllableid))
+    json IsPerson(PARAMS(NPCSeed person,UniverseID controllableid))
     {
         const auto func_res_1 = invoke(IsPerson, person, controllableid);
         return json
@@ -3998,7 +3998,7 @@ namespace ffijson
         };
     }
  
-    json IsPersonTransferScheduled(PARAMS(UniverseID controllableid, NPCSeed person))
+    json IsPersonTransferScheduled(PARAMS(UniverseID controllableid,NPCSeed person))
     {
         const auto func_res_1 = invoke(IsPersonTransferScheduled, controllableid, person);
         return json
@@ -4007,7 +4007,7 @@ namespace ffijson
         };
     }
  
-    json IsPlayerBlacklistDefault(PARAMS(BlacklistID id, const char* listtype, const char* defaultgroup))
+    json IsPlayerBlacklistDefault(PARAMS(BlacklistID id,const char* listtype,const char* defaultgroup))
     {
         const auto func_res_1 = invoke(IsPlayerBlacklistDefault, id, listtype, defaultgroup);
         return json
@@ -4016,7 +4016,7 @@ namespace ffijson
         };
     }
  
-    json IsPlayerCameraTargetViewPossible(PARAMS(UniverseID targetid, bool force))
+    json IsPlayerCameraTargetViewPossible(PARAMS(UniverseID targetid,bool force))
     {
         const auto func_res_1 = invoke(IsPlayerCameraTargetViewPossible, targetid, force);
         return json
@@ -4052,7 +4052,7 @@ namespace ffijson
         };
     }
  
-    json IsRealComponentClass(PARAMS(UniverseID componentid, const char* classname))
+    json IsRealComponentClass(PARAMS(UniverseID componentid,const char* classname))
     {
         const auto func_res_1 = invoke(IsRealComponentClass, componentid, classname);
         return json
@@ -4151,7 +4151,7 @@ namespace ffijson
         };
     }
  
-    json IsSoftwareDefault(PARAMS(UniverseID controllableid, const char* macroname, const char* softwarename))
+    json IsSoftwareDefault(PARAMS(UniverseID controllableid,const char* macroname,const char* softwarename))
     {
         const auto func_res_1 = invoke(IsSoftwareDefault, controllableid, macroname, softwarename);
         return json
@@ -4187,7 +4187,7 @@ namespace ffijson
         };
     }
  
-    json IsSupplyManual(PARAMS(UniverseID containerid, const char* type))
+    json IsSupplyManual(PARAMS(UniverseID containerid,const char* type))
     {
         const auto func_res_1 = invoke(IsSupplyManual, containerid, type);
         return json
@@ -4214,7 +4214,7 @@ namespace ffijson
         };
     }
  
-    json IsTableRowBorderBelowEnabled(PARAMS(const int tableid, uint32_t row))
+    json IsTableRowBorderBelowEnabled(PARAMS(const int tableid,uint32_t row))
     {
         const auto func_res_1 = invoke(IsTableRowBorderBelowEnabled, tableid, row);
         return json
@@ -4286,7 +4286,7 @@ namespace ffijson
         };
     }
  
-    json IsTurretGroupArmed(PARAMS(UniverseID defensibleid, UniverseID contextid, const char* path, const char* group))
+    json IsTurretGroupArmed(PARAMS(UniverseID defensibleid,UniverseID contextid,const char* path,const char* group))
     {
         const auto func_res_1 = invoke(IsTurretGroupArmed, defensibleid, contextid, path, group);
         return json
@@ -4304,7 +4304,7 @@ namespace ffijson
         };
     }
  
-    json IsUnitMacroCompatible(PARAMS(UniverseID containerid, const char* macroname, const char* unitmacroname))
+    json IsUnitMacroCompatible(PARAMS(UniverseID containerid,const char* macroname,const char* unitmacroname))
     {
         const auto func_res_1 = invoke(IsUnitMacroCompatible, containerid, macroname, unitmacroname);
         return json
@@ -4313,7 +4313,7 @@ namespace ffijson
         };
     }
  
-    json IsUpgradeGroupMacroCompatible(PARAMS(UniverseID destructibleid, const char* macroname, const char* path, const char* group, const char* upgradetypename, const char* upgrademacroname))
+    json IsUpgradeGroupMacroCompatible(PARAMS(UniverseID destructibleid,const char* macroname,const char* path,const char* group,const char* upgradetypename,const char* upgrademacroname))
     {
         const auto func_res_1 = invoke(IsUpgradeGroupMacroCompatible, destructibleid, macroname, path, group, upgradetypename, upgrademacroname);
         return json
@@ -4322,7 +4322,7 @@ namespace ffijson
         };
     }
  
-    json IsUpgradeMacroCompatible(PARAMS(UniverseID objectid, UniverseID moduleid, const char* macroname, bool ismodule, const char* upgradetypename, size_t slot, const char* upgrademacroname))
+    json IsUpgradeMacroCompatible(PARAMS(UniverseID objectid,UniverseID moduleid,const char* macroname,bool ismodule,const char* upgradetypename,size_t slot,const char* upgrademacroname))
     {
         const auto func_res_1 = invoke(IsUpgradeMacroCompatible, objectid, moduleid, macroname, ismodule, upgradetypename, slot, upgrademacroname);
         return json
@@ -4394,7 +4394,7 @@ namespace ffijson
         };
     }
  
-    json IsVirtualUpgradeMacroCompatible(PARAMS(UniverseID defensibleid, const char* macroname, const char* upgradetypename, size_t slot, const char* upgrademacroname))
+    json IsVirtualUpgradeMacroCompatible(PARAMS(UniverseID defensibleid,const char* macroname,const char* upgradetypename,size_t slot,const char* upgrademacroname))
     {
         const auto func_res_1 = invoke(IsVirtualUpgradeMacroCompatible, defensibleid, macroname, upgradetypename, slot, upgrademacroname);
         return json
@@ -4412,7 +4412,7 @@ namespace ffijson
         };
     }
  
-    json IsWillingToBuyFromPlayer(PARAMS(UniverseID componentid, const char* warename))
+    json IsWillingToBuyFromPlayer(PARAMS(UniverseID componentid,const char* warename))
     {
         const auto func_res_1 = invoke(IsWillingToBuyFromPlayer, componentid, warename);
         return json
@@ -4421,7 +4421,7 @@ namespace ffijson
         };
     }
  
-    json IsWillingToSellToPlayer(PARAMS(UniverseID componentid, const char* warename))
+    json IsWillingToSellToPlayer(PARAMS(UniverseID componentid,const char* warename))
     {
         const auto func_res_1 = invoke(IsWillingToSellToPlayer, componentid, warename);
         return json
@@ -4511,7 +4511,7 @@ namespace ffijson
         };
     }
  
-    json RemoveConstructionPlan(PARAMS(const char* source, const char* id))
+    json RemoveConstructionPlan(PARAMS(const char* source,const char* id))
     {
         const auto func_res_1 = invoke(RemoveConstructionPlan, source, id);
         return json
@@ -4520,7 +4520,7 @@ namespace ffijson
         };
     }
  
-    json RemoveLoadout(PARAMS(const char* source, const char* macroname, const char* localid))
+    json RemoveLoadout(PARAMS(const char* source,const char* macroname,const char* localid))
     {
         const auto func_res_1 = invoke(RemoveLoadout, source, macroname, localid);
         return json
@@ -4529,7 +4529,7 @@ namespace ffijson
         };
     }
  
-    json RemoveOrder(PARAMS(UniverseID controllableid, size_t idx, bool playercancelled, bool checkonly))
+    json RemoveOrder(PARAMS(UniverseID controllableid,size_t idx,bool playercancelled,bool checkonly))
     {
         const auto func_res_1 = invoke(RemoveOrder, controllableid, idx, playercancelled, checkonly);
         return json
@@ -4538,7 +4538,7 @@ namespace ffijson
         };
     }
  
-    json RemoveOrder2(PARAMS(UniverseID controllableid, size_t idx, bool playercancelled, bool checkonly, bool onlyimmediate))
+    json RemoveOrder2(PARAMS(UniverseID controllableid,size_t idx,bool playercancelled,bool checkonly,bool onlyimmediate))
     {
         const auto func_res_1 = invoke(RemoveOrder2, controllableid, idx, playercancelled, checkonly, onlyimmediate);
         return json
@@ -4547,7 +4547,7 @@ namespace ffijson
         };
     }
  
-    json RequestDockAt(PARAMS(UniverseID containerid, bool checkonly))
+    json RequestDockAt(PARAMS(UniverseID containerid,bool checkonly))
     {
         const auto func_res_1 = invoke(RequestDockAt, containerid, checkonly);
         return json
@@ -4556,7 +4556,7 @@ namespace ffijson
         };
     }
  
-    json RequestShipFromInternalStorage2(PARAMS(UniverseID shipid, bool highpriority, UniverseID refcomponentid))
+    json RequestShipFromInternalStorage2(PARAMS(UniverseID shipid,bool highpriority,UniverseID refcomponentid))
     {
         const auto func_res_1 = invoke(RequestShipFromInternalStorage2, shipid, highpriority, refcomponentid);
         return json
@@ -4565,7 +4565,7 @@ namespace ffijson
         };
     }
  
-    json ResetResponseToSignalForControllable(PARAMS(const char* signalid, UniverseID controllableid))
+    json ResetResponseToSignalForControllable(PARAMS(const char* signalid,UniverseID controllableid))
     {
         const auto func_res_1 = invoke(ResetResponseToSignalForControllable, signalid, controllableid);
         return json
@@ -4592,7 +4592,7 @@ namespace ffijson
         };
     }
  
-    json SetAmmoOfWeapon(PARAMS(UniverseID weaponid, const char* newammomacro))
+    json SetAmmoOfWeapon(PARAMS(UniverseID weaponid,const char* newammomacro))
     {
         const auto func_res_1 = invoke(SetAmmoOfWeapon, weaponid, newammomacro);
         return json
@@ -4601,7 +4601,7 @@ namespace ffijson
         };
     }
  
-    json SetCommander(PARAMS(UniverseID controllableid, UniverseID commanderid, const char* assignment))
+    json SetCommander(PARAMS(UniverseID controllableid,UniverseID commanderid,const char* assignment))
     {
         const auto func_res_1 = invoke(SetCommander, controllableid, commanderid, assignment);
         return json
@@ -4610,7 +4610,7 @@ namespace ffijson
         };
     }
  
-    json SetDefaultResponseToSignalForControllable(PARAMS(const char* newresponse, bool ask, const char* signalid, UniverseID controllableid))
+    json SetDefaultResponseToSignalForControllable(PARAMS(const char* newresponse,bool ask,const char* signalid,UniverseID controllableid))
     {
         const auto func_res_1 = invoke(SetDefaultResponseToSignalForControllable, newresponse, ask, signalid, controllableid);
         return json
@@ -4619,7 +4619,7 @@ namespace ffijson
         };
     }
  
-    json SetDefaultResponseToSignalForFaction(PARAMS(const char* newresponse, bool ask, const char* signalid, const char* factionid))
+    json SetDefaultResponseToSignalForFaction(PARAMS(const char* newresponse,bool ask,const char* signalid,const char* factionid))
     {
         const auto func_res_1 = invoke(SetDefaultResponseToSignalForFaction, newresponse, ask, signalid, factionid);
         return json
@@ -4628,7 +4628,7 @@ namespace ffijson
         };
     }
  
-    json SetEntityToPost(PARAMS(UniverseID controllableid, UniverseID entityid, const char* postid))
+    json SetEntityToPost(PARAMS(UniverseID controllableid,UniverseID entityid,const char* postid))
     {
         const auto func_res_1 = invoke(SetEntityToPost, controllableid, entityid, postid);
         return json
@@ -4637,7 +4637,7 @@ namespace ffijson
         };
     }
  
-    json SetFrameInteractiveObject(PARAMS(const int frameid, const int objectid))
+    json SetFrameInteractiveObject(PARAMS(const int frameid,const int objectid))
     {
         const auto func_res_1 = invoke(SetFrameInteractiveObject, frameid, objectid);
         return json
@@ -4646,7 +4646,7 @@ namespace ffijson
         };
     }
  
-    json SetOrderSyncPointID(PARAMS(UniverseID controllableid, size_t orderidx, uint32_t syncid, bool checkonly))
+    json SetOrderSyncPointID(PARAMS(UniverseID controllableid,size_t orderidx,uint32_t syncid,bool checkonly))
     {
         const auto func_res_1 = invoke(SetOrderSyncPointID, controllableid, orderidx, syncid, checkonly);
         return json
@@ -4655,7 +4655,7 @@ namespace ffijson
         };
     }
  
-    json SetRadarRenderTarget(PARAMS(const char*const rendertargettexture, const UniverseID referencecomponent, const bool mapmode))
+    json SetRadarRenderTarget(PARAMS(const char*const rendertargettexture,const UniverseID referencecomponent,const bool mapmode))
     {
         const auto func_res_1 = invoke(SetRadarRenderTarget, rendertargettexture, referencecomponent, mapmode);
         return json
@@ -4664,7 +4664,7 @@ namespace ffijson
         };
     }
  
-    json SetRadarRenderTargetOnTarget(PARAMS(const char*const rendertargettexture, const UniverseID focuscomponentid, const UniverseID referencecomponent, const bool mapmode))
+    json SetRadarRenderTargetOnTarget(PARAMS(const char*const rendertargettexture,const UniverseID focuscomponentid,const UniverseID referencecomponent,const bool mapmode))
     {
         const auto func_res_1 = invoke(SetRadarRenderTargetOnTarget, rendertargettexture, focuscomponentid, referencecomponent, mapmode);
         return json
@@ -4673,7 +4673,7 @@ namespace ffijson
         };
     }
  
-    json SetSofttarget(PARAMS(UniverseID componentid, const char*const connectionname))
+    json SetSofttarget(PARAMS(UniverseID componentid,const char*const connectionname))
     {
         const auto func_res_1 = invoke(SetSofttarget, componentid, connectionname);
         return json
@@ -4682,7 +4682,7 @@ namespace ffijson
         };
     }
  
-    json SetStationOverviewGraphWare(PARAMS(UniverseID stationid, const char* wareid, bool value))
+    json SetStationOverviewGraphWare(PARAMS(UniverseID stationid,const char* wareid,bool value))
     {
         const auto func_res_1 = invoke(SetStationOverviewGraphWare, stationid, wareid, value);
         return json
@@ -4700,7 +4700,7 @@ namespace ffijson
         };
     }
  
-    json ShouldSubordinateGroupDockAtCommander(PARAMS(UniverseID controllableid, int group))
+    json ShouldSubordinateGroupDockAtCommander(PARAMS(UniverseID controllableid,int group))
     {
         const auto func_res_1 = invoke(ShouldSubordinateGroupDockAtCommander, controllableid, group);
         return json
@@ -4709,7 +4709,7 @@ namespace ffijson
         };
     }
  
-    json ShowGamepadTextInput(PARAMS(const char* description, uint32_t maxchars, const char* existingtext, bool multilines, bool password))
+    json ShowGamepadTextInput(PARAMS(const char* description,uint32_t maxchars,const char* existingtext,bool multilines,bool password))
     {
         const auto func_res_1 = invoke(ShowGamepadTextInput, description, maxchars, existingtext, multilines, password);
         return json
@@ -4718,7 +4718,7 @@ namespace ffijson
         };
     }
  
-    json ShuffleMapConstructionPlan(PARAMS(UniverseID holomapid, bool checkonly))
+    json ShuffleMapConstructionPlan(PARAMS(UniverseID holomapid,bool checkonly))
     {
         const auto func_res_1 = invoke(ShuffleMapConstructionPlan, holomapid, checkonly);
         return json
@@ -4727,7 +4727,7 @@ namespace ffijson
         };
     }
  
-    json StartBoardingOperation(PARAMS(UniverseID defensibletargetid, const char* boarderfactionid))
+    json StartBoardingOperation(PARAMS(UniverseID defensibletargetid,const char* boarderfactionid))
     {
         const auto func_res_1 = invoke(StartBoardingOperation, defensibletargetid, boarderfactionid);
         return json
@@ -4754,7 +4754,7 @@ namespace ffijson
         };
     }
  
-    json TakeShipFromInternalStorage(PARAMS(UniverseID shipid, bool highpriority, bool checkonly))
+    json TakeShipFromInternalStorage(PARAMS(UniverseID shipid,bool highpriority,bool checkonly))
     {
         const auto func_res_1 = invoke(TakeShipFromInternalStorage, shipid, highpriority, checkonly);
         return json
@@ -4763,7 +4763,7 @@ namespace ffijson
         };
     }
  
-    json TeleportPlayerTo(PARAMS(UniverseID controllableid, bool allowcontrolling, bool instant, bool force))
+    json TeleportPlayerTo(PARAMS(UniverseID controllableid,bool allowcontrolling,bool instant,bool force))
     {
         const auto func_res_1 = invoke(TeleportPlayerTo, controllableid, allowcontrolling, instant, force);
         return json
@@ -4781,7 +4781,7 @@ namespace ffijson
         };
     }
  
-    json TriggerCompSlotAnimation(PARAMS(UniverseID componentid, const char* connectionname, const char* triggername))
+    json TriggerCompSlotAnimation(PARAMS(UniverseID componentid,const char* connectionname,const char* triggername))
     {
         const auto func_res_1 = invoke(TriggerCompSlotAnimation, componentid, connectionname, triggername);
         return json
@@ -4790,7 +4790,7 @@ namespace ffijson
         };
     }
  
-    json UpdateAttackerOfBoardingOperation(PARAMS(UniverseID defensibletargetid, UniverseID defensibleboarderid, const char* boarderfactionid, const char* actionid, uint32_t nummarinetiers))
+    json UpdateAttackerOfBoardingOperation(PARAMS(UniverseID defensibletargetid,UniverseID defensibleboarderid,const char* boarderfactionid,const char* actionid,uint32_t nummarinetiers))
     {
         uint32_t marinetieramounts;
         int32_t marinetierskilllevels;
@@ -4810,7 +4810,7 @@ namespace ffijson
         };
     }
  
-    json UpdateBoardingOperation(PARAMS(UniverseID defensibletargetid, const char* boarderfactionid, uint32_t approachthreshold, uint32_t insertionthreshold))
+    json UpdateBoardingOperation(PARAMS(UniverseID defensibletargetid,const char* boarderfactionid,uint32_t approachthreshold,uint32_t insertionthreshold))
     {
         const auto func_res_1 = invoke(UpdateBoardingOperation, defensibletargetid, boarderfactionid, approachthreshold, insertionthreshold);
         return json
@@ -4819,7 +4819,7 @@ namespace ffijson
         };
     }
  
-    json CanTeleportPlayerTo(PARAMS(UniverseID controllableid, bool allowcontrolling, bool force))
+    json CanTeleportPlayerTo(PARAMS(UniverseID controllableid,bool allowcontrolling,bool force))
     {
         const auto func_res_1 = invoke(CanTeleportPlayerTo, controllableid, allowcontrolling, force);
         return json
@@ -4846,7 +4846,7 @@ namespace ffijson
         };
     }
  
-    json GetBoardingActionOfAttacker(PARAMS(UniverseID defensibletargetid, UniverseID defensibleboarderid, const char* boarderfactionid))
+    json GetBoardingActionOfAttacker(PARAMS(UniverseID defensibletargetid,UniverseID defensibleboarderid,const char* boarderfactionid))
     {
         const auto func_res_1 = invoke(GetBoardingActionOfAttacker, defensibletargetid, defensibleboarderid, boarderfactionid);
         return json
@@ -4873,7 +4873,7 @@ namespace ffijson
         };
     }
  
-    json GetCompSlotPlayerActionTriggeredConnection(PARAMS(UniverseID componentid, const char* connectionname))
+    json GetCompSlotPlayerActionTriggeredConnection(PARAMS(UniverseID componentid,const char* connectionname))
     {
         const auto func_res_1 = invoke(GetCompSlotPlayerActionTriggeredConnection, componentid, connectionname);
         return json
@@ -4909,7 +4909,7 @@ namespace ffijson
         };
     }
  
-    json GetCurrentBoardingPhase(PARAMS(UniverseID defensibletargetid, const char* boarderfactionid))
+    json GetCurrentBoardingPhase(PARAMS(UniverseID defensibletargetid,const char* boarderfactionid))
     {
         const auto func_res_1 = invoke(GetCurrentBoardingPhase, defensibletargetid, boarderfactionid);
         return json
@@ -4918,7 +4918,7 @@ namespace ffijson
         };
     }
  
-    json GetCurrentDroneMode(PARAMS(UniverseID defensibleid, const char* dronetype))
+    json GetCurrentDroneMode(PARAMS(UniverseID defensibleid,const char* dronetype))
     {
         const auto func_res_1 = invoke(GetCurrentDroneMode, defensibleid, dronetype);
         return json
@@ -4945,7 +4945,7 @@ namespace ffijson
         };
     }
  
-    json GetCustomGameStartStringProperty(PARAMS(const char* id, const char* propertyid))
+    json GetCustomGameStartStringProperty(PARAMS(const char* id,const char* propertyid))
     {
         CustomGameStartStringPropertyState state;
         const auto func_res_1 = invoke(GetCustomGameStartStringProperty, id, propertyid, &state);
@@ -4967,7 +4967,7 @@ namespace ffijson
         };
     }
  
-    json GetDefaultResponseToSignalForControllable(PARAMS(const char* signalid, UniverseID controllableid))
+    json GetDefaultResponseToSignalForControllable(PARAMS(const char* signalid,UniverseID controllableid))
     {
         const auto func_res_1 = invoke(GetDefaultResponseToSignalForControllable, signalid, controllableid);
         return json
@@ -4976,7 +4976,7 @@ namespace ffijson
         };
     }
  
-    json GetDefaultResponseToSignalForFaction(PARAMS(const char* signalid, const char* factionid))
+    json GetDefaultResponseToSignalForFaction(PARAMS(const char* signalid,const char* factionid))
     {
         const auto func_res_1 = invoke(GetDefaultResponseToSignalForFaction, signalid, factionid);
         return json
@@ -5075,7 +5075,7 @@ namespace ffijson
         };
     }
  
-    json GetLocalizedInputName(PARAMS(uint32_t sourceid, uint32_t codeid))
+    json GetLocalizedInputName(PARAMS(uint32_t sourceid,uint32_t codeid))
     {
         const auto func_res_1 = invoke(GetLocalizedInputName, sourceid, codeid);
         return json
@@ -5102,7 +5102,7 @@ namespace ffijson
         };
     }
  
-    json GetLocalizedText(PARAMS(uint32_t pageid, uint32_t textid, const char* defaultvalue))
+    json GetLocalizedText(PARAMS(uint32_t pageid,uint32_t textid,const char* defaultvalue))
     {
         const auto func_res_1 = invoke(GetLocalizedText, pageid, textid, defaultvalue);
         return json
@@ -5154,7 +5154,7 @@ namespace ffijson
         };
     }
  
-    json GetMissingConstructionPlanBlueprints(PARAMS(UniverseID containerid, const char* constructionplanid))
+    json GetMissingConstructionPlanBlueprints(PARAMS(UniverseID containerid,const char* constructionplanid))
     {
         const auto func_res_1 = invoke(GetMissingConstructionPlanBlueprints, containerid, constructionplanid);
         return json
@@ -5181,7 +5181,7 @@ namespace ffijson
         };
     }
  
-    json GetPersonName(PARAMS(NPCSeed person, UniverseID controllableid))
+    json GetPersonName(PARAMS(NPCSeed person,UniverseID controllableid))
     {
         const auto func_res_1 = invoke(GetPersonName, person, controllableid);
         return json
@@ -5190,7 +5190,7 @@ namespace ffijson
         };
     }
  
-    json GetPersonRole(PARAMS(NPCSeed person, UniverseID controllableid))
+    json GetPersonRole(PARAMS(NPCSeed person,UniverseID controllableid))
     {
         const auto func_res_1 = invoke(GetPersonRole, person, controllableid);
         return json
@@ -5199,7 +5199,7 @@ namespace ffijson
         };
     }
  
-    json GetPersonRoleName(PARAMS(NPCSeed person, UniverseID controllableid))
+    json GetPersonRoleName(PARAMS(NPCSeed person,UniverseID controllableid))
     {
         const auto func_res_1 = invoke(GetPersonRoleName, person, controllableid);
         return json
@@ -5334,7 +5334,7 @@ namespace ffijson
         };
     }
  
-    json GetSlotSize(PARAMS(UniverseID defensibleid, UniverseID moduleid, const char* macroname, bool ismodule, const char* upgradetypename, size_t slot))
+    json GetSlotSize(PARAMS(UniverseID defensibleid,UniverseID moduleid,const char* macroname,bool ismodule,const char* upgradetypename,size_t slot))
     {
         const auto func_res_1 = invoke(GetSlotSize, defensibleid, moduleid, macroname, ismodule, upgradetypename, slot);
         return json
@@ -5343,7 +5343,7 @@ namespace ffijson
         };
     }
  
-    json GetSoftwareMaxCompatibleVersion(PARAMS(UniverseID controllableid, const char* macroname, const char* softwarename))
+    json GetSoftwareMaxCompatibleVersion(PARAMS(UniverseID controllableid,const char* macroname,const char* softwarename))
     {
         const auto func_res_1 = invoke(GetSoftwareMaxCompatibleVersion, controllableid, macroname, softwarename);
         return json
@@ -5361,7 +5361,7 @@ namespace ffijson
         };
     }
  
-    json GetSubordinateGroupAssignment(PARAMS(UniverseID controllableid, int group))
+    json GetSubordinateGroupAssignment(PARAMS(UniverseID controllableid,int group))
     {
         const auto func_res_1 = invoke(GetSubordinateGroupAssignment, controllableid, group);
         return json
@@ -5415,7 +5415,7 @@ namespace ffijson
         };
     }
  
-    json GetTurretGroupMode2(PARAMS(UniverseID defensibleid, UniverseID contextid, const char* path, const char* group))
+    json GetTurretGroupMode2(PARAMS(UniverseID defensibleid,UniverseID contextid,const char* path,const char* group))
     {
         const auto func_res_1 = invoke(GetTurretGroupMode2, defensibleid, contextid, path, group);
         return json
@@ -5424,7 +5424,7 @@ namespace ffijson
         };
     }
  
-    json GetUpgradeSlotCurrentMacro(PARAMS(UniverseID objectid, UniverseID moduleid, const char* upgradetypename, size_t slot))
+    json GetUpgradeSlotCurrentMacro(PARAMS(UniverseID objectid,UniverseID moduleid,const char* upgradetypename,size_t slot))
     {
         const auto func_res_1 = invoke(GetUpgradeSlotCurrentMacro, objectid, moduleid, upgradetypename, slot);
         return json
@@ -5433,7 +5433,7 @@ namespace ffijson
         };
     }
  
-    json GetVirtualUpgradeSlotCurrentMacro(PARAMS(UniverseID defensibleid, const char* upgradetypename, size_t slot))
+    json GetVirtualUpgradeSlotCurrentMacro(PARAMS(UniverseID defensibleid,const char* upgradetypename,size_t slot))
     {
         const auto func_res_1 = invoke(GetVirtualUpgradeSlotCurrentMacro, defensibleid, upgradetypename, slot);
         return json
@@ -5451,7 +5451,7 @@ namespace ffijson
         };
     }
  
-    json RequestDockAtReason(PARAMS(UniverseID containerid, bool checkonly))
+    json RequestDockAtReason(PARAMS(UniverseID containerid,bool checkonly))
     {
         const auto func_res_1 = invoke(RequestDockAtReason, containerid, checkonly);
         return json
@@ -5478,7 +5478,7 @@ namespace ffijson
         };
     }
  
-    json GetBuildTaskDuration(PARAMS(UniverseID containerid, BuildTaskID id))
+    json GetBuildTaskDuration(PARAMS(UniverseID containerid,BuildTaskID id))
     {
         const auto func_res_1 = invoke(GetBuildTaskDuration, containerid, id);
         return json
@@ -5487,7 +5487,7 @@ namespace ffijson
         };
     }
  
-    json GetContainerWareConsumption(PARAMS(UniverseID containerid, const char* wareid, bool ignorestate))
+    json GetContainerWareConsumption(PARAMS(UniverseID containerid,const char* wareid,bool ignorestate))
     {
         const auto func_res_1 = invoke(GetContainerWareConsumption, containerid, wareid, ignorestate);
         return json
@@ -5496,7 +5496,7 @@ namespace ffijson
         };
     }
  
-    json GetContainerWareProduction(PARAMS(UniverseID containerid, const char* wareid, bool ignorestate))
+    json GetContainerWareProduction(PARAMS(UniverseID containerid,const char* wareid,bool ignorestate))
     {
         const auto func_res_1 = invoke(GetContainerWareProduction, containerid, wareid, ignorestate);
         return json
@@ -5658,7 +5658,7 @@ namespace ffijson
         };
     }
  
-    json GetTextHeight(PARAMS(const char*const text, const char*const fontname, const uint32_t fontsize, const float wordwrapwidth))
+    json GetTextHeight(PARAMS(const char*const text,const char*const fontname,const uint32_t fontsize,const float wordwrapwidth))
     {
         const auto func_res_1 = invoke(GetTextHeight, text, fontname, fontsize, wordwrapwidth);
         return json
@@ -5667,7 +5667,7 @@ namespace ffijson
         };
     }
  
-    json GetTextWidth(PARAMS(const char*const text, const char*const fontname, const float fontsize))
+    json GetTextWidth(PARAMS(const char*const text,const char*const fontname,const float fontsize))
     {
         const auto func_res_1 = invoke(GetTextWidth, text, fontname, fontsize);
         return json
@@ -5820,7 +5820,7 @@ namespace ffijson
         };
     }
  
-    json GetContainerBuyLimit(PARAMS(UniverseID containerid, const char* wareid))
+    json GetContainerBuyLimit(PARAMS(UniverseID containerid,const char* wareid))
     {
         const auto func_res_1 = invoke(GetContainerBuyLimit, containerid, wareid);
         return json
@@ -5829,7 +5829,7 @@ namespace ffijson
         };
     }
  
-    json GetContainerSellLimit(PARAMS(UniverseID containerid, const char* wareid))
+    json GetContainerSellLimit(PARAMS(UniverseID containerid,const char* wareid))
     {
         const auto func_res_1 = invoke(GetContainerSellLimit, containerid, wareid);
         return json
@@ -5856,7 +5856,7 @@ namespace ffijson
         };
     }
  
-    json GetEntityCombinedSkill(PARAMS(UniverseID entityid, const char* role, const char* postid))
+    json GetEntityCombinedSkill(PARAMS(UniverseID entityid,const char* role,const char* postid))
     {
         const auto func_res_1 = invoke(GetEntityCombinedSkill, entityid, role, postid);
         return json
@@ -5865,7 +5865,7 @@ namespace ffijson
         };
     }
  
-    json GetPersonCombinedSkill(PARAMS(UniverseID controllableid, NPCSeed person, const char* role, const char* postid))
+    json GetPersonCombinedSkill(PARAMS(UniverseID controllableid,NPCSeed person,const char* role,const char* postid))
     {
         const auto func_res_1 = invoke(GetPersonCombinedSkill, controllableid, person, role, postid);
         return json
@@ -5874,7 +5874,7 @@ namespace ffijson
         };
     }
  
-    json GetPersonTier(PARAMS(NPCSeed npc, const char* role, UniverseID controllableid))
+    json GetPersonTier(PARAMS(NPCSeed npc,const char* role,UniverseID controllableid))
     {
         const auto func_res_1 = invoke(GetPersonTier, npc, role, controllableid);
         return json
@@ -5910,7 +5910,7 @@ namespace ffijson
         };
     }
  
-    json GetUIRelation(PARAMS(const char* fromfactionid, const char* tofactionid))
+    json GetUIRelation(PARAMS(const char* fromfactionid,const char* tofactionid))
     {
         const auto func_res_1 = invoke(GetUIRelation, fromfactionid, tofactionid);
         return json
@@ -5937,7 +5937,7 @@ namespace ffijson
         };
     }
  
-    json GetBuildWarePrice(PARAMS(UniverseID containerid, const char* warename))
+    json GetBuildWarePrice(PARAMS(UniverseID containerid,const char* warename))
     {
         const auto func_res_1 = invoke(GetBuildWarePrice, containerid, warename);
         return json
@@ -5964,7 +5964,7 @@ namespace ffijson
         };
     }
  
-    json GetCustomGameStartMoneyProperty(PARAMS(const char* id, const char* propertyid))
+    json GetCustomGameStartMoneyProperty(PARAMS(const char* id,const char* propertyid))
     {
         CustomGameStartMoneyPropertyState state;
         const auto func_res_1 = invoke(GetCustomGameStartMoneyProperty, id, propertyid, &state);
@@ -5987,7 +5987,7 @@ namespace ffijson
         };
     }
  
-    json GetRepairPrice(PARAMS(UniverseID componenttorepairid, UniverseID containerid))
+    json GetRepairPrice(PARAMS(UniverseID componenttorepairid,UniverseID containerid))
     {
         const auto func_res_1 = invoke(GetRepairPrice, componenttorepairid, containerid);
         return json
@@ -6005,7 +6005,7 @@ namespace ffijson
         };
     }
  
-    json GetBuildMapConstructionPlan(PARAMS(UniverseID holomapid, UniverseID defensibleid, bool usestoredplan))
+    json GetBuildMapConstructionPlan(PARAMS(UniverseID holomapid,UniverseID defensibleid,bool usestoredplan))
     {
         uint32_t resultlen = 32767;
         std::vector<UIConstructionPlanEntry> result;
@@ -6041,7 +6041,7 @@ namespace ffijson
         };
     }
  
-    json GetConstructionMapVenturePlatform(PARAMS(UniverseID holomapid, size_t venturedockidx))
+    json GetConstructionMapVenturePlatform(PARAMS(UniverseID holomapid,size_t venturedockidx))
     {
         const auto func_res_1 = invoke(GetConstructionMapVenturePlatform, holomapid, venturedockidx);
         return json
@@ -6059,7 +6059,7 @@ namespace ffijson
         };
     }
  
-    json GetNumBuildMapConstructionPlan(PARAMS(UniverseID holomapid, bool usestoredplan))
+    json GetNumBuildMapConstructionPlan(PARAMS(UniverseID holomapid,bool usestoredplan))
     {
         const auto func_res_1 = invoke(GetNumBuildMapConstructionPlan, holomapid, usestoredplan);
         return json
@@ -6077,7 +6077,7 @@ namespace ffijson
         };
     }
  
-    json GetNumPlannedStationModules(PARAMS(UniverseID defensibleid, bool includeall))
+    json GetNumPlannedStationModules(PARAMS(UniverseID defensibleid,bool includeall))
     {
         const auto func_res_1 = invoke(GetNumPlannedStationModules, defensibleid, includeall);
         return json
@@ -6131,7 +6131,7 @@ namespace ffijson
         };
     }
  
-    json GetNumUpgradeSlots(PARAMS(UniverseID destructibleid, const char* macroname, const char* upgradetypename))
+    json GetNumUpgradeSlots(PARAMS(UniverseID destructibleid,const char* macroname,const char* upgradetypename))
     {
         const auto func_res_1 = invoke(GetNumUpgradeSlots, destructibleid, macroname, upgradetypename);
         return json
@@ -6140,7 +6140,7 @@ namespace ffijson
         };
     }
  
-    json GetNumVirtualUpgradeSlots(PARAMS(UniverseID objectid, const char* macroname, const char* upgradetypename))
+    json GetNumVirtualUpgradeSlots(PARAMS(UniverseID objectid,const char* macroname,const char* upgradetypename))
     {
         const auto func_res_1 = invoke(GetNumVirtualUpgradeSlots, objectid, macroname, upgradetypename);
         return json
@@ -6158,7 +6158,7 @@ namespace ffijson
         };
     }
  
-    json GetPlannedStationModules(PARAMS( UniverseID defensibleid, bool includeall))
+    json GetPlannedStationModules(PARAMS(UniverseID defensibleid,bool includeall))
     {
         uint32_t resultlen = 32767;
         std::vector<UIConstructionPlanEntry> result;
@@ -6221,7 +6221,7 @@ namespace ffijson
         };
     }
  
-    json CreateOrder(PARAMS(UniverseID controllableid, const char* orderid, bool defaultorder))
+    json CreateOrder(PARAMS(UniverseID controllableid,const char* orderid,bool defaultorder))
     {
         uint32_t func_res_1 = invoke(CreateOrder, controllableid, orderid, defaultorder);
         return json
@@ -6230,7 +6230,7 @@ namespace ffijson
         };
     }
  
-    json CreateOrder2(PARAMS(UniverseID controllableid, const char* orderid, bool defaultorder, bool isoverride))
+    json CreateOrder2(PARAMS(UniverseID controllableid,const char* orderid,bool defaultorder,bool isoverride))
     {
         uint32_t func_res_1 = invoke(CreateOrder2, controllableid, orderid, defaultorder, isoverride);
         return json
@@ -6368,7 +6368,7 @@ namespace ffijson
         };
     }
  
-    json GetAllCountermeasures(PARAMS( UniverseID defensibleid))
+    json GetAllCountermeasures(PARAMS(UniverseID defensibleid))
     {
         uint32_t resultlen = 32767;
         std::vector<AmmoData> result;
@@ -6400,7 +6400,7 @@ namespace ffijson
         };
     }
  
-    json GetAllEquipment(PARAMS( bool playerblueprint))
+    json GetAllEquipment(PARAMS(bool playerblueprint))
     {
         uint32_t resultlen = 32767;
         std::vector<EquipmentWareInfo> result;
@@ -6432,7 +6432,7 @@ namespace ffijson
         };
     }
  
-    json GetAllEquipmentModProperties(PARAMS( const char* equipmentmodclass))
+    json GetAllEquipmentModProperties(PARAMS(const char* equipmentmodclass))
     {
         uint32_t resultlen = 32767;
         std::vector<EquipmentModPropertyInfo> result;
@@ -6466,7 +6466,7 @@ namespace ffijson
         };
     }
  
-    json GetAllFactionShips(PARAMS( const char* factionid))
+    json GetAllFactionShips(PARAMS(const char* factionid))
     {
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
@@ -6487,7 +6487,7 @@ namespace ffijson
         };
     }
  
-    json GetAllFactionStations(PARAMS( const char* factionid))
+    json GetAllFactionStations(PARAMS(const char* factionid))
     {
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
@@ -6508,7 +6508,7 @@ namespace ffijson
         };
     }
  
-    json GetAllFactions(PARAMS( bool includehidden))
+    json GetAllFactions(PARAMS(bool includehidden))
     {
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
@@ -6529,7 +6529,7 @@ namespace ffijson
         };
     }
  
-    json GetAllInventoryBombs(PARAMS( UniverseID entityid))
+    json GetAllInventoryBombs(PARAMS(UniverseID entityid))
     {
         uint32_t resultlen = 32767;
         std::vector<AmmoData> result;
@@ -6561,7 +6561,7 @@ namespace ffijson
         };
     }
  
-    json GetAllLaserTowers(PARAMS( UniverseID defensibleid))
+    json GetAllLaserTowers(PARAMS(UniverseID defensibleid))
     {
         uint32_t resultlen = 32767;
         std::vector<AmmoData> result;
@@ -6593,7 +6593,7 @@ namespace ffijson
         };
     }
  
-    json GetAllMines(PARAMS( UniverseID defensibleid))
+    json GetAllMines(PARAMS(UniverseID defensibleid))
     {
         uint32_t resultlen = 32767;
         std::vector<AmmoData> result;
@@ -6625,7 +6625,7 @@ namespace ffijson
         };
     }
  
-    json GetAllMissiles(PARAMS( UniverseID defensibleid))
+    json GetAllMissiles(PARAMS(UniverseID defensibleid))
     {
         uint32_t resultlen = 32767;
         std::vector<AmmoData> result;
@@ -6687,7 +6687,7 @@ namespace ffijson
         };
     }
  
-    json GetAllNavBeacons(PARAMS( UniverseID defensibleid))
+    json GetAllNavBeacons(PARAMS(UniverseID defensibleid))
     {
         uint32_t resultlen = 32767;
         std::vector<AmmoData> result;
@@ -6752,7 +6752,7 @@ namespace ffijson
         };
     }
  
-    json GetAllResourceProbes(PARAMS( UniverseID defensibleid))
+    json GetAllResourceProbes(PARAMS(UniverseID defensibleid))
     {
         uint32_t resultlen = 32767;
         std::vector<AmmoData> result;
@@ -6784,7 +6784,7 @@ namespace ffijson
         };
     }
  
-    json GetAllResponsesToSignal(PARAMS( const char* signalid))
+    json GetAllResponsesToSignal(PARAMS(const char* signalid))
     {
         uint32_t resultlen = 32767;
         std::vector<ResponseInfo> result;
@@ -6849,7 +6849,7 @@ namespace ffijson
         };
     }
  
-    json GetAllSatellites(PARAMS( UniverseID defensibleid))
+    json GetAllSatellites(PARAMS(UniverseID defensibleid))
     {
         uint32_t resultlen = 32767;
         std::vector<AmmoData> result;
@@ -6881,7 +6881,7 @@ namespace ffijson
         };
     }
  
-    json GetAllShipMacros(PARAMS( bool playerblueprint))
+    json GetAllShipMacros(PARAMS(bool playerblueprint))
     {
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
@@ -6936,7 +6936,7 @@ namespace ffijson
         };
     }
  
-    json GetAllUnits(PARAMS( UniverseID defensibleid, bool onlydrones))
+    json GetAllUnits(PARAMS(UniverseID defensibleid,bool onlydrones))
     {
         uint32_t resultlen = 32767;
         std::vector<UnitData> result;
@@ -6967,7 +6967,7 @@ namespace ffijson
         };
     }
  
-    json GetAllowedWeaponSystems(PARAMS( UniverseID defensibleid, size_t orderidx, bool usedefault))
+    json GetAllowedWeaponSystems(PARAMS(UniverseID defensibleid,size_t orderidx,bool usedefault))
     {
         uint32_t resultlen = 32767;
         std::vector<WeaponSystemInfo> result;
@@ -6998,7 +6998,7 @@ namespace ffijson
         };
     }
  
-    json GetAmmoStorage(PARAMS( UniverseID defensibleid, const char* ammotype))
+    json GetAmmoStorage(PARAMS(UniverseID defensibleid,const char* ammotype))
     {
         uint32_t resultlen = 32767;
         std::vector<AmmoData> result;
@@ -7030,7 +7030,7 @@ namespace ffijson
         };
     }
  
-    json GetAmountOfWareAvailable(PARAMS(const char* wareid, UniverseID productionmoduleid))
+    json GetAmountOfWareAvailable(PARAMS(const char* wareid,UniverseID productionmoduleid))
     {
         uint32_t func_res_1 = invoke(GetAmountOfWareAvailable, wareid, productionmoduleid);
         return json
@@ -7039,7 +7039,7 @@ namespace ffijson
         };
     }
  
-    json GetAssignedConstructionVessels(PARAMS( UniverseID containerid))
+    json GetAssignedConstructionVessels(PARAMS(UniverseID containerid))
     {
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
@@ -7060,7 +7060,7 @@ namespace ffijson
         };
     }
  
-    json GetAttackersOfBoardingOperation(PARAMS( UniverseID defensibletargetid, const char* boarderfactionid))
+    json GetAttackersOfBoardingOperation(PARAMS(UniverseID defensibletargetid,const char* boarderfactionid))
     {
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
@@ -7112,7 +7112,7 @@ namespace ffijson
         };
     }
  
-    json GetAvailableEquipment(PARAMS( UniverseID containerid, const char* classid))
+    json GetAvailableEquipment(PARAMS(UniverseID containerid,const char* classid))
     {
         uint32_t resultlen = 32767;
         std::vector<EquipmentWareInfo> result;
@@ -7176,7 +7176,7 @@ namespace ffijson
         };
     }
  
-    json GetAvailableLockboxes(PARAMS( UniverseID entityid))
+    json GetAvailableLockboxes(PARAMS(UniverseID entityid))
     {
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
@@ -7229,7 +7229,7 @@ namespace ffijson
         };
     }
  
-    json GetBlueprints(PARAMS( const char* set, const char* category, const char* macroname))
+    json GetBlueprints(PARAMS(const char* set,const char* category,const char* macroname))
     {
         uint32_t resultlen = 32767;
         std::vector<UIBlueprint> result;
@@ -7260,7 +7260,7 @@ namespace ffijson
         };
     }
  
-    json GetBoardingCasualtiesOfTier(PARAMS(int32_t marinetierskilllevel, UniverseID defensibletargetid, const char* boarderfactionid))
+    json GetBoardingCasualtiesOfTier(PARAMS(int32_t marinetierskilllevel,UniverseID defensibletargetid,const char* boarderfactionid))
     {
         uint32_t func_res_1 = invoke(GetBoardingCasualtiesOfTier, marinetierskilllevel, defensibletargetid, boarderfactionid);
         return json
@@ -7269,7 +7269,7 @@ namespace ffijson
         };
     }
  
-    json GetBoardingStrengthFromOperation(PARAMS(UniverseID defensibletargetid, const char* boarderfactionid))
+    json GetBoardingStrengthFromOperation(PARAMS(UniverseID defensibletargetid,const char* boarderfactionid))
     {
         uint32_t func_res_1 = invoke(GetBoardingStrengthFromOperation, defensibletargetid, boarderfactionid);
         return json
@@ -7278,7 +7278,7 @@ namespace ffijson
         };
     }
  
-    json GetBoardingStrengthOfControllableTierAmounts(PARAMS(UniverseID controllableid, uint32_t nummarinetiers))
+    json GetBoardingStrengthOfControllableTierAmounts(PARAMS(UniverseID controllableid,uint32_t nummarinetiers))
     {
         uint32_t marinetieramounts;
         int32_t marinetierskilllevels;
@@ -7298,7 +7298,7 @@ namespace ffijson
         };
     }
  
-    json GetBuildModules(PARAMS( UniverseID containerid))
+    json GetBuildModules(PARAMS(UniverseID containerid))
     {
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
@@ -7350,7 +7350,7 @@ namespace ffijson
         };
     }
  
-    json GetBuildTasks(PARAMS( UniverseID containerid, UniverseID buildmoduleid, bool isinprogress, bool includeupgrade))
+    json GetBuildTasks(PARAMS(UniverseID containerid,UniverseID buildmoduleid,bool isinprogress,bool includeupgrade))
     {
         uint32_t resultlen = 32767;
         std::vector<BuildTaskInfo> result;
@@ -7387,7 +7387,7 @@ namespace ffijson
         };
     }
  
-    json GetCargo(PARAMS( UniverseID containerid, const char* tags))
+    json GetCargo(PARAMS(UniverseID containerid,const char* tags))
     {
         uint32_t resultlen = 32767;
         std::vector<UIWareInfo> result;
@@ -7418,7 +7418,7 @@ namespace ffijson
         };
     }
  
-    json GetCargoStatistics(PARAMS( size_t numdatapoints))
+    json GetCargoStatistics(PARAMS(size_t numdatapoints))
     {
         uint32_t resultlen = 32767;
         std::vector<UICargoStat> result;
@@ -7449,7 +7449,7 @@ namespace ffijson
         };
     }
  
-    json GetCargoTransportTypes(PARAMS( UniverseID containerid, bool merge, bool aftertradeorders))
+    json GetCargoTransportTypes(PARAMS(UniverseID containerid,bool merge,bool aftertradeorders))
     {
         uint32_t resultlen = 32767;
         std::vector<StorageInfo> result;
@@ -7502,7 +7502,7 @@ namespace ffijson
         };
     }
  
-    json GetConstructionPlanInvalidPatches(PARAMS( const char* constructionplanid))
+    json GetConstructionPlanInvalidPatches(PARAMS(const char* constructionplanid))
     {
         uint32_t resultlen = 32767;
         std::vector<InvalidPatchInfo> result;
@@ -7567,7 +7567,7 @@ namespace ffijson
         };
     }
  
-    json GetContainerAllowedBuildFactions(PARAMS( UniverseID containerid))
+    json GetContainerAllowedBuildFactions(PARAMS(UniverseID containerid))
     {
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
@@ -7588,7 +7588,7 @@ namespace ffijson
         };
     }
  
-    json GetContainerBuildResources(PARAMS( UniverseID containerid))
+    json GetContainerBuildResources(PARAMS(UniverseID containerid))
     {
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
@@ -7609,7 +7609,7 @@ namespace ffijson
         };
     }
  
-    json GetContainerBuilderMacros(PARAMS( UniverseID containerid))
+    json GetContainerBuilderMacros(PARAMS(UniverseID containerid))
     {
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
@@ -7630,7 +7630,7 @@ namespace ffijson
         };
     }
  
-    json GetContainerStockLimitOverrides(PARAMS( UniverseID containerid))
+    json GetContainerStockLimitOverrides(PARAMS(UniverseID containerid))
     {
         uint32_t resultlen = 32767;
         std::vector<UIWareInfo> result;
@@ -7661,7 +7661,7 @@ namespace ffijson
         };
     }
  
-    json GetContainerWareReservations(PARAMS( UniverseID containerid))
+    json GetContainerWareReservations(PARAMS(UniverseID containerid))
     {
         uint32_t resultlen = 32767;
         std::vector<WareReservationInfo> result;
@@ -7694,7 +7694,7 @@ namespace ffijson
         };
     }
  
-    json GetCurrentMissionOffers(PARAMS( bool showninbbs))
+    json GetCurrentMissionOffers(PARAMS(bool showninbbs))
     {
         uint32_t resultlen = 32767;
         std::vector<uint64_t> result;
@@ -7715,7 +7715,7 @@ namespace ffijson
         };
     }
  
-    json GetCurrentVentureShips(PARAMS( UniverseID ventureplatformid))
+    json GetCurrentVentureShips(PARAMS(UniverseID ventureplatformid))
     {
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
@@ -7736,7 +7736,7 @@ namespace ffijson
         };
     }
  
-    json GetCustomGameStartBlueprintDefaultProperty(PARAMS( const char* id, const char* propertyid))
+    json GetCustomGameStartBlueprintDefaultProperty(PARAMS(const char* id,const char* propertyid))
     {
         uint32_t resultlen = 32767;
         std::vector<CustomGameStartBlueprint> result;
@@ -7765,7 +7765,7 @@ namespace ffijson
         };
     }
  
-    json GetCustomGameStartBlueprintProperty(PARAMS( const char* id, const char* propertyid))
+    json GetCustomGameStartBlueprintProperty(PARAMS(const char* id,const char* propertyid))
     {
         uint32_t resultlen = 32767;
         std::vector<CustomGameStartBlueprint> result;
@@ -7794,7 +7794,7 @@ namespace ffijson
         };
     }
  
-    json GetCustomGameStartEncyclopediaProperty(PARAMS( const char* id, const char* propertyid))
+    json GetCustomGameStartEncyclopediaProperty(PARAMS(const char* id,const char* propertyid))
     {
         uint32_t resultlen = 32767;
         std::vector<CustomGameStartEncyclopediaEntry> result;
@@ -7824,7 +7824,7 @@ namespace ffijson
         };
     }
  
-    json GetCustomGameStartEncyclopediaPropertyCounts(PARAMS(const char* id, const char* propertyid))
+    json GetCustomGameStartEncyclopediaPropertyCounts(PARAMS(const char* id,const char* propertyid))
     {
         uint32_t func_res_1 = invoke(GetCustomGameStartEncyclopediaPropertyCounts, id, propertyid);
         return json
@@ -7833,7 +7833,7 @@ namespace ffijson
         };
     }
  
-    json GetCustomGameStartInventoryDefaultProperty(PARAMS( const char* id, const char* propertyid))
+    json GetCustomGameStartInventoryDefaultProperty(PARAMS(const char* id,const char* propertyid))
     {
         uint32_t resultlen = 32767;
         std::vector<CustomGameStartInventory> result;
@@ -7863,7 +7863,7 @@ namespace ffijson
         };
     }
  
-    json GetCustomGameStartInventoryProperty(PARAMS( const char* id, const char* propertyid))
+    json GetCustomGameStartInventoryProperty(PARAMS(const char* id,const char* propertyid))
     {
         uint32_t resultlen = 32767;
         std::vector<CustomGameStartInventory> result;
@@ -7893,7 +7893,7 @@ namespace ffijson
         };
     }
  
-    json GetCustomGameStartRelationsProperty(PARAMS( const char* id, const char* propertyid))
+    json GetCustomGameStartRelationsProperty(PARAMS(const char* id,const char* propertyid))
     {
         uint32_t resultlen = 32767;
         std::vector<CustomGameStartRelationInfo> result;
@@ -7924,7 +7924,7 @@ namespace ffijson
         };
     }
  
-    json GetCustomGameStartRelationsPropertyCounts(PARAMS(const char* id, const char* propertyid))
+    json GetCustomGameStartRelationsPropertyCounts(PARAMS(const char* id,const char* propertyid))
     {
         uint32_t func_res_1 = invoke(GetCustomGameStartRelationsPropertyCounts, id, propertyid);
         return json
@@ -7933,7 +7933,7 @@ namespace ffijson
         };
     }
  
-    json GetCustomGameStartResearchProperty(PARAMS( const char* id, const char* propertyid))
+    json GetCustomGameStartResearchProperty(PARAMS(const char* id,const char* propertyid))
     {
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
@@ -7954,7 +7954,7 @@ namespace ffijson
         };
     }
  
-    json GetCustomGameStartResearchPropertyCounts(PARAMS(const char* id, const char* propertyid))
+    json GetCustomGameStartResearchPropertyCounts(PARAMS(const char* id,const char* propertyid))
     {
         uint32_t func_res_1 = invoke(GetCustomGameStartResearchPropertyCounts, id, propertyid);
         return json
@@ -7963,7 +7963,7 @@ namespace ffijson
         };
     }
  
-    json GetDamagedSubComponents(PARAMS( UniverseID objectid))
+    json GetDamagedSubComponents(PARAMS(UniverseID objectid))
     {
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
@@ -8002,7 +8002,7 @@ namespace ffijson
         };
     }
  
-    json GetDefensibleActiveWeaponGroup(PARAMS(UniverseID defensibleid, bool primary))
+    json GetDefensibleActiveWeaponGroup(PARAMS(UniverseID defensibleid,bool primary))
     {
         uint32_t func_res_1 = invoke(GetDefensibleActiveWeaponGroup, defensibleid, primary);
         return json
@@ -8011,7 +8011,7 @@ namespace ffijson
         };
     }
  
-    json GetDefensibleDPS(PARAMS( UniverseID defensibleid, bool primary, bool secondary, bool lasers, bool missiles, bool turrets, bool includeheat, bool includeinactive))
+    json GetDefensibleDPS(PARAMS(UniverseID defensibleid,bool primary,bool secondary,bool lasers,bool missiles,bool turrets,bool includeheat,bool includeinactive))
     {
         DPSData result;
         uint32_t func_res_1 = invoke(GetDefensibleDPS, &result, defensibleid, primary, secondary, lasers, missiles, turrets, includeheat, includeinactive);
@@ -8041,7 +8041,7 @@ namespace ffijson
         };
     }
  
-    json GetDockedShips(PARAMS( UniverseID dockingbayorcontainerid, const char* factionid))
+    json GetDockedShips(PARAMS(UniverseID dockingbayorcontainerid,const char* factionid))
     {
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
@@ -8062,7 +8062,7 @@ namespace ffijson
         };
     }
  
-    json GetDroneModes(PARAMS( UniverseID defensibleid, const char* dronetype))
+    json GetDroneModes(PARAMS(UniverseID defensibleid,const char* dronetype))
     {
         uint32_t resultlen = 32767;
         std::vector<DroneModeInfo> result;
@@ -8111,7 +8111,7 @@ namespace ffijson
         };
     }
  
-    json GetDropDownOptions(PARAMS( const int dropdownid))
+    json GetDropDownOptions(PARAMS(const int dropdownid))
     {
         uint32_t resultlen = 32767;
         std::vector<DropDownOption> result;
@@ -8228,7 +8228,7 @@ namespace ffijson
         };
     }
  
-    json GetGraphData(PARAMS( const int graphid, const size_t datarecordidx))
+    json GetGraphData(PARAMS(const int graphid,const size_t datarecordidx))
     {
         uint32_t resultlen = 32767;
         std::vector<GraphDataPoint> result;
@@ -8258,7 +8258,7 @@ namespace ffijson
         };
     }
  
-    json GetGraphDataRecords(PARAMS( int graphid))
+    json GetGraphDataRecords(PARAMS(int graphid))
     {
         uint32_t resultlen = 32767;
         std::vector<GraphDataRecord> result;
@@ -8295,7 +8295,7 @@ namespace ffijson
         };
     }
  
-    json GetGraphIcons(PARAMS( int graphid))
+    json GetGraphIcons(PARAMS(int graphid))
     {
         uint32_t resultlen = 32767;
         std::vector<GraphIcon> result;
@@ -8336,7 +8336,7 @@ namespace ffijson
         };
     }
  
-    json GetHQs(PARAMS( const char* factionid))
+    json GetHQs(PARAMS(const char* factionid))
     {
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
@@ -8357,7 +8357,7 @@ namespace ffijson
         };
     }
  
-    json GetIllegalToFactions(PARAMS( const char* wareid))
+    json GetIllegalToFactions(PARAMS(const char* wareid))
     {
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
@@ -8453,7 +8453,7 @@ namespace ffijson
         };
     }
  
-    json GetLibraryEntryAliases(PARAMS( const char* librarytypeid, const char* id))
+    json GetLibraryEntryAliases(PARAMS(const char* librarytypeid,const char* id))
     {
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
@@ -8474,7 +8474,7 @@ namespace ffijson
         };
     }
  
-    json GetLoadoutCounts(PARAMS( UniverseID defensibleid, const char* macroname, const char* loadoutid))
+    json GetLoadoutCounts(PARAMS(UniverseID defensibleid,const char* macroname,const char* loadoutid))
     {
         UILoadoutCounts result;
         uint32_t func_res_1 = invoke(GetLoadoutCounts, &result, defensibleid, macroname, loadoutid);
@@ -8502,7 +8502,7 @@ namespace ffijson
         };
     }
  
-    json GetLoadoutInvalidPatches(PARAMS( UniverseID defensibleid, const char* macroname, const char* loadoutid))
+    json GetLoadoutInvalidPatches(PARAMS(UniverseID defensibleid,const char* macroname,const char* loadoutid))
     {
         uint32_t resultlen = 32767;
         std::vector<InvalidPatchInfo> result;
@@ -8535,7 +8535,7 @@ namespace ffijson
         };
     }
  
-    json GetLoadoutsInfo(PARAMS( UniverseID componentid, const char* macroname))
+    json GetLoadoutsInfo(PARAMS(UniverseID componentid,const char* macroname))
     {
         uint32_t resultlen = 32767;
         std::vector<UILoadoutInfo> result;
@@ -8585,7 +8585,7 @@ namespace ffijson
         };
     }
  
-    json GetMapComponentMissions(PARAMS( UniverseID holomapid, UniverseID componentid))
+    json GetMapComponentMissions(PARAMS(UniverseID holomapid,UniverseID componentid))
     {
         uint32_t resultlen = 32767;
         std::vector<MissionID> result;
@@ -8606,7 +8606,7 @@ namespace ffijson
         };
     }
  
-    json GetMapRenderedComponents(PARAMS( UniverseID holomapid))
+    json GetMapRenderedComponents(PARAMS(UniverseID holomapid))
     {
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
@@ -8627,7 +8627,7 @@ namespace ffijson
         };
     }
  
-    json GetMapSelectedComponents(PARAMS( UniverseID holomapid))
+    json GetMapSelectedComponents(PARAMS(UniverseID holomapid))
     {
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
@@ -8648,7 +8648,7 @@ namespace ffijson
         };
     }
  
-    json GetMaxProductionStorage(PARAMS( UniverseID containerid))
+    json GetMaxProductionStorage(PARAMS(UniverseID containerid))
     {
         uint32_t resultlen = 32767;
         std::vector<UIWareAmount> result;
@@ -8678,7 +8678,7 @@ namespace ffijson
         };
     }
  
-    json GetMessages(PARAMS( size_t start, size_t count, const char* categoryname))
+    json GetMessages(PARAMS(size_t start,size_t count,const char* categoryname))
     {
         uint32_t resultlen = 32767;
         std::vector<MessageInfo> result;
@@ -8724,7 +8724,7 @@ namespace ffijson
         };
     }
  
-    json GetMissileCargo(PARAMS( UniverseID containerid))
+    json GetMissileCargo(PARAMS(UniverseID containerid))
     {
         uint32_t resultlen = 32767;
         std::vector<UIWareInfo> result;
@@ -8817,7 +8817,7 @@ namespace ffijson
         };
     }
  
-    json GetMissionThreadSubMissions(PARAMS( MissionID missionid))
+    json GetMissionThreadSubMissions(PARAMS(MissionID missionid))
     {
         uint32_t resultlen = 32767;
         std::vector<MissionID> result;
@@ -8838,7 +8838,7 @@ namespace ffijson
         };
     }
  
-    json GetModuleNeededResources(PARAMS( UniverseID holomapid, size_t cp_idx))
+    json GetModuleNeededResources(PARAMS(UniverseID holomapid,size_t cp_idx))
     {
         uint32_t resultlen = 32767;
         std::vector<UIWareInfo> result;
@@ -8869,7 +8869,7 @@ namespace ffijson
         };
     }
  
-    json GetModuleRecycledResources(PARAMS( UniverseID moduleid))
+    json GetModuleRecycledResources(PARAMS(UniverseID moduleid))
     {
         uint32_t resultlen = 32767;
         std::vector<UIWareInfo> result;
@@ -8900,7 +8900,7 @@ namespace ffijson
         };
     }
  
-    json GetMoonInfo(PARAMS( UniverseID clusterid, uint32_t planetidx))
+    json GetMoonInfo(PARAMS(UniverseID clusterid,uint32_t planetidx))
     {
         uint32_t resultlen = 32767;
         std::vector<UICelestialBodyInfo> result;
@@ -8944,7 +8944,7 @@ namespace ffijson
         };
     }
  
-    json GetNPCAccountStatistics(PARAMS( UniverseID entityid, double starttime, double endtime))
+    json GetNPCAccountStatistics(PARAMS(UniverseID entityid,double starttime,double endtime))
     {
         uint32_t resultlen = 32767;
         std::vector<UIAccountStatData> result;
@@ -9214,7 +9214,7 @@ namespace ffijson
         };
     }
  
-    json GetNumAllUnits(PARAMS(UniverseID defensibleid, bool onlydrones))
+    json GetNumAllUnits(PARAMS(UniverseID defensibleid,bool onlydrones))
     {
         uint32_t func_res_1 = invoke(GetNumAllUnits, defensibleid, onlydrones);
         return json
@@ -9232,7 +9232,7 @@ namespace ffijson
         };
     }
  
-    json GetNumAmmoStorage(PARAMS(UniverseID defensibleid, const char* ammotype))
+    json GetNumAmmoStorage(PARAMS(UniverseID defensibleid,const char* ammotype))
     {
         uint32_t func_res_1 = invoke(GetNumAmmoStorage, defensibleid, ammotype);
         return json
@@ -9250,7 +9250,7 @@ namespace ffijson
         };
     }
  
-    json GetNumAttackersOfBoardingOperation(PARAMS(UniverseID defensibletargetid, const char* boarderfactionid))
+    json GetNumAttackersOfBoardingOperation(PARAMS(UniverseID defensibletargetid,const char* boarderfactionid))
     {
         uint32_t func_res_1 = invoke(GetNumAttackersOfBoardingOperation, defensibletargetid, boarderfactionid);
         return json
@@ -9268,7 +9268,7 @@ namespace ffijson
         };
     }
  
-    json GetNumAvailableEquipment(PARAMS(UniverseID containerid, const char* classid))
+    json GetNumAvailableEquipment(PARAMS(UniverseID containerid,const char* classid))
     {
         uint32_t func_res_1 = invoke(GetNumAvailableEquipment, containerid, classid);
         return json
@@ -9304,7 +9304,7 @@ namespace ffijson
         };
     }
  
-    json GetNumBlueprints(PARAMS(const char* set, const char* category, const char* macroname))
+    json GetNumBlueprints(PARAMS(const char* set,const char* category,const char* macroname))
     {
         uint32_t func_res_1 = invoke(GetNumBlueprints, set, category, macroname);
         return json
@@ -9313,7 +9313,7 @@ namespace ffijson
         };
     }
  
-    json GetNumBoardingMarinesFromOperation(PARAMS(UniverseID defensibletargetid, const char* boarderfactionid))
+    json GetNumBoardingMarinesFromOperation(PARAMS(UniverseID defensibletargetid,const char* boarderfactionid))
     {
         uint32_t func_res_1 = invoke(GetNumBoardingMarinesFromOperation, defensibletargetid, boarderfactionid);
         return json
@@ -9331,7 +9331,7 @@ namespace ffijson
         };
     }
  
-    json GetNumBuildTasks(PARAMS(UniverseID containerid, UniverseID buildmoduleid, bool isinprogress, bool includeupgrade))
+    json GetNumBuildTasks(PARAMS(UniverseID containerid,UniverseID buildmoduleid,bool isinprogress,bool includeupgrade))
     {
         uint32_t func_res_1 = invoke(GetNumBuildTasks, containerid, buildmoduleid, isinprogress, includeupgrade);
         return json
@@ -9340,7 +9340,7 @@ namespace ffijson
         };
     }
  
-    json GetNumCargo(PARAMS(UniverseID containerid, const char* tags))
+    json GetNumCargo(PARAMS(UniverseID containerid,const char* tags))
     {
         uint32_t func_res_1 = invoke(GetNumCargo, containerid, tags);
         return json
@@ -9349,7 +9349,7 @@ namespace ffijson
         };
     }
  
-    json GetNumCargoStatistics(PARAMS(UniverseID containerorspaceid, double starttime, double endtime, size_t numdatapoints))
+    json GetNumCargoStatistics(PARAMS(UniverseID containerorspaceid,double starttime,double endtime,size_t numdatapoints))
     {
         uint32_t func_res_1 = invoke(GetNumCargoStatistics, containerorspaceid, starttime, endtime, numdatapoints);
         return json
@@ -9358,7 +9358,7 @@ namespace ffijson
         };
     }
  
-    json GetNumCargoTransportTypes(PARAMS(UniverseID containerid, bool merge))
+    json GetNumCargoTransportTypes(PARAMS(UniverseID containerid,bool merge))
     {
         uint32_t func_res_1 = invoke(GetNumCargoTransportTypes, containerid, merge);
         return json
@@ -9376,7 +9376,7 @@ namespace ffijson
         };
     }
  
-    json GetNumConstructionMapVenturePlatformDocks(PARAMS(UniverseID holomapid, size_t ventureplatformidx))
+    json GetNumConstructionMapVenturePlatformDocks(PARAMS(UniverseID holomapid,size_t ventureplatformidx))
     {
         uint32_t func_res_1 = invoke(GetNumConstructionMapVenturePlatformDocks, holomapid, ventureplatformidx);
         return json
@@ -9475,7 +9475,7 @@ namespace ffijson
         };
     }
  
-    json GetNumDockedShips(PARAMS(UniverseID dockingbayorcontainerid, const char* factionid))
+    json GetNumDockedShips(PARAMS(UniverseID dockingbayorcontainerid,const char* factionid))
     {
         uint32_t func_res_1 = invoke(GetNumDockedShips, dockingbayorcontainerid, factionid);
         return json
@@ -9484,7 +9484,7 @@ namespace ffijson
         };
     }
  
-    json GetNumDroneModes(PARAMS(UniverseID defensibleid, const char* dronetype))
+    json GetNumDroneModes(PARAMS(UniverseID defensibleid,const char* dronetype))
     {
         uint32_t func_res_1 = invoke(GetNumDroneModes, defensibleid, dronetype);
         return json
@@ -9565,7 +9565,7 @@ namespace ffijson
         };
     }
  
-    json GetNumLibraryEntryAliases(PARAMS(const char* librarytypeid, const char* id))
+    json GetNumLibraryEntryAliases(PARAMS(const char* librarytypeid,const char* id))
     {
         uint32_t func_res_1 = invoke(GetNumLibraryEntryAliases, librarytypeid, id);
         return json
@@ -9574,7 +9574,7 @@ namespace ffijson
         };
     }
  
-    json GetNumLoadoutsInfo(PARAMS(UniverseID componentid, const char* macroname))
+    json GetNumLoadoutsInfo(PARAMS(UniverseID componentid,const char* macroname))
     {
         uint32_t func_res_1 = invoke(GetNumLoadoutsInfo, componentid, macroname);
         return json
@@ -9583,7 +9583,7 @@ namespace ffijson
         };
     }
  
-    json GetNumMapComponentMissions(PARAMS(UniverseID holomapid, UniverseID componentid))
+    json GetNumMapComponentMissions(PARAMS(UniverseID holomapid,UniverseID componentid))
     {
         uint32_t func_res_1 = invoke(GetNumMapComponentMissions, holomapid, componentid);
         return json
@@ -9619,7 +9619,7 @@ namespace ffijson
         };
     }
  
-    json GetNumMessages(PARAMS(const char* categoryname, bool unknownBool))
+    json GetNumMessages(PARAMS(const char* categoryname,bool unknownBool))
     {
         uint32_t func_res_1 = invoke(GetNumMessages, categoryname, unknownBool);
         return json
@@ -9637,7 +9637,7 @@ namespace ffijson
         };
     }
  
-    json GetNumMissingBuildResources2(PARAMS(UniverseID containerid, uint32_t numorders, bool playercase))
+    json GetNumMissingBuildResources2(PARAMS(UniverseID containerid,uint32_t numorders,bool playercase))
     {
         UIBuildOrderList orders;
         uint32_t func_res_1 = invoke(GetNumMissingBuildResources2, containerid, &orders, numorders, playercase);
@@ -9660,7 +9660,7 @@ namespace ffijson
         };
     }
  
-    json GetNumMissingLoadoutResources2(PARAMS(UniverseID containerid, uint32_t numorders, bool playercase))
+    json GetNumMissingLoadoutResources2(PARAMS(UniverseID containerid,uint32_t numorders,bool playercase))
     {
         UIBuildOrderList orders;
         uint32_t func_res_1 = invoke(GetNumMissingLoadoutResources2, containerid, &orders, numorders, playercase);
@@ -9692,7 +9692,7 @@ namespace ffijson
         };
     }
  
-    json GetNumModuleNeededResources(PARAMS(UniverseID holomapid, size_t cp_idx))
+    json GetNumModuleNeededResources(PARAMS(UniverseID holomapid,size_t cp_idx))
     {
         uint32_t func_res_1 = invoke(GetNumModuleNeededResources, holomapid, cp_idx);
         return json
@@ -9719,7 +9719,7 @@ namespace ffijson
         };
     }
  
-    json GetNumObjectsWithSyncPoint(PARAMS(uint32_t syncid, bool onlyreached))
+    json GetNumObjectsWithSyncPoint(PARAMS(uint32_t syncid,bool onlyreached))
     {
         uint32_t func_res_1 = invoke(GetNumObjectsWithSyncPoint, syncid, onlyreached);
         return json
@@ -9746,7 +9746,7 @@ namespace ffijson
         };
     }
  
-    json GetNumPeopleAfterOrders(PARAMS(UniverseID controllableid, int32_t numorders))
+    json GetNumPeopleAfterOrders(PARAMS(UniverseID controllableid,int32_t numorders))
     {
         uint32_t func_res_1 = invoke(GetNumPeopleAfterOrders, controllableid, numorders);
         return json
@@ -9755,7 +9755,7 @@ namespace ffijson
         };
     }
  
-    json GetNumPersonSuitableControlPosts(PARAMS(UniverseID controllableid, UniverseID personcontrollableid, NPCSeed person, bool free))
+    json GetNumPersonSuitableControlPosts(PARAMS(UniverseID controllableid,UniverseID personcontrollableid,NPCSeed person,bool free))
     {
         uint32_t func_res_1 = invoke(GetNumPersonSuitableControlPosts, controllableid, personcontrollableid, person, free);
         return json
@@ -9791,7 +9791,7 @@ namespace ffijson
         };
     }
  
-    json GetNumPlayerLogos(PARAMS(bool includestandard, bool includecustom))
+    json GetNumPlayerLogos(PARAMS(bool includestandard,bool includecustom))
     {
         uint32_t func_res_1 = invoke(GetNumPlayerLogos, includestandard, includecustom);
         return json
@@ -9800,7 +9800,7 @@ namespace ffijson
         };
     }
  
-    json GetNumPlayerShipBuildTasks(PARAMS(bool isinprogress, bool includeupgrade))
+    json GetNumPlayerShipBuildTasks(PARAMS(bool isinprogress,bool includeupgrade))
     {
         uint32_t func_res_1 = invoke(GetNumPlayerShipBuildTasks, isinprogress, includeupgrade);
         return json
@@ -9809,7 +9809,7 @@ namespace ffijson
         };
     }
  
-    json GetNumRemovedConstructionPlanModules2(PARAMS(UniverseID holomapid, UniverseID defensibleid, bool usestoredplan, bool checkupgrades))
+    json GetNumRemovedConstructionPlanModules2(PARAMS(UniverseID holomapid,UniverseID defensibleid,bool usestoredplan,bool checkupgrades))
     {
         uint32_t newIndex;
         uint32_t numChangedIndices;
@@ -9901,7 +9901,7 @@ namespace ffijson
         };
     }
  
-    json GetNumSoftwareSlots(PARAMS(UniverseID controllableid, const char* macroname))
+    json GetNumSoftwareSlots(PARAMS(UniverseID controllableid,const char* macroname))
     {
         uint32_t func_res_1 = invoke(GetNumSoftwareSlots, controllableid, macroname);
         return json
@@ -9919,7 +9919,7 @@ namespace ffijson
         };
     }
  
-    json GetNumStationModules(PARAMS(UniverseID stationid, bool includeconstructions, bool includewrecks))
+    json GetNumStationModules(PARAMS(UniverseID stationid,bool includeconstructions,bool includewrecks))
     {
         uint32_t func_res_1 = invoke(GetNumStationModules, stationid, includeconstructions, includewrecks);
         return json
@@ -9946,7 +9946,7 @@ namespace ffijson
         };
     }
  
-    json GetNumStoredUnits(PARAMS(UniverseID defensibleid, const char* cat, bool virtualammo))
+    json GetNumStoredUnits(PARAMS(UniverseID defensibleid,const char* cat,bool virtualammo))
     {
         uint32_t func_res_1 = invoke(GetNumStoredUnits, defensibleid, cat, virtualammo);
         return json
@@ -9964,7 +9964,7 @@ namespace ffijson
         };
     }
  
-    json GetNumSuitableBuildProcessors(PARAMS(UniverseID containerid, UniverseID objectid, const char* macroname))
+    json GetNumSuitableBuildProcessors(PARAMS(UniverseID containerid,UniverseID objectid,const char* macroname))
     {
         uint32_t func_res_1 = invoke(GetNumSuitableBuildProcessors, containerid, objectid, macroname);
         return json
@@ -9973,7 +9973,7 @@ namespace ffijson
         };
     }
  
-    json GetNumSuitableControlPosts(PARAMS(UniverseID controllableid, UniverseID entityid, bool free))
+    json GetNumSuitableControlPosts(PARAMS(UniverseID controllableid,UniverseID entityid,bool free))
     {
         uint32_t func_res_1 = invoke(GetNumSuitableControlPosts, controllableid, entityid, free);
         return json
@@ -9982,7 +9982,7 @@ namespace ffijson
         };
     }
  
-    json GetNumSupplyOrders(PARAMS(UniverseID containerid, bool defaultorders))
+    json GetNumSupplyOrders(PARAMS(UniverseID containerid,bool defaultorders))
     {
         uint32_t func_res_1 = invoke(GetNumSupplyOrders, containerid, defaultorders);
         return json
@@ -10018,7 +10018,7 @@ namespace ffijson
         };
     }
  
-    json GetNumTradeOfferStatistics(PARAMS(UniverseID containerorspaceid, double starttime, double endtime, size_t numdatapoints))
+    json GetNumTradeOfferStatistics(PARAMS(UniverseID containerorspaceid,double starttime,double endtime,size_t numdatapoints))
     {
         uint32_t func_res_1 = invoke(GetNumTradeOfferStatistics, containerorspaceid, starttime, endtime, numdatapoints);
         return json
@@ -10027,7 +10027,7 @@ namespace ffijson
         };
     }
  
-    json GetNumUnavailableUnits(PARAMS(UniverseID defensibleid, const char* cat))
+    json GetNumUnavailableUnits(PARAMS(UniverseID defensibleid,const char* cat))
     {
         uint32_t func_res_1 = invoke(GetNumUnavailableUnits, defensibleid, cat);
         return json
@@ -10036,7 +10036,7 @@ namespace ffijson
         };
     }
  
-    json GetNumUnitCargo(PARAMS(UniverseID containerid, bool onlydrones))
+    json GetNumUnitCargo(PARAMS(UniverseID containerid,bool onlydrones))
     {
         uint32_t func_res_1 = invoke(GetNumUnitCargo, containerid, onlydrones);
         return json
@@ -10054,7 +10054,7 @@ namespace ffijson
         };
     }
  
-    json GetNumUpgradeGroups(PARAMS(UniverseID destructibleid, const char* macroname))
+    json GetNumUpgradeGroups(PARAMS(UniverseID destructibleid,const char* macroname))
     {
         uint32_t func_res_1 = invoke(GetNumUpgradeGroups, destructibleid, macroname);
         return json
@@ -10072,7 +10072,7 @@ namespace ffijson
         };
     }
  
-    json GetNumUsedLimitedModulesFromSubsequence(PARAMS(UniverseID holomapid, size_t cp_idx))
+    json GetNumUsedLimitedModulesFromSubsequence(PARAMS(UniverseID holomapid,size_t cp_idx))
     {
         uint32_t func_res_1 = invoke(GetNumUsedLimitedModulesFromSubsequence, holomapid, cp_idx);
         return json
@@ -10126,7 +10126,7 @@ namespace ffijson
         };
     }
  
-    json GetNumWares(PARAMS(const char* tags, bool research, const char* licenceownerid, const char* exclusiontags))
+    json GetNumWares(PARAMS(const char* tags,bool research,const char* licenceownerid,const char* exclusiontags))
     {
         uint32_t func_res_1 = invoke(GetNumWares, tags, research, licenceownerid, exclusiontags);
         return json
@@ -10135,7 +10135,7 @@ namespace ffijson
         };
     }
  
-    json GetNumWeaponGroupsByWeapon(PARAMS(UniverseID defensibleid, UniverseID weaponid))
+    json GetNumWeaponGroupsByWeapon(PARAMS(UniverseID defensibleid,UniverseID weaponid))
     {
         uint32_t func_res_1 = invoke(GetNumWeaponGroupsByWeapon, defensibleid, weaponid);
         return json
@@ -10180,7 +10180,7 @@ namespace ffijson
         };
     }
  
-    json GetOrders(PARAMS( UniverseID controllableid))
+    json GetOrders(PARAMS(UniverseID controllableid))
     {
         uint32_t resultlen = 32767;
         std::vector<Order> result;
@@ -10217,7 +10217,7 @@ namespace ffijson
         };
     }
  
-    json GetOrders2(PARAMS( UniverseID controllableid))
+    json GetOrders2(PARAMS(UniverseID controllableid))
     {
         uint32_t resultlen = 32767;
         std::vector<Order2> result;
@@ -10254,7 +10254,7 @@ namespace ffijson
         };
     }
  
-    json GetPeople(PARAMS( UniverseID controllableid))
+    json GetPeople(PARAMS(UniverseID controllableid))
     {
         uint32_t resultlen = 32767;
         std::vector<PeopleInfo> result;
@@ -10288,7 +10288,7 @@ namespace ffijson
         };
     }
  
-    json GetPeopleAfterOrders(PARAMS( UniverseID controllableid, int32_t numorders))
+    json GetPeopleAfterOrders(PARAMS(UniverseID controllableid,int32_t numorders))
     {
         uint32_t resultlen = 32767;
         std::vector<NPCInfo> result;
@@ -10321,7 +10321,7 @@ namespace ffijson
         };
     }
  
-    json GetPeopleCapacity(PARAMS(UniverseID controllableid, const char* macroname, bool includecrew))
+    json GetPeopleCapacity(PARAMS(UniverseID controllableid,const char* macroname,bool includecrew))
     {
         uint32_t func_res_1 = invoke(GetPeopleCapacity, controllableid, macroname, includecrew);
         return json
@@ -10330,7 +10330,7 @@ namespace ffijson
         };
     }
  
-    json GetPersonSkills(PARAMS( NPCSeed person, UniverseID controllableid))
+    json GetPersonSkills(PARAMS(NPCSeed person,UniverseID controllableid))
     {
         Skill result;
         uint32_t func_res_1 = invoke(GetPersonSkills, &result, person, controllableid);
@@ -10352,7 +10352,7 @@ namespace ffijson
         };
     }
  
-    json GetPersonSkillsForAssignment(PARAMS( NPCSeed person, UniverseID controllableid, const char* role, const char* postid))
+    json GetPersonSkillsForAssignment(PARAMS(NPCSeed person,UniverseID controllableid,const char* role,const char* postid))
     {
         Skill2 result;
         uint32_t func_res_1 = invoke(GetPersonSkillsForAssignment, &result, person, controllableid, role, postid);
@@ -10374,7 +10374,7 @@ namespace ffijson
         };
     }
  
-    json GetPersonSuitableControlPosts(PARAMS( UniverseID controllableid, UniverseID personcontrollableid, NPCSeed person, bool free))
+    json GetPersonSuitableControlPosts(PARAMS(UniverseID controllableid,UniverseID personcontrollableid,NPCSeed person,bool free))
     {
         uint32_t resultlen = 32767;
         std::vector<ControlPostInfo> result;
@@ -10404,7 +10404,7 @@ namespace ffijson
         };
     }
  
-    json GetPlannedLimitedModules(PARAMS( const char* constructionplanid))
+    json GetPlannedLimitedModules(PARAMS(const char* constructionplanid))
     {
         uint32_t resultlen = 32767;
         std::vector<UIMacroCount> result;
@@ -10504,7 +10504,7 @@ namespace ffijson
         };
     }
  
-    json GetPlayerLogos(PARAMS( bool includestandard, bool includecustom))
+    json GetPlayerLogos(PARAMS(bool includestandard,bool includecustom))
     {
         uint32_t resultlen = 32767;
         std::vector<UILogo> result;
@@ -10535,7 +10535,7 @@ namespace ffijson
         };
     }
  
-    json GetPlayerShipBuildTasks(PARAMS( bool isinprogress, bool includeupgrade))
+    json GetPlayerShipBuildTasks(PARAMS(bool isinprogress,bool includeupgrade))
     {
         uint32_t resultlen = 32767;
         std::vector<BuildTaskInfo> result;
@@ -10572,7 +10572,7 @@ namespace ffijson
         };
     }
  
-    json GetPurchasableCargo(PARAMS(UniverseID containerid, const char* unknownString))
+    json GetPurchasableCargo(PARAMS(UniverseID containerid,const char* unknownString))
     {
         uint32_t func_res_1 = invoke(GetPurchasableCargo, containerid, unknownString);
         return json
@@ -10643,7 +10643,7 @@ namespace ffijson
         };
     }
  
-    json GetRepairResources(PARAMS( UniverseID componenttorepairid))
+    json GetRepairResources(PARAMS(UniverseID componenttorepairid))
     {
         uint32_t resultlen = 32767;
         std::vector<UIWareInfo> result;
@@ -10674,7 +10674,7 @@ namespace ffijson
         };
     }
  
-    json GetResearchModules(PARAMS( UniverseID containerid))
+    json GetResearchModules(PARAMS(UniverseID containerid))
     {
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
@@ -10695,7 +10695,7 @@ namespace ffijson
         };
     }
  
-    json GetRoleTierNPCs(PARAMS( UniverseID controllableid, const char* role, int32_t skilllevel))
+    json GetRoleTierNPCs(PARAMS(UniverseID controllableid,const char* role,int32_t skilllevel))
     {
         uint32_t resultlen = 32767;
         std::vector<NPCSeed> result;
@@ -10716,7 +10716,7 @@ namespace ffijson
         };
     }
  
-    json GetRoleTiers(PARAMS( UniverseID controllableid, const char* role))
+    json GetRoleTiers(PARAMS(UniverseID controllableid,const char* role))
     {
         uint32_t resultlen = 32767;
         std::vector<RoleTierData> result;
@@ -10747,7 +10747,7 @@ namespace ffijson
         };
     }
  
-    json GetSectorsByOwner(PARAMS( const char* factionid))
+    json GetSectorsByOwner(PARAMS(const char* factionid))
     {
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
@@ -10768,7 +10768,7 @@ namespace ffijson
         };
     }
  
-    json GetShieldGroups(PARAMS( UniverseID defensibleid))
+    json GetShieldGroups(PARAMS(UniverseID defensibleid))
     {
         uint32_t resultlen = 32767;
         std::vector<ShieldGroup> result;
@@ -10799,7 +10799,7 @@ namespace ffijson
         };
     }
  
-    json GetSoftwarePredecessors(PARAMS( const char* softwarename))
+    json GetSoftwarePredecessors(PARAMS(const char* softwarename))
     {
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
@@ -10820,7 +10820,7 @@ namespace ffijson
         };
     }
  
-    json GetSoftwareSlots(PARAMS( UniverseID controllableid, const char* macroname))
+    json GetSoftwareSlots(PARAMS(UniverseID controllableid,const char* macroname))
     {
         uint32_t resultlen = 32767;
         std::vector<SoftwareSlot> result;
@@ -10889,7 +10889,7 @@ namespace ffijson
         };
     }
  
-    json GetStationModules(PARAMS( UniverseID stationid, bool includeconstructions, bool includewrecks))
+    json GetStationModules(PARAMS(UniverseID stationid,bool includeconstructions,bool includewrecks))
     {
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
@@ -10910,7 +10910,7 @@ namespace ffijson
         };
     }
  
-    json GetStationOverviewGraphWares(PARAMS( UniverseID stationid))
+    json GetStationOverviewGraphWares(PARAMS(UniverseID stationid))
     {
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
@@ -10931,7 +10931,7 @@ namespace ffijson
         };
     }
  
-    json GetSuitableControlPosts(PARAMS( UniverseID controllableid, UniverseID entityid, bool free))
+    json GetSuitableControlPosts(PARAMS(UniverseID controllableid,UniverseID entityid,bool free))
     {
         uint32_t resultlen = 32767;
         std::vector<ControlPostInfo> result;
@@ -10961,7 +10961,7 @@ namespace ffijson
         };
     }
  
-    json GetSupplyOrders(PARAMS( UniverseID containerid, bool defaultorders))
+    json GetSupplyOrders(PARAMS(UniverseID containerid,bool defaultorders))
     {
         uint32_t resultlen = 32767;
         std::vector<SupplyOverride> result;
@@ -11000,7 +11000,7 @@ namespace ffijson
         };
     }
  
-    json GetTableInitialMultiselectedRows(PARAMS( const int tableid))
+    json GetTableInitialMultiselectedRows(PARAMS(const int tableid))
     {
         uint32_t resultlen = 32767;
         std::vector<uint32_t> result;
@@ -11021,7 +11021,7 @@ namespace ffijson
         };
     }
  
-    json GetTiersOfRole(PARAMS( const char* role))
+    json GetTiersOfRole(PARAMS(const char* role))
     {
         uint32_t resultlen = 32767;
         std::vector<RoleTierData> result;
@@ -11088,7 +11088,7 @@ namespace ffijson
         };
     }
  
-    json GetTradeOfferStatistics(PARAMS( size_t numdatapoints))
+    json GetTradeOfferStatistics(PARAMS(size_t numdatapoints))
     {
         uint32_t resultlen = 32767;
         std::vector<UITradeOfferStat> result;
@@ -11120,7 +11120,7 @@ namespace ffijson
         };
     }
  
-    json GetUnitCargo(PARAMS( UniverseID containerid, bool onlydrones))
+    json GetUnitCargo(PARAMS(UniverseID containerid,bool onlydrones))
     {
         uint32_t resultlen = 32767;
         std::vector<UIWareInfo> result;
@@ -11151,7 +11151,7 @@ namespace ffijson
         };
     }
  
-    json GetUpgradeGroups(PARAMS( UniverseID destructibleid, const char* macroname))
+    json GetUpgradeGroups(PARAMS(UniverseID destructibleid,const char* macroname))
     {
         uint32_t resultlen = 32767;
         std::vector<UpgradeGroup> result;
@@ -11181,7 +11181,7 @@ namespace ffijson
         };
     }
  
-    json GetUpgradeGroups2(PARAMS( UniverseID destructibleid, const char* macroname))
+    json GetUpgradeGroups2(PARAMS(UniverseID destructibleid,const char* macroname))
     {
         uint32_t resultlen = 32767;
         std::vector<UpgradeGroup2> result;
@@ -11211,7 +11211,7 @@ namespace ffijson
         };
     }
  
-    json GetUsedLimitedModules(PARAMS( UniverseID excludedstationid))
+    json GetUsedLimitedModules(PARAMS(UniverseID excludedstationid))
     {
         uint32_t resultlen = 32767;
         std::vector<UIMacroCount> result;
@@ -11241,7 +11241,7 @@ namespace ffijson
         };
     }
  
-    json GetUsedLimitedModulesFromSubsequence(PARAMS( UniverseID holomapid, size_t cp_idx))
+    json GetUsedLimitedModulesFromSubsequence(PARAMS(UniverseID holomapid,size_t cp_idx))
     {
         uint32_t resultlen = 32767;
         std::vector<UIMacroCount> result;
@@ -11271,7 +11271,7 @@ namespace ffijson
         };
     }
  
-    json GetValidTransporterTargets(PARAMS( UniverseID componentid))
+    json GetValidTransporterTargets(PARAMS(UniverseID componentid))
     {
         uint32_t resultlen = 32767;
         std::vector<UIComponentSlot> result;
@@ -11301,7 +11301,7 @@ namespace ffijson
         };
     }
  
-    json GetVenturePlatformDocks(PARAMS( UniverseID ventureplatformid))
+    json GetVenturePlatformDocks(PARAMS(UniverseID ventureplatformid))
     {
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
@@ -11322,7 +11322,7 @@ namespace ffijson
         };
     }
  
-    json GetVenturePlatforms(PARAMS( UniverseID defensibleid))
+    json GetVenturePlatforms(PARAMS(UniverseID defensibleid))
     {
         uint32_t resultlen = 32767;
         std::vector<UniverseID> result;
@@ -11343,7 +11343,7 @@ namespace ffijson
         };
     }
  
-    json GetWareBlueprintOwners(PARAMS( const char* wareid))
+    json GetWareBlueprintOwners(PARAMS(const char* wareid))
     {
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
@@ -11364,7 +11364,7 @@ namespace ffijson
         };
     }
  
-    json GetWareSources(PARAMS( const char* wareid))
+    json GetWareSources(PARAMS(const char* wareid))
     {
         uint32_t resultlen = 32767;
         std::vector<WareSource> result;
@@ -11394,7 +11394,7 @@ namespace ffijson
         };
     }
  
-    json GetWares(PARAMS( const char* tags, bool research, const char* licenceownerid, const char* exclusiontags))
+    json GetWares(PARAMS(const char* tags,bool research,const char* licenceownerid,const char* exclusiontags))
     {
         uint32_t resultlen = 32767;
         std::vector<const char*> result;
@@ -11415,7 +11415,7 @@ namespace ffijson
         };
     }
  
-    json GetWeaponGroupsByWeapon(PARAMS( UniverseID defensibleid, UniverseID weaponid))
+    json GetWeaponGroupsByWeapon(PARAMS(UniverseID defensibleid,UniverseID weaponid))
     {
         uint32_t resultlen = 32767;
         std::vector<UIWeaponGroup> result;
@@ -11445,7 +11445,7 @@ namespace ffijson
         };
     }
  
-    json PlayDetailmonitorCutscene(PARAMS(uint32_t cutsceneid, const char* rendertarget))
+    json PlayDetailmonitorCutscene(PARAMS(uint32_t cutsceneid,const char* rendertarget))
     {
         uint32_t func_res_1 = invoke(PlayDetailmonitorCutscene, cutsceneid, rendertarget);
         return json
@@ -11454,7 +11454,7 @@ namespace ffijson
         };
     }
  
-    json PrepareBuildSequenceResources(PARAMS(UniverseID holomapid, UniverseID stationid))
+    json PrepareBuildSequenceResources(PARAMS(UniverseID holomapid,UniverseID stationid))
     {
         uint32_t func_res_1 = invoke(PrepareBuildSequenceResources, holomapid, stationid);
         return json
@@ -11481,7 +11481,7 @@ namespace ffijson
         };
     }
  
-    json AddCopyToConstructionMap(PARAMS(UniverseID holomapid, size_t cp_idx, bool copysequence))
+    json AddCopyToConstructionMap(PARAMS(UniverseID holomapid,size_t cp_idx,bool copysequence))
     {
         invoke(AddCopyToConstructionMap, holomapid, cp_idx, copysequence);
         return json
@@ -11490,7 +11490,7 @@ namespace ffijson
         };
     }
  
-    json AddCrewExchangeOrder(PARAMS(UniverseID containerid, UniverseID partnercontainerid, uint32_t numnpcs, uint32_t numpartnernpcs, bool tradecomputer))
+    json AddCrewExchangeOrder(PARAMS(UniverseID containerid,UniverseID partnercontainerid,uint32_t numnpcs,uint32_t numpartnernpcs,bool tradecomputer))
     {
         NPCSeed npcs;
         NPCSeed partnernpcs;
@@ -11506,7 +11506,7 @@ namespace ffijson
  
     }
  
-    json AddMacroToConstructionMap(PARAMS(UniverseID holomapid, const char* macroname, bool startdragging))
+    json AddMacroToConstructionMap(PARAMS(UniverseID holomapid,const char* macroname,bool startdragging))
     {
         invoke(AddMacroToConstructionMap, holomapid, macroname, startdragging);
         return json
@@ -11533,7 +11533,7 @@ namespace ffijson
         };
     }
  
-    json AddSimilarMapComponentsToSelection(PARAMS(UniverseID holomapid, UniverseID componentid))
+    json AddSimilarMapComponentsToSelection(PARAMS(UniverseID holomapid,UniverseID componentid))
     {
         invoke(AddSimilarMapComponentsToSelection, holomapid, componentid);
         return json
@@ -11542,7 +11542,7 @@ namespace ffijson
         };
     }
  
-    json ChangeMapBuildPlot(PARAMS(UniverseID holomapid, float x, float y, float z))
+    json ChangeMapBuildPlot(PARAMS(UniverseID holomapid,float x,float y,float z))
     {
         invoke(ChangeMapBuildPlot, holomapid, x, y, z);
         return json
@@ -11569,7 +11569,7 @@ namespace ffijson
         };
     }
  
-    json ClearContainerBuyLimitOverride(PARAMS(UniverseID containerid, const char* wareid))
+    json ClearContainerBuyLimitOverride(PARAMS(UniverseID containerid,const char* wareid))
     {
         invoke(ClearContainerBuyLimitOverride, containerid, wareid);
         return json
@@ -11578,7 +11578,7 @@ namespace ffijson
         };
     }
  
-    json ClearContainerSellLimitOverride(PARAMS(UniverseID containerid, const char* wareid))
+    json ClearContainerSellLimitOverride(PARAMS(UniverseID containerid,const char* wareid))
     {
         invoke(ClearContainerSellLimitOverride, containerid, wareid);
         return json
@@ -11623,7 +11623,7 @@ namespace ffijson
         };
     }
  
-    json ClearMapTradeFilterByPlayerOffer(PARAMS(UniverseID holomapid, bool buysellswitch))
+    json ClearMapTradeFilterByPlayerOffer(PARAMS(UniverseID holomapid,bool buysellswitch))
     {
         invoke(ClearMapTradeFilterByPlayerOffer, holomapid, buysellswitch);
         return json
@@ -11794,7 +11794,7 @@ namespace ffijson
         };
     }
  
-    json DismantleGroupedWeaponMod(PARAMS(UniverseID defensibleid, UniverseID contextid, const char* group))
+    json DismantleGroupedWeaponMod(PARAMS(UniverseID defensibleid,UniverseID contextid,const char* group))
     {
         invoke(DismantleGroupedWeaponMod, defensibleid, contextid, group);
         return json
@@ -11803,7 +11803,7 @@ namespace ffijson
         };
     }
  
-    json DismantleShieldMod(PARAMS(UniverseID defensibleid, UniverseID contextid, const char* group))
+    json DismantleShieldMod(PARAMS(UniverseID defensibleid,UniverseID contextid,const char* group))
     {
         invoke(DismantleShieldMod, defensibleid, contextid, group);
         return json
@@ -11884,7 +11884,7 @@ namespace ffijson
         };
     }
  
-    json FadeScreen(PARAMS(float fadeouttime, float fadeintime))
+    json FadeScreen(PARAMS(float fadeouttime,float fadeintime))
     {
         invoke(FadeScreen, fadeouttime, fadeintime);
         return json
@@ -11893,7 +11893,7 @@ namespace ffijson
         };
     }
  
-    json GenerateModuleLoadout(PARAMS( UniverseID holomapid, size_t cp_idx, UniverseID defensibleid, float level))
+    json GenerateModuleLoadout(PARAMS(UniverseID holomapid,size_t cp_idx,UniverseID defensibleid,float level))
     {
         UILoadout result;
         invoke(GenerateModuleLoadout, &result, holomapid, cp_idx, defensibleid, level);
@@ -11927,7 +11927,7 @@ namespace ffijson
  
     }
  
-    json GenerateModuleLoadoutCounts(PARAMS( UniverseID holomapid, size_t cp_idx, UniverseID defensibleid, float level))
+    json GenerateModuleLoadoutCounts(PARAMS(UniverseID holomapid,size_t cp_idx,UniverseID defensibleid,float level))
     {
         UILoadoutCounts result;
         invoke(GenerateModuleLoadoutCounts, &result, holomapid, cp_idx, defensibleid, level);
@@ -11951,7 +11951,7 @@ namespace ffijson
  
     }
  
-    json GenerateShipKnownLoadout(PARAMS( const char* macroname, float level))
+    json GenerateShipKnownLoadout(PARAMS(const char* macroname,float level))
     {
         UILoadout result;
         invoke(GenerateShipKnownLoadout, &result, macroname, level);
@@ -11985,7 +11985,7 @@ namespace ffijson
  
     }
  
-    json GenerateShipKnownLoadoutCounts(PARAMS( const char* macroname, float level))
+    json GenerateShipKnownLoadoutCounts(PARAMS(const char* macroname,float level))
     {
         UILoadoutCounts result;
         invoke(GenerateShipKnownLoadoutCounts, &result, macroname, level);
@@ -12009,7 +12009,7 @@ namespace ffijson
  
     }
  
-    json GenerateShipLoadout(PARAMS( UniverseID containerid, UniverseID shipid, const char* macroname, float level))
+    json GenerateShipLoadout(PARAMS(UniverseID containerid,UniverseID shipid,const char* macroname,float level))
     {
         UILoadout result;
         invoke(GenerateShipLoadout, &result, containerid, shipid, macroname, level);
@@ -12043,7 +12043,7 @@ namespace ffijson
  
     }
  
-    json GenerateShipLoadoutCounts(PARAMS( UniverseID containerid, UniverseID shipid, const char* macroname, float level))
+    json GenerateShipLoadoutCounts(PARAMS(UniverseID containerid,UniverseID shipid,const char* macroname,float level))
     {
         UILoadoutCounts result;
         invoke(GenerateShipLoadoutCounts, &result, containerid, shipid, macroname, level);
@@ -12067,7 +12067,7 @@ namespace ffijson
  
     }
  
-    json GetBuildTaskCrewTransferInfo(PARAMS( UniverseID containerid, BuildTaskID id))
+    json GetBuildTaskCrewTransferInfo(PARAMS(UniverseID containerid,BuildTaskID id))
     {
         CrewTransferInfo result;
         invoke(GetBuildTaskCrewTransferInfo, &result, containerid, id);
@@ -12088,7 +12088,7 @@ namespace ffijson
  
     }
  
-    json GetConstructionMapItemLoadout(PARAMS( UniverseID holomapid, size_t itemidx, UniverseID defensibleid))
+    json GetConstructionMapItemLoadout(PARAMS(UniverseID holomapid,size_t itemidx,UniverseID defensibleid))
     {
         UILoadout result;
         invoke(GetConstructionMapItemLoadout, &result, holomapid, itemidx, defensibleid);
@@ -12122,7 +12122,7 @@ namespace ffijson
  
     }
  
-    json GetConstructionMapItemLoadoutCounts(PARAMS( UniverseID holomapid, size_t itemidx, UniverseID defensibleid))
+    json GetConstructionMapItemLoadoutCounts(PARAMS(UniverseID holomapid,size_t itemidx,UniverseID defensibleid))
     {
         UILoadoutCounts result;
         invoke(GetConstructionMapItemLoadoutCounts, &result, holomapid, itemidx, defensibleid);
@@ -12146,7 +12146,7 @@ namespace ffijson
  
     }
  
-    json GetCurrentLoadout(PARAMS( UniverseID defensibleid, UniverseID moduleid))
+    json GetCurrentLoadout(PARAMS(UniverseID defensibleid,UniverseID moduleid))
     {
         UILoadout result;
         invoke(GetCurrentLoadout, &result, defensibleid, moduleid);
@@ -12180,7 +12180,7 @@ namespace ffijson
  
     }
  
-    json GetCurrentLoadoutCounts(PARAMS( UniverseID defensibleid, UniverseID moduleid))
+    json GetCurrentLoadoutCounts(PARAMS(UniverseID defensibleid,UniverseID moduleid))
     {
         UILoadoutCounts result;
         invoke(GetCurrentLoadoutCounts, &result, defensibleid, moduleid);
@@ -12204,7 +12204,7 @@ namespace ffijson
  
     }
  
-    json GetCustomGameStartLoadoutProperty(PARAMS( const char* id, const char* propertyid))
+    json GetCustomGameStartLoadoutProperty(PARAMS(const char* id,const char* propertyid))
     {
         UILoadout result;
         invoke(GetCustomGameStartLoadoutProperty, &result, id, propertyid);
@@ -12238,7 +12238,7 @@ namespace ffijson
  
     }
  
-    json GetCustomGameStartLoadoutPropertyCounts(PARAMS( const char* id, const char* propertyid))
+    json GetCustomGameStartLoadoutPropertyCounts(PARAMS(const char* id,const char* propertyid))
     {
         UILoadoutCounts result;
         invoke(GetCustomGameStartLoadoutPropertyCounts, &result, id, propertyid);
@@ -12262,7 +12262,7 @@ namespace ffijson
  
     }
  
-    json GetLoadout(PARAMS( UniverseID defensibleid, const char* macroname, const char* loadoutid))
+    json GetLoadout(PARAMS(UniverseID defensibleid,const char* macroname,const char* loadoutid))
     {
         UILoadout result;
         invoke(GetLoadout, &result, defensibleid, macroname, loadoutid);
@@ -12322,7 +12322,7 @@ namespace ffijson
         };
     }
  
-    json LaunchLaserTower(PARAMS(UniverseID defensibleid, const char* lasertowermacroname))
+    json LaunchLaserTower(PARAMS(UniverseID defensibleid,const char* lasertowermacroname))
     {
         invoke(LaunchLaserTower, defensibleid, lasertowermacroname);
         return json
@@ -12331,7 +12331,7 @@ namespace ffijson
         };
     }
  
-    json LaunchMine(PARAMS(UniverseID defensibleid, const char* minemacroname))
+    json LaunchMine(PARAMS(UniverseID defensibleid,const char* minemacroname))
     {
         invoke(LaunchMine, defensibleid, minemacroname);
         return json
@@ -12340,7 +12340,7 @@ namespace ffijson
         };
     }
  
-    json LaunchNavBeacon(PARAMS(UniverseID defensibleid, const char* navbeaconmacroname))
+    json LaunchNavBeacon(PARAMS(UniverseID defensibleid,const char* navbeaconmacroname))
     {
         invoke(LaunchNavBeacon, defensibleid, navbeaconmacroname);
         return json
@@ -12349,7 +12349,7 @@ namespace ffijson
         };
     }
  
-    json LaunchResourceProbe(PARAMS(UniverseID defensibleid, const char* resourceprobemacroname))
+    json LaunchResourceProbe(PARAMS(UniverseID defensibleid,const char* resourceprobemacroname))
     {
         invoke(LaunchResourceProbe, defensibleid, resourceprobemacroname);
         return json
@@ -12358,7 +12358,7 @@ namespace ffijson
         };
     }
  
-    json LaunchSatellite(PARAMS(UniverseID defensibleid, const char* satellitemacroname))
+    json LaunchSatellite(PARAMS(UniverseID defensibleid,const char* satellitemacroname))
     {
         invoke(LaunchSatellite, defensibleid, satellitemacroname);
         return json
@@ -12394,7 +12394,7 @@ namespace ffijson
         };
     }
  
-    json NewMultiplayerGame(PARAMS(const char* modulename, const char* difficulty))
+    json NewMultiplayerGame(PARAMS(const char* modulename,const char* difficulty))
     {
         invoke(NewMultiplayerGame, modulename, difficulty);
         return json
@@ -12430,7 +12430,7 @@ namespace ffijson
         };
     }
  
-    json NotifyInteractMenuHidden(PARAMS(const uint32_t id, const bool allclosed))
+    json NotifyInteractMenuHidden(PARAMS(const uint32_t id,const bool allclosed))
     {
         invoke(NotifyInteractMenuHidden, id, allclosed);
         return json
@@ -12484,7 +12484,7 @@ namespace ffijson
         };
     }
  
-    json ReadKnownItem(PARAMS(const char* libraryid, const char* itemid, bool read))
+    json ReadKnownItem(PARAMS(const char* libraryid,const char* itemid,bool read))
     {
         invoke(ReadKnownItem, libraryid, itemid, read);
         return json
@@ -12493,7 +12493,7 @@ namespace ffijson
         };
     }
  
-    json ReassignPeople(PARAMS(UniverseID controllableid, uint32_t amount))
+    json ReassignPeople(PARAMS(UniverseID controllableid,uint32_t amount))
     {
         CrewTransferContainer reassignedcrew;
         invoke(ReassignPeople, controllableid, &reassignedcrew, amount);
@@ -12556,7 +12556,7 @@ namespace ffijson
         };
     }
  
-    json ReleasePersonFromCrewTransfer(PARAMS(UniverseID controllableid, NPCSeed person))
+    json ReleasePersonFromCrewTransfer(PARAMS(UniverseID controllableid,NPCSeed person))
     {
         invoke(ReleasePersonFromCrewTransfer, controllableid, person);
         return json
@@ -12592,7 +12592,7 @@ namespace ffijson
         };
     }
  
-    json RemoveFill(PARAMS(const UniverseID componentid, const char*const connectionname))
+    json RemoveFill(PARAMS(const UniverseID componentid,const char*const connectionname))
     {
         invoke(RemoveFill, componentid, connectionname);
         return json
@@ -12610,7 +12610,7 @@ namespace ffijson
         };
     }
  
-    json RemoveItemFromConstructionMap(PARAMS(UniverseID holomapid, size_t itemidx))
+    json RemoveItemFromConstructionMap(PARAMS(UniverseID holomapid,size_t itemidx))
     {
         invoke(RemoveItemFromConstructionMap, holomapid, itemidx);
         return json
@@ -12619,7 +12619,7 @@ namespace ffijson
         };
     }
  
-    json RemoveOrderSyncPointID(PARAMS(UniverseID controllableid, size_t orderidx))
+    json RemoveOrderSyncPointID(PARAMS(UniverseID controllableid,size_t orderidx))
     {
         invoke(RemoveOrderSyncPointID, controllableid, orderidx);
         return json
@@ -12628,7 +12628,7 @@ namespace ffijson
         };
     }
  
-    json RemoveOutline(PARAMS(const UniverseID componentid, const char*const connectionname))
+    json RemoveOutline(PARAMS(const UniverseID componentid,const char*const connectionname))
     {
         invoke(RemoveOutline, componentid, connectionname);
         return json
@@ -12637,7 +12637,7 @@ namespace ffijson
         };
     }
  
-    json RemovePerson(PARAMS(UniverseID controllableid, NPCSeed person))
+    json RemovePerson(PARAMS(UniverseID controllableid,NPCSeed person))
     {
         invoke(RemovePerson, controllableid, person);
         return json
@@ -12682,7 +12682,7 @@ namespace ffijson
         };
     }
  
-    json RemoveTradeWare(PARAMS(UniverseID containerid, const char* wareid))
+    json RemoveTradeWare(PARAMS(UniverseID containerid,const char* wareid))
     {
         invoke(RemoveTradeWare, containerid, wareid);
         return json
@@ -12781,7 +12781,7 @@ namespace ffijson
         };
     }
  
-    json SaveMapConstructionPlan(PARAMS(UniverseID holomapid, const char* source, const char* id, bool overwrite, const char* name, const char* desc))
+    json SaveMapConstructionPlan(PARAMS(UniverseID holomapid,const char* source,const char* id,bool overwrite,const char* name,const char* desc))
     {
         invoke(SaveMapConstructionPlan, holomapid, source, id, overwrite, name, desc);
         return json
@@ -12790,7 +12790,7 @@ namespace ffijson
         };
     }
  
-    json SelectBuildMapEntry(PARAMS(UniverseID holomapid, size_t cp_idx))
+    json SelectBuildMapEntry(PARAMS(UniverseID holomapid,size_t cp_idx))
     {
         invoke(SelectBuildMapEntry, holomapid, cp_idx);
         return json
@@ -12808,7 +12808,7 @@ namespace ffijson
         };
     }
  
-    json SelectSimilarMapComponents(PARAMS(UniverseID holomapid, UniverseID componentid))
+    json SelectSimilarMapComponents(PARAMS(UniverseID holomapid,UniverseID componentid))
     {
         invoke(SelectSimilarMapComponents, holomapid, componentid);
         return json
@@ -12817,7 +12817,7 @@ namespace ffijson
         };
     }
  
-    json SellPlayerShip(PARAMS(UniverseID shipid, UniverseID shipyardid))
+    json SellPlayerShip(PARAMS(UniverseID shipid,UniverseID shipyardid))
     {
         invoke(SellPlayerShip, shipid, shipyardid);
         return json
@@ -12844,7 +12844,7 @@ namespace ffijson
         };
     }
  
-    json SetAllMissileTurretModes(PARAMS(UniverseID defensibleid, const char* mode))
+    json SetAllMissileTurretModes(PARAMS(UniverseID defensibleid,const char* mode))
     {
         invoke(SetAllMissileTurretModes, defensibleid, mode);
         return json
@@ -12853,7 +12853,7 @@ namespace ffijson
         };
     }
  
-    json SetAllMissileTurretsArmed(PARAMS(UniverseID defensibleid, bool arm))
+    json SetAllMissileTurretsArmed(PARAMS(UniverseID defensibleid,bool arm))
     {
         invoke(SetAllMissileTurretsArmed, defensibleid, arm);
         return json
@@ -12862,7 +12862,7 @@ namespace ffijson
         };
     }
  
-    json SetAllNonMissileTurretModes(PARAMS(UniverseID defensibleid, const char* mode))
+    json SetAllNonMissileTurretModes(PARAMS(UniverseID defensibleid,const char* mode))
     {
         invoke(SetAllNonMissileTurretModes, defensibleid, mode);
         return json
@@ -12871,7 +12871,7 @@ namespace ffijson
         };
     }
  
-    json SetAllNonMissileTurretsArmed(PARAMS(UniverseID defensibleid, bool arm))
+    json SetAllNonMissileTurretsArmed(PARAMS(UniverseID defensibleid,bool arm))
     {
         invoke(SetAllNonMissileTurretsArmed, defensibleid, arm);
         return json
@@ -12880,7 +12880,7 @@ namespace ffijson
         };
     }
  
-    json SetAllTurretModes(PARAMS(UniverseID defensibleid, const char* mode))
+    json SetAllTurretModes(PARAMS(UniverseID defensibleid,const char* mode))
     {
         invoke(SetAllTurretModes, defensibleid, mode);
         return json
@@ -12889,7 +12889,7 @@ namespace ffijson
         };
     }
  
-    json SetAllTurretsArmed(PARAMS(UniverseID defensibleid, bool arm))
+    json SetAllTurretsArmed(PARAMS(UniverseID defensibleid,bool arm))
     {
         invoke(SetAllTurretsArmed, defensibleid, arm);
         return json
@@ -12898,7 +12898,7 @@ namespace ffijson
         };
     }
  
-    json SetAllowedWeaponSystems(PARAMS(UniverseID defensibleid, size_t orderidx, bool usedefault, uint32_t numuiweaponsysteminfo))
+    json SetAllowedWeaponSystems(PARAMS(UniverseID defensibleid,size_t orderidx,bool usedefault,uint32_t numuiweaponsysteminfo))
     {
         WeaponSystemInfo uiweaponsysteminfo;
         invoke(SetAllowedWeaponSystems, defensibleid, orderidx, usedefault, &uiweaponsysteminfo, numuiweaponsysteminfo);
@@ -12934,7 +12934,7 @@ namespace ffijson
         };
     }
  
-    json SetBoxText(PARAMS(const int boxtextid, const char* text))
+    json SetBoxText(PARAMS(const int boxtextid,const char* text))
     {
         invoke(SetBoxText, boxtextid, text);
         return json
@@ -12943,7 +12943,7 @@ namespace ffijson
         };
     }
  
-    json SetButtonActive(PARAMS(const int buttonid, bool active))
+    json SetButtonActive(PARAMS(const int buttonid,bool active))
     {
         invoke(SetButtonActive, buttonid, active);
         return json
@@ -12952,7 +12952,7 @@ namespace ffijson
         };
     }
  
-    json SetButtonIcon2ID(PARAMS(const int buttonid, const char* iconid))
+    json SetButtonIcon2ID(PARAMS(const int buttonid,const char* iconid))
     {
         invoke(SetButtonIcon2ID, buttonid, iconid);
         return json
@@ -12961,7 +12961,7 @@ namespace ffijson
         };
     }
  
-    json SetButtonIconID(PARAMS(const int buttonid, const char* iconid))
+    json SetButtonIconID(PARAMS(const int buttonid,const char* iconid))
     {
         invoke(SetButtonIconID, buttonid, iconid);
         return json
@@ -12970,7 +12970,7 @@ namespace ffijson
         };
     }
  
-    json SetButtonText2(PARAMS(const int buttonid, const char* text))
+    json SetButtonText2(PARAMS(const int buttonid,const char* text))
     {
         invoke(SetButtonText2, buttonid, text);
         return json
@@ -12979,7 +12979,7 @@ namespace ffijson
         };
     }
  
-    json SetCheckBoxChecked2(PARAMS(const int checkboxid, bool checked, bool update))
+    json SetCheckBoxChecked2(PARAMS(const int checkboxid,bool checked,bool update))
     {
         invoke(SetCheckBoxChecked2, checkboxid, checked, update);
         return json
@@ -13006,7 +13006,7 @@ namespace ffijson
         };
     }
  
-    json SetConfigSetting(PARAMS(const char*const setting, const bool value))
+    json SetConfigSetting(PARAMS(const char*const setting,const bool value))
     {
         invoke(SetConfigSetting, setting, value);
         return json
@@ -13015,7 +13015,7 @@ namespace ffijson
         };
     }
  
-    json SetConstructionSequenceFromConstructionMap(PARAMS(UniverseID containerid, UniverseID holomapid))
+    json SetConstructionSequenceFromConstructionMap(PARAMS(UniverseID containerid,UniverseID holomapid))
     {
         invoke(SetConstructionSequenceFromConstructionMap, containerid, holomapid);
         return json
@@ -13024,7 +13024,7 @@ namespace ffijson
         };
     }
  
-    json SetContainerBuildAllowedFactions(PARAMS(UniverseID containerid, uint32_t numuifactions))
+    json SetContainerBuildAllowedFactions(PARAMS(UniverseID containerid,uint32_t numuifactions))
     {
         uint32_t resultlen = 32767;
         std::vector<const char*> uifactions;
@@ -13041,7 +13041,7 @@ namespace ffijson
  
     }
  
-    json SetContainerBuildPriceFactor(PARAMS(UniverseID containerid, float value))
+    json SetContainerBuildPriceFactor(PARAMS(UniverseID containerid,float value))
     {
         invoke(SetContainerBuildPriceFactor, containerid, value);
         return json
@@ -13050,7 +13050,7 @@ namespace ffijson
         };
     }
  
-    json SetContainerBuyLimitOverride(PARAMS(UniverseID containerid, const char* wareid, int32_t amount))
+    json SetContainerBuyLimitOverride(PARAMS(UniverseID containerid,const char* wareid,int32_t amount))
     {
         invoke(SetContainerBuyLimitOverride, containerid, wareid, amount);
         return json
@@ -13059,7 +13059,7 @@ namespace ffijson
         };
     }
  
-    json SetContainerFactionBuildRescricted(PARAMS(UniverseID containerid, bool value))
+    json SetContainerFactionBuildRescricted(PARAMS(UniverseID containerid,bool value))
     {
         invoke(SetContainerFactionBuildRescricted, containerid, value);
         return json
@@ -13068,7 +13068,7 @@ namespace ffijson
         };
     }
  
-    json SetContainerGlobalPriceFactor(PARAMS(UniverseID containerid, float value))
+    json SetContainerGlobalPriceFactor(PARAMS(UniverseID containerid,float value))
     {
         invoke(SetContainerGlobalPriceFactor, containerid, value);
         return json
@@ -13077,7 +13077,7 @@ namespace ffijson
         };
     }
  
-    json SetContainerSellLimitOverride(PARAMS(UniverseID containerid, const char* wareid, int32_t amount))
+    json SetContainerSellLimitOverride(PARAMS(UniverseID containerid,const char* wareid,int32_t amount))
     {
         invoke(SetContainerSellLimitOverride, containerid, wareid, amount);
         return json
@@ -13086,7 +13086,7 @@ namespace ffijson
         };
     }
  
-    json SetContainerWareIsBuyable(PARAMS(UniverseID containerid, const char* wareid, bool allowed))
+    json SetContainerWareIsBuyable(PARAMS(UniverseID containerid,const char* wareid,bool allowed))
     {
         invoke(SetContainerWareIsBuyable, containerid, wareid, allowed);
         return json
@@ -13095,7 +13095,7 @@ namespace ffijson
         };
     }
  
-    json SetContainerWareIsSellable(PARAMS(UniverseID containerid, const char* wareid, bool allowed))
+    json SetContainerWareIsSellable(PARAMS(UniverseID containerid,const char* wareid,bool allowed))
     {
         invoke(SetContainerWareIsSellable, containerid, wareid, allowed);
         return json
@@ -13104,7 +13104,7 @@ namespace ffijson
         };
     }
  
-    json SetControllableBlacklist(PARAMS(UniverseID controllableid, BlacklistID id, const char* listtype, bool value))
+    json SetControllableBlacklist(PARAMS(UniverseID controllableid,BlacklistID id,const char* listtype,bool value))
     {
         invoke(SetControllableBlacklist, controllableid, id, listtype, value);
         return json
@@ -13122,7 +13122,7 @@ namespace ffijson
         };
     }
  
-    json SetCustomGameStartBlueprintProperty(PARAMS(const char* id, const char* propertyid, uint32_t uivaluecount))
+    json SetCustomGameStartBlueprintProperty(PARAMS(const char* id,const char* propertyid,uint32_t uivaluecount))
     {
         CustomGameStartBlueprint uivalue;
         invoke(SetCustomGameStartBlueprintProperty, id, propertyid, &uivalue, uivaluecount);
@@ -13138,7 +13138,7 @@ namespace ffijson
  
     }
  
-    json SetCustomGameStartBoolProperty(PARAMS(const char* id, const char* propertyid, bool uivalue))
+    json SetCustomGameStartBoolProperty(PARAMS(const char* id,const char* propertyid,bool uivalue))
     {
         invoke(SetCustomGameStartBoolProperty, id, propertyid, uivalue);
         return json
@@ -13147,7 +13147,7 @@ namespace ffijson
         };
     }
  
-    json SetCustomGameStartEncyclopediaProperty(PARAMS(const char* id, const char* propertyid, uint32_t uivaluecount))
+    json SetCustomGameStartEncyclopediaProperty(PARAMS(const char* id,const char* propertyid,uint32_t uivaluecount))
     {
         CustomGameStartEncyclopediaEntry uivalue;
         invoke(SetCustomGameStartEncyclopediaProperty, id, propertyid, &uivalue, uivaluecount);
@@ -13164,7 +13164,7 @@ namespace ffijson
  
     }
  
-    json SetCustomGameStartInventoryProperty(PARAMS(const char* id, const char* propertyid, uint32_t uivaluecount))
+    json SetCustomGameStartInventoryProperty(PARAMS(const char* id,const char* propertyid,uint32_t uivaluecount))
     {
         CustomGameStartInventory uivalue;
         invoke(SetCustomGameStartInventoryProperty, id, propertyid, &uivalue, uivaluecount);
@@ -13181,7 +13181,7 @@ namespace ffijson
  
     }
  
-    json SetCustomGameStartMoneyProperty(PARAMS(const char* id, const char* propertyid, int64_t uivalue))
+    json SetCustomGameStartMoneyProperty(PARAMS(const char* id,const char* propertyid,int64_t uivalue))
     {
         invoke(SetCustomGameStartMoneyProperty, id, propertyid, uivalue);
         return json
@@ -13190,7 +13190,7 @@ namespace ffijson
         };
     }
  
-    json SetCustomGameStartRelationsProperty(PARAMS(const char* id, const char* propertyid, uint32_t uivaluecount))
+    json SetCustomGameStartRelationsProperty(PARAMS(const char* id,const char* propertyid,uint32_t uivaluecount))
     {
         CustomGameStartRelationInfo uivalue;
         invoke(SetCustomGameStartRelationsProperty, id, propertyid, &uivalue, uivaluecount);
@@ -13208,7 +13208,7 @@ namespace ffijson
  
     }
  
-    json SetCustomGameStartResearchProperty(PARAMS(const char* id, const char* propertyid, uint32_t uivaluecount))
+    json SetCustomGameStartResearchProperty(PARAMS(const char* id,const char* propertyid,uint32_t uivaluecount))
     {
         uint32_t resultlen = 32767;
         std::vector<const char*> uivalue;
@@ -13225,7 +13225,7 @@ namespace ffijson
  
     }
  
-    json SetCustomGameStartStringProperty(PARAMS(const char* id, const char* propertyid, const char* uivalue))
+    json SetCustomGameStartStringProperty(PARAMS(const char* id,const char* propertyid,const char* uivalue))
     {
         invoke(SetCustomGameStartStringProperty, id, propertyid, uivalue);
         return json
@@ -13234,7 +13234,7 @@ namespace ffijson
         };
     }
  
-    json SetDefensibleActiveWeaponGroup(PARAMS(UniverseID defensibleid, bool primary, uint32_t groupidx))
+    json SetDefensibleActiveWeaponGroup(PARAMS(UniverseID defensibleid,bool primary,uint32_t groupidx))
     {
         invoke(SetDefensibleActiveWeaponGroup, defensibleid, primary, groupidx);
         return json
@@ -13243,7 +13243,7 @@ namespace ffijson
         };
     }
  
-    json SetDefensibleLoadoutLevel(PARAMS(UniverseID defensibleid, float value))
+    json SetDefensibleLoadoutLevel(PARAMS(UniverseID defensibleid,float value))
     {
         invoke(SetDefensibleLoadoutLevel, defensibleid, value);
         return json
@@ -13252,7 +13252,7 @@ namespace ffijson
         };
     }
  
-    json SetDockingBayReservation(PARAMS(UniverseID dockingbayid, double duration))
+    json SetDockingBayReservation(PARAMS(UniverseID dockingbayid,double duration))
     {
         invoke(SetDockingBayReservation, dockingbayid, duration);
         return json
@@ -13261,7 +13261,7 @@ namespace ffijson
         };
     }
  
-    json SetDroneMode(PARAMS(UniverseID defensibleid, const char* dronetype, const char* mode))
+    json SetDroneMode(PARAMS(UniverseID defensibleid,const char* dronetype,const char* mode))
     {
         invoke(SetDroneMode, defensibleid, dronetype, mode);
         return json
@@ -13270,7 +13270,7 @@ namespace ffijson
         };
     }
  
-    json SetDroneTypeArmed(PARAMS(UniverseID defensibleid, const char* dronetype, bool arm))
+    json SetDroneTypeArmed(PARAMS(UniverseID defensibleid,const char* dronetype,bool arm))
     {
         invoke(SetDroneTypeArmed, defensibleid, dronetype, arm);
         return json
@@ -13279,7 +13279,7 @@ namespace ffijson
         };
     }
  
-    json SetDropDownCurOption(PARAMS(const int dropdownid, const char* id))
+    json SetDropDownCurOption(PARAMS(const int dropdownid,const char* id))
     {
         invoke(SetDropDownCurOption, dropdownid, id);
         return json
@@ -13288,7 +13288,7 @@ namespace ffijson
         };
     }
  
-    json SetEditBoxActive(PARAMS(const int editboxid, bool active))
+    json SetEditBoxActive(PARAMS(const int editboxid,bool active))
     {
         invoke(SetEditBoxActive, editboxid, active);
         return json
@@ -13297,7 +13297,7 @@ namespace ffijson
         };
     }
  
-    json SetEditBoxText(PARAMS(const int editboxid, const char* text))
+    json SetEditBoxText(PARAMS(const int editboxid,const char* text))
     {
         invoke(SetEditBoxText, editboxid, text);
         return json
@@ -13306,7 +13306,7 @@ namespace ffijson
         };
     }
  
-    json SetFill(PARAMS(const UniverseID componentid, const char*const connectionname, const uint8_t red, const uint8_t green, const uint8_t blue, const float alpha, const bool animated, const float minalpha, const float maxalpha, const float transitiontime))
+    json SetFill(PARAMS(const UniverseID componentid,const char*const connectionname,const uint8_t red,const uint8_t green,const uint8_t blue,const float alpha,const bool animated,const float minalpha,const float maxalpha,const float transitiontime))
     {
         invoke(SetFill, componentid, connectionname, red, green, blue, alpha, animated, minalpha, maxalpha, transitiontime);
         return json
@@ -13315,7 +13315,7 @@ namespace ffijson
         };
     }
  
-    json SetFleetName(PARAMS(UniverseID controllableid, const char* fleetname))
+    json SetFleetName(PARAMS(UniverseID controllableid,const char* fleetname))
     {
         invoke(SetFleetName, controllableid, fleetname);
         return json
@@ -13324,7 +13324,7 @@ namespace ffijson
         };
     }
  
-    json SetFlowChartNodeCaptionText(PARAMS(const int flowchartnodeid, const char* text))
+    json SetFlowChartNodeCaptionText(PARAMS(const int flowchartnodeid,const char* text))
     {
         invoke(SetFlowChartNodeCaptionText, flowchartnodeid, text);
         return json
@@ -13333,7 +13333,7 @@ namespace ffijson
         };
     }
  
-    json SetFlowChartNodeCurValue(PARAMS(const int flowchartnodeid, double value))
+    json SetFlowChartNodeCurValue(PARAMS(const int flowchartnodeid,double value))
     {
         invoke(SetFlowChartNodeCurValue, flowchartnodeid, value);
         return json
@@ -13342,7 +13342,7 @@ namespace ffijson
         };
     }
  
-    json SetFlowChartNodeMaxValue(PARAMS(const int flowchartnodeid, double value))
+    json SetFlowChartNodeMaxValue(PARAMS(const int flowchartnodeid,double value))
     {
         invoke(SetFlowChartNodeMaxValue, flowchartnodeid, value);
         return json
@@ -13351,7 +13351,7 @@ namespace ffijson
         };
     }
  
-    json SetFlowChartNodeSlider1Value(PARAMS(const int flowchartnodeid, double value))
+    json SetFlowChartNodeSlider1Value(PARAMS(const int flowchartnodeid,double value))
     {
         invoke(SetFlowChartNodeSlider1Value, flowchartnodeid, value);
         return json
@@ -13360,7 +13360,7 @@ namespace ffijson
         };
     }
  
-    json SetFlowChartNodeSlider2Value(PARAMS(const int flowchartnodeid, double value))
+    json SetFlowChartNodeSlider2Value(PARAMS(const int flowchartnodeid,double value))
     {
         invoke(SetFlowChartNodeSlider2Value, flowchartnodeid, value);
         return json
@@ -13369,7 +13369,7 @@ namespace ffijson
         };
     }
  
-    json SetFlowChartNodeSliderStep(PARAMS(const int flowchartnodeid, double step))
+    json SetFlowChartNodeSliderStep(PARAMS(const int flowchartnodeid,double step))
     {
         invoke(SetFlowChartNodeSliderStep, flowchartnodeid, step);
         return json
@@ -13378,7 +13378,7 @@ namespace ffijson
         };
     }
  
-    json SetFlowChartNodeStatusBgIcon(PARAMS(const int flowchartnodeid, const char* iconid))
+    json SetFlowChartNodeStatusBgIcon(PARAMS(const int flowchartnodeid,const char* iconid))
     {
         invoke(SetFlowChartNodeStatusBgIcon, flowchartnodeid, iconid);
         return json
@@ -13387,7 +13387,7 @@ namespace ffijson
         };
     }
  
-    json SetFlowChartNodeStatusIcon(PARAMS(const int flowchartnodeid, const char* iconid))
+    json SetFlowChartNodeStatusIcon(PARAMS(const int flowchartnodeid,const char* iconid))
     {
         invoke(SetFlowChartNodeStatusIcon, flowchartnodeid, iconid);
         return json
@@ -13396,7 +13396,7 @@ namespace ffijson
         };
     }
  
-    json SetFlowChartNodeStatusText(PARAMS(const int flowchartnodeid, const char* text))
+    json SetFlowChartNodeStatusText(PARAMS(const int flowchartnodeid,const char* text))
     {
         invoke(SetFlowChartNodeStatusText, flowchartnodeid, text);
         return json
@@ -13405,7 +13405,7 @@ namespace ffijson
         };
     }
  
-    json SetFlowchartNodeExpanded(PARAMS(const int flowchartnodeid, const int frameid, bool expandedabove))
+    json SetFlowchartNodeExpanded(PARAMS(const int flowchartnodeid,const int frameid,bool expandedabove))
     {
         invoke(SetFlowchartNodeExpanded, flowchartnodeid, frameid, expandedabove);
         return json
@@ -13414,7 +13414,7 @@ namespace ffijson
         };
     }
  
-    json SetFocusMapComponent(PARAMS(UniverseID holomapid, UniverseID componentid, bool resetplayerpan))
+    json SetFocusMapComponent(PARAMS(UniverseID holomapid,UniverseID componentid,bool resetplayerpan))
     {
         invoke(SetFocusMapComponent, holomapid, componentid, resetplayerpan);
         return json
@@ -13432,7 +13432,7 @@ namespace ffijson
         };
     }
  
-    json SetGroupAndAssignment(PARAMS(UniverseID controllableid, int group, const char* assignment))
+    json SetGroupAndAssignment(PARAMS(UniverseID controllableid,int group,const char* assignment))
     {
         invoke(SetGroupAndAssignment, controllableid, group, assignment);
         return json
@@ -13459,7 +13459,7 @@ namespace ffijson
         };
     }
  
-    json SetIcon(PARAMS(const int widgeticonid, const char* iconid))
+    json SetIcon(PARAMS(const int widgeticonid,const char* iconid))
     {
         invoke(SetIcon, widgeticonid, iconid);
         return json
@@ -13468,7 +13468,7 @@ namespace ffijson
         };
     }
  
-    json SetIconText(PARAMS(const int widgeticonid, const char* text))
+    json SetIconText(PARAMS(const int widgeticonid,const char* text))
     {
         invoke(SetIconText, widgeticonid, text);
         return json
@@ -13477,7 +13477,7 @@ namespace ffijson
         };
     }
  
-    json SetIconText2(PARAMS(const int widgeticonid, const char* text))
+    json SetIconText2(PARAMS(const int widgeticonid,const char* text))
     {
         invoke(SetIconText2, widgeticonid, text);
         return json
@@ -13486,7 +13486,7 @@ namespace ffijson
         };
     }
  
-    json SetInversionSetting(PARAMS(uint32_t uirangeid, const char* parametername, bool value))
+    json SetInversionSetting(PARAMS(uint32_t uirangeid,const char* parametername,bool value))
     {
         invoke(SetInversionSetting, uirangeid, parametername, value);
         return json
@@ -13504,7 +13504,7 @@ namespace ffijson
         };
     }
  
-    json SetKnownRead(PARAMS(UniverseID componentid, bool read))
+    json SetKnownRead(PARAMS(UniverseID componentid,bool read))
     {
         invoke(SetKnownRead, componentid, read);
         return json
@@ -13522,7 +13522,7 @@ namespace ffijson
         };
     }
  
-    json SetMacroMapLocalLinearHighways(PARAMS(UniverseID holomapid, bool value))
+    json SetMacroMapLocalLinearHighways(PARAMS(UniverseID holomapid,bool value))
     {
         invoke(SetMacroMapLocalLinearHighways, holomapid, value);
         return json
@@ -13531,7 +13531,7 @@ namespace ffijson
         };
     }
  
-    json SetMacroMapLocalRingHighways(PARAMS(UniverseID holomapid, bool value))
+    json SetMacroMapLocalRingHighways(PARAMS(UniverseID holomapid,bool value))
     {
         invoke(SetMacroMapLocalRingHighways, holomapid, value);
         return json
@@ -13540,7 +13540,7 @@ namespace ffijson
         };
     }
  
-    json SetMapAlertFilter(PARAMS(UniverseID holomapid, uint32_t alertlevel))
+    json SetMapAlertFilter(PARAMS(UniverseID holomapid,uint32_t alertlevel))
     {
         invoke(SetMapAlertFilter, holomapid, alertlevel);
         return json
@@ -13549,7 +13549,7 @@ namespace ffijson
         };
     }
  
-    json SetMapFactionRelationColorOption(PARAMS(UniverseID holomapid, bool value))
+    json SetMapFactionRelationColorOption(PARAMS(UniverseID holomapid,bool value))
     {
         invoke(SetMapFactionRelationColorOption, holomapid, value);
         return json
@@ -13558,7 +13558,7 @@ namespace ffijson
         };
     }
  
-    json SetMapPaintMod(PARAMS(UniverseID holomapid, const char* wareid))
+    json SetMapPaintMod(PARAMS(UniverseID holomapid,const char* wareid))
     {
         invoke(SetMapPaintMod, holomapid, wareid);
         return json
@@ -13567,7 +13567,7 @@ namespace ffijson
         };
     }
  
-    json SetMapPanOffset(PARAMS(UniverseID holomapid, UniverseID offsetcomponentid))
+    json SetMapPanOffset(PARAMS(UniverseID holomapid,UniverseID offsetcomponentid))
     {
         invoke(SetMapPanOffset, holomapid, offsetcomponentid);
         return json
@@ -13576,7 +13576,7 @@ namespace ffijson
         };
     }
  
-    json SetMapPicking(PARAMS(UniverseID holomapid, bool enable))
+    json SetMapPicking(PARAMS(UniverseID holomapid,bool enable))
     {
         invoke(SetMapPicking, holomapid, enable);
         return json
@@ -13585,7 +13585,7 @@ namespace ffijson
         };
     }
  
-    json SetMapRelativeMousePosition(PARAMS(UniverseID holomapid, bool valid, float x, float y))
+    json SetMapRelativeMousePosition(PARAMS(UniverseID holomapid,bool valid,float x,float y))
     {
         invoke(SetMapRelativeMousePosition, holomapid, valid, x, y);
         return json
@@ -13594,7 +13594,7 @@ namespace ffijson
         };
     }
  
-    json SetMapRenderAllAllyOrderQueues(PARAMS(UniverseID holomapid, bool value))
+    json SetMapRenderAllAllyOrderQueues(PARAMS(UniverseID holomapid,bool value))
     {
         invoke(SetMapRenderAllAllyOrderQueues, holomapid, value);
         return json
@@ -13603,7 +13603,7 @@ namespace ffijson
         };
     }
  
-    json SetMapRenderAllOrderQueues(PARAMS(UniverseID holomapid, bool value))
+    json SetMapRenderAllOrderQueues(PARAMS(UniverseID holomapid,bool value))
     {
         invoke(SetMapRenderAllOrderQueues, holomapid, value);
         return json
@@ -13612,7 +13612,7 @@ namespace ffijson
         };
     }
  
-    json SetMapRenderCargoContents(PARAMS(UniverseID holomapid, bool value))
+    json SetMapRenderCargoContents(PARAMS(UniverseID holomapid,bool value))
     {
         invoke(SetMapRenderCargoContents, holomapid, value);
         return json
@@ -13621,7 +13621,7 @@ namespace ffijson
         };
     }
  
-    json SetMapRenderCivilianShips(PARAMS(UniverseID holomapid, bool value))
+    json SetMapRenderCivilianShips(PARAMS(UniverseID holomapid,bool value))
     {
         invoke(SetMapRenderCivilianShips, holomapid, value);
         return json
@@ -13630,7 +13630,7 @@ namespace ffijson
         };
     }
  
-    json SetMapRenderCrewInfo(PARAMS(UniverseID holomapid, bool value))
+    json SetMapRenderCrewInfo(PARAMS(UniverseID holomapid,bool value))
     {
         invoke(SetMapRenderCrewInfo, holomapid, value);
         return json
@@ -13639,7 +13639,7 @@ namespace ffijson
         };
     }
  
-    json SetMapRenderDockedShipInfos(PARAMS(UniverseID holomapid, bool value))
+    json SetMapRenderDockedShipInfos(PARAMS(UniverseID holomapid,bool value))
     {
         invoke(SetMapRenderDockedShipInfos, holomapid, value);
         return json
@@ -13648,7 +13648,7 @@ namespace ffijson
         };
     }
  
-    json SetMapRenderEclipticLines(PARAMS(UniverseID holomapid, bool value))
+    json SetMapRenderEclipticLines(PARAMS(UniverseID holomapid,bool value))
     {
         invoke(SetMapRenderEclipticLines, holomapid, value);
         return json
@@ -13657,7 +13657,7 @@ namespace ffijson
         };
     }
  
-    json SetMapRenderMissionGuidance(PARAMS(UniverseID holomapid, MissionID missionid))
+    json SetMapRenderMissionGuidance(PARAMS(UniverseID holomapid,MissionID missionid))
     {
         invoke(SetMapRenderMissionGuidance, holomapid, missionid);
         return json
@@ -13666,7 +13666,7 @@ namespace ffijson
         };
     }
  
-    json SetMapRenderMissionOffers(PARAMS(UniverseID holomapid, bool value))
+    json SetMapRenderMissionOffers(PARAMS(UniverseID holomapid,bool value))
     {
         invoke(SetMapRenderMissionOffers, holomapid, value);
         return json
@@ -13675,7 +13675,7 @@ namespace ffijson
         };
     }
  
-    json SetMapRenderResourceInfo(PARAMS(UniverseID holomapid, bool value))
+    json SetMapRenderResourceInfo(PARAMS(UniverseID holomapid,bool value))
     {
         invoke(SetMapRenderResourceInfo, holomapid, value);
         return json
@@ -13684,7 +13684,7 @@ namespace ffijson
         };
     }
  
-    json SetMapRenderSelectionLines(PARAMS(UniverseID holomapid, bool value))
+    json SetMapRenderSelectionLines(PARAMS(UniverseID holomapid,bool value))
     {
         invoke(SetMapRenderSelectionLines, holomapid, value);
         return json
@@ -13693,7 +13693,7 @@ namespace ffijson
         };
     }
  
-    json SetMapRenderTradeOffers(PARAMS(UniverseID holomapid, bool value))
+    json SetMapRenderTradeOffers(PARAMS(UniverseID holomapid,bool value))
     {
         invoke(SetMapRenderTradeOffers, holomapid, value);
         return json
@@ -13702,7 +13702,7 @@ namespace ffijson
         };
     }
  
-    json SetMapRenderWorkForceInfo(PARAMS(UniverseID holomapid, bool value))
+    json SetMapRenderWorkForceInfo(PARAMS(UniverseID holomapid,bool value))
     {
         invoke(SetMapRenderWorkForceInfo, holomapid, value);
         return json
@@ -13711,7 +13711,7 @@ namespace ffijson
         };
     }
  
-    json SetMapRenderWrecks(PARAMS(UniverseID holomapid, bool value))
+    json SetMapRenderWrecks(PARAMS(UniverseID holomapid,bool value))
     {
         invoke(SetMapRenderWrecks, holomapid, value);
         return json
@@ -13720,7 +13720,7 @@ namespace ffijson
         };
     }
  
-    json SetMapStationInfoBoxMargin(PARAMS(UniverseID holomapid, const char* margin, uint32_t width))
+    json SetMapStationInfoBoxMargin(PARAMS(UniverseID holomapid,const char* margin,uint32_t width))
     {
         invoke(SetMapStationInfoBoxMargin, holomapid, margin, width);
         return json
@@ -13729,7 +13729,7 @@ namespace ffijson
         };
     }
  
-    json SetMapTargetDistance(PARAMS(UniverseID holomapid, float distance))
+    json SetMapTargetDistance(PARAMS(UniverseID holomapid,float distance))
     {
         invoke(SetMapTargetDistance, holomapid, distance);
         return json
@@ -13738,7 +13738,7 @@ namespace ffijson
         };
     }
  
-    json SetMapTopTradesCount(PARAMS(UniverseID holomapid, uint32_t count))
+    json SetMapTopTradesCount(PARAMS(UniverseID holomapid,uint32_t count))
     {
         invoke(SetMapTopTradesCount, holomapid, count);
         return json
@@ -13747,7 +13747,7 @@ namespace ffijson
         };
     }
  
-    json SetMapTradeFilterByMaxPrice(PARAMS(UniverseID holomapid, int64_t price))
+    json SetMapTradeFilterByMaxPrice(PARAMS(UniverseID holomapid,int64_t price))
     {
         invoke(SetMapTradeFilterByMaxPrice, holomapid, price);
         return json
@@ -13756,7 +13756,7 @@ namespace ffijson
         };
     }
  
-    json SetMapTradeFilterByMinTotalVolume(PARAMS(UniverseID holomapid, uint32_t minvolume))
+    json SetMapTradeFilterByMinTotalVolume(PARAMS(UniverseID holomapid,uint32_t minvolume))
     {
         invoke(SetMapTradeFilterByMinTotalVolume, holomapid, minvolume);
         return json
@@ -13765,7 +13765,7 @@ namespace ffijson
         };
     }
  
-    json SetMapTradeFilterByPlayerOffer(PARAMS(UniverseID holomapid, bool buysellswitch, bool enable))
+    json SetMapTradeFilterByPlayerOffer(PARAMS(UniverseID holomapid,bool buysellswitch,bool enable))
     {
         invoke(SetMapTradeFilterByPlayerOffer, holomapid, buysellswitch, enable);
         return json
@@ -13774,7 +13774,7 @@ namespace ffijson
         };
     }
  
-    json SetMapTradeFilterByWare(PARAMS(UniverseID holomapid, uint32_t numwareids))
+    json SetMapTradeFilterByWare(PARAMS(UniverseID holomapid,uint32_t numwareids))
     {
         uint32_t resultlen = 32767;
         std::vector<const char*> wareids;
@@ -13791,7 +13791,7 @@ namespace ffijson
  
     }
  
-    json SetMapTradeFilterByWareTransport(PARAMS(UniverseID holomapid, uint32_t numtransporttypes))
+    json SetMapTradeFilterByWareTransport(PARAMS(UniverseID holomapid,uint32_t numtransporttypes))
     {
         uint32_t resultlen = 32767;
         std::vector<const char*> transporttypes;
@@ -13808,7 +13808,7 @@ namespace ffijson
  
     }
  
-    json SetMessageRead(PARAMS(MessageID messageid, const char* categoryname))
+    json SetMessageRead(PARAMS(MessageID messageid,const char* categoryname))
     {
         invoke(SetMessageRead, messageid, categoryname);
         return json
@@ -13817,7 +13817,7 @@ namespace ffijson
         };
     }
  
-    json SetMouseCursorPosition(PARAMS(const int32_t posx, const int32_t posy))
+    json SetMouseCursorPosition(PARAMS(const int32_t posx,const int32_t posy))
     {
         invoke(SetMouseCursorPosition, posx, posy);
         return json
@@ -13853,7 +13853,7 @@ namespace ffijson
         };
     }
  
-    json SetMouseSteeringInvertedOption(PARAMS(const char* paramname, bool value))
+    json SetMouseSteeringInvertedOption(PARAMS(const char* paramname,bool value))
     {
         invoke(SetMouseSteeringInvertedOption, paramname, value);
         return json
@@ -13862,7 +13862,7 @@ namespace ffijson
         };
     }
  
-    json SetNotificationTypeEnabled(PARAMS(const char* id, bool value))
+    json SetNotificationTypeEnabled(PARAMS(const char* id,bool value))
     {
         invoke(SetNotificationTypeEnabled, id, value);
         return json
@@ -13871,7 +13871,7 @@ namespace ffijson
         };
     }
  
-    json SetOutline(PARAMS(const UniverseID componentid, const char*const connectionname, const uint8_t red, const uint8_t green, const uint8_t blue, const bool animated))
+    json SetOutline(PARAMS(const UniverseID componentid,const char*const connectionname,const uint8_t red,const uint8_t green,const uint8_t blue,const bool animated))
     {
         invoke(SetOutline, componentid, connectionname, red, green, blue, animated);
         return json
@@ -13880,7 +13880,7 @@ namespace ffijson
         };
     }
  
-    json SetPlayerBlacklistDefault(PARAMS(BlacklistID id, const char* listtype, const char* defaultgroup, bool value))
+    json SetPlayerBlacklistDefault(PARAMS(BlacklistID id,const char* listtype,const char* defaultgroup,bool value))
     {
         invoke(SetPlayerBlacklistDefault, id, listtype, defaultgroup, value);
         return json
@@ -13898,7 +13898,7 @@ namespace ffijson
         };
     }
  
-    json SetPlayerCameraTargetView(PARAMS(UniverseID targetid, bool force))
+    json SetPlayerCameraTargetView(PARAMS(UniverseID targetid,bool force))
     {
         invoke(SetPlayerCameraTargetView, targetid, force);
         return json
@@ -13934,7 +13934,7 @@ namespace ffijson
         };
     }
  
-    json SetPlayerIllegalWare(PARAMS(const char* wareid, bool illegal))
+    json SetPlayerIllegalWare(PARAMS(const char* wareid,bool illegal))
     {
         invoke(SetPlayerIllegalWare, wareid, illegal);
         return json
@@ -13961,7 +13961,7 @@ namespace ffijson
         };
     }
  
-    json SetRadarMousePosition(PARAMS(float x, float y))
+    json SetRadarMousePosition(PARAMS(float x,float y))
     {
         invoke(SetRadarMousePosition, x, y);
         return json
@@ -13988,7 +13988,7 @@ namespace ffijson
         };
     }
  
-    json SetSelectedMapComponent(PARAMS(UniverseID holomapid, UniverseID componentid))
+    json SetSelectedMapComponent(PARAMS(UniverseID holomapid,UniverseID componentid))
     {
         invoke(SetSelectedMapComponent, holomapid, componentid);
         return json
@@ -13997,7 +13997,7 @@ namespace ffijson
         };
     }
  
-    json SetSelectedMapComponents(PARAMS(UniverseID holomapid, uint32_t numcomponentids))
+    json SetSelectedMapComponents(PARAMS(UniverseID holomapid,uint32_t numcomponentids))
     {
         UniverseID componentids;
         invoke(SetSelectedMapComponents, holomapid, &componentids, numcomponentids);
@@ -14011,7 +14011,7 @@ namespace ffijson
  
     }
  
-    json SetSelectedMapGroup(PARAMS(UniverseID holomapid, UniverseID destructibleid, const char* macroname, const char* path, const char* group))
+    json SetSelectedMapGroup(PARAMS(UniverseID holomapid,UniverseID destructibleid,const char* macroname,const char* path,const char* group))
     {
         invoke(SetSelectedMapGroup, holomapid, destructibleid, macroname, path, group);
         return json
@@ -14020,7 +14020,7 @@ namespace ffijson
         };
     }
  
-    json SetSelectedMapMacroSlot(PARAMS(UniverseID holomapid, UniverseID defensibleid, UniverseID moduleid, const char* macroname, bool ismodule, const char* upgradetypename, size_t slot))
+    json SetSelectedMapMacroSlot(PARAMS(UniverseID holomapid,UniverseID defensibleid,UniverseID moduleid,const char* macroname,bool ismodule,const char* upgradetypename,size_t slot))
     {
         invoke(SetSelectedMapMacroSlot, holomapid, defensibleid, moduleid, macroname, ismodule, upgradetypename, slot);
         return json
@@ -14029,7 +14029,7 @@ namespace ffijson
         };
     }
  
-    json SetShieldHullBarHullPercent(PARAMS(const int shieldhullbarid, float hullpercent))
+    json SetShieldHullBarHullPercent(PARAMS(const int shieldhullbarid,float hullpercent))
     {
         invoke(SetShieldHullBarHullPercent, shieldhullbarid, hullpercent);
         return json
@@ -14038,7 +14038,7 @@ namespace ffijson
         };
     }
  
-    json SetShieldHullBarShieldPercent(PARAMS(const int shieldhullbarid, float shieldpercent))
+    json SetShieldHullBarShieldPercent(PARAMS(const int shieldhullbarid,float shieldpercent))
     {
         invoke(SetShieldHullBarShieldPercent, shieldhullbarid, shieldpercent);
         return json
@@ -14047,7 +14047,7 @@ namespace ffijson
         };
     }
  
-    json SetSliderCellMaxFactor(PARAMS(const int slidercellid, uint32_t maxfactor))
+    json SetSliderCellMaxFactor(PARAMS(const int slidercellid,uint32_t maxfactor))
     {
         invoke(SetSliderCellMaxFactor, slidercellid, maxfactor);
         return json
@@ -14056,7 +14056,7 @@ namespace ffijson
         };
     }
  
-    json SetSliderCellMaxSelectValue(PARAMS(const int slidercellid, double value))
+    json SetSliderCellMaxSelectValue(PARAMS(const int slidercellid,double value))
     {
         invoke(SetSliderCellMaxSelectValue, slidercellid, value);
         return json
@@ -14065,7 +14065,7 @@ namespace ffijson
         };
     }
  
-    json SetSliderCellMaxValue(PARAMS(const int slidercellid, double value))
+    json SetSliderCellMaxValue(PARAMS(const int slidercellid,double value))
     {
         invoke(SetSliderCellMaxValue, slidercellid, value);
         return json
@@ -14074,7 +14074,7 @@ namespace ffijson
         };
     }
  
-    json SetSliderCellValue(PARAMS(const int slidercellid, double value))
+    json SetSliderCellValue(PARAMS(const int slidercellid,double value))
     {
         invoke(SetSliderCellValue, slidercellid, value);
         return json
@@ -14092,7 +14092,7 @@ namespace ffijson
         };
     }
  
-    json SetStatusBarCurrentValue(PARAMS(const int statusbarid, float value))
+    json SetStatusBarCurrentValue(PARAMS(const int statusbarid,float value))
     {
         invoke(SetStatusBarCurrentValue, statusbarid, value);
         return json
@@ -14101,7 +14101,7 @@ namespace ffijson
         };
     }
  
-    json SetStatusBarMaxValue(PARAMS(const int statusbarid, float value))
+    json SetStatusBarMaxValue(PARAMS(const int statusbarid,float value))
     {
         invoke(SetStatusBarMaxValue, statusbarid, value);
         return json
@@ -14110,7 +14110,7 @@ namespace ffijson
         };
     }
  
-    json SetStatusBarStartValue(PARAMS(const int statusbarid, float value))
+    json SetStatusBarStartValue(PARAMS(const int statusbarid,float value))
     {
         invoke(SetStatusBarStartValue, statusbarid, value);
         return json
@@ -14119,7 +14119,7 @@ namespace ffijson
         };
     }
  
-    json SetSubordinateGroupAssignment(PARAMS(UniverseID controllableid, int group, const char* assignment))
+    json SetSubordinateGroupAssignment(PARAMS(UniverseID controllableid,int group,const char* assignment))
     {
         invoke(SetSubordinateGroupAssignment, controllableid, group, assignment);
         return json
@@ -14128,7 +14128,7 @@ namespace ffijson
         };
     }
  
-    json SetSubordinateGroupDockAtCommander(PARAMS(UniverseID controllableid, int group, bool value))
+    json SetSubordinateGroupDockAtCommander(PARAMS(UniverseID controllableid,int group,bool value))
     {
         invoke(SetSubordinateGroupDockAtCommander, controllableid, group, value);
         return json
@@ -14137,7 +14137,7 @@ namespace ffijson
         };
     }
  
-    json SetSupplyManual(PARAMS(UniverseID containerid, const char* type, bool onoff))
+    json SetSupplyManual(PARAMS(UniverseID containerid,const char* type,bool onoff))
     {
         invoke(SetSupplyManual, containerid, type, onoff);
         return json
@@ -14146,7 +14146,7 @@ namespace ffijson
         };
     }
  
-    json SetTableNextConnectedTable(PARAMS(const int tableid, const int nexttableid))
+    json SetTableNextConnectedTable(PARAMS(const int tableid,const int nexttableid))
     {
         invoke(SetTableNextConnectedTable, tableid, nexttableid);
         return json
@@ -14155,7 +14155,7 @@ namespace ffijson
         };
     }
  
-    json SetTableNextHorizontalConnectedTable(PARAMS(const int tableid, const int nexttableid))
+    json SetTableNextHorizontalConnectedTable(PARAMS(const int tableid,const int nexttableid))
     {
         invoke(SetTableNextHorizontalConnectedTable, tableid, nexttableid);
         return json
@@ -14164,7 +14164,7 @@ namespace ffijson
         };
     }
  
-    json SetTablePreviousConnectedTable(PARAMS(const int tableid, const int prevtableid))
+    json SetTablePreviousConnectedTable(PARAMS(const int tableid,const int prevtableid))
     {
         invoke(SetTablePreviousConnectedTable, tableid, prevtableid);
         return json
@@ -14173,7 +14173,7 @@ namespace ffijson
         };
     }
  
-    json SetTablePreviousHorizontalConnectedTable(PARAMS(const int tableid, const int prevtableid))
+    json SetTablePreviousHorizontalConnectedTable(PARAMS(const int tableid,const int prevtableid))
     {
         invoke(SetTablePreviousHorizontalConnectedTable, tableid, prevtableid);
         return json
@@ -14281,7 +14281,7 @@ namespace ffijson
         };
     }
  
-    json SetTrackedMenuFullscreen(PARAMS(const char* menu, bool fullscreen))
+    json SetTrackedMenuFullscreen(PARAMS(const char* menu,bool fullscreen))
     {
         invoke(SetTrackedMenuFullscreen, menu, fullscreen);
         return json
@@ -14290,7 +14290,7 @@ namespace ffijson
         };
     }
  
-    json SetTurretGroupArmed(PARAMS(UniverseID defensibleid, UniverseID contextid, const char* path, const char* group, bool arm))
+    json SetTurretGroupArmed(PARAMS(UniverseID defensibleid,UniverseID contextid,const char* path,const char* group,bool arm))
     {
         invoke(SetTurretGroupArmed, defensibleid, contextid, path, group, arm);
         return json
@@ -14299,7 +14299,7 @@ namespace ffijson
         };
     }
  
-    json SetTurretGroupMode2(PARAMS(UniverseID defensibleid, UniverseID contextid, const char* path, const char* group, const char* mode))
+    json SetTurretGroupMode2(PARAMS(UniverseID defensibleid,UniverseID contextid,const char* path,const char* group,const char* mode))
     {
         invoke(SetTurretGroupMode2, defensibleid, contextid, path, group, mode);
         return json
@@ -14344,7 +14344,7 @@ namespace ffijson
         };
     }
  
-    json SetWeaponArmed(PARAMS(UniverseID weaponid, bool arm))
+    json SetWeaponArmed(PARAMS(UniverseID weaponid,bool arm))
     {
         invoke(SetWeaponArmed, weaponid, arm);
         return json
@@ -14353,7 +14353,7 @@ namespace ffijson
         };
     }
  
-    json SetWeaponGroup(PARAMS(UniverseID defensibleid, UniverseID weaponid, bool primary, uint32_t groupidx, bool value))
+    json SetWeaponGroup(PARAMS(UniverseID defensibleid,UniverseID weaponid,bool primary,uint32_t groupidx,bool value))
     {
         invoke(SetWeaponGroup, defensibleid, weaponid, primary, groupidx, value);
         return json
@@ -14362,7 +14362,7 @@ namespace ffijson
         };
     }
  
-    json SetWeaponMode(PARAMS(UniverseID weaponid, const char* mode))
+    json SetWeaponMode(PARAMS(UniverseID weaponid,const char* mode))
     {
         invoke(SetWeaponMode, weaponid, mode);
         return json
@@ -14371,7 +14371,7 @@ namespace ffijson
         };
     }
  
-    json SetWidgetAssociatedElement(PARAMS(const int widgetid, bool value))
+    json SetWidgetAssociatedElement(PARAMS(const int widgetid,bool value))
     {
         invoke(SetWidgetAssociatedElement, widgetid, value);
         return json
@@ -14380,7 +14380,7 @@ namespace ffijson
         };
     }
  
-    json ShowBuildPlotPlacementMap(PARAMS(UniverseID holomapid, UniverseID sectorid))
+    json ShowBuildPlotPlacementMap(PARAMS(UniverseID holomapid,UniverseID sectorid))
     {
         invoke(ShowBuildPlotPlacementMap, holomapid, sectorid);
         return json
@@ -14389,7 +14389,7 @@ namespace ffijson
         };
     }
  
-    json ShowConstructionMap(PARAMS(UniverseID holomapid, UniverseID stationid, const char* constructionplanid, bool restore))
+    json ShowConstructionMap(PARAMS(UniverseID holomapid,UniverseID stationid,const char* constructionplanid,bool restore))
     {
         invoke(ShowConstructionMap, holomapid, stationid, constructionplanid, restore);
         return json
@@ -14398,7 +14398,7 @@ namespace ffijson
         };
     }
  
-    json ShowInteractMenu(PARAMS(const UniverseID componentid, const char*const connectionname, const uint32_t id))
+    json ShowInteractMenu(PARAMS(const UniverseID componentid,const char*const connectionname,const uint32_t id))
     {
         invoke(ShowInteractMenu, componentid, connectionname, id);
         return json
@@ -14407,7 +14407,7 @@ namespace ffijson
         };
     }
  
-    json SignalObjectWithNPCSeed(PARAMS(UniverseID objecttosignalid, const char* param, NPCSeed person, UniverseID controllableid))
+    json SignalObjectWithNPCSeed(PARAMS(UniverseID objecttosignalid,const char* param,NPCSeed person,UniverseID controllableid))
     {
         invoke(SignalObjectWithNPCSeed, objecttosignalid, param, person, controllableid);
         return json
@@ -14425,7 +14425,7 @@ namespace ffijson
         };
     }
  
-    json StartBriefing(PARAMS(MissionID missionid, const char* texturename, bool issubmission))
+    json StartBriefing(PARAMS(MissionID missionid,const char* texturename,bool issubmission))
     {
         invoke(StartBriefing, missionid, texturename, issubmission);
         return json
@@ -14443,7 +14443,7 @@ namespace ffijson
         };
     }
  
-    json StartMapBoxSelect(PARAMS(UniverseID holomapid, bool selectenemies))
+    json StartMapBoxSelect(PARAMS(UniverseID holomapid,bool selectenemies))
     {
         invoke(StartMapBoxSelect, holomapid, selectenemies);
         return json
@@ -14470,7 +14470,7 @@ namespace ffijson
         };
     }
  
-    json StartResearch(PARAMS(const char* wareid, UniverseID researchmoduleid))
+    json StartResearch(PARAMS(const char* wareid,UniverseID researchmoduleid))
     {
         invoke(StartResearch, wareid, researchmoduleid);
         return json
@@ -14497,7 +14497,7 @@ namespace ffijson
         };
     }
  
-    json StartVoiceSequence(PARAMS(const char* sequenceid, UniverseID entityid))
+    json StartVoiceSequence(PARAMS(const char* sequenceid,UniverseID entityid))
     {
         invoke(StartVoiceSequence, sequenceid, entityid);
         return json
@@ -14506,7 +14506,7 @@ namespace ffijson
         };
     }
  
-    json StopBriefing(PARAMS(MissionID missionid, bool issubmission))
+    json StopBriefing(PARAMS(MissionID missionid,bool issubmission))
     {
         invoke(StopBriefing, missionid, issubmission);
         return json
@@ -14605,7 +14605,7 @@ namespace ffijson
         };
     }
  
-    json TrackMenu(PARAMS(const char* menu, bool fullscreen))
+    json TrackMenu(PARAMS(const char* menu,bool fullscreen))
     {
         invoke(TrackMenu, menu, fullscreen);
         return json
@@ -14623,7 +14623,7 @@ namespace ffijson
         };
     }
  
-    json UnmutePlayerAlert(PARAMS(size_t index, bool silent))
+    json UnmutePlayerAlert(PARAMS(size_t index,bool silent))
     {
         invoke(UnmutePlayerAlert, index, silent);
         return json
@@ -14650,7 +14650,7 @@ namespace ffijson
         };
     }
  
-    json UpdateProduction(PARAMS(UniverseID containerormoduleid, bool force))
+    json UpdateProduction(PARAMS(UniverseID containerormoduleid,bool force))
     {
         invoke(UpdateProduction, containerormoduleid, force);
         return json
@@ -14668,7 +14668,7 @@ namespace ffijson
         };
     }
  
-    json UpdateSupplyOverrides(PARAMS(UniverseID containerid, uint32_t numoverrides))
+    json UpdateSupplyOverrides(PARAMS(UniverseID containerid,uint32_t numoverrides))
     {
         SupplyOverride overrides;
         invoke(UpdateSupplyOverrides, containerid, &overrides, numoverrides);
@@ -14685,7 +14685,7 @@ namespace ffijson
  
     }
  
-    json ZoomMap(PARAMS(UniverseID holomapid, float zoomstep))
+    json ZoomMap(PARAMS(UniverseID holomapid,float zoomstep))
     {
         invoke(ZoomMap, holomapid, zoomstep);
         return json
