@@ -7,49 +7,52 @@
 # AfterStruct, AfterUnion
 
 UseTab: false
-BasedOnStyle: LLVM
-IndentWidth: 4
+#BasedOnStyle: LLVM
+#IndentWidth: 4
 BreakBeforeBraces: "Stroustrup"
 AllowShortIfStatementsOnASingleLine: false
-IndentCaseLabels: false
-ColumnLimit: 120
-PointerAlignment: "Left"
-
-#AccessModifierOffset: -4
-#AlignAfterOpenBracket: DontAlign
-#AllowShortBlocksOnASingleLine: true
-#AllowShortFunctionsOnASingleLine: All
-#BasedOnStyle: LLVM
-#BraceWrapping:
-#  AfterClass: false    # TODO: verify
-#  AfterControlStatement: false    # TODO: verify
-#  AfterEnum: false    # TODO: verify
-#  AfterFunction: false    # TODO: verify
-#  AfterNamespace: false    # TODO: verify
-#  AfterStruct: false    # TODO: verify
-#  AfterUnion: false    # TODO: verify
-#  BeforeCatch: true
-#  BeforeElse: true
-#  IndentBraces: false
-#  SplitEmptyFunction: true
-#  SplitEmptyRecord: true
-#BreakBeforeBraces: Custom
-#ColumnLimit: 0
-#Cpp11BracedListStyle: true
-#FixNamespaceComments: false
 #IndentCaseLabels: false
-#IndentPPDirectives: None
-#IndentWidth: 4
-#MaxEmptyLinesToKeep: 10
+ColumnLimit: 96
+#PointerAlignment: "Left"
 #NamespaceIndentation: All
-#PointerAlignment: Left
-#SortIncludes: false
-#SortUsingDeclarations: false
-#SpaceAfterCStyleCast: false
-#SpaceBeforeAssignmentOperators: true
-#SpaceBeforeParens: ControlStatements
-#SpaceInEmptyParentheses: false
-#SpacesInCStyleCastParentheses: false
-#SpacesInParentheses: false
-#SpacesInSquareBrackets: false
-#TabWidth: 4
+SortIncludes: "Never"
+
+
+
+AccessModifierOffset: -4
+AlignAfterOpenBracket: DontAlign
+AllowShortBlocksOnASingleLine: true
+AllowShortFunctionsOnASingleLine: All
+BasedOnStyle: LLVM
+BraceWrapping:
+  AfterClass: false    # TODO: verify
+  AfterControlStatement: false    # TODO: verify
+  AfterEnum: false    # TODO: verify
+  AfterFunction: false    # TODO: verify
+  AfterNamespace: false    # TODO: verify
+  AfterStruct: false    # TODO: verify
+  AfterUnion: false    # TODO: verify
+  BeforeCatch: true
+  BeforeElse: true
+  IndentBraces: false
+  SplitEmptyFunction: true
+  SplitEmptyRecord: true
+BreakBeforeBraces: Custom
+#ColumnLimit: 0
+Cpp11BracedListStyle: true
+FixNamespaceComments: false
+IndentCaseLabels: false
+IndentPPDirectives: None
+IndentWidth: 4
+MaxEmptyLinesToKeep: 10
+NamespaceIndentation: All
+PointerAlignment: Left
+SortUsingDeclarations: false
+SpaceAfterCStyleCast: false
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyParentheses: false
+SpacesInCStyleCastParentheses: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: true
+TabWidth: 4

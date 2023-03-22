@@ -19,6 +19,12 @@
     <Filter Include="Source Files\httpserver">
       <UniqueIdentifier>{6dab583b-fb8d-497f-8644-e1b507e9a52d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\ffi">
+      <UniqueIdentifier>{6bdb67f2-cabf-4fb5-9e06-3a3e1f9569a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ffi">
+      <UniqueIdentifier>{2bb62194-14ae-49ec-83f9-80bd9bd57885}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -27,13 +33,85 @@
     <ClCompile Include="httpserver\HttpServer.cpp">
       <Filter>Source Files\httpserver</Filter>
     </ClCompile>
+    <ClCompile Include="ffi\FFIInvoke.cpp">
+      <Filter>Source Files\ffi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\subhook\subhook.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include=".clang-format" />
+    <None Include="..\Request_collection.har" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="httpserver\HttpServer.h">
       <Filter>Header Files\httpserver</Filter>
     </ClInclude>
+    <ClInclude Include="ffi\FFIInvoke.h">
+      <Filter>Header Files\ffi</Filter>
+    </ClInclude>
+    <ClInclude Include="ffi\x4ffi\ffi_typedef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ffi\x4ffi\ffi_typedef_struct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ffi\x4ffi\ffi_funcs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="endpoint_impl\player_funcs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InitHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ffi\x4ffi\ffi_funcs_menu_map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="endpoint_impl\common_funcs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ffi\x4ffi\ffi_funcs_menu_playerinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ffi\ffi_enum_helper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="endpoint_impl\message_funcs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ffi\json_converters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="_lua_.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lua_scripts\json.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lua_scripts\dump_lua.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="endpoint_impl\logbook_funcs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="endpoint_impl\object_and_component_funcs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ffi\x4ffi\ffi_funcs_helper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ffi\x4ffi\ffi_funcs_station_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lua_scripts\ComponentDataHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="asm.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
 </Project>
