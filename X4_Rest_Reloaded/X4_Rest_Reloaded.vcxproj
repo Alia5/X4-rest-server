@@ -161,6 +161,7 @@
     <MASM Include="asm.asm">
       <FileType>Document</FileType>
     </MASM>
+    <None Include="..\README.md" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="endpoint_impl\common_funcs.h" />
