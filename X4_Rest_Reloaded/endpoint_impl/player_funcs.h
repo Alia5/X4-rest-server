@@ -63,7 +63,7 @@ end
 return json.encode(statTable)
                 )";
                 const auto callResult = executeLua(get_stats_lua, true, true);
-                SET_CONTENT((callResult));
+                res.set_content(callResult, "application/json");
                 return;
             }
             SET_CONTENT(({}));
