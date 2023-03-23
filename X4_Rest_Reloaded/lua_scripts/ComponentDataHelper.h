@@ -3,7 +3,7 @@
 #include <vector>
 
 
-static const std::vector<const std::string> valid_component_data_attribs = {
+static const std::vector<std::string> valid_component_data_attribs = {
   // clang-format off
   "zoneid",
   "isplayerowned",
@@ -114,3 +114,8 @@ static const std::vector<const std::string> valid_component_data_attribs = {
   "systemid"
   // clang-format on
 };
+
+bool is_valid_component_data(const std::string& attrib) {
+    return std::ranges::find(valid_component_data_attribs,
+                             attrib) != valid_component_data_attribs.end();
+}
