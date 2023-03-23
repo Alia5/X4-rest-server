@@ -28,4 +28,16 @@ namespace X4FFI {
             {"isread", m.isread},
         };
     }
+
+    inline void to_json(json& j, const UIPosRot& m) {
+        j = nlohmann::json{{"x", m.x}, {"y", m.y}, {"z", m.z}, {"pitch", m.pitch},
+            {"yaw", m.yaw}, {"roll", m.roll}};
+    };
+
+    inline void to_json(json& j, const SofttargetDetails& s) {
+        j = nlohmann::json{
+            {"softtargetID", s.softtargetID},
+            {"softtargetConnectionName", s.softtargetConnectionName},
+        };
+    }
 }

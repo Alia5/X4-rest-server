@@ -10,9 +10,44 @@
 
 inline void RegisterObjectAndComponentFunctions(INIT_PARAMS()) {
     HttpServer::AddEndpoint(UINT64_PARAM_GET_HANDLER(GetObjectIDCode, "objectId"));
+    HttpServer::AddEndpoint(UINT64_PARAM_GET_HANDLER(GetObjectPositionInSector, "objectId"));
 
     HttpServer::AddEndpoint(UINT64_PARAM_GET_HANDLER(GetComponentClass, "componentId"));
     HttpServer::AddEndpoint(UINT64_PARAM_GET_HANDLER(GetComponentName, "componentId"));
+
+    HttpServer::AddEndpoint(UINT64_PARAM_GET_HANDLER(IsObjectKnown, "componentId"));
+
+    HttpServer::AddEndpoint({"/IsComponentClass", HttpServer::Method::GET,
+        [&](const httplib::Request& req, httplib::Response& res)
+        {
+            uint64_t componentId;
+            try {
+                componentId = std::stoull(req.get_param_value("componentId"));
+            }
+            catch (...) {
+                return BadRequest(res, "componentId is invalid");
+            }
+            if (componentId == 0) {
+                return BadRequest(res, "componentId is required");
+            }
+
+            std::string component_class;
+            try {
+                component_class = req.get_param_value("componentClass");
+            }
+            catch (...) {
+                return BadRequest(res, "componentClass is required");
+            }
+            if (component_class.empty())
+            {
+                return BadRequest(res, "componentClass is required");
+            }
+
+            const auto callResult = invoke(IsComponentClass, componentId, component_class.c_str());
+            SET_CONTENT((callResult));
+
+        }
+    });
 
     HttpServer::AddEndpoint({"/GetComponentData", HttpServer::Method::GET,
         [](const httplib::Request& req, httplib::Response& res) {
@@ -23,6 +58,11 @@ inline void RegisterObjectAndComponentFunctions(INIT_PARAMS()) {
             catch (...) {
                 return BadRequest(res, "componentId is invalid");
             }
+            if (componentId == 0)
+            {
+                return BadRequest(res, "componentId is required");
+            }
+
             std::string attribs;
 
             try {

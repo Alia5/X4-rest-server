@@ -15,6 +15,9 @@ inline void RegisterPlayerFunctions(INIT_PARAMS()) {
     HttpServer::AddEndpoint(SIMPLE_GET_HANDLER(GetPlayerObjectID));
     HttpServer::AddEndpoint(SIMPLE_GET_HANDLER(GetPlayerOccupiedShipID));
 
+    HttpServer::AddEndpoint(SIMPLE_GET_HANDLER(GetPlayerTargetOffset));
+    HttpServer::AddEndpoint(SIMPLE_GET_HANDLER(GetSofttarget));
+
     HttpServer::AddEndpoint(SIMPLE_GET_HANDLER(GetCreditsDueFromPlayerBuilds));
     HttpServer::AddEndpoint(SIMPLE_GET_HANDLER(GetCreditsDueFromPlayerTrades));
 
