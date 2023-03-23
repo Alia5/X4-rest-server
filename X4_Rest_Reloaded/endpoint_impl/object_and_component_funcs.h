@@ -43,7 +43,7 @@ inline void RegisterObjectAndComponentFunctions(INIT_PARAMS()) {
                 if (!is_valid_component_data(attr_str)) {
                     res.status = 401;
                     SET_CONTENT(({{"code", 401}, {"name", "Bad Request"},
-                        {"message", "attribs are invalid"}, {"valid_attributes", valid_component_data_attribs}}));
+                        {"message", "attrib \"" + attr_str + "\" is invalid"}, {"valid_attributes", valid_component_data_attribs}}));
                     return;
                 }
                 lua_attribs += "\"" + attr_str + "\",";
