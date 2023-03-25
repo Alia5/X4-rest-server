@@ -9,7 +9,7 @@ https://opensource.org/licenses/MIT.
 #pragma once
 #include "endpoint_impl/common_funcs.h"
 #include "endpoint_impl/logbook_funcs.h"
-#include "endpoint_impl/map_funcs.h"
+#include "endpoint_impl/map_or_query_funcs.h"
 #include "endpoint_impl/message_funcs.h"
 #include "endpoint_impl/object_and_component_funcs.h"
 #include "endpoint_impl/player_funcs.h"
@@ -24,7 +24,7 @@ public:
         RegisterMessageFunctions(ffi_invoke);
         RegisterLogbookFunctions(ffi_invoke);
         RegisterObjectAndComponentFunctions(ffi_invoke);
-        RegisterMapFunctions(ffi_invoke);
+        RegisterMapOrQueryFunctions(ffi_invoke);
     }
 };
 

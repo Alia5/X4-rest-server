@@ -8,3 +8,4 @@
 #include "ffi_funcs_menu_playerinfo.h"
 #include "ffi_funcs_helper.h"
 #include "ffi_funcs_station_config.h"
+#include "ffi_funcs_customgame.h"

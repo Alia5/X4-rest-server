@@ -62,13 +62,13 @@ inline void RegisterPlayerFunctions(INIT_PARAMS()) {
 local statTable = {}
 local stats = GetAllStatIDs()
 for i = 1, #stats do
-	local hidden, displayname = GetStatData(stats[i], "hidden", "displayname")
-	if not hidden then
-		statTable[stats[i]] = GetStatData(stats[i], "displayvalue")
-	else 
-	   	)" + std::string{include_hidden ? "" : "-- "} +
+    local hidden, displayname = GetStatData(stats[i], "hidden", "displayname")
+    if not hidden then
+        statTable[stats[i]] = GetStatData(stats[i], "displayvalue")
+    else 
+        )" + std::string{include_hidden ? "" : "-- "} +
                     R"(statTable["hidden:" .. stats[i]] = GetStatData(stats[i], "displayvalue")
-	end
+    end
 end
 
 return json.encode(statTable)

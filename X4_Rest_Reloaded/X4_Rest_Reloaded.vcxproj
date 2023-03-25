@@ -165,13 +165,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="endpoint_impl\common_funcs.h" />
-    <ClInclude Include="endpoint_impl\map_funcs.h" />
+    <ClInclude Include="endpoint_impl\map_or_query_funcs.h" />
     <ClInclude Include="endpoint_impl\object_and_component_funcs.h" />
     <ClInclude Include="endpoint_impl\logbook_funcs.h" />
     <ClInclude Include="endpoint_impl\message_funcs.h" />
     <ClInclude Include="ffi\FFIInvoke.h" />
     <ClInclude Include="ffi\ffi_enum_helper.h" />
     <ClInclude Include="ffi\json_converters.h" />
+    <ClInclude Include="ffi\x4ffi\ffi_funcs_customgame.h" />
     <ClInclude Include="ffi\x4ffi\ffi_funcs_helper.h" />
     <ClInclude Include="ffi\x4ffi\ffi_funcs_station_config.h" />
     <ClInclude Include="lua_scripts\ComponentDataHelper.h" />

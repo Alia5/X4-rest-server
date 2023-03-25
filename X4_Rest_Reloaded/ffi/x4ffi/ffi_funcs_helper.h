@@ -1,5 +1,4 @@
 #pragma once
-#pragma once
 #include "ffi_typedef.h"
 #include "ffi_typedef_struct.h"
 

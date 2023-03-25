@@ -40,4 +40,8 @@ namespace X4FFI {
             {"softtargetConnectionName", s.softtargetConnectionName},
         };
     }
+    inline void to_json(json& j, const RaceInfo& r) {
+        j = nlohmann::json{{"id", r.id}, {"name", r.name}, {"shortname", r.shortname},
+            {"description", r.description}, {"icon", r.icon}};
+    }
 }
