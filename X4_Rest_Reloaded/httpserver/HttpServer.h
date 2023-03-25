@@ -1,3 +1,11 @@
+/*
+Copyright 2021-2023 Peter Repukat - FlatspotSoftware
+
+Use of this source code is governed by the MIT
+license that can be found in the LICENSE file or at
+https://opensource.org/licenses/MIT.
+*/
+
 #pragma once
 #include <httplib.h>
 #include <nlohmann/json.hpp>
@@ -7,40 +15,40 @@
 
 #define HAN_FN [ & ](const httplib::Request& req, httplib::Response& res)
 
-#define SIMPLE_GET_HANDLER(FuncName)                                                                                   \
-    {                                                                                                                  \
-        std::string("/") + QUOTE(FuncName), HttpServer::Method::GET, HAN_FN {                                          \
-            const auto callResult = invoke(FuncName);                                                                  \
-            SET_CONTENT((callResult));                                                                                 \
-        }                                                                                                              \
+#define SIMPLE_GET_HANDLER(FuncName)                                                           \
+    {                                                                                          \
+        std::string("/") + QUOTE(FuncName), HttpServer::Method::GET, HAN_FN {                  \
+            const auto callResult = invoke(FuncName);                                          \
+            SET_CONTENT((callResult));                                                         \
+        }                                                                                      \
     }
 
-#define INT_PARAM_GET_HANDLER(FuncName, paramName)                                                                     \
-    {                                                                                                                  \
-        std::string("/") + QUOTE(FuncName), HttpServer::Method::GET, HAN_FN {                                          \
-            try {                                                                                                      \
-                const auto param = std::stoi(req.get_param_value(paramName));                                   \
-                const auto callResult = invoke(FuncName, param);                                                       \
-                SET_CONTENT((callResult));                                                                             \
-            }                                                                                                          \
-            catch (...) {                                                                                              \
-                return BadRequest(res, std::string(paramName) + " is invalid");                                 \
-            }                                                                                                          \
-        }                                                                                                              \
+#define INT_PARAM_GET_HANDLER(FuncName, paramName)                                             \
+    {                                                                                          \
+        std::string("/") + QUOTE(FuncName), HttpServer::Method::GET, HAN_FN {                  \
+            try {                                                                              \
+                const auto param = std::stoi(req.get_param_value(paramName));                  \
+                const auto callResult = invoke(FuncName, param);                               \
+                SET_CONTENT((callResult));                                                     \
+            }                                                                                  \
+            catch (...) {                                                                      \
+                return BadRequest(res, std::string(paramName) + " is invalid");                \
+            }                                                                                  \
+        }                                                                                      \
     }
 
-#define UINT64_PARAM_GET_HANDLER(FuncName, paramName)                                                                    \
-    {                                                                                                                  \
-        std::string("/") + QUOTE(FuncName), HttpServer::Method::GET, HAN_FN {                                          \
-            try {                                                                                                      \
-                const uint64_t param = std::stoull(req.get_param_value(paramName));                                  \
-                const auto callResult = invoke(FuncName, param);                                                       \
-                SET_CONTENT((callResult));                                                                             \
-            }                                                                                                          \
-            catch (...) {                                                                                              \
-                return BadRequest(res, std::string(paramName) + " is invalid");                                 \
-            }                                                                                                          \
-        }                                                                                                              \
+#define UINT64_PARAM_GET_HANDLER(FuncName, paramName)                                          \
+    {                                                                                          \
+        std::string("/") + QUOTE(FuncName), HttpServer::Method::GET, HAN_FN {                  \
+            try {                                                                              \
+                const uint64_t param = std::stoull(req.get_param_value(paramName));            \
+                const auto callResult = invoke(FuncName, param);                               \
+                SET_CONTENT((callResult));                                                     \
+            }                                                                                  \
+            catch (...) {                                                                      \
+                return BadRequest(res, std::string(paramName) + " is invalid");                \
+            }                                                                                  \
+        }                                                                                      \
     }
 
 

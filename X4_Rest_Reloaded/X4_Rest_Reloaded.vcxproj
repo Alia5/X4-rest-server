@@ -165,6 +165,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="endpoint_impl\common_funcs.h" />
+    <ClInclude Include="endpoint_impl\map_funcs.h" />
     <ClInclude Include="endpoint_impl\object_and_component_funcs.h" />
     <ClInclude Include="endpoint_impl\logbook_funcs.h" />
     <ClInclude Include="endpoint_impl\message_funcs.h" />
