@@ -53,8 +53,8 @@ https://opensource.org/licenses/MIT.
 
 
 inline void BadRequest(httplib::Response& res, std::string const& message) {
-    res.status = 401;
-    SET_CONTENT(({{"code", 401}, {"name", "Bad Request"}, {"message", message}}));
+    res.status = 400;
+    SET_CONTENT(({{"code", 400}, {"name", "Bad Request"}, {"message", message}}));
 }
 
 class FFIInvoke;
