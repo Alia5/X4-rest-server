@@ -79,4 +79,15 @@ return json.encode(statTable)
             }
             SET_CONTENT(({}));
         }});
+
+    HttpServer::AddEndpoint({"/GetPlayerMoney", HttpServer::Method::GET,
+        [ & ](const httplib::Request& req, httplib::Response& res) {
+            if (ui_lua_state != nullptr) {
+                const auto get_stats_lua = R"(return json.encode(GetPlayerMoney))";
+                const auto callResult = executeLua(get_stats_lua, true, true);
+                res.set_content(callResult, "application/json");
+                return;
+            }
+            SET_CONTENT(({}));
+        }});
 }
