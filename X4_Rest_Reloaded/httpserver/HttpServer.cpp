@@ -9,8 +9,7 @@ https://opensource.org/licenses/MIT.
 #include "HttpServer.h"
 HttpServer::HttpServer(FFIInvoke& ffi_invoke) : ffi_invoke_(ffi_invoke) {}
 
-std::string HttpServer::ToString(Method m)
-{
+std::string HttpServer::ToString(Method m) {
     switch (m) {
     case POST:
         return "POST";
@@ -25,14 +24,15 @@ std::string HttpServer::ToString(Method m)
 
 void HttpServer::AddEndpoint(const Endpoint&& e) { endpoints_.push_back(e); }
 
-void HttpServer::run(int port)
-{
+void HttpServer::run(int port) {
 
-    server_.Get("/", [this](const httplib::Request& req, httplib::Response& res) {
+    server_.set_default_headers(httplib::Headers{{"Access-Control-Allow-Origin", "*"}});
+
+    server_.Get("/", [ this ](const httplib::Request& req, httplib::Response& res) {
         auto content_json = nlohmann::json{{"endpoints", nlohmann::json::array()}};
 
         for (const auto& e : endpoints_) {
-            content_json["endpoints"].push_back(nlohmann::json{
+            content_json[ "endpoints" ].push_back(nlohmann::json{
                 {"path", e.path},
                 {"method", ToString(e.method)},
                 {"response", e.response_hint},
@@ -40,7 +40,8 @@ void HttpServer::run(int port)
             });
         }
 
-        content_json["endpoints"].push_back(nlohmann::json{{"path", "/stop"}, {"method", "POST"}});
+        content_json[ "endpoints" ].push_back(
+            nlohmann::json{{"path", "/stop"}, {"method", "POST"}});
 
         res.set_content(content_json.dump(4), "application/json");
         res.status = 200;
@@ -48,7 +49,8 @@ void HttpServer::run(int port)
 
     for (const auto& e : endpoints_) {
         const auto fn =
-            ([this, &e]() -> httplib::Server& (httplib::Server::*)(const std::string&, httplib::Server::Handler) {
+            ([ this, &e ]() -> httplib::Server& (httplib::Server::*)(const std::string&,
+                                httplib::Server::Handler) {
                 switch (e.method) {
                 case POST:
                     return &httplib::Server::Post;
@@ -61,51 +63,52 @@ void HttpServer::run(int port)
                 }
             })();
 
-        (server_.*fn)(e.path, [this, &e](const httplib::Request& req, httplib::Response& res) {
-            res.status = 0;
-            res.content_length_ = 0;
-            try {
-                e.handler(req, res);
-            }
-            catch (std::exception& err) {
-                // spdlog::error("Exception in http handler: {}", err.what());
-                res.status = res.status == 0 ? 500 : res.status;
-                if (res.content_length_ == 0) {
+        (server_.*fn)(
+            e.path, [ this, &e ](const httplib::Request& req, httplib::Response& res) {
+                res.status = 0;
+                res.content_length_ = 0;
+                try {
+                    e.handler(req, res);
+                }
+                catch (std::exception& err) {
+                    // spdlog::error("Exception in http handler: {}", err.what());
+                    res.status = res.status == 0 ? 500 : res.status;
+                    if (res.content_length_ == 0) {
+                        res.set_content(
+                            nlohmann::json{
+                                {"code", res.status},
+                                {"name", "HandlerError"},
+                                {"message", err.what()},
+                            }
+                                .dump(),
+                            "application/json");
+                    }
+                }
+                catch (...) {
+                    res.status = 500;
                     res.set_content(
                         nlohmann::json{
                             {"code", res.status},
-                            {"name", "HandlerError"},
-                            {"message", err.what()},
+                            {"name", "Internal Server Error"},
+                            {"message", "Unknown Error"},
                         }
                             .dump(),
                         "application/json");
                 }
-            }
-            catch (...) {
-                res.status = 500;
-                res.set_content(
-                    nlohmann::json{
-                        {"code", res.status},
-                        {"name", "Internal Server Error"},
-                        {"message", "Unknown Error"},
-                    }
-                        .dump(),
-                    "application/json");
-            }
-            if (res.status == 0) {
-                res.status = e.method == Method::POST ? 201 : 200;
-            }
-        });
+                if (res.status == 0) {
+                    res.status = e.method == Method::POST ? 201 : 200;
+                }
+            });
     }
 
     // --
 #ifdef _DEBUG
-    server_.Post("/stop", [&](const httplib::Request& req, httplib::Response& res) {
-        std::thread([&]() { server_.stop(); }).detach();
+    server_.Post("/stop", [ & ](const httplib::Request& req, httplib::Response& res) {
+        std::thread([ & ]() { server_.stop(); }).detach();
         res.set_content(nlohmann::json{{"ejected", true}}.dump(), "application/json");
     });
 #endif
     // somehow got bad request every other request without an extra thread o.O
     // (The server_ already runs in it's own separate thread by default...
-    std::thread([&]() { server_.listen("0.0.0.0", port); }).join();
+    std::thread([ & ]() { server_.listen("0.0.0.0", port); }).join();
 }
