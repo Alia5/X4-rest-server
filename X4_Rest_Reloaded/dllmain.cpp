@@ -916,7 +916,7 @@ DWORD WINAPI MainThread(LPVOID param) {
                 subhook::HookFlags::HookFlag64BitOffset);
         }
 
-        server.run(3000);
+        server.run(3002);
     }
     FreeLibraryAndExitThread((HMODULE)param, 0);
 }
