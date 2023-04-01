@@ -10,7 +10,7 @@
 #define LUA_ERRMEM 4
 #define LUA_ERRERR 5
 
-std::mutex lua_state_mtx;
+std::timed_mutex lua_state_mtx;
 
 typedef void* lua_State;
 
@@ -59,26 +59,26 @@ int lua_pcall_hook(lua_State* L, int nargs, int nresults, int errfunc) {
     if (L == ui_lua_state) {
         const auto res = lua_pcall(L, nargs, nresults, errfunc);
 
-        // OutputDebugStringA("Calling lua_string from http: Loading lua_string\n");
+        // // OutputDebugStringA("Calling lua_string from http: Loading lua_string\n");
         const auto lua_str = toExecuteLuaString.load();
         if (lua_str != nullptr) {
             const auto top = lua_gettop(L);
             if (luaL_loadstring(L, lua_str) == LUA_OK) {
-                OutputDebugStringA("Calling lua_string from http: calling lua\n");
+                // OutputDebugStringA("Calling lua_string from http: calling lua\n");
                 if (lua_pcall(L, 0, -1, 0) == LUA_OK) {
                     const char* result = lua_tolstring(L, -1, nullptr);
 
                     if (result == nullptr) {
-                        OutputDebugStringA("Calling lua_string from http: storing res 1\n");
+                        // OutputDebugStringA("Calling lua_string from http: storing res 1\n");
                         lua_result.store("true");
                     }
                     else {
-                        OutputDebugStringA("Calling lua_string from http: storing res 2\n");
+                        // OutputDebugStringA("Calling lua_string from http: storing res 2\n");
                         lua_result.store(result);
                     }
                 }
                 else {
-                    OutputDebugStringA("Calling lua_string from http: storing res 3\n");
+                    // OutputDebugStringA("Calling lua_string from http: storing res 3\n");
                     lua_result.store("error executing lua");
                 }
                 auto newTop = lua_gettop(L);
@@ -88,10 +88,10 @@ int lua_pcall_hook(lua_State* L, int nargs, int nresults, int errfunc) {
                 }
             }
             else {
-                OutputDebugStringA("Calling lua_string from http: storing res 4\n");
+                // OutputDebugStringA("Calling lua_string from http: storing res 4\n");
                 lua_result.store("false");
             }
-            OutputDebugStringA("Calling lua_string from http: resetting lua_string\n");
+            // OutputDebugStringA("Calling lua_string from http: resetting lua_string\n");
             toExecuteLuaString.store(nullptr);
         }
         return res;
@@ -123,17 +123,28 @@ inline void loadLuaLib() {
 
 inline std::string executeLua(
     const std::string& lua_code, bool include_json = true, bool encode_userdata = false) {
-    OutputDebugStringA("queuing lua execution: locking lua_state_mtx\n");
-    const std::lock_guard<std::mutex> lock(lua_state_mtx);
+
+    std::stringstream threadIdStrStr;
+    threadIdStrStr << std::this_thread::get_id();
+
+    const auto start = std::chrono::high_resolution_clock::now();
+    // OutputDebugStringA(
+        (std::string("queuing lua execution: locking lua_state_mtx; threadId: ") +
+            threadIdStrStr.str() + "\n")
+            .c_str());
+    if (!lua_state_mtx.try_lock_for(std::chrono::seconds(3)))
+    {
+        throw std::exception("Error: Timeout acquiring lua execution lock");
+    }
+    const std::lock_guard<std::timed_mutex> lock(lua_state_mtx, std::adopt_lock);
     if (ui_lua_state != nullptr) {
-        OutputDebugStringA("queuing lua execution: resetting lua result\n");
+        // OutputDebugStringA("queuing lua execution: resetting lua result\n");
         lua_result.store(nullptr);
         std::string lua_str =
             include_json ? (GetJsonLua(encode_userdata) + "\n" + lua_code) : lua_code;
-        OutputDebugStringA("queuing lua execution: storing lua string\n");
+        // OutputDebugStringA("queuing lua execution: storing lua string\n");
         toExecuteLuaString.store(lua_str.c_str());
-        const auto start = std::chrono::high_resolution_clock::now();
-        OutputDebugStringA("queuing lua execution: loading lua string\n");
+        // OutputDebugStringA("queuing lua execution: loading lua string\n");
         auto res = lua_result.load();
         while (res == nullptr) {
             Sleep(1);
@@ -142,9 +153,10 @@ inline std::string executeLua(
                     .count() > 3000) {
                 throw std::exception("Lua error: Timeout executing lua");
             }
-            // OutputDebugStringA("queuing lua execution: loading lua string in loop\n");
+            // // OutputDebugStringA("queuing lua execution: loading lua string in loop\n");
             res = lua_result.load();
         }
+        // OutputDebugStringA("queuing lua execution: returning\n");
         return res;
     }
     throw std::exception("Lua error: Lua_State not loaded");

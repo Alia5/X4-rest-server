@@ -961,9 +961,9 @@ subhook::Hook LuaCloseHook;
 subhook::Hook LuaGetMetatableHook;
 
 void lua_setfield_hook(lua_State* L, int idx, const char* k) {
-    const std::lock_guard<std::mutex> lock(lua_state_mtx);
+    const std::lock_guard<std::timed_mutex> lock(lua_state_mtx);
 
-    // OutputDebugStringA((std::string("lua_setfield_hook: ") + k + "\n").c_str());
+    // // OutputDebugStringA((std::string("lua_setfield_hook: ") + k + "\n").c_str());
     subhook::ScopedHookRemove remove(&LuaSetFieldHook);
     lua_setfield(L, idx, k);
 
@@ -972,15 +972,15 @@ void lua_setfield_hook(lua_State* L, int idx, const char* k) {
     // -10002 is magic number defined in lua_setglobal macro
     // see: lua src
     if (idx == -10002 && std::string(k) == "UpdateFrame") {
-        OutputDebugStringA("lua_setfield_hook; found_lua_state\n");
+        // OutputDebugStringA("lua_setfield_hook; found_lua_state\n");
         ui_lua_state = L;
     }
 }
 
 void lua_close_hook(lua_State* L) {
-    const std::lock_guard<std::mutex> lock(lua_state_mtx);
+    const std::lock_guard<std::timed_mutex> lock(lua_state_mtx);
     if (L == ui_lua_state) {
-        OutputDebugStringA("Lua_close_hook; ui_lua_state_closed\n");
+        // OutputDebugStringA("Lua_close_hook; ui_lua_state_closed\n");
         ui_lua_state = nullptr;
     }
     subhook::ScopedHookRemove remove(&LuaCloseHook);
@@ -988,9 +988,9 @@ void lua_close_hook(lua_State* L) {
 }
 
 int lua_getmetatable_hook(lua_State* L, int idx) {
-    const std::lock_guard<std::mutex> lock(lua_state_mtx);
+    const std::lock_guard<std::timed_mutex> lock(lua_state_mtx);
     if (L == ui_lua_state) {
-        OutputDebugStringA(
+        // OutputDebugStringA(
             (std::string("lua_getmetatable_hook; idx: ") + std::to_string(idx) + "\n").c_str());
     }
     subhook::ScopedHookRemove remove(&LuaGetMetatableHook);
