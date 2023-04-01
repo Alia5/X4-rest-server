@@ -109,6 +109,12 @@
     <ClInclude Include="lua_scripts\ComponentDataHelper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="endpoint_impl\map_or_query_funcs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ffi\x4ffi\ffi_funcs_customgame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <MASM Include="asm.asm">

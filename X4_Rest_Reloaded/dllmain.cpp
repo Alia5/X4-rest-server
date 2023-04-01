@@ -9,54 +9,67 @@
 #define FUNCTION_COUNT 203
 
 extern "C" uintptr_t functions[ FUNCTION_COUNT ] = {0};
-std::string functionNames[] = {"DbgHelpCreateUserDump", "DbgHelpCreateUserDumpW", "EnumDirTree", "EnumDirTreeW",
-    "EnumerateLoadedModules", "EnumerateLoadedModules64", "EnumerateLoadedModulesEx", "EnumerateLoadedModulesExW",
-    "EnumerateLoadedModulesW64", "ExtensionApiVersion", "FindDebugInfoFile", "FindDebugInfoFileEx",
-    "FindDebugInfoFileExW", "FindExecutableImage", "FindExecutableImageEx", "FindExecutableImageExW", "FindFileInPath",
-    "FindFileInSearchPath", "GetTimestampForLoadedLibrary", "ImageDirectoryEntryToData", "ImageDirectoryEntryToDataEx",
-    "ImageNtHeader", "ImageRvaToSection", "ImageRvaToVa", "ImagehlpApiVersion", "ImagehlpApiVersionEx",
-    "MakeSureDirectoryPathExists", "MiniDumpReadDumpStream", "MiniDumpWriteDump", "SearchTreeForFile",
-    "SearchTreeForFileW", "StackWalk", "StackWalk64", "SymAddSourceStream", "SymAddSourceStreamA",
-    "SymAddSourceStreamW", "SymAddSymbol", "SymAddSymbolW", "SymCleanup", "SymDeleteSymbol", "SymDeleteSymbolW",
-    "SymEnumLines", "SymEnumLinesW", "SymEnumProcesses", "SymEnumSourceFileTokens", "SymEnumSourceFiles",
-    "SymEnumSourceFilesW", "SymEnumSourceLines", "SymEnumSourceLinesW", "SymEnumSym", "SymEnumSymbols",
-    "SymEnumSymbolsForAddr", "SymEnumSymbolsForAddrW", "SymEnumSymbolsW", "SymEnumTypes", "SymEnumTypesByName",
-    "SymEnumTypesByNameW", "SymEnumTypesW", "SymEnumerateModules", "SymEnumerateModules64", "SymEnumerateModulesW64",
-    "SymEnumerateSymbols", "SymEnumerateSymbols64", "SymEnumerateSymbolsW", "SymEnumerateSymbolsW64",
-    "SymFindDebugInfoFile", "SymFindDebugInfoFileW", "SymFindExecutableImage", "SymFindExecutableImageW",
-    "SymFindFileInPath", "SymFindFileInPathW", "SymFromAddr", "SymFromAddrW", "SymFromIndex", "SymFromIndexW",
-    "SymFromName", "SymFromNameW", "SymFromToken", "SymFromTokenW", "SymFunctionTableAccess",
-    "SymFunctionTableAccess64", "SymGetFileLineOffsets64", "SymGetHomeDirectory", "SymGetHomeDirectoryW",
-    "SymGetLineFromAddr", "SymGetLineFromAddr64", "SymGetLineFromAddrW64", "SymGetLineFromName", "SymGetLineFromName64",
-    "SymGetLineFromNameW64", "SymGetLineNext", "SymGetLineNext64", "SymGetLineNextW64", "SymGetLinePrev",
-    "SymGetLinePrev64", "SymGetLinePrevW64", "SymGetModuleBase", "SymGetModuleBase64", "SymGetModuleInfo",
-    "SymGetModuleInfo64", "SymGetModuleInfoW", "SymGetModuleInfoW64", "SymGetOmapBlockBase", "SymGetOmaps",
-    "SymGetOptions", "SymGetScope", "SymGetScopeW", "SymGetSearchPath", "SymGetSearchPathW", "SymGetSourceFile",
-    "SymGetSourceFileFromToken", "SymGetSourceFileFromTokenW", "SymGetSourceFileToken", "SymGetSourceFileTokenW",
-    "SymGetSourceFileW", "SymGetSourceVarFromToken", "SymGetSourceVarFromTokenW", "SymGetSymFromAddr",
-    "SymGetSymFromAddr64", "SymGetSymFromName", "SymGetSymFromName64", "SymGetSymNext", "SymGetSymNext64",
-    "SymGetSymPrev", "SymGetSymPrev64", "SymGetSymbolFile", "SymGetSymbolFileW", "SymGetTypeFromName",
-    "SymGetTypeFromNameW", "SymGetTypeInfo", "SymGetTypeInfoEx", "SymGetUnwindInfo", "SymInitialize", "SymInitializeW",
-    "SymLoadModule", "SymLoadModule64", "SymLoadModuleEx", "SymLoadModuleExW", "SymMatchFileName", "SymMatchFileNameW",
-    "SymMatchString", "SymMatchStringA", "SymMatchStringW", "SymNext", "SymNextW", "SymPrev", "SymPrevW",
-    "SymRefreshModuleList", "SymRegisterCallback", "SymRegisterCallback64", "SymRegisterCallbackW64",
-    "SymRegisterFunctionEntryCallback", "SymRegisterFunctionEntryCallback64", "SymSearch", "SymSearchW",
-    "SymSetContext", "SymSetHomeDirectory", "SymSetHomeDirectoryW", "SymSetOptions", "SymSetParentWindow",
-    "SymSetScopeFromAddr", "SymSetScopeFromIndex", "SymSetSearchPath", "SymSetSearchPathW", "SymSrvDeltaName",
-    "SymSrvDeltaNameW", "SymSrvGetFileIndexInfo", "SymSrvGetFileIndexInfoW", "SymSrvGetFileIndexString",
-    "SymSrvGetFileIndexStringW", "SymSrvGetFileIndexes", "SymSrvGetFileIndexesW", "SymSrvGetSupplement",
-    "SymSrvGetSupplementW", "SymSrvIsStore", "SymSrvIsStoreW", "SymSrvStoreFile", "SymSrvStoreFileW",
-    "SymSrvStoreSupplement", "SymSrvStoreSupplementW", "SymUnDName", "SymUnDName64", "SymUnloadModule",
-    "SymUnloadModule64", "UnDecorateSymbolName", "UnDecorateSymbolNameW", "WinDbgExtensionDllInit", "block", "chksym",
-    "dbghelp", "dh", "fptr", "homedir", "itoldyouso", "lmi", "lminfo", "omap", "srcfiles", "stack_force_ebp",
-    "stackdbg", "sym", "symsrv", "vc7fpo"};
+std::string functionNames[] = {"DbgHelpCreateUserDump", "DbgHelpCreateUserDumpW", "EnumDirTree",
+    "EnumDirTreeW", "EnumerateLoadedModules", "EnumerateLoadedModules64",
+    "EnumerateLoadedModulesEx", "EnumerateLoadedModulesExW", "EnumerateLoadedModulesW64",
+    "ExtensionApiVersion", "FindDebugInfoFile", "FindDebugInfoFileEx", "FindDebugInfoFileExW",
+    "FindExecutableImage", "FindExecutableImageEx", "FindExecutableImageExW", "FindFileInPath",
+    "FindFileInSearchPath", "GetTimestampForLoadedLibrary", "ImageDirectoryEntryToData",
+    "ImageDirectoryEntryToDataEx", "ImageNtHeader", "ImageRvaToSection", "ImageRvaToVa",
+    "ImagehlpApiVersion", "ImagehlpApiVersionEx", "MakeSureDirectoryPathExists",
+    "MiniDumpReadDumpStream", "MiniDumpWriteDump", "SearchTreeForFile", "SearchTreeForFileW",
+    "StackWalk", "StackWalk64", "SymAddSourceStream", "SymAddSourceStreamA",
+    "SymAddSourceStreamW", "SymAddSymbol", "SymAddSymbolW", "SymCleanup", "SymDeleteSymbol",
+    "SymDeleteSymbolW", "SymEnumLines", "SymEnumLinesW", "SymEnumProcesses",
+    "SymEnumSourceFileTokens", "SymEnumSourceFiles", "SymEnumSourceFilesW",
+    "SymEnumSourceLines", "SymEnumSourceLinesW", "SymEnumSym", "SymEnumSymbols",
+    "SymEnumSymbolsForAddr", "SymEnumSymbolsForAddrW", "SymEnumSymbolsW", "SymEnumTypes",
+    "SymEnumTypesByName", "SymEnumTypesByNameW", "SymEnumTypesW", "SymEnumerateModules",
+    "SymEnumerateModules64", "SymEnumerateModulesW64", "SymEnumerateSymbols",
+    "SymEnumerateSymbols64", "SymEnumerateSymbolsW", "SymEnumerateSymbolsW64",
+    "SymFindDebugInfoFile", "SymFindDebugInfoFileW", "SymFindExecutableImage",
+    "SymFindExecutableImageW", "SymFindFileInPath", "SymFindFileInPathW", "SymFromAddr",
+    "SymFromAddrW", "SymFromIndex", "SymFromIndexW", "SymFromName", "SymFromNameW",
+    "SymFromToken", "SymFromTokenW", "SymFunctionTableAccess", "SymFunctionTableAccess64",
+    "SymGetFileLineOffsets64", "SymGetHomeDirectory", "SymGetHomeDirectoryW",
+    "SymGetLineFromAddr", "SymGetLineFromAddr64", "SymGetLineFromAddrW64", "SymGetLineFromName",
+    "SymGetLineFromName64", "SymGetLineFromNameW64", "SymGetLineNext", "SymGetLineNext64",
+    "SymGetLineNextW64", "SymGetLinePrev", "SymGetLinePrev64", "SymGetLinePrevW64",
+    "SymGetModuleBase", "SymGetModuleBase64", "SymGetModuleInfo", "SymGetModuleInfo64",
+    "SymGetModuleInfoW", "SymGetModuleInfoW64", "SymGetOmapBlockBase", "SymGetOmaps",
+    "SymGetOptions", "SymGetScope", "SymGetScopeW", "SymGetSearchPath", "SymGetSearchPathW",
+    "SymGetSourceFile", "SymGetSourceFileFromToken", "SymGetSourceFileFromTokenW",
+    "SymGetSourceFileToken", "SymGetSourceFileTokenW", "SymGetSourceFileW",
+    "SymGetSourceVarFromToken", "SymGetSourceVarFromTokenW", "SymGetSymFromAddr",
+    "SymGetSymFromAddr64", "SymGetSymFromName", "SymGetSymFromName64", "SymGetSymNext",
+    "SymGetSymNext64", "SymGetSymPrev", "SymGetSymPrev64", "SymGetSymbolFile",
+    "SymGetSymbolFileW", "SymGetTypeFromName", "SymGetTypeFromNameW", "SymGetTypeInfo",
+    "SymGetTypeInfoEx", "SymGetUnwindInfo", "SymInitialize", "SymInitializeW", "SymLoadModule",
+    "SymLoadModule64", "SymLoadModuleEx", "SymLoadModuleExW", "SymMatchFileName",
+    "SymMatchFileNameW", "SymMatchString", "SymMatchStringA", "SymMatchStringW", "SymNext",
+    "SymNextW", "SymPrev", "SymPrevW", "SymRefreshModuleList", "SymRegisterCallback",
+    "SymRegisterCallback64", "SymRegisterCallbackW64", "SymRegisterFunctionEntryCallback",
+    "SymRegisterFunctionEntryCallback64", "SymSearch", "SymSearchW", "SymSetContext",
+    "SymSetHomeDirectory", "SymSetHomeDirectoryW", "SymSetOptions", "SymSetParentWindow",
+    "SymSetScopeFromAddr", "SymSetScopeFromIndex", "SymSetSearchPath", "SymSetSearchPathW",
+    "SymSrvDeltaName", "SymSrvDeltaNameW", "SymSrvGetFileIndexInfo", "SymSrvGetFileIndexInfoW",
+    "SymSrvGetFileIndexString", "SymSrvGetFileIndexStringW", "SymSrvGetFileIndexes",
+    "SymSrvGetFileIndexesW", "SymSrvGetSupplement", "SymSrvGetSupplementW", "SymSrvIsStore",
+    "SymSrvIsStoreW", "SymSrvStoreFile", "SymSrvStoreFileW", "SymSrvStoreSupplement",
+    "SymSrvStoreSupplementW", "SymUnDName", "SymUnDName64", "SymUnloadModule",
+    "SymUnloadModule64", "UnDecorateSymbolName", "UnDecorateSymbolNameW",
+    "WinDbgExtensionDllInit", "block", "chksym", "dbghelp", "dh", "fptr", "homedir",
+    "itoldyouso", "lmi", "lminfo", "omap", "srcfiles", "stack_force_ebp", "stackdbg", "sym",
+    "symsrv", "vc7fpo"};
 
 // [index: 000] [ordinal: 001] DbgHelpCreateUserDump
-#pragma comment(linker, "/EXPORT:DbgHelpCreateUserDump=func_120d4bcc12264f01a49264ce4e5d6600,@1")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:DbgHelpCreateUserDump=func_120d4bcc12264f01a49264ce4e5d6600,@1")
 extern "C" void func_120d4bcc12264f01a49264ce4e5d6600();
 
 // [index: 001] [ordinal: 002] DbgHelpCreateUserDumpW
-#pragma comment(linker, "/EXPORT:DbgHelpCreateUserDumpW=func_5a497ce26860415ab42f4f459876f50a,@2")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:DbgHelpCreateUserDumpW=func_5a497ce26860415ab42f4f459876f50a,@2")
 extern "C" void func_5a497ce26860415ab42f4f459876f50a();
 
 // [index: 002] [ordinal: 003] EnumDirTree
@@ -68,23 +81,28 @@ extern "C" void func_09032d9487a04160b52bcd5c69d4d225();
 extern "C" void func_1193994b75124806925a32e2e7b3224e();
 
 // [index: 004] [ordinal: 005] EnumerateLoadedModules
-#pragma comment(linker, "/EXPORT:EnumerateLoadedModules=func_1b8edab639384bf38c970734c669991b,@5")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:EnumerateLoadedModules=func_1b8edab639384bf38c970734c669991b,@5")
 extern "C" void func_1b8edab639384bf38c970734c669991b();
 
 // [index: 005] [ordinal: 006] EnumerateLoadedModules64
-#pragma comment(linker, "/EXPORT:EnumerateLoadedModules64=func_3eeb0856fb1442d29b3827b5ff3c56ea,@6")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:EnumerateLoadedModules64=func_3eeb0856fb1442d29b3827b5ff3c56ea,@6")
 extern "C" void func_3eeb0856fb1442d29b3827b5ff3c56ea();
 
 // [index: 006] [ordinal: 007] EnumerateLoadedModulesEx
-#pragma comment(linker, "/EXPORT:EnumerateLoadedModulesEx=func_2614d9b92afc497e96e6dc6b2c31da7a,@7")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:EnumerateLoadedModulesEx=func_2614d9b92afc497e96e6dc6b2c31da7a,@7")
 extern "C" void func_2614d9b92afc497e96e6dc6b2c31da7a();
 
 // [index: 007] [ordinal: 008] EnumerateLoadedModulesExW
-#pragma comment(linker, "/EXPORT:EnumerateLoadedModulesExW=func_41812600d28e435d8d07b04859da4f19,@8")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:EnumerateLoadedModulesExW=func_41812600d28e435d8d07b04859da4f19,@8")
 extern "C" void func_41812600d28e435d8d07b04859da4f19();
 
 // [index: 008] [ordinal: 009] EnumerateLoadedModulesW64
-#pragma comment(linker, "/EXPORT:EnumerateLoadedModulesW64=func_466feb2fc7a04fe59cb6fdf1bc760e59,@9")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:EnumerateLoadedModulesW64=func_466feb2fc7a04fe59cb6fdf1bc760e59,@9")
 extern "C" void func_466feb2fc7a04fe59cb6fdf1bc760e59();
 
 // [index: 009] [ordinal: 010] ExtensionApiVersion
@@ -100,7 +118,8 @@ extern "C" void func_f2febe9572d24fec927ba8143bcc31fc();
 extern "C" void func_af26c2bbdb894a6a9e054e83aff46558();
 
 // [index: 012] [ordinal: 013] FindDebugInfoFileExW
-#pragma comment(linker, "/EXPORT:FindDebugInfoFileExW=func_b87a769cf3f74c039af9134860db53ef,@13")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:FindDebugInfoFileExW=func_b87a769cf3f74c039af9134860db53ef,@13")
 extern "C" void func_b87a769cf3f74c039af9134860db53ef();
 
 // [index: 013] [ordinal: 014] FindExecutableImage
@@ -108,11 +127,13 @@ extern "C" void func_b87a769cf3f74c039af9134860db53ef();
 extern "C" void func_dd8db33634954900abe53de8f2e938fb();
 
 // [index: 014] [ordinal: 015] FindExecutableImageEx
-#pragma comment(linker, "/EXPORT:FindExecutableImageEx=func_e6c78f032eab43ae808e0e71b0cad112,@15")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:FindExecutableImageEx=func_e6c78f032eab43ae808e0e71b0cad112,@15")
 extern "C" void func_e6c78f032eab43ae808e0e71b0cad112();
 
 // [index: 015] [ordinal: 016] FindExecutableImageExW
-#pragma comment(linker, "/EXPORT:FindExecutableImageExW=func_89ec93494815484c989c80645c9c0d3e,@16")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:FindExecutableImageExW=func_89ec93494815484c989c80645c9c0d3e,@16")
 extern "C" void func_89ec93494815484c989c80645c9c0d3e();
 
 // [index: 016] [ordinal: 017] FindFileInPath
@@ -120,19 +141,23 @@ extern "C" void func_89ec93494815484c989c80645c9c0d3e();
 extern "C" void func_f7ec0ce3270949d4abd17601d65a16eb();
 
 // [index: 017] [ordinal: 018] FindFileInSearchPath
-#pragma comment(linker, "/EXPORT:FindFileInSearchPath=func_54ed153c41d2477f85c75c6ce7f2e8bf,@18")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:FindFileInSearchPath=func_54ed153c41d2477f85c75c6ce7f2e8bf,@18")
 extern "C" void func_54ed153c41d2477f85c75c6ce7f2e8bf();
 
 // [index: 018] [ordinal: 019] GetTimestampForLoadedLibrary
-#pragma comment(linker, "/EXPORT:GetTimestampForLoadedLibrary=func_628e418bc5ae47e7a634c3e2a0ba8e53,@19")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:GetTimestampForLoadedLibrary=func_628e418bc5ae47e7a634c3e2a0ba8e53,@19")
 extern "C" void func_628e418bc5ae47e7a634c3e2a0ba8e53();
 
 // [index: 019] [ordinal: 020] ImageDirectoryEntryToData
-#pragma comment(linker, "/EXPORT:ImageDirectoryEntryToData=func_abfb253e31724ecb890696e7a302aee2,@20")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:ImageDirectoryEntryToData=func_abfb253e31724ecb890696e7a302aee2,@20")
 extern "C" void func_abfb253e31724ecb890696e7a302aee2();
 
 // [index: 020] [ordinal: 021] ImageDirectoryEntryToDataEx
-#pragma comment(linker, "/EXPORT:ImageDirectoryEntryToDataEx=func_5014c0bbfc9243b09d7a513d0859599e,@21")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:ImageDirectoryEntryToDataEx=func_5014c0bbfc9243b09d7a513d0859599e,@21")
 extern "C" void func_5014c0bbfc9243b09d7a513d0859599e();
 
 // [index: 021] [ordinal: 022] ImageNtHeader
@@ -152,15 +177,18 @@ extern "C" void func_e4a98242d7664f3e9917207817fb2e39();
 extern "C" void func_5f15d681e5d248fe89737c551a5bddb9();
 
 // [index: 025] [ordinal: 026] ImagehlpApiVersionEx
-#pragma comment(linker, "/EXPORT:ImagehlpApiVersionEx=func_2e17b1f39b32459288179d47c8b777d3,@26")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:ImagehlpApiVersionEx=func_2e17b1f39b32459288179d47c8b777d3,@26")
 extern "C" void func_2e17b1f39b32459288179d47c8b777d3();
 
 // [index: 026] [ordinal: 027] MakeSureDirectoryPathExists
-#pragma comment(linker, "/EXPORT:MakeSureDirectoryPathExists=func_38d9a17105524d86abe70f719a7301d4,@27")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:MakeSureDirectoryPathExists=func_38d9a17105524d86abe70f719a7301d4,@27")
 extern "C" void func_38d9a17105524d86abe70f719a7301d4();
 
 // [index: 027] [ordinal: 028] MiniDumpReadDumpStream
-#pragma comment(linker, "/EXPORT:MiniDumpReadDumpStream=func_3159e20812b24a879e6402ab51f56539,@28")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:MiniDumpReadDumpStream=func_3159e20812b24a879e6402ab51f56539,@28")
 extern "C" void func_3159e20812b24a879e6402ab51f56539();
 
 // [index: 028] [ordinal: 029] MiniDumpWriteDump
@@ -228,7 +256,8 @@ extern "C" void func_f8c07b6f1c2c4f9cadd87e2fa1a148b3();
 extern "C" void func_d4b0b901987d48b08e4ad7273d26a856();
 
 // [index: 044] [ordinal: 045] SymEnumSourceFileTokens
-#pragma comment(linker, "/EXPORT:SymEnumSourceFileTokens=func_d5799c579c5240fc8bfac1bbd9ae4649,@45")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymEnumSourceFileTokens=func_d5799c579c5240fc8bfac1bbd9ae4649,@45")
 extern "C" void func_d5799c579c5240fc8bfac1bbd9ae4649();
 
 // [index: 045] [ordinal: 046] SymEnumSourceFiles
@@ -256,11 +285,13 @@ extern "C" void func_646b2baef49f4de98451b729e195e025();
 extern "C" void func_b0dd177ba32a4a6f86b3f7bb3f44e61c();
 
 // [index: 051] [ordinal: 052] SymEnumSymbolsForAddr
-#pragma comment(linker, "/EXPORT:SymEnumSymbolsForAddr=func_eb26d336a8bd4cf4b9d866d36cdebeb4,@52")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymEnumSymbolsForAddr=func_eb26d336a8bd4cf4b9d866d36cdebeb4,@52")
 extern "C" void func_eb26d336a8bd4cf4b9d866d36cdebeb4();
 
 // [index: 052] [ordinal: 053] SymEnumSymbolsForAddrW
-#pragma comment(linker, "/EXPORT:SymEnumSymbolsForAddrW=func_9f051ed805b44911825043937af76a03,@53")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymEnumSymbolsForAddrW=func_9f051ed805b44911825043937af76a03,@53")
 extern "C" void func_9f051ed805b44911825043937af76a03();
 
 // [index: 053] [ordinal: 054] SymEnumSymbolsW
@@ -288,11 +319,13 @@ extern "C" void func_8207fe8372bf4fd29147728f7e4f96f5();
 extern "C" void func_c4c876a265e142e4a5d9cf1de138c9e1();
 
 // [index: 059] [ordinal: 060] SymEnumerateModules64
-#pragma comment(linker, "/EXPORT:SymEnumerateModules64=func_98e192b898014789bc6f1c05681c907c,@60")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymEnumerateModules64=func_98e192b898014789bc6f1c05681c907c,@60")
 extern "C" void func_98e192b898014789bc6f1c05681c907c();
 
 // [index: 060] [ordinal: 061] SymEnumerateModulesW64
-#pragma comment(linker, "/EXPORT:SymEnumerateModulesW64=func_40a3487452b24844a11862d6e43d7ac9,@61")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymEnumerateModulesW64=func_40a3487452b24844a11862d6e43d7ac9,@61")
 extern "C" void func_40a3487452b24844a11862d6e43d7ac9();
 
 // [index: 061] [ordinal: 062] SymEnumerateSymbols
@@ -300,31 +333,38 @@ extern "C" void func_40a3487452b24844a11862d6e43d7ac9();
 extern "C" void func_455f30bb765b4d47a0fc33997a41e82c();
 
 // [index: 062] [ordinal: 063] SymEnumerateSymbols64
-#pragma comment(linker, "/EXPORT:SymEnumerateSymbols64=func_aae6ef28a2d24cbd881939afb65ae9f1,@63")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymEnumerateSymbols64=func_aae6ef28a2d24cbd881939afb65ae9f1,@63")
 extern "C" void func_aae6ef28a2d24cbd881939afb65ae9f1();
 
 // [index: 063] [ordinal: 064] SymEnumerateSymbolsW
-#pragma comment(linker, "/EXPORT:SymEnumerateSymbolsW=func_791b356f9bb64636b73854d75eb95b70,@64")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymEnumerateSymbolsW=func_791b356f9bb64636b73854d75eb95b70,@64")
 extern "C" void func_791b356f9bb64636b73854d75eb95b70();
 
 // [index: 064] [ordinal: 065] SymEnumerateSymbolsW64
-#pragma comment(linker, "/EXPORT:SymEnumerateSymbolsW64=func_a827e2f1f7a5433e91cf06febbc8edad,@65")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymEnumerateSymbolsW64=func_a827e2f1f7a5433e91cf06febbc8edad,@65")
 extern "C" void func_a827e2f1f7a5433e91cf06febbc8edad();
 
 // [index: 065] [ordinal: 066] SymFindDebugInfoFile
-#pragma comment(linker, "/EXPORT:SymFindDebugInfoFile=func_3d0575058c3b4ad588fa5cc31f3aec04,@66")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymFindDebugInfoFile=func_3d0575058c3b4ad588fa5cc31f3aec04,@66")
 extern "C" void func_3d0575058c3b4ad588fa5cc31f3aec04();
 
 // [index: 066] [ordinal: 067] SymFindDebugInfoFileW
-#pragma comment(linker, "/EXPORT:SymFindDebugInfoFileW=func_448e0c3500eb42e993a4028cefa01302,@67")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymFindDebugInfoFileW=func_448e0c3500eb42e993a4028cefa01302,@67")
 extern "C" void func_448e0c3500eb42e993a4028cefa01302();
 
 // [index: 067] [ordinal: 068] SymFindExecutableImage
-#pragma comment(linker, "/EXPORT:SymFindExecutableImage=func_9905fb79efb246afafa67d36de3f46d8,@68")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymFindExecutableImage=func_9905fb79efb246afafa67d36de3f46d8,@68")
 extern "C" void func_9905fb79efb246afafa67d36de3f46d8();
 
 // [index: 068] [ordinal: 069] SymFindExecutableImageW
-#pragma comment(linker, "/EXPORT:SymFindExecutableImageW=func_0472d45552d34d308b36ca2202222f15,@69")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymFindExecutableImageW=func_0472d45552d34d308b36ca2202222f15,@69")
 extern "C" void func_0472d45552d34d308b36ca2202222f15();
 
 // [index: 069] [ordinal: 070] SymFindFileInPath
@@ -368,15 +408,18 @@ extern "C" void func_a6963f71dad0411195cdc60bf12a58b6();
 extern "C" void func_2e2ac702406a40359779ee92f3124df9();
 
 // [index: 079] [ordinal: 080] SymFunctionTableAccess
-#pragma comment(linker, "/EXPORT:SymFunctionTableAccess=func_525c710710b74849985e248e90a6b7a9,@80")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymFunctionTableAccess=func_525c710710b74849985e248e90a6b7a9,@80")
 extern "C" void func_525c710710b74849985e248e90a6b7a9();
 
 // [index: 080] [ordinal: 081] SymFunctionTableAccess64
-#pragma comment(linker, "/EXPORT:SymFunctionTableAccess64=func_f8432a5bde234aa7b091a0190692821e,@81")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymFunctionTableAccess64=func_f8432a5bde234aa7b091a0190692821e,@81")
 extern "C" void func_f8432a5bde234aa7b091a0190692821e();
 
 // [index: 081] [ordinal: 082] SymGetFileLineOffsets64
-#pragma comment(linker, "/EXPORT:SymGetFileLineOffsets64=func_5ce186fe326348c080e04634555c4c40,@82")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymGetFileLineOffsets64=func_5ce186fe326348c080e04634555c4c40,@82")
 extern "C" void func_5ce186fe326348c080e04634555c4c40();
 
 // [index: 082] [ordinal: 083] SymGetHomeDirectory
@@ -384,7 +427,8 @@ extern "C" void func_5ce186fe326348c080e04634555c4c40();
 extern "C" void func_b7bf49f769dd4f188626ea3e93ed228d();
 
 // [index: 083] [ordinal: 084] SymGetHomeDirectoryW
-#pragma comment(linker, "/EXPORT:SymGetHomeDirectoryW=func_d61208f4506149ee99fe708cfc50276d,@84")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymGetHomeDirectoryW=func_d61208f4506149ee99fe708cfc50276d,@84")
 extern "C" void func_d61208f4506149ee99fe708cfc50276d();
 
 // [index: 084] [ordinal: 085] SymGetLineFromAddr
@@ -392,11 +436,13 @@ extern "C" void func_d61208f4506149ee99fe708cfc50276d();
 extern "C" void func_cea06f13c17e4640bf33aff62e1d237c();
 
 // [index: 085] [ordinal: 086] SymGetLineFromAddr64
-#pragma comment(linker, "/EXPORT:SymGetLineFromAddr64=func_1e68542de6274511b826c3f25de44fed,@86")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymGetLineFromAddr64=func_1e68542de6274511b826c3f25de44fed,@86")
 extern "C" void func_1e68542de6274511b826c3f25de44fed();
 
 // [index: 086] [ordinal: 087] SymGetLineFromAddrW64
-#pragma comment(linker, "/EXPORT:SymGetLineFromAddrW64=func_2ce9dc8f6a394be9b7d4e883e5c90be3,@87")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymGetLineFromAddrW64=func_2ce9dc8f6a394be9b7d4e883e5c90be3,@87")
 extern "C" void func_2ce9dc8f6a394be9b7d4e883e5c90be3();
 
 // [index: 087] [ordinal: 088] SymGetLineFromName
@@ -404,11 +450,13 @@ extern "C" void func_2ce9dc8f6a394be9b7d4e883e5c90be3();
 extern "C" void func_78644265a3cd46f4aa7dfdae1b5a47f7();
 
 // [index: 088] [ordinal: 089] SymGetLineFromName64
-#pragma comment(linker, "/EXPORT:SymGetLineFromName64=func_5a94a69a463e4fd6ad748a5ca5b7e768,@89")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymGetLineFromName64=func_5a94a69a463e4fd6ad748a5ca5b7e768,@89")
 extern "C" void func_5a94a69a463e4fd6ad748a5ca5b7e768();
 
 // [index: 089] [ordinal: 090] SymGetLineFromNameW64
-#pragma comment(linker, "/EXPORT:SymGetLineFromNameW64=func_0a8d3143fbc149888df42da24aea9d41,@90")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymGetLineFromNameW64=func_0a8d3143fbc149888df42da24aea9d41,@90")
 extern "C" void func_0a8d3143fbc149888df42da24aea9d41();
 
 // [index: 090] [ordinal: 091] SymGetLineNext
@@ -456,11 +504,13 @@ extern "C" void func_40cb2c5223504d0cacc7f445b191a07c();
 extern "C" void func_fced6dea3d6d4eeab466e36dd9c601dd();
 
 // [index: 101] [ordinal: 102] SymGetModuleInfoW64
-#pragma comment(linker, "/EXPORT:SymGetModuleInfoW64=func_57c9111d75b04a22a4419cc2f3ee42e1,@102")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymGetModuleInfoW64=func_57c9111d75b04a22a4419cc2f3ee42e1,@102")
 extern "C" void func_57c9111d75b04a22a4419cc2f3ee42e1();
 
 // [index: 102] [ordinal: 103] SymGetOmapBlockBase
-#pragma comment(linker, "/EXPORT:SymGetOmapBlockBase=func_c184d00e42c546ecbdf28a73c3d0860c,@103")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymGetOmapBlockBase=func_c184d00e42c546ecbdf28a73c3d0860c,@103")
 extern "C" void func_c184d00e42c546ecbdf28a73c3d0860c();
 
 // [index: 103] [ordinal: 104] SymGetOmaps
@@ -492,19 +542,23 @@ extern "C" void func_e9400fca96b8475281335e6c372c0b24();
 extern "C" void func_d2f648a8edad4f1a9ebe2a68fcbbc483();
 
 // [index: 110] [ordinal: 111] SymGetSourceFileFromToken
-#pragma comment(linker, "/EXPORT:SymGetSourceFileFromToken=func_620bde3040d44c599eed447e352225f8,@111")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymGetSourceFileFromToken=func_620bde3040d44c599eed447e352225f8,@111")
 extern "C" void func_620bde3040d44c599eed447e352225f8();
 
 // [index: 111] [ordinal: 112] SymGetSourceFileFromTokenW
-#pragma comment(linker, "/EXPORT:SymGetSourceFileFromTokenW=func_1905cc6d08f641ec975cef2911d458af,@112")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymGetSourceFileFromTokenW=func_1905cc6d08f641ec975cef2911d458af,@112")
 extern "C" void func_1905cc6d08f641ec975cef2911d458af();
 
 // [index: 112] [ordinal: 113] SymGetSourceFileToken
-#pragma comment(linker, "/EXPORT:SymGetSourceFileToken=func_fcf8508608f145a28f0181d9b2d29924,@113")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymGetSourceFileToken=func_fcf8508608f145a28f0181d9b2d29924,@113")
 extern "C" void func_fcf8508608f145a28f0181d9b2d29924();
 
 // [index: 113] [ordinal: 114] SymGetSourceFileTokenW
-#pragma comment(linker, "/EXPORT:SymGetSourceFileTokenW=func_471b532f8e4742acb3159c237694d824,@114")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymGetSourceFileTokenW=func_471b532f8e4742acb3159c237694d824,@114")
 extern "C" void func_471b532f8e4742acb3159c237694d824();
 
 // [index: 114] [ordinal: 115] SymGetSourceFileW
@@ -512,11 +566,13 @@ extern "C" void func_471b532f8e4742acb3159c237694d824();
 extern "C" void func_9a8ecc62ddc64d278c8c6f9428d9aa83();
 
 // [index: 115] [ordinal: 116] SymGetSourceVarFromToken
-#pragma comment(linker, "/EXPORT:SymGetSourceVarFromToken=func_b465689dea434304b4115a98213e622b,@116")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymGetSourceVarFromToken=func_b465689dea434304b4115a98213e622b,@116")
 extern "C" void func_b465689dea434304b4115a98213e622b();
 
 // [index: 116] [ordinal: 117] SymGetSourceVarFromTokenW
-#pragma comment(linker, "/EXPORT:SymGetSourceVarFromTokenW=func_2489d534a2f0417a92217160ced2cef0,@117")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymGetSourceVarFromTokenW=func_2489d534a2f0417a92217160ced2cef0,@117")
 extern "C" void func_2489d534a2f0417a92217160ced2cef0();
 
 // [index: 117] [ordinal: 118] SymGetSymFromAddr
@@ -524,7 +580,8 @@ extern "C" void func_2489d534a2f0417a92217160ced2cef0();
 extern "C" void func_32f4d89c30ba4f5a87e3ac4837523bd4();
 
 // [index: 118] [ordinal: 119] SymGetSymFromAddr64
-#pragma comment(linker, "/EXPORT:SymGetSymFromAddr64=func_b55eb589335f4ba4ae78b74cdcfa0390,@119")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymGetSymFromAddr64=func_b55eb589335f4ba4ae78b74cdcfa0390,@119")
 extern "C" void func_b55eb589335f4ba4ae78b74cdcfa0390();
 
 // [index: 119] [ordinal: 120] SymGetSymFromName
@@ -532,7 +589,8 @@ extern "C" void func_b55eb589335f4ba4ae78b74cdcfa0390();
 extern "C" void func_5bfa3f0cd59640afbf9809ac04fdf739();
 
 // [index: 120] [ordinal: 121] SymGetSymFromName64
-#pragma comment(linker, "/EXPORT:SymGetSymFromName64=func_782776b4332941778dd354455ab2d6cf,@121")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymGetSymFromName64=func_782776b4332941778dd354455ab2d6cf,@121")
 extern "C" void func_782776b4332941778dd354455ab2d6cf();
 
 // [index: 121] [ordinal: 122] SymGetSymNext
@@ -564,7 +622,8 @@ extern "C" void func_1a44d0aaab1b4e6d9c83e8517f223c7a();
 extern "C" void func_ce687ef4e98546e0972a5077f9ee574a();
 
 // [index: 128] [ordinal: 129] SymGetTypeFromNameW
-#pragma comment(linker, "/EXPORT:SymGetTypeFromNameW=func_6fc85559dcea47779831cfec37c60c79,@129")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymGetTypeFromNameW=func_6fc85559dcea47779831cfec37c60c79,@129")
 extern "C" void func_6fc85559dcea47779831cfec37c60c79();
 
 // [index: 129] [ordinal: 130] SymGetTypeInfo
@@ -640,27 +699,33 @@ extern "C" void func_c13e1510288842af89f4e496146e1bf7();
 extern "C" void func_88bbd0071d354028b3369a50a85ca00a();
 
 // [index: 147] [ordinal: 148] SymRefreshModuleList
-#pragma comment(linker, "/EXPORT:SymRefreshModuleList=func_804a2084a6b4424ba28e1eb11b5f8033,@148")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymRefreshModuleList=func_804a2084a6b4424ba28e1eb11b5f8033,@148")
 extern "C" void func_804a2084a6b4424ba28e1eb11b5f8033();
 
 // [index: 148] [ordinal: 149] SymRegisterCallback
-#pragma comment(linker, "/EXPORT:SymRegisterCallback=func_ab01306cad744492a985ce3b95b5960c,@149")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymRegisterCallback=func_ab01306cad744492a985ce3b95b5960c,@149")
 extern "C" void func_ab01306cad744492a985ce3b95b5960c();
 
 // [index: 149] [ordinal: 150] SymRegisterCallback64
-#pragma comment(linker, "/EXPORT:SymRegisterCallback64=func_8080c183e2b046bc86678755f34eb924,@150")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymRegisterCallback64=func_8080c183e2b046bc86678755f34eb924,@150")
 extern "C" void func_8080c183e2b046bc86678755f34eb924();
 
 // [index: 150] [ordinal: 151] SymRegisterCallbackW64
-#pragma comment(linker, "/EXPORT:SymRegisterCallbackW64=func_c5fc4017fa724f14952456e291337c19,@151")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymRegisterCallbackW64=func_c5fc4017fa724f14952456e291337c19,@151")
 extern "C" void func_c5fc4017fa724f14952456e291337c19();
 
 // [index: 151] [ordinal: 152] SymRegisterFunctionEntryCallback
-#pragma comment(linker, "/EXPORT:SymRegisterFunctionEntryCallback=func_57ac55e2fdd84ec99bd1cf697b38724a,@152")
+#pragma comment(linker,                                                                        \
+    "/EXPORT:SymRegisterFunctionEntryCallback=func_57ac55e2fdd84ec99bd1cf697b38724a,@152")
 extern "C" void func_57ac55e2fdd84ec99bd1cf697b38724a();
 
 // [index: 152] [ordinal: 153] SymRegisterFunctionEntryCallback64
-#pragma comment(linker, "/EXPORT:SymRegisterFunctionEntryCallback64=func_4d7f6fcf84134956b99ca85165e3eda7,@153")
+#pragma comment(linker,                                                                        \
+    "/EXPORT:SymRegisterFunctionEntryCallback64=func_4d7f6fcf84134956b99ca85165e3eda7,@153")
 extern "C" void func_4d7f6fcf84134956b99ca85165e3eda7();
 
 // [index: 153] [ordinal: 154] SymSearch
@@ -676,11 +741,13 @@ extern "C" void func_dae8a0938d6a4ea28ee27c8ad296fb68();
 extern "C" void func_0dd96a1b03594209bcecc77fa4d3ae77();
 
 // [index: 156] [ordinal: 157] SymSetHomeDirectory
-#pragma comment(linker, "/EXPORT:SymSetHomeDirectory=func_746274b5a3e24932ab15ddf6497f6975,@157")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymSetHomeDirectory=func_746274b5a3e24932ab15ddf6497f6975,@157")
 extern "C" void func_746274b5a3e24932ab15ddf6497f6975();
 
 // [index: 157] [ordinal: 158] SymSetHomeDirectoryW
-#pragma comment(linker, "/EXPORT:SymSetHomeDirectoryW=func_141be2aa490d4155ab9bcb065ad25496,@158")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymSetHomeDirectoryW=func_141be2aa490d4155ab9bcb065ad25496,@158")
 extern "C" void func_141be2aa490d4155ab9bcb065ad25496();
 
 // [index: 158] [ordinal: 159] SymSetOptions
@@ -692,11 +759,13 @@ extern "C" void func_bb8e0848bb654cbaaf585dce364b82c7();
 extern "C" void func_087e38567ed94e3c922b95f90f297d28();
 
 // [index: 160] [ordinal: 161] SymSetScopeFromAddr
-#pragma comment(linker, "/EXPORT:SymSetScopeFromAddr=func_cfbb7c03c7ab440588c2460829842e68,@161")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymSetScopeFromAddr=func_cfbb7c03c7ab440588c2460829842e68,@161")
 extern "C" void func_cfbb7c03c7ab440588c2460829842e68();
 
 // [index: 161] [ordinal: 162] SymSetScopeFromIndex
-#pragma comment(linker, "/EXPORT:SymSetScopeFromIndex=func_f0fe26bbce8843429df3f4dfd62abd0f,@162")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymSetScopeFromIndex=func_f0fe26bbce8843429df3f4dfd62abd0f,@162")
 extern "C" void func_f0fe26bbce8843429df3f4dfd62abd0f();
 
 // [index: 162] [ordinal: 163] SymSetSearchPath
@@ -716,35 +785,43 @@ extern "C" void func_0e8629d277e148dabe58195bbd1bc19f();
 extern "C" void func_32c75c9ffff64c8c96ef07dbdec9876a();
 
 // [index: 166] [ordinal: 167] SymSrvGetFileIndexInfo
-#pragma comment(linker, "/EXPORT:SymSrvGetFileIndexInfo=func_a20c633cb6c74cda86290059e5346038,@167")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymSrvGetFileIndexInfo=func_a20c633cb6c74cda86290059e5346038,@167")
 extern "C" void func_a20c633cb6c74cda86290059e5346038();
 
 // [index: 167] [ordinal: 168] SymSrvGetFileIndexInfoW
-#pragma comment(linker, "/EXPORT:SymSrvGetFileIndexInfoW=func_44e8bb14d6864d2daf68692969e5bb7f,@168")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymSrvGetFileIndexInfoW=func_44e8bb14d6864d2daf68692969e5bb7f,@168")
 extern "C" void func_44e8bb14d6864d2daf68692969e5bb7f();
 
 // [index: 168] [ordinal: 169] SymSrvGetFileIndexString
-#pragma comment(linker, "/EXPORT:SymSrvGetFileIndexString=func_a4be3fb2023a493da75af93dff4d760c,@169")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymSrvGetFileIndexString=func_a4be3fb2023a493da75af93dff4d760c,@169")
 extern "C" void func_a4be3fb2023a493da75af93dff4d760c();
 
 // [index: 169] [ordinal: 170] SymSrvGetFileIndexStringW
-#pragma comment(linker, "/EXPORT:SymSrvGetFileIndexStringW=func_9c5b914d48b743e0b6bd5353ee3a4399,@170")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymSrvGetFileIndexStringW=func_9c5b914d48b743e0b6bd5353ee3a4399,@170")
 extern "C" void func_9c5b914d48b743e0b6bd5353ee3a4399();
 
 // [index: 170] [ordinal: 171] SymSrvGetFileIndexes
-#pragma comment(linker, "/EXPORT:SymSrvGetFileIndexes=func_bb3dd46db1f049f1a99916716dbbf7c7,@171")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymSrvGetFileIndexes=func_bb3dd46db1f049f1a99916716dbbf7c7,@171")
 extern "C" void func_bb3dd46db1f049f1a99916716dbbf7c7();
 
 // [index: 171] [ordinal: 172] SymSrvGetFileIndexesW
-#pragma comment(linker, "/EXPORT:SymSrvGetFileIndexesW=func_27cfbca0d08744ebb198e1eae6ec3918,@172")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymSrvGetFileIndexesW=func_27cfbca0d08744ebb198e1eae6ec3918,@172")
 extern "C" void func_27cfbca0d08744ebb198e1eae6ec3918();
 
 // [index: 172] [ordinal: 173] SymSrvGetSupplement
-#pragma comment(linker, "/EXPORT:SymSrvGetSupplement=func_60dabb1b3bcb43ae8e3b391bd6d3bb34,@173")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymSrvGetSupplement=func_60dabb1b3bcb43ae8e3b391bd6d3bb34,@173")
 extern "C" void func_60dabb1b3bcb43ae8e3b391bd6d3bb34();
 
 // [index: 173] [ordinal: 174] SymSrvGetSupplementW
-#pragma comment(linker, "/EXPORT:SymSrvGetSupplementW=func_55bd03b68b534f73af20c7fefa915edb,@174")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymSrvGetSupplementW=func_55bd03b68b534f73af20c7fefa915edb,@174")
 extern "C" void func_55bd03b68b534f73af20c7fefa915edb();
 
 // [index: 174] [ordinal: 175] SymSrvIsStore
@@ -764,11 +841,13 @@ extern "C" void func_462730cd24b54245b63efec1fa66356f();
 extern "C" void func_d890c2adf05647bfa3827591729ee96f();
 
 // [index: 178] [ordinal: 179] SymSrvStoreSupplement
-#pragma comment(linker, "/EXPORT:SymSrvStoreSupplement=func_7b912c74bcc147fd92431bbf91b73b72,@179")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymSrvStoreSupplement=func_7b912c74bcc147fd92431bbf91b73b72,@179")
 extern "C" void func_7b912c74bcc147fd92431bbf91b73b72();
 
 // [index: 179] [ordinal: 180] SymSrvStoreSupplementW
-#pragma comment(linker, "/EXPORT:SymSrvStoreSupplementW=func_4cba7942d15643fcb3568cdbb62f0b49,@180")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:SymSrvStoreSupplementW=func_4cba7942d15643fcb3568cdbb62f0b49,@180")
 extern "C" void func_4cba7942d15643fcb3568cdbb62f0b49();
 
 // [index: 180] [ordinal: 181] SymUnDName
@@ -788,15 +867,18 @@ extern "C" void func_8f5c3fcc90cb4b58a81de4668d9fedd7();
 extern "C" void func_3e41f8550d484736afdcb72ab71d582a();
 
 // [index: 184] [ordinal: 185] UnDecorateSymbolName
-#pragma comment(linker, "/EXPORT:UnDecorateSymbolName=func_ca821d1ff479496baa8acd471c1f45e1,@185")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:UnDecorateSymbolName=func_ca821d1ff479496baa8acd471c1f45e1,@185")
 extern "C" void func_ca821d1ff479496baa8acd471c1f45e1();
 
 // [index: 185] [ordinal: 186] UnDecorateSymbolNameW
-#pragma comment(linker, "/EXPORT:UnDecorateSymbolNameW=func_22c30795f97942f087a3ca9298bee45b,@186")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:UnDecorateSymbolNameW=func_22c30795f97942f087a3ca9298bee45b,@186")
 extern "C" void func_22c30795f97942f087a3ca9298bee45b();
 
 // [index: 186] [ordinal: 187] WinDbgExtensionDllInit
-#pragma comment(linker, "/EXPORT:WinDbgExtensionDllInit=func_79fe5515ae5a48af86f86890db997bf1,@187")
+#pragma comment(                                                                               \
+    linker, "/EXPORT:WinDbgExtensionDllInit=func_79fe5515ae5a48af86f86890db997bf1,@187")
 extern "C" void func_79fe5515ae5a48af86f86890db997bf1();
 
 // [index: 187] [ordinal: 188] block
@@ -876,29 +958,44 @@ extern "C" void func_6ac821f951f445aea5abfee4d1136db4();
 
 subhook::Hook LuaSetFieldHook;
 subhook::Hook LuaCloseHook;
+subhook::Hook LuaGetMetatableHook;
 
-void lua_setfield_hook(lua_State* L, int idx, const char* k)
-{
+void lua_setfield_hook(lua_State* L, int idx, const char* k) {
+    const std::lock_guard<std::mutex> lock(lua_state_mtx);
+
+    // OutputDebugStringA((std::string("lua_setfield_hook: ") + k + "\n").c_str());
     subhook::ScopedHookRemove remove(&LuaSetFieldHook);
     lua_setfield(L, idx, k);
 
     // correct lua state has functions from the UI.
-    // a simple function is named "Pause"
+    // UpdateFrame seems to be the last one that's called when loading
     // -10002 is magic number defined in lua_setglobal macro
     // see: lua src
-    if (idx == -10002 && std::string(k) == "Pause") { 
+    if (idx == -10002 && std::string(k) == "UpdateFrame") {
+        OutputDebugStringA("lua_setfield_hook; found_lua_state\n");
         ui_lua_state = L;
     }
 }
 
-void lua_close_hook(lua_State* L)
-{
-    subhook::ScopedHookRemove remove(&LuaCloseHook);
-    if (L == ui_lua_state)
-    {
+void lua_close_hook(lua_State* L) {
+    const std::lock_guard<std::mutex> lock(lua_state_mtx);
+    if (L == ui_lua_state) {
+        OutputDebugStringA("Lua_close_hook; ui_lua_state_closed\n");
         ui_lua_state = nullptr;
     }
+    subhook::ScopedHookRemove remove(&LuaCloseHook);
     lua_close(L);
+}
+
+int lua_getmetatable_hook(lua_State* L, int idx) {
+    const std::lock_guard<std::mutex> lock(lua_state_mtx);
+    if (L == ui_lua_state) {
+        OutputDebugStringA(
+            (std::string("lua_getmetatable_hook; idx: ") + std::to_string(idx) + "\n").c_str());
+    }
+    subhook::ScopedHookRemove remove(&LuaGetMetatableHook);
+    int ret = lua_getmetatable(L, idx);
+    return ret;
 }
 
 DWORD WINAPI MainThread(LPVOID param) {
@@ -910,10 +1007,12 @@ DWORD WINAPI MainThread(LPVOID param) {
         loadLuaLib();
 
         if (const auto lua_module = GetModuleHandle(L"lua51_64.dll")) {
-            LuaSetFieldHook.Install(GetProcAddress(lua_module, "lua_setfield"), &lua_setfield_hook,
-                subhook::HookFlags::HookFlag64BitOffset);
+            LuaSetFieldHook.Install(GetProcAddress(lua_module, "lua_setfield"),
+                &lua_setfield_hook, subhook::HookFlags::HookFlag64BitOffset);
             LuaCloseHook.Install(GetProcAddress(lua_module, "lua_close"), &lua_close_hook,
                 subhook::HookFlags::HookFlag64BitOffset);
+            LuaGetMetatableHook.Install(GetProcAddress(lua_module, "lua_getmetatable"),
+                &lua_getmetatable_hook, subhook::HookFlags::HookFlag64BitOffset);
         }
 
         server.run(3002);
