@@ -129,11 +129,10 @@ inline std::string executeLua(
 
     const auto start = std::chrono::high_resolution_clock::now();
     // OutputDebugStringA(
-        (std::string("queuing lua execution: locking lua_state_mtx; threadId: ") +
-            threadIdStrStr.str() + "\n")
-            .c_str());
-    if (!lua_state_mtx.try_lock_for(std::chrono::seconds(3)))
-    {
+    (std::string("queuing lua execution: locking lua_state_mtx; threadId: ") +
+        threadIdStrStr.str() + "\n")
+        .c_str();
+    if (!lua_state_mtx.try_lock_for(std::chrono::seconds(3))) {
         throw std::exception("Error: Timeout acquiring lua execution lock");
     }
     const std::lock_guard<std::timed_mutex> lock(lua_state_mtx, std::adopt_lock);

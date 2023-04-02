@@ -991,7 +991,7 @@ int lua_getmetatable_hook(lua_State* L, int idx) {
     const std::lock_guard<std::timed_mutex> lock(lua_state_mtx);
     if (L == ui_lua_state) {
         // OutputDebugStringA(
-            (std::string("lua_getmetatable_hook; idx: ") + std::to_string(idx) + "\n").c_str());
+            (std::string("lua_getmetatable_hook; idx: ") + std::to_string(idx) + "\n").c_str();
     }
     subhook::ScopedHookRemove remove(&LuaGetMetatableHook);
     int ret = lua_getmetatable(L, idx);
