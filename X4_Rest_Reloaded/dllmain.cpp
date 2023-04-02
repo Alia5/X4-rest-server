@@ -955,49 +955,6 @@ extern "C" void func_6ac821f951f445aea5abfee4d1136db4();
 
 #include "_lua_.h"
 
-
-subhook::Hook LuaSetFieldHook;
-subhook::Hook LuaCloseHook;
-subhook::Hook LuaGetMetatableHook;
-
-void lua_setfield_hook(lua_State* L, int idx, const char* k) {
-    const std::lock_guard<std::timed_mutex> lock(lua_state_mtx);
-
-    // // OutputDebugStringA((std::string("lua_setfield_hook: ") + k + "\n").c_str());
-    subhook::ScopedHookRemove remove(&LuaSetFieldHook);
-    lua_setfield(L, idx, k);
-
-    // correct lua state has functions from the UI.
-    // UpdateFrame seems to be the last one that's called when loading
-    // -10002 is magic number defined in lua_setglobal macro
-    // see: lua src
-    if (idx == -10002 && std::string(k) == "UpdateFrame") {
-        // OutputDebugStringA("lua_setfield_hook; found_lua_state\n");
-        ui_lua_state = L;
-    }
-}
-
-void lua_close_hook(lua_State* L) {
-    const std::lock_guard<std::timed_mutex> lock(lua_state_mtx);
-    if (L == ui_lua_state) {
-        // OutputDebugStringA("Lua_close_hook; ui_lua_state_closed\n");
-        ui_lua_state = nullptr;
-    }
-    subhook::ScopedHookRemove remove(&LuaCloseHook);
-    lua_close(L);
-}
-
-int lua_getmetatable_hook(lua_State* L, int idx) {
-    const std::lock_guard<std::timed_mutex> lock(lua_state_mtx);
-    if (L == ui_lua_state) {
-        // OutputDebugStringA(
-            (std::string("lua_getmetatable_hook; idx: ") + std::to_string(idx) + "\n").c_str();
-    }
-    subhook::ScopedHookRemove remove(&LuaGetMetatableHook);
-    int ret = lua_getmetatable(L, idx);
-    return ret;
-}
-
 DWORD WINAPI MainThread(LPVOID param) {
     if (const HMODULE x4mod = GetModuleHandle(L"X4.exe")) {
         FFIInvoke ffi_invoke(x4mod);
@@ -1005,15 +962,6 @@ DWORD WINAPI MainThread(LPVOID param) {
         HttpServer server(ffi_invoke);
 
         loadLuaLib();
-
-        if (const auto lua_module = GetModuleHandle(L"lua51_64.dll")) {
-            LuaSetFieldHook.Install(GetProcAddress(lua_module, "lua_setfield"),
-                &lua_setfield_hook, subhook::HookFlags::HookFlag64BitOffset);
-            LuaCloseHook.Install(GetProcAddress(lua_module, "lua_close"), &lua_close_hook,
-                subhook::HookFlags::HookFlag64BitOffset);
-            LuaGetMetatableHook.Install(GetProcAddress(lua_module, "lua_getmetatable"),
-                &lua_getmetatable_hook, subhook::HookFlags::HookFlag64BitOffset);
-        }
 
         server.run(3002);
     }

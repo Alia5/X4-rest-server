@@ -19,6 +19,9 @@ lua_State* ui_lua_state = nullptr;
 using _lua_setfield = void (*)(lua_State* L, int idx, const char* k);
 _lua_setfield lua_setfield;
 
+using _lua_getfield = void (*)(lua_State* L, int idx, const char* k);
+_lua_getfield lua_getfield;
+
 using _lua_close = void (*)(lua_State* L);
 _lua_close lua_close;
 
@@ -49,17 +52,51 @@ using _lua_gettop = int (*)(lua_State* L);
 _lua_gettop lua_gettop;
 
 
-subhook::Hook LuaPcallHook;
 std::atomic<const char*> toExecuteLuaString{};
 std::atomic<const char*> lua_result{};
 
-int lua_pcall_hook(lua_State* L, int nargs, int nresults, int errfunc) {
-    subhook::ScopedHookRemove remove(&LuaPcallHook);
 
+subhook::Hook LuaSetFieldHook;
+subhook::Hook LuaCloseHook;
+
+subhook::Hook LuaGetFieldHook;
+
+void lua_setfield_hook(lua_State* L, int idx, const char* k) {
+    // OutputDebugStringA((std::string("lua_setfield_hook: ") + k + "  idx: " +
+    // std::to_string(idx) + "\n").c_str());
+    subhook::ScopedHookRemove remove(&LuaSetFieldHook);
+    lua_setfield(L, idx, k);
+
+    // correct lua state has functions from the UI.
+    // UpdateFrame seems to be the last one that's called when loading
+    // -10002 is magic number defined in lua_setglobal macro
+    // see: lua src
+    if (idx == -10002 && std::string(k) == "UpdateFrame") {
+        const std::lock_guard<std::timed_mutex> lock(lua_state_mtx);
+        // OutputDebugStringA("lua_setfield_hook; found_lua_state\n");
+        ui_lua_state = L;
+    }
+}
+
+void lua_close_hook(lua_State* L) {
+    const std::lock_guard<std::timed_mutex> lock(lua_state_mtx);
     if (L == ui_lua_state) {
-        const auto res = lua_pcall(L, nargs, nresults, errfunc);
+        // OutputDebugStringA("Lua_close_hook; ui_lua_state_closed\n");
+        ui_lua_state = nullptr;
+    }
+    subhook::ScopedHookRemove remove(&LuaCloseHook);
+    lua_close(L);
+}
 
-        // // OutputDebugStringA("Calling lua_string from http: Loading lua_string\n");
+void lua_getfield_hook(lua_State* L, int idx, const char* k) {
+    subhook::ScopedHookRemove remove(&LuaGetFieldHook);
+    lua_getfield(L, idx, k);
+    // "onUpdate" is called every frame; this makes sure we're in the correct game-thread
+    if (L == ui_lua_state && std::string(k) == "onUpdate") {
+        // OutputDebugStringA(
+        //     (std::string("lua_getfield_hook: ") + k + "  idx: " + std::to_string(idx) + "\n")
+        //         .c_str());
+
         const auto lua_str = toExecuteLuaString.load();
         if (lua_str != nullptr) {
             const auto top = lua_gettop(L);
@@ -69,16 +106,19 @@ int lua_pcall_hook(lua_State* L, int nargs, int nresults, int errfunc) {
                     const char* result = lua_tolstring(L, -1, nullptr);
 
                     if (result == nullptr) {
-                        // OutputDebugStringA("Calling lua_string from http: storing res 1\n");
+                        // OutputDebugStringA("Calling lua_string from http: storing
+                        // res 1\n");
                         lua_result.store("true");
                     }
                     else {
-                        // OutputDebugStringA("Calling lua_string from http: storing res 2\n");
+                        // OutputDebugStringA("Calling lua_string from http: storing
+                        // res 2\n");
                         lua_result.store(result);
                     }
                 }
                 else {
-                    // OutputDebugStringA("Calling lua_string from http: storing res 3\n");
+                    // OutputDebugStringA("Calling lua_string from http: storing res
+                    // 3\n");
                     lua_result.store("error executing lua");
                 }
                 auto newTop = lua_gettop(L);
@@ -88,20 +128,21 @@ int lua_pcall_hook(lua_State* L, int nargs, int nresults, int errfunc) {
                 }
             }
             else {
-                // OutputDebugStringA("Calling lua_string from http: storing res 4\n");
-                lua_result.store("false");
+                // OutputDebugStringA("Calling lua_string from http: storing res
+                // 4\n");
+                lua_result.store("error loading lua");
             }
-            // OutputDebugStringA("Calling lua_string from http: resetting lua_string\n");
+            // OutputDebugStringA("Calling lua_string from http: resetting
+            // lua_string\n");
             toExecuteLuaString.store(nullptr);
         }
-        return res;
     }
-    return lua_pcall(L, nargs, nresults, errfunc);
 }
 
 inline void loadLuaLib() {
     if (const auto lua_module = GetModuleHandle(L"lua51_64.dll")) {
         lua_setfield = (_lua_setfield)(GetProcAddress(lua_module, "lua_setfield"));
+        lua_getfield = (_lua_getfield)(GetProcAddress(lua_module, "lua_getfield"));
         lua_close = (_lua_close)(GetProcAddress(lua_module, "lua_close"));
 
         luaL_loadfilex = (_luaL_loadfilex)GetProcAddress(lua_module, "luaL_loadfilex");
@@ -116,7 +157,12 @@ inline void loadLuaLib() {
 
         lua_gettop = (_lua_gettop)GetProcAddress(lua_module, "lua_gettop");
 
-        LuaPcallHook.Install(GetProcAddress(lua_module, "lua_pcall"), &lua_pcall_hook,
+        LuaSetFieldHook.Install(GetProcAddress(lua_module, "lua_setfield"), &lua_setfield_hook,
+            subhook::HookFlags::HookFlag64BitOffset);
+        LuaCloseHook.Install(GetProcAddress(lua_module, "lua_close"), &lua_close_hook,
+            subhook::HookFlags::HookFlag64BitOffset);
+
+        LuaGetFieldHook.Install(GetProcAddress(lua_module, "lua_getfield"), &lua_getfield_hook,
             subhook::HookFlags::HookFlag64BitOffset);
     }
 }
@@ -146,7 +192,7 @@ inline std::string executeLua(
         // OutputDebugStringA("queuing lua execution: loading lua string\n");
         auto res = lua_result.load();
         while (res == nullptr) {
-            Sleep(1);
+            Sleep(10);
             if (std::chrono::duration_cast<std::chrono::milliseconds>(
                     std::chrono::high_resolution_clock::now() - start)
                     .count() > 3000) {
