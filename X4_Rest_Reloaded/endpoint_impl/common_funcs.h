@@ -18,7 +18,29 @@ https://opensource.org/licenses/MIT.
 
 inline void RegisterCommonFunctions(INIT_PARAMS()) {
     HttpServer::AddEndpoint(SIMPLE_GET_HANDLER(GetGameStartName));
-    HttpServer::AddEndpoint(SIMPLE_GET_HANDLER(GetCurrentGameTime));
+    // gametime doesn't work from separate thread; use lua in render-thread as workaround
+    // HttpServer::AddEndpoint(SIMPLE_GET_HANDLER(GetCurrentGameTime));
+    HttpServer::AddEndpoint({"/GetCurrentGameTime", HttpServer::Method::GET,
+        [ & ](const httplib::Request& req, httplib::Response& res) {
+            if (ui_lua_state != nullptr) {
+
+                const auto lua_script =R"(    
+                local ffi = require("ffi")
+                local C = ffi.C
+                ffi.cdef[[
+	                double GetCurrentGameTime(void);
+                ]]
+                return C.GetCurrentGameTime()
+                )";
+
+                const auto result = executeLua(lua_script, true, false);
+
+                res.set_content(result, "application/json");
+                return;
+            }
+            SET_CONTENT(({false}));
+        }});
+
     HttpServer::AddEndpoint(SIMPLE_GET_HANDLER(GetCurrentUTCDataTime));
 
     HttpServer::AddEndpoint({"/Pause", HttpServer::Method::POST,
