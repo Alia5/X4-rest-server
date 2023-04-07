@@ -83,6 +83,59 @@ public:
     };
 
     static void AddEndpoint(const Endpoint&& e);
+    template <typename T>
+    static inline auto ParseQueryParam(const httplib::Request& req, const std::string& name, T defaultValue) -> T
+    {
+        T value = defaultValue;
+        try {
+            value = req.get_param_value(name);
+        }
+        catch (...) {
+            // ignore
+        }
+        return value;
+    }
+    template <>
+    static inline auto ParseQueryParam(
+        const httplib::Request& req, const std::string& name, bool defaultValue) -> bool {
+        auto value = defaultValue;
+        try {
+            const auto value_str = req.get_param_value(name);
+            value = value_str == "true" || value_str == "1";
+        }
+        catch (...) {
+            // ignore
+        }
+        return value;
+    }
+    template <>
+    static inline auto ParseQueryParam(
+        const httplib::Request& req, const std::string& name, int defaultValue) -> int {
+        auto value = defaultValue;
+        try {
+            const auto value_str = req.get_param_value(name);
+            value = std::stoi(value_str);
+        }
+        catch (...) {
+            // ignore
+        }
+        return value;
+    }
+
+    template <>
+    static inline auto ParseQueryParam(const httplib::Request& req, const std::string& name,
+        unsigned long long defaultValue) -> unsigned long long {
+        auto value = defaultValue;
+        try {
+            const auto value_str = req.get_param_value(name);
+            value = std::stoll(value_str);
+        }
+        catch (...) {
+            // ignore
+        }
+        return value;
+    }
+
 
     /**
      * creating the endpoints and defining them with some lambdas.
