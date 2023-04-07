@@ -62,17 +62,34 @@ inline void RegisterLogbookFunctions(INIT_PARAMS()) {
             catch (...) {
                 // ignore
             }
-            if (page <= 0) {
-                page = 1;
-            }
+            //if (page <= 0) {
+            //    page = 1;
+            //}
 
             if (ui_lua_state != nullptr) {
                 // "inspiration" from gamefiles /ui/addons/ego_detailmonitor/menu_playerinfo.lua
+
+                if (page == 0)
+                {
+                    std::string lua = R"(local logbook = {}
+local numEntries = GetNumLogbook(")" + category +
+                                      R"(")
+local queries = math.ceil(numEntries / 500)
+for i=0,queries do
+table.insert(logbook, GetLogbook(i*500+1, 500, ")" +
+                                      category + R"("))
+end
+return json.encode(logbook))";
+                    const auto result = executeLua(lua, true, true);
+                    res.set_content(result, "application/json");
+                    return;
+                }
+
                 std::string lua = R"(
                     local numEntries = GetNumLogbook( ")" +
                                   category + R"(" )
                     local logbook = {}
-                    local startIndex = 1
+                    local startIndex = 0
                     local numQuery = math.min(100, numEntries)
                     local curPage = )" +
                                   std::to_string(page) + R"(
